@@ -1,21 +1,26 @@
 using LemuRivolta.InkAtoms;
 
+using UnityAtoms.BaseAtoms;
+
 using UnityEngine;
 using UnityEngine.Assertions;
 
 public class Dialogue : MonoBehaviour
 {
-    [SerializeField] private GameObject leftBalloonRoot;
-    [SerializeField] private GameObject rightBalloonRoot;
+    [SerializeField] private Balloon leftBalloon;
+    [SerializeField] private Balloon rightBalloon;
     [SerializeField] private GameObject choicesRoot;
     [SerializeField] private GameObject otherRoot;
 
+    [SerializeField] private StringEvent continueEvent;
+
     private void Awake()
     {
-        Assert.IsNotNull(leftBalloonRoot);
-        Assert.IsNotNull(rightBalloonRoot);
+        Assert.IsNotNull(leftBalloon);
+        Assert.IsNotNull(rightBalloon);
         Assert.IsNotNull(choicesRoot);
         Assert.IsNotNull(otherRoot);
+        Assert.IsNotNull(continueEvent);
     }
 
     public void OnStoryStepChanged(StoryStep step)
@@ -29,13 +34,13 @@ public class Dialogue : MonoBehaviour
 
         if (characterName == "YOU")
         {
-            leftBalloonRoot.SetActive(true);
-            rightBalloonRoot.SetActive(false);
+            leftBalloon.SetText(characterLine);
+            rightBalloon.Hide();
         }
         else
         {
-            leftBalloonRoot.SetActive(false);
-            rightBalloonRoot.SetActive(true);
+            leftBalloon.Hide();
+            rightBalloon.SetText(characterLine);
         }
     }
 
@@ -59,5 +64,10 @@ public class Dialogue : MonoBehaviour
         {
             character.gameObject.SetActive(character.CharacterName == characterName);
         }
+    }
+
+    public void OnBalloonClick()
+    {
+        continueEvent.Raise(null);
     }
 }
