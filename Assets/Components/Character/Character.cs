@@ -1,23 +1,26 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private GameObject shadowObject;
+    [SerializeField] private Image mainImage;
+    [SerializeField] private Image shadow;
 
     private void Start()
     {
-        Assert.IsNotNull(shadowObject);
+        Assert.IsNotNull(shadow);
+        shadow.sprite = mainImage.sprite;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        shadowObject.SetActive(true);
+        shadow.gameObject.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        shadowObject.SetActive(false);
+        shadow.gameObject.SetActive(false);
     }
 }
