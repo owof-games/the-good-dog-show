@@ -12,7 +12,7 @@ namespace UnityAtoms.BaseAtoms
     {
         protected override bool ValueEquals(GameArea other)
         {
-            throw new NotImplementedException();
+            return Value == other;
         }
     }
 }
