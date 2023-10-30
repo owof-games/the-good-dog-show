@@ -8,12 +8,14 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject leftBalloonRoot;
     [SerializeField] private GameObject rightBalloonRoot;
     [SerializeField] private GameObject choicesRoot;
+    [SerializeField] private GameObject otherRoot;
 
     private void Awake()
     {
         Assert.IsNotNull(leftBalloonRoot);
         Assert.IsNotNull(rightBalloonRoot);
         Assert.IsNotNull(choicesRoot);
+        Assert.IsNotNull(otherRoot);
     }
 
     public void OnStoryStepChanged(StoryStep step)
@@ -48,6 +50,14 @@ public class Dialogue : MonoBehaviour
         else
         {
             return (null, text);
+        }
+    }
+
+    public void OnCurrentDialogueCharacterChanged(CharacterName characterName)
+    {
+        foreach (var character in otherRoot.GetComponentsInChildren<Character>(true))
+        {
+            character.gameObject.SetActive(character.CharacterName == characterName);
         }
     }
 }

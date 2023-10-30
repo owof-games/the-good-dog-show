@@ -1,3 +1,5 @@
+using System.Linq;
+
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
@@ -9,6 +11,8 @@ public class Character : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [SerializeField] private Image shadow;
     [SerializeField] private Button button;
     [SerializeField] private CharacterName characterName;
+
+    public CharacterName CharacterName => characterName;
 
     private void Awake()
     {
