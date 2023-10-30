@@ -335,22 +335,26 @@ DOGRON: Complimenti, hai vinto a scapito di: {da_eliminare}
 
 
 
+VAR tmp = 0
 
 EXTERNAL moveToLounge()
 === function moveToLounge() ===
 [[[move to lounge]]]
 
-EXTERNAL moveToKitchen()
+// EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
-[[[move to kitchen]]]
+~ tmp = 1
+// [[[move to kitchen]]]
 
-EXTERNAL moveToEnd()
+// EXTERNAL moveToEnd()
 === function moveToEnd() ===
-[[[move to kitchen]]]
+~ tmp = 1
+// [[[move to kitchen]]]
 
-EXTERNAL loungeDialogue(char)
+// EXTERNAL loungeDialogue(char)
 === function loungeDialogue(char) ===
-[[[talk with {char}]]]
+~ tmp = 1
+// [[[talk with {char}]]]
 
 
 

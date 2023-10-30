@@ -18,7 +18,9 @@ MonoBehaviour:
   inkStoryAtomsInitialized: {fileID: 11400000, guid: 632d3a548cdcc414ea628d1e8fa18ce0, type: 2}
   debugCurrentState: 0
   variableListeners: []
-  externalFunctions: []
+  externalFunctions:
+  - {fileID: 11400000, guid: 61fd0764bf740b144a1133f736177db2, type: 2}
   commandLineParsers: []
   tagProcessors: []
-  syntaxCheckFiles: []
+  syntaxCheckFiles:
+  - {fileID: 102900000, guid: b7c6bc094062f4f4eb00b072bc928955, type: 3}

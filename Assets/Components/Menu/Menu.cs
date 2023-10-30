@@ -1,3 +1,5 @@
+using LemuRivolta.InkAtoms;
+
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
@@ -5,12 +7,20 @@ using UnityEngine.Assertions;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] private GameAreaEvent moveToGameAreaEvent;
+    [SerializeField] private StringEvent continueEvent;
+    [SerializeField] private InkAtomsStory inkAtomsStory;
+    [SerializeField] private TextAsset inkTextAsset;
 
     private void Start()
     {
-        Assert.IsNotNull(moveToGameAreaEvent);
+        Assert.IsNotNull(inkAtomsStory);
+        Assert.IsNotNull(inkTextAsset);
+        Assert.IsNotNull(continueEvent);
     }
 
-    public void MoveToLounge() => moveToGameAreaEvent.Raise(GameArea.Lounge);
+    public void OnStart()
+    {
+        inkAtomsStory.Setup(inkTextAsset);
+        continueEvent.Raise(null);
+    }
 }

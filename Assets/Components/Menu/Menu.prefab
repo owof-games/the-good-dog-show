@@ -122,7 +122,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4905196625283791951}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: MoveToLounge
+        m_MethodName: OnStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -197,6 +197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveToGameAreaEvent: {fileID: 11400000, guid: 1381fee5817cc7246a8aab73773c28fb, type: 2}
+  continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
+  inkAtomsStory: {fileID: 11400000, guid: c6bfcfd395c994843afe25dd3c0b5e88, type: 2}
+  inkTextAsset: {fileID: 4900000, guid: a1310572c3c50bf4ea2a5e8b7392013c, type: 3}
 --- !u!1 &7369932695728038189
 GameObject:
   m_ObjectHideFlags: 0
