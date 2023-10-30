@@ -1,7 +1,6 @@
 TODO: riduci a uno ingrediente
 === test_abilities
-~ moveToLounge()
-~ loungeDialogue(DOGRON)
+~ moveToDialogue(DOGRON)
 // permette di aggiungere o togliere concorrenti a seconda che l'abilità sia disponibile.
 
 //TEST: PRESENTAZIONE

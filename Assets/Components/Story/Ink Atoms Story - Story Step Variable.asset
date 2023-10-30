@@ -20,7 +20,7 @@ MonoBehaviour:
     Tags: []
     CanContinue: 0
     LineNumber: 0
-  _changed: {fileID: 0}
+  _changed: {fileID: 11400000, guid: 00a75b0a2aa80204397ea3ce33b1aaee, type: 2}
   _changedWithHistory: {fileID: 0}
   _triggerChangedOnOnEnable: 0
   _triggerChangedWithHistoryOnOnEnable: 0

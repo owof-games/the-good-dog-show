@@ -1,4 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.WebSockets;
 
 using UnityAtoms.BaseAtoms;
 
@@ -13,15 +16,19 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private BoolVariable transitioning;
 
     [SerializeField] private TransitionVideo transitionVideo;
-    [SerializeField] private GameAreaComponent menuArea;
-    [SerializeField] private GameAreaComponent loungeArea;
+    [SerializeField] private GameAreaComponent[] areas;
+
+    private Dictionary<GameArea, GameAreaComponent> areasMapping;
+
+    private void Awake()
+    {
+        Assert.IsNotNull(transitionVideo);
+
+        areasMapping = areas.ToDictionary(c => c.GameArea);
+    }
 
     private void Start()
     {
-        Assert.IsNotNull(transitionVideo);
-        Assert.IsNotNull(menuArea);
-        Assert.IsNotNull(loungeArea);
-
         OnMoveToGameArea(currentGameArea.Value);
     }
 
@@ -31,12 +38,17 @@ public class TransitionManager : MonoBehaviour
     /// <param name="gameArea">The game area.</param>
     /// <returns>The game area component.</returns>
     /// <exception cref="System.ArgumentException">If the game area is unknown.</exception>
-    private GameAreaComponent GetGameAreaComponent(GameArea gameArea) => gameArea switch
+    private GameAreaComponent GetGameAreaComponent(GameArea gameArea)
     {
-        GameArea.Menu => menuArea,
-        GameArea.Lounge => loungeArea,
-        _ => throw new System.ArgumentException($"unknown game area {gameArea}")
-    };
+        if (areasMapping.TryGetValue(gameArea, out var result))
+        {
+            return result;
+        }
+        else
+        {
+            throw new System.ArgumentException($"unknown game area {gameArea}");
+        }
+    }
 
     /// <summary>
     /// Callback method for when it's requested to change the game area.
@@ -68,12 +80,11 @@ public class TransitionManager : MonoBehaviour
     /// <param name="gameArea">The game area to turn on or off.</param>
     private void TurnOn(GameArea gameArea)
     {
-        void Do(GameArea targetValue) =>
-            GetGameAreaComponent(targetValue)
-            .gameObject
-            .SetActive(gameArea == targetValue);
-
-        Do(GameArea.Menu);
-        Do(GameArea.Lounge);
+        foreach (var g in areasMapping.Keys)
+        {
+            GetGameAreaComponent(g)
+                .gameObject
+                .SetActive(gameArea == g);
+        }
     }
 }

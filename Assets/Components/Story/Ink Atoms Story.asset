@@ -16,10 +16,11 @@ MonoBehaviour:
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   choiceEvent: {fileID: 11400000, guid: dc57eccc9f32c6040bb44052def9fa71, type: 2}
   inkStoryAtomsInitialized: {fileID: 11400000, guid: 632d3a548cdcc414ea628d1e8fa18ce0, type: 2}
-  debugCurrentState: 0
+  debugCurrentState: 1
   variableListeners: []
   externalFunctions:
   - {fileID: 11400000, guid: 61fd0764bf740b144a1133f736177db2, type: 2}
+  - {fileID: 11400000, guid: 66a38a046da85b347b77bc51460da5da, type: 2}
   commandLineParsers: []
   tagProcessors: []
   syntaxCheckFiles:

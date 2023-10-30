@@ -341,6 +341,10 @@ EXTERNAL moveToLounge()
 === function moveToLounge() ===
 [[[move to lounge]]]
 
+EXTERNAL moveToDialogue(character)
+=== function moveToDialogue(character) ===
+[[[move to dialogue with {character}]]]
+
 // EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 ~ tmp = 1

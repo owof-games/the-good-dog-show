@@ -10,6 +10,7 @@ public class TransitionVideo : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private RectTransform targetImageTransform;
     [SerializeField] private float slideTime = 0.3f;
+    [SerializeField] private bool debugMode;
 
     /// <summary>
     /// A coroutine that starts playing the video, and waits for the video to completely cover the
@@ -30,6 +31,7 @@ public class TransitionVideo : MonoBehaviour
     private IEnumerator SlideOutWhenComplete()
     {
         yield return WaitForStoppedVideoPlayer();
+        DOTween.Kill(targetImageTransform);
         yield return GetSlideYieldInstruction(false);
     }
 
@@ -56,5 +58,6 @@ public class TransitionVideo : MonoBehaviour
     }
 
     public CustomYieldInstruction WaitForStoppedVideoPlayer() =>
+        debugMode ? null :
         new WaitForVideoPlayerCompleteYieldInstruction(videoPlayer);
 }

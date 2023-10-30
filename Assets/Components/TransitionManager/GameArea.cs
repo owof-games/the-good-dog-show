@@ -2,7 +2,7 @@ public enum GameArea
 {
     Menu,
     Lounge,
-    CharacterTalk,
+    Dialogue,
     Kitchen,
     DogronTalk
 }

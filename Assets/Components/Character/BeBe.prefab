@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4254919208549740792}
   - component: {fileID: 5679595979767792275}
   m_Layer: 5
-  m_Name: Character
+  m_Name: BeBe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,6 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage: {fileID: 8250777939907625166}
   shadow: {fileID: 2748966328005963011}
+  button: {fileID: 4254919208549740792}
+  characterName: 3
 --- !u!1 &7554009904049286000
 GameObject:
   m_ObjectHideFlags: 0

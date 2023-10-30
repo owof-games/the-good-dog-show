@@ -7,16 +7,27 @@ public class Character : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     [SerializeField] private Image mainImage;
     [SerializeField] private Image shadow;
+    [SerializeField] private Button button;
+    [SerializeField] private CharacterName characterName;
+
+    private void Awake()
+    {
+        Assert.IsNotNull(shadow);
+        Assert.IsNotNull(mainImage);
+        Assert.IsNotNull(button);
+    }
 
     private void Start()
     {
-        Assert.IsNotNull(shadow);
         shadow.sprite = mainImage.sprite;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        shadow.gameObject.SetActive(true);
+        if (button.IsInteractable())
+        {
+            shadow.gameObject.SetActive(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
