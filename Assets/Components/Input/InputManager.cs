@@ -2,17 +2,18 @@ using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private GameAreaVariable currentGameArea;
-
-    private Controls controls;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private ControlTypeVariable controlType;
 
     private void Awake()
     {
         Assert.IsNotNull(currentGameArea);
-        controls = new();
+        Assert.IsNotNull(playerInput);
     }
 
     private void OnEnable()
@@ -36,11 +37,23 @@ public class InputManager : MonoBehaviour
     {
         if (currentGameArea.Value == GameArea.Dialogue)
         {
-            controls.Dialogue.Enable();
+            playerInput.enabled = true;
+            playerInput.SwitchCurrentActionMap("Dialogue");
         }
         else
         {
-            controls.Dialogue.Disable();
+            playerInput.enabled = false;
         }
+    }
+
+    public void OnControlsChanged(PlayerInput _)
+    {
+        controlType.Value = playerInput.currentControlScheme switch
+        {
+            "MouseAndKeyboard" => ControlType.MouseAndKeyboard,
+            "Xbox" => ControlType.Xbox,
+            "Gamepad" => ControlType.Gamepad,
+            _ => throw new System.Exception($"Unknown control scheme {playerInput.currentControlScheme}")
+        };
     }
 }

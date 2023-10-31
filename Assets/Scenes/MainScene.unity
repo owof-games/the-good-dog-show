@@ -1207,6 +1207,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3859521909393219649, guid: dc7398678d5b65644a7eec6d462272a8, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859521909393219649, guid: dc7398678d5b65644a7eec6d462272a8, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: MouseAndKeyboard
+      objectReference: {fileID: 0}
     - target: {fileID: 8366013974354855733, guid: dc7398678d5b65644a7eec6d462272a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 473.94617

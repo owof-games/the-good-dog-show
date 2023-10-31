@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
         EventSystem currentEventSystem = EventSystem.current;
         if (currentEventSystem.currentSelectedGameObject == null)
         {
-            Debug.Log("Selecting start button");
+            //Debug.Log("Selecting start button");
             currentEventSystem.SetSelectedGameObject(startButton.gameObject);
         }
     }

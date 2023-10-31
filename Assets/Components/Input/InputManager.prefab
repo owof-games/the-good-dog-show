@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8366013974354855733}
   - component: {fileID: 8622097590482774091}
+  - component: {fileID: 3859521909393219649}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -45,3 +46,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGameArea: {fileID: 11400000, guid: 782ed2f367a33534381d6474369659c5, type: 2}
+  playerInput: {fileID: 3859521909393219649}
+  controlType: {fileID: 11400000, guid: 3bc1933dd6db19c409e083f1d0e03d5c, type: 2}
+--- !u!114 &3859521909393219649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167568054418096075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1d58d5f177031734d92b6e9762ac6ebc, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8622097590482774091}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnControlsChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9a87170d-d95d-4679-842b-412a20db3724
+    m_ActionName: Dialogue/Choice1[/Keyboard/1,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6480023f-fd1c-4aa3-b2db-5e46871d09c4
+    m_ActionName: Dialogue/Choice2[/Keyboard/2,/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 07b95a4b-6b0c-49ea-b06e-f7dcfd58abe9
+    m_ActionName: Dialogue/Choice3[/Keyboard/3,/XInputControllerWindows/buttonEast]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Dialogue
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
