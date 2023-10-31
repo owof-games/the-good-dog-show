@@ -9,11 +9,18 @@ public class InputManager : MonoBehaviour
     [SerializeField] private GameAreaVariable currentGameArea;
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private ControlTypeVariable controlType;
+    [SerializeField] private VoidEvent choice1Performed;
+    [SerializeField] private VoidEvent choice2Performed;
+    [SerializeField] private VoidEvent choice3Performed;
 
     private void Awake()
     {
         Assert.IsNotNull(currentGameArea);
         Assert.IsNotNull(playerInput);
+        Assert.IsNotNull(controlType);
+        Assert.IsNotNull(choice1Performed);
+        Assert.IsNotNull(choice2Performed);
+        Assert.IsNotNull(choice3Performed);
     }
 
     private void OnEnable()
@@ -56,4 +63,10 @@ public class InputManager : MonoBehaviour
             _ => throw new System.Exception($"Unknown control scheme {playerInput.currentControlScheme}")
         };
     }
+
+    private static UnityAtoms.Void @void = new();
+
+    public void PerformChoice1() => choice1Performed.Raise(@void);
+    public void PerformChoice2() => choice2Performed.Raise(@void);
+    public void PerformChoice3() => choice3Performed.Raise(@void);
 }

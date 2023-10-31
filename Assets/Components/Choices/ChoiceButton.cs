@@ -6,6 +6,7 @@ using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ChoiceButton : MonoBehaviour
@@ -72,4 +73,12 @@ public class ChoiceButton : MonoBehaviour
             FlowName = null
         });
     }
+
+    public void SimulateClick()
+    {
+        ExecuteEvents.Execute(gameObject,
+            new BaseEventData(EventSystem.current),
+            ExecuteEvents.submitHandler);
+    }
+
 }

@@ -69,17 +69,6 @@
                 },
                 {
                     "name": "",
-                    "id": "6520d0ab-35d2-4fbb-a53f-7efd57ed256c",
-                    "path": "<DualShockGamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PlayStation",
-                    "action": "Choice1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "beaea556-b604-42f9-a19a-6f48523ed16d",
                     "path": "<Keyboard>/2",
                     "interactions": "",
@@ -113,17 +102,6 @@
                 },
                 {
                     "name": "",
-                    "id": "660740d6-ed35-442c-a033-4d98516d07f5",
-                    "path": "<DualShockGamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PlayStation",
-                    "action": "Choice2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "afabfcec-83f8-4b9f-af92-f28dbd372ee5",
                     "path": "<Keyboard>/3",
                     "interactions": "",
@@ -151,17 +129,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Choice3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "bd2104f4-77ca-47af-b592-f5fafb6b848d",
-                    "path": "<DualShockGamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PlayStation",
                     "action": "Choice3",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -203,17 +170,6 @@
             "devices": [
                 {
                     "devicePath": "<XInputController>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "PlayStation",
-            "bindingGroup": "PlayStation",
-            "devices": [
-                {
-                    "devicePath": "<DualShockGamepad>",
                     "isOptional": false,
                     "isOR": false
                 }

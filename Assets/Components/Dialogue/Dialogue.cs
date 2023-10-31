@@ -4,6 +4,7 @@ using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.EventSystems;
 
 public class Dialogue : MonoBehaviour
 {
@@ -37,6 +38,18 @@ public class Dialogue : MonoBehaviour
     private void Start()
     {
         UpdateElements();
+    }
+
+    private GameObject lastSelected;
+    private void Update()
+    {
+        var newSelected = EventSystem.current.currentSelectedGameObject;
+        if (lastSelected != newSelected)
+        {
+            var name = newSelected == null ? "<nothing>" : newSelected.name;
+            //Debug.Log($"selection changed to {name}", newSelected);
+            lastSelected = newSelected;
+        }
     }
 
     private void OnDisable()
@@ -79,6 +92,28 @@ public class Dialogue : MonoBehaviour
         // show the choices
         MainThreadQueue.EnqueueLater(() =>
             choicesRoot.SetActive(storyStep.Value.Choices.Length > 0 && !isWritingText.Value));
+
+        // try to select a relevant UI element if possible
+        MainThreadQueue.EnqueueLater(() =>
+        {
+            if (EventSystem.current.currentSelectedGameObject != null)
+            {
+                return;
+            }
+
+            if (choicesRoot.activeSelf)
+            {
+                EventSystem.current.SetSelectedGameObject(choicesRoot.transform.GetChild(0).gameObject);
+            }
+            else if (leftBalloon.gameObject.activeSelf)
+            {
+                EventSystem.current.SetSelectedGameObject(leftBalloon.gameObject);
+            }
+            else if (rightBalloon.gameObject.activeSelf)
+            {
+                EventSystem.current.SetSelectedGameObject(rightBalloon.gameObject);
+            }
+        });
     }
 
     private (string, string) GetCharacterLine(string text)

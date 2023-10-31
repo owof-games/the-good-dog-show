@@ -48,6 +48,9 @@ MonoBehaviour:
   currentGameArea: {fileID: 11400000, guid: 782ed2f367a33534381d6474369659c5, type: 2}
   playerInput: {fileID: 3859521909393219649}
   controlType: {fileID: 11400000, guid: 3bc1933dd6db19c409e083f1d0e03d5c, type: 2}
+  choice1Performed: {fileID: 11400000, guid: dcb06c195ebcb304aa731225fb736b83, type: 2}
+  choice2Performed: {fileID: 11400000, guid: a155bc14f77ffb84ab943fdd4051e23a, type: 2}
+  choice3Performed: {fileID: 11400000, guid: 1a0d9b4fd6bf23c4485eb9bcfa427732, type: 2}
 --- !u!114 &3859521909393219649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,15 +89,51 @@ MonoBehaviour:
         m_CallState: 2
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8622097590482774091}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: PerformChoice1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9a87170d-d95d-4679-842b-412a20db3724
     m_ActionName: Dialogue/Choice1[/Keyboard/1,/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8622097590482774091}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: PerformChoice2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6480023f-fd1c-4aa3-b2db-5e46871d09c4
     m_ActionName: Dialogue/Choice2[/Keyboard/2,/XInputControllerWindows/buttonNorth]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8622097590482774091}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: PerformChoice3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 07b95a4b-6b0c-49ea-b06e-f7dcfd58abe9
     m_ActionName: Dialogue/Choice3[/Keyboard/3,/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
