@@ -12,6 +12,9 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject choicesRoot;
     [SerializeField] private GameObject otherRoot;
 
+    [SerializeField] private StoryStepVariable storyStep;
+    [SerializeField] private BoolVariable isWritingText;
+
     [SerializeField] private StringEvent continueEvent;
 
     private void Awake()
@@ -20,12 +23,42 @@ public class Dialogue : MonoBehaviour
         Assert.IsNotNull(rightBalloon);
         Assert.IsNotNull(choicesRoot);
         Assert.IsNotNull(otherRoot);
+        Assert.IsNotNull(storyStep);
+        Assert.IsNotNull(isWritingText);
         Assert.IsNotNull(continueEvent);
     }
 
-    public void OnStoryStepChanged(StoryStep step)
+    private void OnEnable()
     {
-        var (characterName, characterLine) = GetCharacterLine(step.Text);
+        storyStep.Changed.Register(OnStoryStepChanged);
+        isWritingText.Changed.Register(OnIsWritingTextChanged);
+    }
+
+    private void Start()
+    {
+        UpdateElements();
+    }
+
+    private void OnDisable()
+    {
+        storyStep.Changed.Unregister(OnStoryStepChanged);
+        isWritingText.Changed.Unregister(OnIsWritingTextChanged);
+    }
+
+    private void OnIsWritingTextChanged(bool _)
+    {
+        UpdateElements();
+    }
+
+    public void OnStoryStepChanged(StoryStep _)
+    {
+        UpdateElements();
+    }
+
+    private void UpdateElements()
+    {
+        // show the dialogue balloons
+        var (characterName, characterLine) = GetCharacterLine(storyStep.Value.Text);
         if (characterName == null)
         {
             Debug.Log($"Dialogue got line '{characterLine}', cannot parse an actor");
@@ -34,14 +67,18 @@ public class Dialogue : MonoBehaviour
 
         if (characterName == "YOU")
         {
-            leftBalloon.SetText(characterLine);
+            leftBalloon.Text = characterLine;
             rightBalloon.Hide();
         }
         else
         {
             leftBalloon.Hide();
-            rightBalloon.SetText(characterLine);
+            rightBalloon.Text = characterLine;
         }
+
+        // show the choices
+        MainThreadQueue.EnqueueLater(() =>
+            choicesRoot.SetActive(storyStep.Value.Choices.Length > 0 && !isWritingText.Value));
     }
 
     private (string, string) GetCharacterLine(string text)

@@ -5,6 +5,8 @@ using LemuRivolta.InkAtoms;
 
 using TMPro;
 
+using UnityAtoms.BaseAtoms;
+
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
@@ -18,6 +20,8 @@ public class Balloon : MonoBehaviour
     [SerializeField] private GameObject hideButtonAdvance;
     [SerializeField] private Button buttonAdvance;
     [SerializeField] private float charactersPerSecond;
+    [SerializeField] private BoolVariable isWritingText;
+    [SerializeField] private StoryStepVariable storyStep;
 
     private void Awake()
     {
@@ -26,6 +30,12 @@ public class Balloon : MonoBehaviour
         Assert.IsNotNull(hideButtonAdvance);
         Assert.IsNotNull(buttonAdvance);
         Assert.IsTrue(charactersPerSecond > 0);
+        Assert.IsNotNull(isWritingText);
+    }
+
+    private void OnEnable()
+    {
+        storyStep.Changed.Register(OnStoryStepChanged);
     }
 
     private void Start()
@@ -33,30 +43,45 @@ public class Balloon : MonoBehaviour
         UpdateButton();
     }
 
-    public void SetText(string text)
+    private void OnDisable()
+    {
+        storyStep.Changed.Unregister(OnStoryStepChanged);
+    }
+
+    private string text;
+
+    public string Text
+    {
+        get => text;
+        set
+        {
+            if (text == value) return;
+            text = value;
+            SetText(text);
+        }
+    }
+
+    private void SetText(string text)
     {
         // the SetActive of SetTextInternal will cause the listeners to activate, and rely on replay callbacks
-        // but since we've been called inside an event, and the replay callbacks aren't saved until _after_
+        // but since could be called inside an event, and the replay callbacks aren't saved until _after_
         // if we do it right now, we'll end up _not_ having the replay callbacks
-        IEnumerator SetTextInternal()
+        MainThreadQueue.EnqueueLater(() =>
         {
             // because of the optimizations of MainThreadQueue, we have to force a yield return null
             // if we want the execution to actually start on the next frame
-            yield return null;
             gameObject.SetActive(true);
             StopAllCoroutines();
             StartCoroutine(SetTextCoroutine(text));
             EventSystem.current.SetSelectedGameObject(buttonAdvance.gameObject);
-        }
-        MainThreadQueue.Enqueue(SetTextInternal);
+        });
     }
 
-    private bool isTextRunning;
     private bool forceTextToEnd = false;
 
     private IEnumerator SetTextCoroutine(string text)
     {
-        isTextRunning = true;
+        isWritingText.Value = true;
         forceTextToEnd = false;
         UpdateButton();
         try
@@ -97,7 +122,7 @@ public class Balloon : MonoBehaviour
         }
         finally
         {
-            isTextRunning = false;
+            isWritingText.Value = false;
             UpdateButton();
         }
     }
@@ -120,35 +145,29 @@ public class Balloon : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private bool canContinue;
-
     public void OnAdvanceButtonClick()
     {
         // clicking while the text is running will just cause it to go to the end
-        if (isTextRunning)
+        if (isWritingText.Value)
         {
             forceTextToEnd = true;
         }
         // otherwise, actually advance (if we can)
-        else if (canContinue)
+        else if (storyStep.Value.CanContinue)
         {
             advance.Invoke();
         }
     }
 
-    private StoryStep storyStep;
-
-    public void OnStoryStepChanged(StoryStep step)
+    public void OnStoryStepChanged(StoryStep _)
     {
-        storyStep = step;
-        hideButtonAdvance.SetActive(!step.CanContinue);
-        canContinue = step.CanContinue;
         UpdateButton();
     }
 
     private void UpdateButton()
     {
-        buttonAdvance.enabled = isTextRunning || storyStep.CanContinue;
+        buttonAdvance.interactable = isWritingText.Value || storyStep.Value.CanContinue;
+        hideButtonAdvance.SetActive(isWritingText.Value || !storyStep.Value.CanContinue);
     }
 
     //public void OnAdvance() {
