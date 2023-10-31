@@ -1,9 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-
-using Ink.Parsed;
 
 using LemuRivolta.InkAtoms;
 
@@ -12,6 +8,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Balloon : MonoBehaviour
@@ -31,6 +28,11 @@ public class Balloon : MonoBehaviour
         Assert.IsTrue(charactersPerSecond > 0);
     }
 
+    private void Start()
+    {
+        UpdateButton();
+    }
+
     public void SetText(string text)
     {
         // the SetActive of SetTextInternal will cause the listeners to activate, and rely on replay callbacks
@@ -44,17 +46,19 @@ public class Balloon : MonoBehaviour
             gameObject.SetActive(true);
             StopAllCoroutines();
             StartCoroutine(SetTextCoroutine(text));
+            EventSystem.current.SetSelectedGameObject(buttonAdvance.gameObject);
         }
         MainThreadQueue.Enqueue(SetTextInternal);
     }
 
-    private bool setTextCoroutineRunning = false;
+    private bool isTextRunning;
     private bool forceTextToEnd = false;
 
     private IEnumerator SetTextCoroutine(string text)
     {
-        setTextCoroutineRunning = true;
+        isTextRunning = true;
         forceTextToEnd = false;
+        UpdateButton();
         try
         {
             // produce the mesh with the text contents
@@ -93,7 +97,8 @@ public class Balloon : MonoBehaviour
         }
         finally
         {
-            setTextCoroutineRunning = false;
+            isTextRunning = false;
+            UpdateButton();
         }
     }
 
@@ -120,7 +125,7 @@ public class Balloon : MonoBehaviour
     public void OnAdvanceButtonClick()
     {
         // clicking while the text is running will just cause it to go to the end
-        if (setTextCoroutineRunning)
+        if (isTextRunning)
         {
             forceTextToEnd = true;
         }
@@ -131,9 +136,24 @@ public class Balloon : MonoBehaviour
         }
     }
 
+    private StoryStep storyStep;
+
     public void OnStoryStepChanged(StoryStep step)
     {
+        storyStep = step;
         hideButtonAdvance.SetActive(!step.CanContinue);
         canContinue = step.CanContinue;
+        UpdateButton();
     }
+
+    private void UpdateButton()
+    {
+        buttonAdvance.enabled = isTextRunning || storyStep.CanContinue;
+    }
+
+    //public void OnAdvance() {
+    //    ExecuteEvents.Execute(buttonAdvance.gameObject,
+    //        new BaseEventData(EventSystem.current),
+    //        ExecuteEvents.submitHandler);
+    //}
 }

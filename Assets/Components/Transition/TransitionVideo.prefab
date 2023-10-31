@@ -62,6 +62,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 5799775895285041317}
   targetImageTransform: {fileID: 2032247609410099634}
   slideTime: 0.3
+  debugMode: 0
 --- !u!1 &7437024197555520698
 GameObject:
   m_ObjectHideFlags: 0
