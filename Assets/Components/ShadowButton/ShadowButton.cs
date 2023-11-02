@@ -40,4 +40,32 @@ public class ShadowButton : Button
                 EventSystem.current.SetSelectedGameObject(gameObject));
         }
     }
+
+    #region FindSelectableOn* overrides to skip inactive objects
+
+    public override Selectable FindSelectableOnRight()
+    {
+        Selectable s = base.FindSelectableOnRight();
+        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnRight();
+    }
+
+    public override Selectable FindSelectableOnLeft()
+    {
+        Selectable s = base.FindSelectableOnLeft();
+        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnLeft();
+    }
+
+    public override Selectable FindSelectableOnUp()
+    {
+        Selectable s = base.FindSelectableOnUp();
+        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnUp();
+    }
+
+    public override Selectable FindSelectableOnDown()
+    {
+        Selectable s = base.FindSelectableOnDown();
+        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnDown();
+    }
+
+    #endregion
 }
