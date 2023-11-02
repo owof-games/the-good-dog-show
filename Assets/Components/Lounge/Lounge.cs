@@ -46,10 +46,6 @@ public class Lounge : MonoBehaviour
     private void OnEnable()
     {
         storyStep.Changed.Register(OnStoryStepChanged);
-    }
-
-    private void Start()
-    {
         StartCoroutine(KeepButtonsSelected());
     }
 
@@ -82,10 +78,13 @@ public class Lounge : MonoBehaviour
 
         for (; ; )
         {
+            bool doneSomething = false;
             // select a character-button if none of them is selected
             if (!characterButtons.Contains(current.currentSelectedGameObject))
             {
+                Debug.Log($"updating lounge: selecting {lastSelectedButton.gameObject.name}");
                 current.SetSelectedGameObject(lastSelectedButton);
+                doneSomething = true;
             }
 
             // update the last selected character
@@ -93,6 +92,13 @@ public class Lounge : MonoBehaviour
                 lastSelectedButton != current.currentSelectedGameObject)
             {
                 lastSelectedButton = current.currentSelectedGameObject;
+                Debug.Log($"updating lounge: updating to {lastSelectedButton.gameObject.name}");
+                doneSomething = true;
+            }
+
+            if(!doneSomething)
+            {
+                Debug.Log($"updating lounge: done nothing");
             }
 
             // wait for the next frame
