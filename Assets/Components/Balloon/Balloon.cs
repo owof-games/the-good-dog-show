@@ -140,10 +140,9 @@ public class Balloon : MonoBehaviour
         textInfo.textComponent.UpdateVertexData();
     }
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+    public void Hide() => gameObject.SetActive(false);
+
+    public void SelectButton() => EventSystem.current.SetSelectedGameObject(buttonAdvance.gameObject);
 
     public void OnAdvanceButtonClick()
     {
