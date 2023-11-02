@@ -1,5 +1,7 @@
 -> prima_giornata
 
+
+
 === test_abilities
 
 ~ moveToDialogue(DOGRON)
@@ -14,26 +16,27 @@ DOGRON: buona scelta, avanti!
 
 -> prima_giornata
 
+
+
 === prima_giornata
 
 ~ moveToLounge()
 
-
-    ~ temp num_loop_rimanenti = 3
-    - (loop)
-    ~ num_loop_rimanenti -= 1
-    $
-    * {num_loop_rimanenti >= 0} [$BeBe]
-      -> BeBe_choice
-    * {num_loop_rimanenti >= 0} [$UgoEMimi]
-      -> UgoEMimi_choice
-    * {num_loop_rimanenti >= 0} [$Piiiietro]
-      -> Piiiietro_choice
-    * {num_loop_rimanenti >= 0} [$Quello]
-      -> Quello_choice
-    * {num_loop_rimanenti >= 0} [$ilDivo]
-      -> ilDivo_choice  
-    * -> cucina_giorno_uno
+~ temp num_loop_rimanenti = 3
+- (loop)
+~ num_loop_rimanenti -= 1
+$
+* {num_loop_rimanenti >= 0} [$BeBe]
+  -> BeBe_choice
+* {num_loop_rimanenti >= 0} [$UgoEMimi]
+  -> UgoEMimi_choice
+* {num_loop_rimanenti >= 0} [$Piiiietro]
+  -> Piiiietro_choice
+* {num_loop_rimanenti >= 0} [$Quello]
+  -> Quello_choice
+* {num_loop_rimanenti >= 0} [$ilDivo]
+  -> ilDivo_choice  
+* -> cucina_giorno_uno
 
 
     = UgoEMimi_choice
@@ -62,6 +65,8 @@ DOGRON: buona scelta, avanti!
     ilDivo: ciao
     YOU: ciao
     -> loop
+
+
 
 === cucina_giorno_uno
 

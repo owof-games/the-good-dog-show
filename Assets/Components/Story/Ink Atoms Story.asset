@@ -17,9 +17,17 @@ MonoBehaviour:
   choiceEvent: {fileID: 11400000, guid: dc57eccc9f32c6040bb44052def9fa71, type: 2}
   inkStoryAtomsInitialized: {fileID: 11400000, guid: 632d3a548cdcc414ea628d1e8fa18ce0, type: 2}
   debugCurrentState: 1
-  variableListeners: []
+  variableListeners:
+  - matchKind: 3
+    name: alive_characters
+    regex: 
+    list: []
+    variablePairChangeEvent: {fileID: 0}
+    variableChangeEvent: {fileID: 0}
+    variableValue: {fileID: 0}
+    variableList: {fileID: 11400000, guid: c990438b7d605b44f875a22ea21b27a7, type: 2}
   externalFunctions:
-  - {fileID: 11400000, guid: 61fd0764bf740b144a1133f736177db2, type: 2}
+  - {fileID: 11400000, guid: 37b66554ed2987e4899fc5d64548e171, type: 2}
   - {fileID: 11400000, guid: 66a38a046da85b347b77bc51460da5da, type: 2}
   - {fileID: 11400000, guid: 013f432c627a55240bb013e3587ca368, type: 2}
   commandLineParsers: []

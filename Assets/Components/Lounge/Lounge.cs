@@ -16,6 +16,7 @@ public class Lounge : MonoBehaviour
     [SerializeField] private Transform charactersRoot;
     [SerializeField] private StoryStepVariable storyStep;
     [SerializeField] private ChosenChoiceEvent choiceEvent;
+    [SerializeField] private SerializableInkListItemValueList aliveCharacters;
 
     private List<GameObject> characterButtons;
     private List<LoungeCharacter> loungeCharacters;
@@ -25,6 +26,7 @@ public class Lounge : MonoBehaviour
         Assert.IsNotNull(charactersRoot);
         Assert.IsNotNull(storyStep);
         Assert.IsNotNull(choiceEvent);
+        Assert.IsNotNull(aliveCharacters);
 
         // extract all the buttons
         characterButtons = charactersRoot
@@ -63,7 +65,8 @@ public class Lounge : MonoBehaviour
     {
         foreach(var character in loungeCharacters) {
             bool hasChoice = storyStep.Value.Choices.Any(choice => choice.Text.Trim() == character.ChoiceString);
-            character.gameObject.SetActive(hasChoice);
+            bool isAlive = aliveCharacters.Any(li => li.itemName == character.CharacterName.ToString());
+            character.gameObject.SetActive(hasChoice && isAlive);
         }
     }
 

@@ -3,15 +3,17 @@ using UnityEngine.Assertions;
 
 public class LoungeCharacter : MonoBehaviour
 {
-    [SerializeField] private string choiceString;
+    [SerializeField] private Character character;
     [SerializeField] private Lounge lounge;
 
-    public string ChoiceString => choiceString;
+    public string ChoiceString => "$" + character.CharacterName.ToString();
+
+    public CharacterName CharacterName => character.CharacterName;
 
     private void Awake()
     {
-        Assert.IsFalse(string.IsNullOrWhiteSpace(choiceString));
+        Assert.IsNotNull(character);
     }
 
-    public void OnClick() => lounge.OnChooseCharacter(choiceString);
+    public void OnClick() => lounge.OnChooseCharacter(ChoiceString);
 }
