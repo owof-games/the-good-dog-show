@@ -31,7 +31,7 @@ public class TransitionManager : MonoBehaviour
 
     private void Start()
     {
-        OnMoveToGameArea(currentGameArea.Value);
+        OnMoveToGameArea(currentGameArea.Value, true);
     }
 
     /// <summary>
@@ -56,21 +56,33 @@ public class TransitionManager : MonoBehaviour
     /// Callback method for when it's requested to change the game area.
     /// </summary>
     /// <param name="gameArea">The new game area.</param>
-    public void OnMoveToGameArea(GameArea gameArea)
+    public void OnMoveToGameArea(GameArea gameArea) => OnMoveToGameArea(gameArea, false);
+
+    public void OnMoveToGameArea(GameArea gameArea, bool startup)
     {
-        if (currentGameArea.Value == gameArea)
+        if (startup)
         {
-            TurnOn(gameArea); // just for startup
-            return;
+            var enumerator = TurnOn(gameArea); // just for startup
+            if (enumerator != null)
+            {
+                StartCoroutine(enumerator);
+            }
         }
-        StartCoroutine(PlayTransition(gameArea));
+        else
+        {
+            StartCoroutine(PlayTransition(gameArea));
+        }
     }
 
     private IEnumerator PlayTransition(GameArea gameArea)
     {
         transitioning.Value = true;
         yield return transitionVideo.StartVideoAndWaitForCover();
-        TurnOn(gameArea);
+        var enumerator = TurnOn(gameArea);
+        if (enumerator != null)
+        {
+            yield return enumerator;
+        }
         yield return transitionVideo.WaitForStoppedVideoPlayer();
         currentGameArea.Value = gameArea;
         transitioning.Value = false;
@@ -80,13 +92,19 @@ public class TransitionManager : MonoBehaviour
     /// Turn on the given game area and off all the others.
     /// </summary>
     /// <param name="gameArea">The game area to turn on or off.</param>
-    private void TurnOn(GameArea gameArea)
+    private IEnumerator TurnOn(GameArea gameArea)
     {
+        IEnumerator enumerator = null;
         foreach (var g in areasMapping.Keys)
         {
-            GetGameAreaComponent(g)
-                .gameObject
-                .SetActive(gameArea == g);
+            var active = gameArea == g;
+            GameObject go = GetGameAreaComponent(g).gameObject;
+            go.SetActive(gameArea == g);
+            if (active && go.TryGetComponent<TransitionTarget>(out var transitionTarget))
+            {
+                enumerator = transitionTarget.OnTurnOn();
+            }
         }
+        return enumerator;
     }
 }

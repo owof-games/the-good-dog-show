@@ -25,7 +25,7 @@ public class ShadowButton : Button
         lastShowShadowState = state == SelectionState.Selected;
         if (TryGetComponent<ShadowButtonCompanion>(out var shadowButtonCompanion))
         {
-            Debug.Log($"Setting shadow state of {gameObject.name} to {lastShowShadowState}");
+            //Debug.Log($"Setting shadow state of {gameObject.name} to {lastShowShadowState}");
             shadowButtonCompanion.ShowShadow(lastShowShadowState);
         }
         else
