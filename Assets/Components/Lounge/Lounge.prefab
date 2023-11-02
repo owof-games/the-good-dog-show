@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3509800731996148527}
   - component: {fileID: 3615627205971081220}
+  - component: {fileID: 1336933387968863593}
   m_Layer: 5
   m_Name: Lounge
   m_TagString: Untagged
@@ -168,6 +169,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameArea: 1
+--- !u!114 &1336933387968863593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6246625105121335967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64772f813df478c438d8cba9e4284804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charactersRoot: {fileID: 2545634078781662082}
 --- !u!1 &8400307946909220331
 GameObject:
   m_ObjectHideFlags: 0
