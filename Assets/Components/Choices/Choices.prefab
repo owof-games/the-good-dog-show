@@ -171,6 +171,14 @@ PrefabInstance:
       propertyPath: _eventReference._event
       value: 
       objectReference: {fileID: 11400000, guid: dcb06c195ebcb304aa731225fb736b83, type: 2}
+    - target: {fileID: 6107800065870746240, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107800065870746240, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79103641651d2b640a46038932df0e15, type: 3}
     - target: {fileID: 8490576173388999615, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: m_Type
       value: 0
@@ -312,6 +320,14 @@ PrefabInstance:
       propertyPath: _eventReference._event
       value: 
       objectReference: {fileID: 11400000, guid: a155bc14f77ffb84ab943fdd4051e23a, type: 2}
+    - target: {fileID: 6107800065870746240, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107800065870746240, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 77b5cd7950ec30c4fa98b19acff4db89, type: 3}
     - target: {fileID: 8490576173388999615, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: m_Type
       value: 0
@@ -465,6 +481,14 @@ PrefabInstance:
       propertyPath: _eventReference._event
       value: 
       objectReference: {fileID: 11400000, guid: 1a0d9b4fd6bf23c4485eb9bcfa427732, type: 2}
+    - target: {fileID: 6107800065870746240, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107800065870746240, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e41dfdcf5b48dd2478a49d44b8f60b6f, type: 3}
     - target: {fileID: 8490576173388999615, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: m_Type
       value: 0

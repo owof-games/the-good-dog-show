@@ -10,12 +10,14 @@ using UnityEngine.UI;
 public class ShadowButtonCompanion : MonoBehaviour
 {
     [SerializeField] private Image shadowImage;
+    [SerializeField] private Image foregroundImage;
     [SerializeField] private Image baseImage;
     [SerializeField] private ShadowButton shadowButton;
 
     private void Awake()
     {
         Assert.IsNotNull(shadowImage);
+        Assert.IsNotNull(foregroundImage);
         Assert.IsNotNull(baseImage);
         Assert.IsNotNull(shadowButton);
     }
@@ -23,6 +25,9 @@ public class ShadowButtonCompanion : MonoBehaviour
     private void Start()
     {
         shadowImage.sprite = baseImage.sprite;
+        foregroundImage.sprite = baseImage.sprite;
+        foregroundImage.enabled = true;
+        baseImage.enabled = false;
     }
 
     public void ShowShadow(bool show)
