@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
+/// <summary>
+/// An icon showing an input hint that changes according to the current control scheme.
+/// </summary>
 public class InputHint : MonoBehaviour
 {
     public enum Icon

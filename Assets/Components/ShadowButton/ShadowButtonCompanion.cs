@@ -2,6 +2,11 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
+/// <summary>
+/// Companion component to <see cref="ShadowButton"/>. The functionality is split into two components
+/// because ShadowButton derives from Button and as such also inherits its property drawer, making it
+/// not trivial to add new properties.
+/// </summary>
 public class ShadowButtonCompanion : MonoBehaviour
 {
     [SerializeField] private Image shadowImage;

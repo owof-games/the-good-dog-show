@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// <para>
+/// A button that displays a shadow under it when it's selected or highlighted.
+/// </para>
+/// <para>
+/// See also: <seealso cref="ShadowButtonCompanion"/>.
+/// </para>
+/// </summary>
 public class ShadowButton : Button
 {
     private bool lastShowShadowState;

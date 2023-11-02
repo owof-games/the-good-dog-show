@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.WebSockets;
 
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/// <summary>
+/// Manager object that handles the transitions between different areas.
+/// </summary>
 public class TransitionManager : MonoBehaviour
 {
     [Tooltip("The variable containing the current game area.")]
