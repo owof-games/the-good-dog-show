@@ -16,9 +16,11 @@ DOGRON: buona scelta, avanti!
 
 === prima_giornata
 
+~ moveToLounge()
+
+
     ~ temp num_loop_rimanenti = 3
     - (loop)
-    ~ moveToLounge()
     ~ num_loop_rimanenti -= 1
     $
     * {num_loop_rimanenti >= 0} [$BeBe]
@@ -35,38 +37,35 @@ DOGRON: buona scelta, avanti!
 
 
     = UgoEMimi_choice
-    ~ moveToDialogue(UgoEMimi)
     UgoEMimi: ciao
     YOU: ciao
     -> loop
 
     = BeBe_choice
-    ~ moveToDialogue(BeBe)
     BeBe: ciao
     YOU: ciao
     -> loop
 
     = Piiiietro_choice
-    ~ moveToDialogue(Piiiietro)
     Piiiietro: ciao
     YOU: ciao
     -> loop
 
 
     = Quello_choice
-    ~ moveToDialogue(Quello)
     Quello: ciao
     YOU: ciao
     -> loop
 
 
     = ilDivo_choice
-    ~ moveToDialogue(ilDivo)
     ilDivo: ciao
     YOU: ciao
     -> loop
 
 === cucina_giorno_uno
+
+~ moveToKitchen()
 
 -> DONE
 
@@ -305,21 +304,13 @@ EXTERNAL moveToDialogue(character)
 === function moveToDialogue(character) ===
 [[[move to dialogue with {character}]]]
 
-// EXTERNAL moveToKitchen()
+EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
-~ tmp = 1
-// [[[move to kitchen]]]
+[[[move to kitchen]]]
 
 // EXTERNAL moveToEnd()
 === function moveToEnd() ===
-~ tmp = 1
-// [[[move to kitchen]]]
-
-// EXTERNAL loungeDialogue(char)
-=== function loungeDialogue(char) ===
-~ tmp = 1
-// [[[talk with {char}]]]
-
+[[[move to end]]]
 
 
 
