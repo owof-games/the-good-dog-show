@@ -1,3 +1,7 @@
+using System.Collections;
+
+using DG.Tweening;
+
 using LemuRivolta.InkAtoms;
 
 using UnityAtoms.BaseAtoms;
@@ -6,7 +10,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
 
-public class Dialogue : MonoBehaviour
+public class Dialogue : TransitionTarget
 {
     [SerializeField] private Balloon leftBalloon;
     [SerializeField] private Balloon rightBalloon;
@@ -18,6 +22,18 @@ public class Dialogue : MonoBehaviour
 
     [SerializeField] private StringEvent continueEvent;
 
+    [SerializeField] private RectTransform youRectTransform;
+    [SerializeField] private RectTransform otherRectTransform;
+    [SerializeField] private RectTransform youStart;
+    [SerializeField] private RectTransform otherStart;
+    [SerializeField] private float animationDuration = 0.3f;
+
+    [SerializeField] private Ease easingIn;
+    [SerializeField] private Ease easingOut;
+
+    private Vector2? youInitialPosition;
+    private Vector2? otherInitialPosition;
+
     private void Awake()
     {
         Assert.IsNotNull(leftBalloon);
@@ -27,6 +43,10 @@ public class Dialogue : MonoBehaviour
         Assert.IsNotNull(storyStep);
         Assert.IsNotNull(isWritingText);
         Assert.IsNotNull(continueEvent);
+        Assert.IsNotNull(youRectTransform);
+        Assert.IsNotNull(otherRectTransform);
+        Assert.IsNotNull(youStart);
+        Assert.IsNotNull(otherStart);
     }
 
     private void OnEnable()
@@ -50,6 +70,52 @@ public class Dialogue : MonoBehaviour
     {
         storyStep.Changed.Unregister(OnStoryStepChanged);
         isWritingText.Changed.Unregister(OnIsWritingTextChanged);
+    }
+
+    public override IEnumerator OnTurnOn()
+    {
+        youRectTransform.DOComplete();
+        otherRectTransform.DOComplete();
+
+        if(!youInitialPosition.HasValue)
+        {
+            youInitialPosition = youRectTransform.anchoredPosition;
+            otherInitialPosition = otherRectTransform.anchoredPosition;
+        }
+
+        youRectTransform.anchoredPosition = youStart.anchoredPosition;
+        var tweenYou = youRectTransform.DOAnchorPos(youInitialPosition.Value, animationDuration)
+            .SetEase(easingIn);
+        otherRectTransform.anchoredPosition = otherStart.anchoredPosition;
+        var tweenOther = otherRectTransform.DOAnchorPos(otherInitialPosition.Value, animationDuration)
+            .SetEase(easingIn);
+
+        while (tweenYou.active || tweenOther.active)
+        {
+            yield return null;
+        }
+    }
+
+    public override IEnumerator OnTurnOff()
+    {
+        leftBalloon.Hide();
+        rightBalloon.Hide();
+        choicesRoot.SetActive(false);
+
+        youRectTransform.DOComplete();
+        otherRectTransform.DOComplete();
+
+        youRectTransform.anchoredPosition = youInitialPosition.Value;
+        var tweenYou = youRectTransform.DOAnchorPos(youStart.anchoredPosition, animationDuration)
+            .SetEase(easingOut);
+        otherRectTransform.anchoredPosition = otherInitialPosition.Value;
+        var tweenOther = otherRectTransform.DOAnchorPos(otherStart.anchoredPosition, animationDuration)
+            .SetEase(easingOut);
+
+        while (tweenYou.active || tweenOther.active)
+        {
+            yield return null;
+        }
     }
 
     private void OnIsWritingTextChanged(bool _)

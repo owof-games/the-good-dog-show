@@ -6,5 +6,6 @@ using UnityEngine;
 /// </summary>
 public abstract class TransitionTarget : MonoBehaviour
 {
-    public abstract IEnumerator OnTurnOn();
+    public virtual IEnumerator OnTurnOn() => null;
+    public virtual IEnumerator OnTurnOff() => null;
 }

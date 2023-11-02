@@ -16,11 +16,9 @@ DOGRON: buona scelta, avanti!
 
 === prima_giornata
 
-~ moveToLounge()
-
-
     ~ temp num_loop_rimanenti = 3
     - (loop)
+    ~ moveToLounge()
     ~ num_loop_rimanenti -= 1
     $
     * {num_loop_rimanenti >= 0} [$BeBe]
@@ -37,28 +35,33 @@ DOGRON: buona scelta, avanti!
 
 
     = UgoEMimi_choice
+    ~ moveToDialogue(UgoEMimi)
     UgoEMimi: ciao
     YOU: ciao
     -> loop
 
     = BeBe_choice
+    ~ moveToDialogue(BeBe)
     BeBe: ciao
     YOU: ciao
     -> loop
 
     = Piiiietro_choice
+    ~ moveToDialogue(Piiiietro)
     Piiiietro: ciao
     YOU: ciao
     -> loop
 
 
     = Quello_choice
+    ~ moveToDialogue(Quello)
     Quello: ciao
     YOU: ciao
     -> loop
 
 
     = ilDivo_choice
+    ~ moveToDialogue(ilDivo)
     ilDivo: ciao
     YOU: ciao
     -> loop

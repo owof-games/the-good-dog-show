@@ -77,8 +77,13 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator PlayTransition(GameArea gameArea)
     {
         transitioning.Value = true;
+        var enumerator = TurnOff(gameArea);
+        if (enumerator != null)
+        {
+            yield return enumerator;
+        }
         yield return transitionVideo.StartVideoAndWaitForCover();
-        var enumerator = TurnOn(gameArea);
+        enumerator = TurnOn(gameArea);
         if (enumerator != null)
         {
             yield return enumerator;
@@ -89,22 +94,63 @@ public class TransitionManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Turn on the given game area and off all the others.
+    /// Turn on the given game area.
     /// </summary>
-    /// <param name="gameArea">The game area to turn on or off.</param>
+    /// <param name="gameArea">The game area to turn on.</param>
     private IEnumerator TurnOn(GameArea gameArea)
     {
-        IEnumerator enumerator = null;
+        IEnumerator enumerator;
+
+        // turn on the new area, possibly executing its OnTurnOn
         foreach (var g in areasMapping.Keys)
         {
             var active = gameArea == g;
-            GameObject go = GetGameAreaComponent(g).gameObject;
-            go.SetActive(gameArea == g);
-            if (active && go.TryGetComponent<TransitionTarget>(out var transitionTarget))
+            if (!active)
             {
-                enumerator = transitionTarget.OnTurnOn();
+                continue;
+            }
+            GameObject go = GetGameAreaComponent(g).gameObject;
+            go.SetActive(true);
+            if (go.TryGetComponent<TransitionTarget>(out var transitionTarget) &&
+                (enumerator = transitionTarget.OnTurnOn()) != null)
+            {
+                while (enumerator.MoveNext())
+                {
+                    yield return enumerator.Current;
+                }
             }
         }
-        return enumerator;
+    }
+
+    /// <summary>
+    /// Turn off everything but the current area.
+    /// </summary>
+    /// <param name="gameArea">The game area to keep on.</param>
+    private IEnumerator TurnOff(GameArea gameArea)
+    {
+        IEnumerator enumerator;
+
+        // turn off the area that is on, possibly executing its OnTurnOff
+        foreach (var g in areasMapping.Keys)
+        {
+            if (g == gameArea)
+            {
+                continue;
+            }
+            var go = GetGameAreaComponent(g).gameObject;
+            if (!go.activeSelf)
+            {
+                continue;
+            }
+            if (go.TryGetComponent<TransitionTarget>(out var transitionTarget) &&
+                (enumerator = transitionTarget.OnTurnOff()) != null)
+            {
+                while (enumerator.MoveNext())
+                {
+                    yield return enumerator.Current;
+                }
+            }
+            go.SetActive(false);
+        }
     }
 }
