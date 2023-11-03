@@ -27,15 +27,20 @@ DOGRON: buona scelta, avanti!
 ~ num_loop_rimanenti -= 1
 @moveToLounge
 * {num_loop_rimanenti >= 0 and alive_characters has BeBe} [BeBe]
-  -> BeBe_choice
+  -> BeBe_choice ->
+  -> loop
 * {num_loop_rimanenti >= 0 and alive_characters has UgoEMimi} [UgoEMimi]
-  -> UgoEMimi_choice
+  -> UgoEMimi_choice ->
+  -> loop
 * {num_loop_rimanenti >= 0 and alive_characters has Piiiietro} [Piiiietro]
-  -> Piiiietro_choice
+  -> Piiiietro_choice ->
+  -> loop
 * {num_loop_rimanenti >= 0 and alive_characters has Quello} [Quello]
-  -> Quello_choice
+  -> Quello_choice ->
+  -> loop
 * {num_loop_rimanenti >= 0 and alive_characters has ilDivo} [ilDivo]
-  -> ilDivo_choice
+  -> ilDivo_choice ->
+  -> loop
 * -> cucina_giorno_uno
 
 
@@ -43,39 +48,39 @@ DOGRON: buona scelta, avanti!
     ~ moveToDialogue(UgoEMimi)
     UgoEMimi: ciao
     YOU: ciao
-    -> loop
+    ->->
 
     = BeBe_choice
     ~ moveToDialogue(BeBe)
     BeBe: ciao
     YOU: ciao
-    -> loop
+    ->->
 
     = Piiiietro_choice
     ~ moveToDialogue(Piiiietro)
     Piiiietro: ciao
     YOU: ciao
-    -> loop
+    ->->
 
 
     = Quello_choice
     ~ moveToDialogue(Quello)
     Quello: ciao
     YOU: ciao
-    -> loop
+    ->->
 
 
     = ilDivo_choice
     ~ moveToDialogue(ilDivo)
     ilDivo: ciao
     YOU: ciao
-    -> loop
+    ->->
 
 
 
 === cucina_giorno_uno
 
-~ moveToKitchen()
+~ moveToKitchen(alive_characters)
 
 -> DONE
 
@@ -314,9 +319,9 @@ EXTERNAL moveToDialogue(character)
 === function moveToDialogue(character) ===
 [[[move to dialogue with {character}]]]
 
-EXTERNAL moveToKitchen()
-=== function moveToKitchen() ===
-[[[move to kitchen]]]
+EXTERNAL moveToKitchen(alive_chars)
+=== function moveToKitchen(alive_chars) ===
+[[[move to kitchen with {alive_chars}]]]
 
 // EXTERNAL moveToEnd()
 === function moveToEnd() ===

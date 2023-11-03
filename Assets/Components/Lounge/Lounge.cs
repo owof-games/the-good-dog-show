@@ -27,9 +27,10 @@ public class Lounge : MonoBehaviour
         Assert.IsNotNull(continueEvent);
 
         // extract all the buttons
-        characterButtons = charactersRoot
-            .GetComponentsInChildren<Button>(true)
-            .Select(c => c.gameObject)
+        characterButtons = (
+            from c in charactersRoot.GetComponentsInChildren<Button>(true)
+            where c.interactable
+            select c.gameObject)
             .ToList();
 
         // and get the lounge characters
@@ -67,14 +68,22 @@ public class Lounge : MonoBehaviour
 
         for (; ; )
         {
+            var activeCharacterButtons = characterButtons.Where(cb => cb.activeSelf);
+
+            // update last selected character button if it's no longer active
+            if (!activeCharacterButtons.Contains(lastSelectedButton))
+            {
+                lastSelectedButton = activeCharacterButtons.FirstOrDefault();
+            }
+
             // select a character-button if none of them is selected
-            if (!characterButtons.Contains(current.currentSelectedGameObject))
+            if (!activeCharacterButtons.Contains(current.currentSelectedGameObject))
             {
                 current.SetSelectedGameObject(lastSelectedButton);
             }
 
             // update the last selected character
-            if (characterButtons.Contains(current.currentSelectedGameObject) &&
+            if (activeCharacterButtons.Contains(current.currentSelectedGameObject) &&
                 lastSelectedButton != current.currentSelectedGameObject)
             {
                 lastSelectedButton = current.currentSelectedGameObject;
