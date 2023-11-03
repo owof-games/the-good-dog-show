@@ -23,6 +23,7 @@ DOGRON: buona scelta, avanti!
 
 -> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno)
 
+
     = ugoemimi_choice
     UgoEMimi: ciao
     YOU: ciao
