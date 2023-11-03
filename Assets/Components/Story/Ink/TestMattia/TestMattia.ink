@@ -1,3 +1,4 @@
+INCLUDE VariablesAndFunctions/LoungeLoop.ink
 -> prima_giornata
 
 
@@ -20,58 +21,31 @@ DOGRON: buona scelta, avanti!
 
 === prima_giornata
 
+-> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno)
 
-~ temp num_loop_rimanenti = 3
-
-- (loop)
-~ num_loop_rimanenti -= 1
-@moveToLounge
-* {num_loop_rimanenti >= 0 and alive_characters has BeBe} [BeBe]
-  -> BeBe_choice ->
-  -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has UgoEMimi} [UgoEMimi]
-  -> UgoEMimi_choice ->
-  -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has Piiiietro} [Piiiietro]
-  -> Piiiietro_choice ->
-  -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has Quello} [Quello]
-  -> Quello_choice ->
-  -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has ilDivo} [ilDivo]
-  -> ilDivo_choice ->
-  -> loop
-* -> cucina_giorno_uno
-
-
-    = UgoEMimi_choice
-    ~ moveToDialogue(UgoEMimi)
+    = ugoemimi_choice
     UgoEMimi: ciao
     YOU: ciao
     ->->
 
-    = BeBe_choice
-    ~ moveToDialogue(BeBe)
+    = bebe_choice
     BeBe: ciao
     YOU: ciao
     ->->
 
-    = Piiiietro_choice
-    ~ moveToDialogue(Piiiietro)
+    = piiiietro_choice
     Piiiietro: ciao
     YOU: ciao
     ->->
 
 
-    = Quello_choice
-    ~ moveToDialogue(Quello)
+    = quello_choice
     Quello: ciao
     YOU: ciao
     ->->
 
 
-    = ilDivo_choice
-    ~ moveToDialogue(ilDivo)
+    = ildivo_choice
     ilDivo: ciao
     YOU: ciao
     ->->
@@ -87,7 +61,7 @@ DOGRON: buona scelta, avanti!
 
 
 
-// lista di tutte le RichiamaConcorrenteilità possibili, verrà popolata durante il primo dialogo
+// lista di tutte le abilità possibili, verrà popolata durante il primo dialogo
 LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
@@ -96,7 +70,7 @@ LIST extra_characters = DOGRON
 // lista di tutti gli ingredienti possibili di tutte le giornate
 LIST ingredients = uova, pentola, noce_moscata, farina, saltare, sciogliere, lievitare, sale, cipolla, affettare, tonno_in_scatola, mescolare, burro, montare, zafferano, mantecare, braciola, arrosticino, costina, osso, grigliare, crocchette, versare, riempire, formaggio, fondere, coccole, brandina, cuccia, sgranocchiare, fidarsi, barattoloDelloYogurt, pettorina, trasportino, veterinario, automobile, viaggiare, inconscio, correreneisogni, coccolare, carezzare, pettare, grattare, dormireAssieme, protezione, noGatti, volAuVent, Skyrim, blocchiDiErba, uovaDiPecora, scolare, lacrime, cacaoAmaro, specchiarsi, scottare, iverivideogiochi, canapé, mungere, cardare, ChinottoDiSavona, raccontare, selfie, interviste, avvelenare, collareconetichetta, tonnoalnaturale, cantare, perdonare, evolversi, iomestessomemedesimo, selfcare, sventrare, emancipazione, MichelaMurgia, sacrificio, Peanutbutter, giocattoloPreferito, KateBush, ideaDiSuccesso, cassaPortatile, padre, funghicida, mappa, grande, aiuto, aiutoooooo, colladipesce, filtrare, Mazinga, orecchieUgo
 
-// variRichiamaConcorrenteile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
+// variabile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
 VAR base_ingredients_of_the_day = ()
 VAR dialogue_ingredients_of_the_day = ()
 
