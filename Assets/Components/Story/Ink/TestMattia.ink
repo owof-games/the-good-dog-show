@@ -20,48 +20,53 @@ DOGRON: buona scelta, avanti!
 
 === prima_giornata
 
-~ moveToLounge()
 
 ~ temp num_loop_rimanenti = 3
+
 - (loop)
 ~ num_loop_rimanenti -= 1
-$
-* {num_loop_rimanenti >= 0} [$BeBe]
+@moveToLounge
+* {num_loop_rimanenti >= 0 and alive_characters has BeBe} [BeBe]
   -> BeBe_choice
-* {num_loop_rimanenti >= 0} [$UgoEMimi]
+* {num_loop_rimanenti >= 0 and alive_characters has UgoEMimi} [UgoEMimi]
   -> UgoEMimi_choice
-* {num_loop_rimanenti >= 0} [$Piiiietro]
+* {num_loop_rimanenti >= 0 and alive_characters has Piiiietro} [Piiiietro]
   -> Piiiietro_choice
-* {num_loop_rimanenti >= 0} [$Quello]
+* {num_loop_rimanenti >= 0 and alive_characters has Quello} [Quello]
   -> Quello_choice
-* {num_loop_rimanenti >= 0} [$ilDivo]
-  -> ilDivo_choice  
+* {num_loop_rimanenti >= 0 and alive_characters has ilDivo} [ilDivo]
+  -> ilDivo_choice
 * -> cucina_giorno_uno
 
 
     = UgoEMimi_choice
+    ~ moveToDialogue(UgoEMimi)
     UgoEMimi: ciao
     YOU: ciao
     -> loop
 
     = BeBe_choice
+    ~ moveToDialogue(BeBe)
     BeBe: ciao
     YOU: ciao
     -> loop
 
     = Piiiietro_choice
+    ~ moveToDialogue(Piiiietro)
     Piiiietro: ciao
     YOU: ciao
     -> loop
 
 
     = Quello_choice
+    ~ moveToDialogue(Quello)
     Quello: ciao
     YOU: ciao
     -> loop
 
 
     = ilDivo_choice
+    ~ moveToDialogue(ilDivo)
     ilDivo: ciao
     YOU: ciao
     -> loop

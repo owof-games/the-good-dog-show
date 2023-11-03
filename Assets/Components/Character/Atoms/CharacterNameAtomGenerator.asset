@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FullQualifiedName: CharacterName, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
-  GenerationOptions: 3097777
+  GenerationOptions: 3097841
   Scripts:
   - {fileID: 0}
   - {fileID: 0}

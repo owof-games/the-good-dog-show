@@ -1,10 +1,12 @@
+using UnityAtoms.BaseAtoms;
+
 using UnityEngine;
 using UnityEngine.Assertions;
 
 public class LoungeCharacter : MonoBehaviour
 {
     [SerializeField] private Character character;
-    [SerializeField] private Lounge lounge;
+    [SerializeField] private CharacterNameEvent talkWithCharacter;
 
     public string ChoiceString => "$" + character.CharacterName.ToString();
 
@@ -13,7 +15,8 @@ public class LoungeCharacter : MonoBehaviour
     private void Awake()
     {
         Assert.IsNotNull(character);
+        Assert.IsNotNull(talkWithCharacter);
     }
 
-    public void OnClick() => lounge.OnChooseCharacter(ChoiceString);
+    public void OnClick() => talkWithCharacter.Raise(character.CharacterName);
 }

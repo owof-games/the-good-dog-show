@@ -27,10 +27,10 @@ MonoBehaviour:
     variableValue: {fileID: 0}
     variableList: {fileID: 11400000, guid: c990438b7d605b44f875a22ea21b27a7, type: 2}
   externalFunctions:
-  - {fileID: 11400000, guid: 37b66554ed2987e4899fc5d64548e171, type: 2}
   - {fileID: 11400000, guid: 66a38a046da85b347b77bc51460da5da, type: 2}
   - {fileID: 11400000, guid: 013f432c627a55240bb013e3587ca368, type: 2}
-  commandLineParsers: []
+  commandLineParsers:
+  - {fileID: 11400000, guid: ffe6f9b1cdc89ea4ebc17baaa406a49c, type: 2}
   tagProcessors: []
   syntaxCheckFiles:
   - {fileID: 102900000, guid: b7c6bc094062f4f4eb00b072bc928955, type: 3}

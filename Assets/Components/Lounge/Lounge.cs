@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-using LemuRivolta.InkAtoms;
-
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
@@ -14,9 +12,9 @@ using UnityEngine.UI;
 public class Lounge : MonoBehaviour
 {
     [SerializeField] private Transform charactersRoot;
-    [SerializeField] private StoryStepVariable storyStep;
     [SerializeField] private ChosenChoiceEvent choiceEvent;
-    [SerializeField] private SerializableInkListItemValueList aliveCharacters;
+    [SerializeField] private StringEvent continueEvent;
+    [SerializeField] private CharacterNameValueList charactersInLounge;
 
     private List<GameObject> characterButtons;
     private List<LoungeCharacter> loungeCharacters;
@@ -24,9 +22,9 @@ public class Lounge : MonoBehaviour
     private void Awake()
     {
         Assert.IsNotNull(charactersRoot);
-        Assert.IsNotNull(storyStep);
         Assert.IsNotNull(choiceEvent);
-        Assert.IsNotNull(aliveCharacters);
+        Assert.IsNotNull(charactersInLounge);
+        Assert.IsNotNull(continueEvent);
 
         // extract all the buttons
         characterButtons = charactersRoot
@@ -47,26 +45,14 @@ public class Lounge : MonoBehaviour
 
     private void OnEnable()
     {
-        storyStep.Changed.Register(OnStoryStepChanged);
         StartCoroutine(KeepButtonsSelected());
     }
 
-    private void OnDisable()
+    public void UpdateActiveCharacters()
     {
-        storyStep.Changed.Unregister(OnStoryStepChanged);
-    }
-
-    private void OnStoryStepChanged(StoryStep step)
-    {
-        UpdateActiveCharacters();
-    }
-
-    private void UpdateActiveCharacters()
-    {
-        foreach(var character in loungeCharacters) {
-            bool hasChoice = storyStep.Value.Choices.Any(choice => choice.Text.Trim() == character.ChoiceString);
-            bool isAlive = aliveCharacters.Any(li => li.itemName == character.CharacterName.ToString());
-            character.gameObject.SetActive(hasChoice && isAlive);
+        foreach (var character in loungeCharacters)
+        {
+            character.gameObject.SetActive(charactersInLounge.Contains(character.CharacterName));
         }
     }
 
@@ -81,13 +67,10 @@ public class Lounge : MonoBehaviour
 
         for (; ; )
         {
-            bool doneSomething = false;
             // select a character-button if none of them is selected
             if (!characterButtons.Contains(current.currentSelectedGameObject))
             {
-                Debug.Log($"updating lounge: selecting {lastSelectedButton.gameObject.name}");
                 current.SetSelectedGameObject(lastSelectedButton);
-                doneSomething = true;
             }
 
             // update the last selected character
@@ -95,30 +78,10 @@ public class Lounge : MonoBehaviour
                 lastSelectedButton != current.currentSelectedGameObject)
             {
                 lastSelectedButton = current.currentSelectedGameObject;
-                Debug.Log($"updating lounge: updating to {lastSelectedButton.gameObject.name}");
-                doneSomething = true;
-            }
-
-            if(!doneSomething)
-            {
-                Debug.Log($"updating lounge: done nothing");
             }
 
             // wait for the next frame
             yield return null;
         }
-    }
-
-    public void OnChooseCharacter(string choiceName)
-    {
-        var choiceIndex = storyStep.Value
-            .Choices
-            .First(choice => choice.Text.Trim() == choiceName)
-            .Index;
-        choiceEvent.Raise(new()
-        {
-            ChoiceIndex = choiceIndex,
-            FlowName = null
-        });
     }
 }

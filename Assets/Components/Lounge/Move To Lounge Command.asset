@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4bfa1ba1a145448a73de128b38813f, type: 3}
-  m_Name: Move To Lounge External Function
+  m_Script: {fileID: 11500000, guid: 8896ef94935f21744b4c0620ef2d9165, type: 3}
+  m_Name: Move To Lounge Command
   m_EditorClassIdentifier: 
-  gameArea: 1
-  functionName: moveToLounge
   moveToGameAreaEvent: {fileID: 11400000, guid: 1381fee5817cc7246a8aab73773c28fb, type: 2}
   currentGameArea: {fileID: 11400000, guid: 782ed2f367a33534381d6474369659c5, type: 2}
+  talkWithCharacterEvent: {fileID: 11400000, guid: 6d6791551a883ad4287e6e4d637900e4, type: 2}
+  charactersInLounge: {fileID: 11400000, guid: 1510ad7d53542bb4eab16b0d2ae0f5e6, type: 2}
