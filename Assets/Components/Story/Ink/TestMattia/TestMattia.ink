@@ -1,5 +1,8 @@
 INCLUDE VariablesAndFunctions/LoungeLoop.ink
--> prima_giornata
+
+
+
+-> cucina_giorno_uno
 
 
 
@@ -55,7 +58,7 @@ DOGRON: buona scelta, avanti!
 
 === cucina_giorno_uno
 
-~ moveToKitchen(alive_characters)
+~ moveToKitchen()
 
 -> DONE
 
@@ -65,7 +68,7 @@ DOGRON: buona scelta, avanti!
 // lista di tutte le abilità possibili, verrà popolata durante il primo dialogo
 LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
-LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
+LIST alive_characters = UgoEMimi, BeBe, (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
 
 // lista di tutti gli ingredienti possibili di tutte le giornate
@@ -294,9 +297,9 @@ EXTERNAL moveToDialogue(character)
 === function moveToDialogue(character) ===
 [[[move to dialogue with {character}]]]
 
-EXTERNAL moveToKitchen(alive_chars)
-=== function moveToKitchen(alive_chars) ===
-[[[move to kitchen with {alive_chars}]]]
+EXTERNAL moveToKitchen()
+=== function moveToKitchen() ===
+[[[move to kitchen with {alive_characters}]]]
 
 // EXTERNAL moveToEnd()
 === function moveToEnd() ===
