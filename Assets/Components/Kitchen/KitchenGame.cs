@@ -4,31 +4,62 @@ using System.Linq;
 
 using UnityEngine;
 using UnityEngine.Assertions;
-using LemuRivolta.InkAtoms;
+using System;
+using System.Collections;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class KitchenGame : MonoBehaviour
 {
-    [SerializeField] private InkAtomsStoryReference inkAtomsStory;
+    [SerializeField] private GameObject ingredientButtonPrefab;
+    [SerializeField] private VerticalLayoutGroup verticalLayoutGroup;
 
     private void Awake()
     {
-        Assert.IsNotNull(inkAtomsStory);
+        Assert.IsNotNull(ingredientButtonPrefab);
+        Assert.IsNotNull(verticalLayoutGroup);
     }
 
-    public void PlayKitchenGame(string ingredients)
+    [SerializeField] private float outOfRecipeBookHeight = 400;
+
+    private Tweener ingredientsAnimation;
+
+    public void PlayKitchenGame(string ingredientKeys)
     {
-        var ingredientInfoName = inkAtomsStory.Value.GetInkListFromListDefinitions("IngredientInfo");
-        ingredientInfoName.AddItem("Name");
+        ingredientsAnimation?.Kill();
 
-        var ingredientsList = ingredients.Split(',');
+        ImmediatelyDestroyIngredientButtons();
 
-        var ingredientNames = ingredientsList.Select(ingredient =>
+        foreach (var ingredientKey in ingredientKeys.Split(','))
         {
-            InkList inkIngredient = inkAtomsStory.Value.GetInkListFromListDefinitions("Ingredients");
-            inkIngredient.AddItem(ingredient);
-            var ingredientName = inkAtomsStory.Value.Call("getIngredientData", out var _,
-                inkIngredient, ingredientInfoName);
-            return (string)ingredientName;
-        }).ToList();
+            var button = Instantiate(ingredientButtonPrefab, verticalLayoutGroup.transform);
+            button.GetComponent<IngredientButton>().SetupIngredient(ingredientKey);
+        }
+
+        // force layout to recompute
+        Canvas.ForceUpdateCanvases();
+
+        // run the ingredients button animation
+        ingredientsAnimation = verticalLayoutGroup.GetComponent<RectTransform>().DOAnchorPos(
+            new(0, outOfRecipeBookHeight + verticalLayoutGroup.preferredHeight),
+            100)
+            .SetEase(Ease.Linear)
+            .SetSpeedBased()
+            .SetLoops(-1);
+    }
+
+    private void ImmediatelyDestroyIngredientButtons()
+    {
+        GameObject[] allChildren = new GameObject[verticalLayoutGroup.transform.childCount];
+        var i = 0;
+        foreach (Transform child in verticalLayoutGroup.transform)
+        {
+            allChildren[i] = child.gameObject;
+            i += 1;
+        }
+        foreach (GameObject child in allChildren)
+        {
+            DestroyImmediate(child);
+        }
     }
 }

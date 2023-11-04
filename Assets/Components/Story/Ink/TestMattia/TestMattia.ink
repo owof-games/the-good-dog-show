@@ -104,7 +104,7 @@ VAR chosen_ingredient = InvalidIngredient
         ~ displayed_choose_ingredient = true
         ~ show_only_correct_ingredients = true
     - not displayed_explanation:
-        Scegli ingredienti e azioni sulla base di quello che ti è stato raccontato... fai in fretta!
+        Scegli ingredienti e azioni sulla base di quello che ti è stato raccontato... e fai in fretta!
         ~ displayed_explanation = true
     - else:
         ~ hideKitchenText()

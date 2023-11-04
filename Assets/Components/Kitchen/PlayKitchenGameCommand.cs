@@ -34,5 +34,6 @@ public class PlayKitchenGameCommand : CommandLineParser
         string chosenIngredient = null;
         yield return ingredientChosenEvent.Await(onEvent: i => chosenIngredient = i);
         Assert.IsNotNull(chosenIngredient);
+        Debug.Log($"chosen ingredient key {chosenIngredient}");
     }
 }
