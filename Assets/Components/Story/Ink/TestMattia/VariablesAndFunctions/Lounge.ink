@@ -5,28 +5,35 @@
 - (loop)
 
 ~ num_loop_rimanenti -= 1
+~ temp youHaveTimeToTalk = num_loop_rimanenti >= 0
 
 @moveToLounge
-* {num_loop_rimanenti >= 0 and alive_characters has BeBe} [BeBe]
+* {youHaveTimeToTalk and isAlive(BeBe)} [BeBe]
     ~ moveToDialogue(BeBe)
     -> bebe_tunnel ->
     -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has UgoEMimi} [UgoEMimi]
+* {youHaveTimeToTalk and isAlive(UgoEMimi)} [UgoEMimi]
     ~ moveToDialogue(UgoEMimi)
     -> ugoemimi_tunnel ->
     -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has Piiiietro} [Piiiietro]
+* {youHaveTimeToTalk and isAlive(Piiiietro)} [Piiiietro]
     ~ moveToDialogue(Piiiietro)
     -> piiiietro_tunnel ->
     -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has Quello} [Quello]
+* {youHaveTimeToTalk and isAlive(Quello)} [Quello]
     ~ moveToDialogue(Quello)
     -> quello_tunnel ->
     -> loop
-* {num_loop_rimanenti >= 0 and alive_characters has ilDivo} [ilDivo]
+* {youHaveTimeToTalk and isAlive(ilDivo)} [ilDivo]
     ~ moveToDialogue(ilDivo)
     -> ildivo_tunnel ->
     -> loop
 * -> kitchen_divert
 
 
+=== function isAlive(character)
+~ return alive_characters has character
+
+EXTERNAL moveToLounge()
+=== function moveToLounge() ===
+[[[move to lounge]]]

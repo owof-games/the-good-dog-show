@@ -1,7 +1,15 @@
-INCLUDE VariablesAndFunctions/LoungeLoop.ink
+INCLUDE VariablesAndFunctions/Lounge.ink
+INCLUDE VariablesAndFunctions/BuiltIn.ink
+INCLUDE VariablesAndFunctions/IngredientsDatabase.ink
+INCLUDE VariablesAndFunctions/Exception.ink
 
 
 
+
+
+
+~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
+~ chosen_ingredient = Cipolla
 -> cucina_giorno_uno
 
 
@@ -55,13 +63,100 @@ DOGRON: buona scelta, avanti!
     ->->
 
 
+VAR chosen_ingredient = InvalidIngredient
+
 
 === cucina_giorno_uno
 
+// TODO: params
+~ temp num_ingredients = 3
+~ temp base_ingredients_of_the_day = (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale)
+
+// move to the kitchen scene
 ~ moveToKitchen()
 
--> DONE
+// set the statistics of the ingredients to zero
+~ temp strangeness = 0
+~ temp num_right_ingredients = 0
 
+// loop counter (from 0 to num_ingredients)
+~ temp num_loop = 0
+
+// flags that track whether we displayed or not certain phrases
+~ temp displayed_choose_ingredient = false
+~ temp displayed_explanation = false
+
+- (loop)
+
+// check whether we should break the loop and go to the ending
+~ num_loop += 1
+{ num_loop > num_ingredients:
+    ~ dialogue_ingredients_of_the_day = ()
+    -> finale_giorno_uno(strangeness, num_right_ingredients)
+}
+
+// variable to track whether to only show correct ingredients in the list
+~ temp show_only_correct_ingredients = false
+
+{
+    - not displayed_choose_ingredient and abilities has SceltaIngrediente:
+        Hai fortuna, puoi scegliere un ingrediente giusto prima di iniziare!
+        ~ displayed_choose_ingredient = true
+        ~ show_only_correct_ingredients = true
+    - not displayed_explanation:
+        Scegli ingredienti e azioni sulla base di quello che ti è stato raccontato... fai in fretta!
+        ~ displayed_explanation = true
+    - else:
+        ~ hideKitchenText()
+}
+
+// choose which ingredients to show
+~ temp all_ingredients = dialogue_ingredients_of_the_day
+{ not show_only_correct_ingredients:
+    ~ all_ingredients += base_ingredients_of_the_day
+}
+
+// play a minigame round
+@playKitchenGame ingredients:{get_list_with_commas(all_ingredients)}
+
+{ not in_unity:
+    -> debugChooseIngredient(all_ingredients) ->
+}
+
+// add the strangeness of the chosen ingredient
+{ getIngredientData(chosen_ingredient, Strangeness):
+- 1:
+  ~ strangeness += 1
+- 2:
+  ~ strangeness += 2
+- 3:
+  ~ strangeness += 3
+- 4:
+  ~ strangeness += 4
+}
+
+// count the number of right ingredients
+{ dialogue_ingredients_of_the_day has chosen_ingredient:
+    ~ num_right_ingredients += 1
+    ~ ingredientFeedback(true)
+- else:
+    ~ ingredientFeedback(false)
+}
+
+// remove the chosen ingredient from all the lists so that it can't be chosen again
+~ base_ingredients_of_the_day -= chosen_ingredient
+~ dialogue_ingredients_of_the_day -= chosen_ingredient
+
+// loop back for another minigame round
+-> loop
+
+
+
+=== finale_giorno_uno(strangeness, num_right_ingredients)
+
+Finale del giorno uno, la strangeness è {strangeness}, e il numero di ingredienti giusti sono {num_right_ingredients}.
+
+-> DONE
 
 
 
@@ -71,11 +166,7 @@ LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliE
 LIST alive_characters = UgoEMimi, BeBe, (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
 
-// lista di tutti gli ingredienti possibili di tutte le giornate
-LIST ingredients = uova, pentola, noce_moscata, farina, saltare, sciogliere, lievitare, sale, cipolla, affettare, tonno_in_scatola, mescolare, burro, montare, zafferano, mantecare, braciola, arrosticino, costina, osso, grigliare, crocchette, versare, riempire, formaggio, fondere, coccole, brandina, cuccia, sgranocchiare, fidarsi, barattoloDelloYogurt, pettorina, trasportino, veterinario, automobile, viaggiare, inconscio, correreneisogni, coccolare, carezzare, pettare, grattare, dormireAssieme, protezione, noGatti, volAuVent, Skyrim, blocchiDiErba, uovaDiPecora, scolare, lacrime, cacaoAmaro, specchiarsi, scottare, iverivideogiochi, canapé, mungere, cardare, ChinottoDiSavona, raccontare, selfie, interviste, avvelenare, collareconetichetta, tonnoalnaturale, cantare, perdonare, evolversi, iomestessomemedesimo, selfcare, sventrare, emancipazione, MichelaMurgia, sacrificio, Peanutbutter, giocattoloPreferito, KateBush, ideaDiSuccesso, cassaPortatile, padre, funghicida, mappa, grande, aiuto, aiutoooooo, colladipesce, filtrare, Mazinga, orecchieUgo
-
 // variabile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
-VAR base_ingredients_of_the_day = ()
 VAR dialogue_ingredients_of_the_day = ()
 
 // viene impostata da unity alla fine della ricetta e ti dice se ce l'hai fatta o meno
@@ -85,195 +176,6 @@ VAR Eliminatrice = false
 VAR Resuscitatrice = false
 VAR ScampataLaMorte = false
 
-
-=== function translate_ingredient(ingredient) ===
-    { ingredient:
-    - uova: uova
-    - pentola: pentola
-    - noce_moscata: noce moscata
-    - farina: farina
-    - saltare: saltare
-    - sciogliere: sciogliere
-    - lievitare: lievitare
-    - sale: sale
-    - cipolla: cipolla
-    - affettare: affettare
-    - tonno_in_scatola: tonno in scatola
-    - mescolare: mescolare
-    - burro: burro
-    - montare: montare
-    - zafferano: zafferano
-    - mantecare: mantecare
-    - braciola: braciola
-    - arrosticino: arrosticino
-    - costina: costina
-    - osso: osso
-    - grigliare: grigliare
-    - crocchette: crocchette
-    - versare: versare
-    - riempire: riempire
-    - formaggio: formaggio
-    - fondere: fondere
-    - coccole: coccole
-    - brandina: brandina
-    - cuccia: cuccia
-    - sgranocchiare: sgranocchiare
-    - fidarsi: fidarsi
-    - barattoloDelloYogurt: il barattolo dello Yogurt
-    - pettorina: pettorina
-    - trasportino: trasportino
-    - veterinario: veterinario
-    - automobile: automobile
-    - viaggiare: viaggiare
-    - inconscio: inconscio
-    - correreneisogni: correre nei sogni
-    - coccolare: coccolare
-    - carezzare: carezzare
-    - pettare: pettare
-    - grattare: grattare
-    - dormireAssieme: dormire assieme
-    - protezione: protezione
-    - noGatti: niente gatti!
-    - volAuVent: vol-au-vent
-    - Skyrim: Skyrim
-    - blocchiDiErba: blocchi di erba
-    - uovaDiPecora: uova di pecora
-    - scolare: scolare
-    - lacrime: lacrime
-    - cacaoAmaro: cacao amaro
-    - specchiarsi: specchiarsi
-    - scottare: scottare
-    - iverivideogiochi: i VERI videogiochi
-    - canapé: canapé
-    - mungere: mungere
-    - cardare: cardare
-    - ChinottoDiSavona: Chinotto di Savona
-    - raccontare: raccontare
-    - selfie: selfie
-    - interviste: interviste
-    - avvelenare: avvelenare
-    - collareconetichetta: collare con un'etichetta col nome Dogron
-    - tonnoalnaturale: tonno in scatola al naturale
-    - cantare: cantare
-    - perdonare: perdonare
-    - evolversi: evolversi
-    - iomestessomemedesimo: iomestessomemedesimo
-    - selfcare: hashtagselfcare
-    - sventrare: sventrare
-    - emancipazione: emancipazione
-    - MichelaMurgia: Michela Murgia
-    - sacrificio: sacrificio
-    - Peanutbutter: mr.Peanutbutter
-    - giocattoloPreferito: la pallina preferita di DOGRON
-    - KateBush: Kate Bush
-    - ideaDiSuccesso: l'idea del successo
-    - cassaPortatile: una cassa portatile
-    - padre: padre
-    - funghicida: funghicida
-    - mappa: mappa
-    - grande: Io sono ancora grande, è la ristorazione che è diventata piccola.
-    - aiuto: aiuto
-    - aiutoooooo: AIUTOOOOOOOOOOOOOOOOOOOO
-    - colladipesce: colla di pesce
-    - filtrare: filtrare
-    - Mazinga: Mazinga
-    - orecchieUgo: orecchie di Ugo
-
-    }
-
-=== function value_ingredient(ingredient) ===
-    { ingredient:
-    - uova: 1
-    - pentola: 2
-    - noce_moscata: 1
-    - farina: 1
-    - saltare: 1
-    - sciogliere: 2
-    - lievitare: 2
-    - sale: 1
-    - cipolla: 1
-    - affettare: 3
-    - tonno_in_scatola: 1
-    - mescolare: 1
-    - burro: 1
-    - montare: 3
-    - zafferano: 3
-    - mantecare: 3
-    - braciola: 2
-    - arrosticino: 3
-    - costina: 3
-    - osso: 2
-    - grigliare: 2
-    - crocchette: 1
-    - versare: 2
-    - riempire: 3
-    - formaggio: 2
-    - fondere: 2
-    - coccole: 3
-    - brandina: 3
-    - cuccia: 3
-    - sgranocchiare: 2
-    - fidarsi: 3
-    - barattoloDelloYogurt: 2
-    - pettorina: 3
-    - trasportino: 3
-    - veterinario: 3
-    - automobile: 3
-    - viaggiare: 2
-    - inconscio: 3
-    - correreneisogni: 2
-    - coccolare: 3
-    - carezzare: 2
-    - pettare: 3
-    - grattare: 4
-    - dormireAssieme: 4
-    - protezione: 2
-    - noGatti: 4
-    - volAuVent: 2
-    - Skyrim: 2
-    - blocchiDiErba: 2
-    - uovaDiPecora: 3
-    - scolare: 2
-    - lacrime: 3
-    - cacaoAmaro: 2
-    - specchiarsi: 3
-    - scottare: 2
-    - iverivideogiochi: 3
-    - canapé: 2
-    - mungere: 2
-    - cardare: 3
-    - ChinottoDiSavona: 2
-    - raccontare: 3
-    - selfie: 3
-    - interviste: 3
-    - avvelenare: 3
-    - collareconetichetta: 3
-    - tonnoalnaturale: 3
-    - cantare: 3
-    - perdonare: 3
-    - evolversi: 3
-    - iomestessomemedesimo: 3
-    - selfcare: 3
-    - sventrare: 3
-    - emancipazione: 4
-    - MichelaMurgia: 4
-    - sacrificio: 3
-    - Peanutbutter: 4
-    - giocattoloPreferito: 4
-    - KateBush: 3
-    - ideaDiSuccesso: 4
-    - cassaPortatile: 4
-    - padre: 3
-    - funghicida: 4
-    - mappa: 4
-    - grande: 2
-    - aiuto: 3
-    - aiutoooooo: 4
-    - colladipesce: 1
-    - filtrare: 1
-    - Mazinga: 2
-    - orecchieUgo: 3
-    }
 
 
 
@@ -289,10 +191,6 @@ VAR ScampataLaMorte = false
     
 VAR tmp = 0
 
-EXTERNAL moveToLounge()
-=== function moveToLounge() ===
-[[[move to lounge]]]
-
 EXTERNAL moveToDialogue(character)
 === function moveToDialogue(character) ===
 [[[move to dialogue with {character}]]]
@@ -301,12 +199,201 @@ EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 [[[move to kitchen with {alive_characters}]]]
 
+EXTERNAL hideKitchenText()
+=== function hideKitchenText() ===
+[[[hide the kitchen text]]]
+
+EXTERNAL ingredientFeedback(isRight)
+=== function ingredientFeedback(isRight) ===
+[[[the chosen ingredient is right? {isRight}]]]
+
+=== debugChooseIngredient(ingredients)
+DEBUG - scegli l'ingrediente:
++ {ingredients has Uova} Uova
+  ~ chosen_ingredient = Uova
++ {ingredients has Pentola} Pentola
+  ~ chosen_ingredient = Pentola
++ {ingredients has NoceMoscata} NoceMoscata
+  ~ chosen_ingredient = NoceMoscata
++ {ingredients has Farina} Farina
+  ~ chosen_ingredient = Farina
++ {ingredients has Saltare} Saltare
+  ~ chosen_ingredient = Saltare
++ {ingredients has Sciogliere} Sciogliere
+  ~ chosen_ingredient = Sciogliere
++ {ingredients has Lievitare} Lievitare
+  ~ chosen_ingredient = Lievitare
++ {ingredients has Sale} Sale
+  ~ chosen_ingredient = Sale
++ {ingredients has Cipolla} Cipolla
+  ~ chosen_ingredient = Cipolla
++ {ingredients has Affettare} Affettare
+  ~ chosen_ingredient = Affettare
++ {ingredients has TonnoInScatola} TonnoInScatola
+  ~ chosen_ingredient = TonnoInScatola
++ {ingredients has Mescolare} Mescolare
+  ~ chosen_ingredient = Mescolare
++ {ingredients has Burro} Burro
+  ~ chosen_ingredient = Burro
++ {ingredients has Montare} Montare
+  ~ chosen_ingredient = Montare
++ {ingredients has Zafferano} Zafferano
+  ~ chosen_ingredient = Zafferano
++ {ingredients has Mantecare} Mantecare
+  ~ chosen_ingredient = Mantecare
++ {ingredients has Braciola} Braciola
+  ~ chosen_ingredient = Braciola
++ {ingredients has Arrosticino} Arrosticino
+  ~ chosen_ingredient = Arrosticino
++ {ingredients has Costina} Costina
+  ~ chosen_ingredient = Costina
++ {ingredients has Osso} Osso
+  ~ chosen_ingredient = Osso
++ {ingredients has Grigliare} Grigliare
+  ~ chosen_ingredient = Grigliare
++ {ingredients has Crocchette} Crocchette
+  ~ chosen_ingredient = Crocchette
++ {ingredients has Versare} Versare
+  ~ chosen_ingredient = Versare
++ {ingredients has Riempire} Riempire
+  ~ chosen_ingredient = Riempire
++ {ingredients has Formaggio} Formaggio
+  ~ chosen_ingredient = Formaggio
++ {ingredients has Fondere} Fondere
+  ~ chosen_ingredient = Fondere
++ {ingredients has Coccole} Coccole
+  ~ chosen_ingredient = Coccole
++ {ingredients has Brandina} Brandina
+  ~ chosen_ingredient = Brandina
++ {ingredients has Cuccia} Cuccia
+  ~ chosen_ingredient = Cuccia
++ {ingredients has Sgranocchiare} Sgranocchiare
+  ~ chosen_ingredient = Sgranocchiare
++ {ingredients has Fidarsi} Fidarsi
+  ~ chosen_ingredient = Fidarsi
++ {ingredients has BarattoloDelloYogurt} BarattoloDelloYogurt
+  ~ chosen_ingredient = BarattoloDelloYogurt
++ {ingredients has Pettorina} Pettorina
+  ~ chosen_ingredient = Pettorina
++ {ingredients has Trasportino} Trasportino
+  ~ chosen_ingredient = Trasportino
++ {ingredients has Veterinario} Veterinario
+  ~ chosen_ingredient = Veterinario
++ {ingredients has Automobile} Automobile
+  ~ chosen_ingredient = Automobile
++ {ingredients has Viaggiare} Viaggiare
+  ~ chosen_ingredient = Viaggiare
++ {ingredients has Inconscio} Inconscio
+  ~ chosen_ingredient = Inconscio
++ {ingredients has CorrereNeiSogni} CorrereNeiSogni
+  ~ chosen_ingredient = CorrereNeiSogni
++ {ingredients has Coccolare} Coccolare
+  ~ chosen_ingredient = Coccolare
++ {ingredients has Carezzare} Carezzare
+  ~ chosen_ingredient = Carezzare
++ {ingredients has Pettare} Pettare
+  ~ chosen_ingredient = Pettare
++ {ingredients has Grattare} Grattare
+  ~ chosen_ingredient = Grattare
++ {ingredients has DormireAssieme} DormireAssieme
+  ~ chosen_ingredient = DormireAssieme
++ {ingredients has Protezione} Protezione
+  ~ chosen_ingredient = Protezione
++ {ingredients has NoGatti} NoGatti
+  ~ chosen_ingredient = NoGatti
++ {ingredients has VolAuVent} VolAuVent
+  ~ chosen_ingredient = VolAuVent
++ {ingredients has Skyrim} Skyrim
+  ~ chosen_ingredient = Skyrim
++ {ingredients has BlocchiDiErba} BlocchiDiErba
+  ~ chosen_ingredient = BlocchiDiErba
++ {ingredients has UovaDiPecora} UovaDiPecora
+  ~ chosen_ingredient = UovaDiPecora
++ {ingredients has Scolare} Scolare
+  ~ chosen_ingredient = Scolare
++ {ingredients has Lacrime} Lacrime
+  ~ chosen_ingredient = Lacrime
++ {ingredients has CacaoAmaro} CacaoAmaro
+  ~ chosen_ingredient = CacaoAmaro
++ {ingredients has Specchiarsi} Specchiarsi
+  ~ chosen_ingredient = Specchiarsi
++ {ingredients has Scottare} Scottare
+  ~ chosen_ingredient = Scottare
++ {ingredients has IVeriVideogiochi} IVeriVideogiochi
+  ~ chosen_ingredient = IVeriVideogiochi
++ {ingredients has Canapé} Canapé
+  ~ chosen_ingredient = Canapé
++ {ingredients has Mungere} Mungere
+  ~ chosen_ingredient = Mungere
++ {ingredients has Cardare} Cardare
+  ~ chosen_ingredient = Cardare
++ {ingredients has ChinottoDiSavona} ChinottoDiSavona
+  ~ chosen_ingredient = ChinottoDiSavona
++ {ingredients has Raccontare} Raccontare
+  ~ chosen_ingredient = Raccontare
++ {ingredients has Selfie} Selfie
+  ~ chosen_ingredient = Selfie
++ {ingredients has Interviste} Interviste
+  ~ chosen_ingredient = Interviste
++ {ingredients has Avvelenare} Avvelenare
+  ~ chosen_ingredient = Avvelenare
++ {ingredients has CollareConEtichetta} CollareConEtichetta
+  ~ chosen_ingredient = CollareConEtichetta
++ {ingredients has TonnoAlNaturale} TonnoAlNaturale
+  ~ chosen_ingredient = TonnoAlNaturale
++ {ingredients has Cantare} Cantare
+  ~ chosen_ingredient = Cantare
++ {ingredients has Perdonare} Perdonare
+  ~ chosen_ingredient = Perdonare
++ {ingredients has Evolversi} Evolversi
+  ~ chosen_ingredient = Evolversi
++ {ingredients has IoMeStessoMedesimo} IoMeStessoMedesimo
+  ~ chosen_ingredient = IoMeStessoMedesimo
++ {ingredients has SelfCare} SelfCare
+  ~ chosen_ingredient = SelfCare
++ {ingredients has Sventrare} Sventrare
+  ~ chosen_ingredient = Sventrare
++ {ingredients has Emancipazione} Emancipazione
+  ~ chosen_ingredient = Emancipazione
++ {ingredients has MichelaMurgia} MichelaMurgia
+  ~ chosen_ingredient = MichelaMurgia
++ {ingredients has Sacrificio} Sacrificio
+  ~ chosen_ingredient = Sacrificio
++ {ingredients has PeanutButter} PeanutButter
+  ~ chosen_ingredient = PeanutButter
++ {ingredients has GiocattoloPreferito} GiocattoloPreferito
+  ~ chosen_ingredient = GiocattoloPreferito
++ {ingredients has KateBush} KateBush
+  ~ chosen_ingredient = KateBush
++ {ingredients has IdeaDiSuccesso} IdeaDiSuccesso
+  ~ chosen_ingredient = IdeaDiSuccesso
++ {ingredients has CassaPortatile} CassaPortatile
+  ~ chosen_ingredient = CassaPortatile
++ {ingredients has Padre} Padre
+  ~ chosen_ingredient = Padre
++ {ingredients has Funghicida} Funghicida
+  ~ chosen_ingredient = Funghicida
++ {ingredients has Mappa} Mappa
+  ~ chosen_ingredient = Mappa
++ {ingredients has Grande} Grande
+  ~ chosen_ingredient = Grande
++ {ingredients has Aiuto} Aiuto
+  ~ chosen_ingredient = Aiuto
++ {ingredients has Aiutoooooo} Aiutoooooo
+  ~ chosen_ingredient = Aiutoooooo
++ {ingredients has CollaDiPesce} CollaDiPesce
+  ~ chosen_ingredient = CollaDiPesce
++ {ingredients has Filtrare} Filtrare
+  ~ chosen_ingredient = Filtrare
++ {ingredients has Mazinga} Mazinga
+  ~ chosen_ingredient = Mazinga
++ {ingredients has OrecchieUgo} OrecchieUgo
+  ~ chosen_ingredient = OrecchieUgo
+-
+->->
+
+VAR in_unity = false
+
 // EXTERNAL moveToEnd()
 === function moveToEnd() ===
 [[[move to end]]]
-
-
-
-
-
-VAR num_ingredients = 0

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f4bfa1ba1a145448a73de128b38813f, type: 3}
-  m_Name: Move To Kitchen External Function
+  m_Name: Move To Kitchen Function
   m_EditorClassIdentifier: 
   gameArea: 3
   functionName: moveToKitchen

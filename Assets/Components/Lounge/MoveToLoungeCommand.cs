@@ -34,7 +34,7 @@ public class MoveToLoungeCommand : CommandLineParser
     {
         if (choices.Length == 0)
         {
-            // the fallback choice has been activated, do nothing
+            // the fallback choice has been activated, just continue
             yield break;
         }
         // move to the lounge

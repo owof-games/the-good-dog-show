@@ -54,6 +54,7 @@ public class Menu : MonoBehaviour
     public void OnStart()
     {
         inkAtomsStory.Setup(inkTextAsset);
+        inkAtomsStory["in_unity"] = true;
         continueEvent.Raise(null);
     }
 }
