@@ -566,6 +566,12 @@ MonoBehaviour:
   verticalLayoutGroup1: {fileID: 2230315680464541066}
   verticalLayoutGroup2: {fileID: 7934046242596575638}
   recipeBookHeight: 400
+  ingredientsSpeedMultiplier:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 349dc61f38031da4784e0b4af7608cc2, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!114 &2988996641917955454
 MonoBehaviour:
   m_ObjectHideFlags: 0

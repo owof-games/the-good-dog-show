@@ -1,7 +1,45 @@
+/* ---------------------------------
+
+   VARIABLES AND CONSTANTS
+
+ ----------------------------------*/
+
+
 // variabile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
 VAR dialogue_ingredients_of_the_day = ()
 // chosen ingredient; this is set by Unity in @playKitchenGame
 VAR chosen_ingredient = InvalidIngredient
+CONST normal_speed = 1.3
+CONST slow_speed = 1.0
+
+
+
+/* ---------------------------------
+
+   EXTERNAL FUNCTIONS
+
+ ----------------------------------*/
+
+
+EXTERNAL setIngredientsSpeed(speed)
+=== function setIngredientsSpeed(speed)
+[[[ set ingredients speed to {speed} ]]]
+
+EXTERNAL moveToKitchen()
+=== function moveToKitchen() ===
+[[[move to kitchen with {alive_characters}]]]
+
+EXTERNAL hideKitchenText()
+=== function hideKitchenText() ===
+[[[hide the kitchen text]]]
+
+
+
+/* ---------------------------------
+
+   KNOTS
+
+ ----------------------------------*/
 
 
 === kitchen_loop(num_ingredients, base_ingredients_of_the_day, -> ending)
@@ -19,6 +57,13 @@ VAR chosen_ingredient = InvalidIngredient
 // flags that track whether we displayed or not certain phrases
 ~ temp displayed_choose_ingredient = false
 ~ temp displayed_explanation = false
+
+// setup speed according to abilities
+{ abilities has ScelteLente:
+    ~ setIngredientsSpeed(slow_speed)
+- else:
+    ~ setIngredientsSpeed(normal_speed)
+}
 
 - (loop)
 

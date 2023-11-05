@@ -40,6 +40,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02efb75a4a3e04944a02b035b0644823, type: 2}
   - {fileID: 11400000, guid: a9b1953a1b9787546b940ce02a460b2d, type: 2}
   - {fileID: 11400000, guid: db5f795dc6a5c55469f277fd410ff2d7, type: 2}
+  - {fileID: 11400000, guid: 0500ed1641ec08d46b9123dbdcd782f5, type: 2}
   commandLineParsers:
   - {fileID: 11400000, guid: ffe6f9b1cdc89ea4ebc17baaa406a49c, type: 2}
   - {fileID: 11400000, guid: c099c1e6d74019a49afbb40b9d328f5f, type: 2}

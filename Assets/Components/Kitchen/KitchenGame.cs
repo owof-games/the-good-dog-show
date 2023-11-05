@@ -3,6 +3,7 @@ using UnityEngine.Assertions;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Linq;
+using UnityAtoms.BaseAtoms;
 
 public class KitchenGame : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class KitchenGame : MonoBehaviour
     [SerializeField] private VerticalLayoutGroup verticalLayoutGroup1;
     [SerializeField] private VerticalLayoutGroup verticalLayoutGroup2;
     [SerializeField] private float recipeBookHeight = 400;
+    [SerializeField] private FloatReference ingredientsSpeedMultiplier;
 
     private void Awake()
     {
         Assert.IsNotNull(ingredientButtonPrefab);
         Assert.IsNotNull(verticalLayoutGroup1);
         Assert.IsNotNull(verticalLayoutGroup2);
+        Assert.IsTrue(ingredientsSpeedMultiplier.Value > 0);
     }
 
     private RectTransform verticalLayoutRectTransform1;
@@ -102,7 +105,7 @@ public class KitchenGame : MonoBehaviour
                 otherTransform.anchoredPosition - new Vector2(0, preferredHeight + spacing);
             // start the animation up until it disappears
             var tweener = myTransform
-                .DOAnchorPos(new Vector2(0, recipeBookHeight + preferredHeight), 100)
+                .DOAnchorPos(new Vector2(0, recipeBookHeight + preferredHeight), 100 * ingredientsSpeedMultiplier.Value)
                 .SetEase(Ease.Linear)
                 .SetSpeedBased()
                 .OnComplete(() =>
