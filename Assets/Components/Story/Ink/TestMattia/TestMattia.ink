@@ -87,7 +87,7 @@ DOGRON: Tu che ne dici?
 -
 DOGRON: Esatto!
 
--> seconda_giornata
+-> END
 
 
 === seconda_giornata

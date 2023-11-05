@@ -300,15 +300,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07765d787d8f41948b66eb5c3abbbe9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textContents: {fileID: 8761236465243260411}
+  charactersPerSecond: 50
   advance:
     m_PersistentCalls:
       m_Calls: []
-  hideButtonAdvance: {fileID: 3077367887286398841}
-  buttonAdvance: {fileID: 7560436668354961062}
-  charactersPerSecond: 50
   isWritingText: {fileID: 11400000, guid: 1b050b637021fef4c92729db0f05b99a, type: 2}
   storyStep: {fileID: 11400000, guid: 8363b8f137780a440b4f3bac11b53796, type: 2}
+  moveToGameAreaEvent:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 1381fee5817cc7246a8aab73773c28fb, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  textContents: {fileID: 8761236465243260411}
+  hideButtonAdvance: {fileID: 3077367887286398841}
+  buttonAdvance: {fileID: 7560436668354961062}
+  inputHint: {fileID: 6127570527395905021}
 --- !u!114 &6961102064733689721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,5 +594,10 @@ PrefabInstance:
 --- !u!224 &347475919087079268 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7359651808918424353, guid: ba2ade0e6f6cd2b4bac9ab234d3d96cd, type: 3}
+  m_PrefabInstance: {fileID: 7129417916362310725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6127570527395905021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4033333280240646584, guid: ba2ade0e6f6cd2b4bac9ab234d3d96cd, type: 3}
   m_PrefabInstance: {fileID: 7129417916362310725}
   m_PrefabAsset: {fileID: 0}

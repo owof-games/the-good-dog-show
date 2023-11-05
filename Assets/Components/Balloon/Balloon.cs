@@ -15,13 +15,19 @@ using UnityEngine.UI;
 
 public class Balloon : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI textContents;
-    [SerializeField] private UnityEvent advance;
-    [SerializeField] private GameObject hideButtonAdvance;
-    [SerializeField] private Button buttonAdvance;
     [SerializeField] private float charactersPerSecond;
+    [SerializeField] private UnityEvent advance;
+
+    [Header("Atoms")]
     [SerializeField] private BoolVariable isWritingText;
     [SerializeField] private StoryStepVariable storyStep;
+    [SerializeField] private GameAreaEventReference moveToGameAreaEvent;
+
+    [Header("Internal References")]
+    [SerializeField] private TextMeshProUGUI textContents;
+    [SerializeField] private GameObject hideButtonAdvance;
+    [SerializeField] private Button buttonAdvance;
+    [SerializeField] private GameObject inputHint;
 
     private void Awake()
     {
@@ -31,6 +37,8 @@ public class Balloon : MonoBehaviour
         Assert.IsNotNull(buttonAdvance);
         Assert.IsTrue(charactersPerSecond > 0);
         Assert.IsNotNull(isWritingText);
+        Assert.IsNotNull(inputHint);
+        Assert.IsNotNull(moveToGameAreaEvent.Event);
     }
 
     private void OnEnable()
@@ -160,6 +168,12 @@ public class Balloon : MonoBehaviour
         {
             advance.Invoke();
         }
+        // if we reached the end of the story, straight jump to the main menu
+        // TODO: this could change if we have a credits scene
+        else if (!storyStep.Value.CanContinue && storyStep.Value.Choices.Length == 0)
+        {
+            moveToGameAreaEvent.Event.Raise(GameArea.Menu);
+        }
     }
 
     public void OnStoryStepChanged(StoryStep _)
@@ -169,7 +183,8 @@ public class Balloon : MonoBehaviour
 
     private void UpdateButton()
     {
-        buttonAdvance.interactable = isWritingText.Value || storyStep.Value.CanContinue;
-        hideButtonAdvance.SetActive(isWritingText.Value || !storyStep.Value.CanContinue);
+        buttonAdvance.interactable = isWritingText.Value || storyStep.Value.Choices.Length == 0;
+        hideButtonAdvance.SetActive(!buttonAdvance.interactable || isWritingText.Value);
+        inputHint.SetActive(buttonAdvance.interactable);
     }
 }

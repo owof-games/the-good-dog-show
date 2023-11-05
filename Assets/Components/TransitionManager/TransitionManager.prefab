@@ -61,7 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c661e9e1fdc3864fab9572bbaf92b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _developerDescription: 
+  _developerDescription: when requested, the transition manager moves to another
+    scene
   _unityEventResponse:
     m_PersistentCalls:
       m_Calls:

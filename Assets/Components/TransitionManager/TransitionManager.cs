@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+using LemuRivolta.InkAtoms;
+
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
