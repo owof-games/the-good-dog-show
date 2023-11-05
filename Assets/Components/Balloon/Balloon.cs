@@ -172,10 +172,4 @@ public class Balloon : MonoBehaviour
         buttonAdvance.interactable = isWritingText.Value || storyStep.Value.CanContinue;
         hideButtonAdvance.SetActive(isWritingText.Value || !storyStep.Value.CanContinue);
     }
-
-    //public void OnAdvance() {
-    //    ExecuteEvents.Execute(buttonAdvance.gameObject,
-    //        new BaseEventData(EventSystem.current),
-    //        ExecuteEvents.submitHandler);
-    //}
 }
