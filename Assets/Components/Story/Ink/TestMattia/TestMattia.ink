@@ -123,6 +123,8 @@ VAR chosen_ingredient = InvalidIngredient
     -> debugChooseIngredient(all_ingredients) ->
 }
 
+After
+
 // add the strangeness of the chosen ingredient
 { getIngredientData(chosen_ingredient, Strangeness):
 - 1:
@@ -208,6 +210,26 @@ EXTERNAL ingredientFeedback(isRight)
 [[[the chosen ingredient is right? {isRight}]]]
 
 === debugChooseIngredient(ingredients)
+DEBUG - scegli l'ingrediente:
+~ temp last_ingredient = dequeue(ingredients)
+-> list_choices(-> say_choice, ingredients) ->
++ Scegli "{last_ingredient}"
+-
+->->
+
+=== say_choice(element)
++ Scegli "{element}"
+  ~ chosen_ingredient = element
+-> DONE
+
+=== list_choices(-> what_do, list)
+{list:
+    <- what_do(pop(list))
+    -> list_choices(what_do, list)->
+}
+->->
+
+=== debugChooseIngredientOld(ingredients)
 DEBUG - scegli l'ingrediente:
 + {ingredients has Uova} Uova
   ~ chosen_ingredient = Uova

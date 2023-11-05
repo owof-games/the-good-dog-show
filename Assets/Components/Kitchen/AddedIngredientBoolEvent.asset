@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c72169bfba9e8f043bf985b691676d5f, type: 3}
-  m_Name: Ingredient Feedback External Function
+  m_Script: {fileID: 11500000, guid: a0635ac2f70594bd3a31a5ced16469dc, type: 3}
+  m_Name: AddedIngredientBoolEvent
   m_EditorClassIdentifier: 
-  addedIngredient: {fileID: 11400000, guid: 0bdc616d48772d24791eca79b6edbe65, type: 2}
+  _developerDescription: 
+  _replayBufferSize: 1
+  _inspectorRaiseValue: 0

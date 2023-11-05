@@ -160,6 +160,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5549071992144628674}
   - component: {fileID: 4142241337523697471}
+  - component: {fileID: 2540777619572428136}
+  - component: {fileID: 7542783476703383126}
   m_Layer: 5
   m_Name: DogronWithFeedback
   m_TagString: Untagged
@@ -208,6 +210,57 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2540777619572428136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521928110828758429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6ab7cbc45164d19b20476265c251c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: When an ingredient is added, play the appropriate animation
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7542783476703383126}
+        m_TargetAssemblyTypeName: DogronFeedback, Assembly-CSharp
+        m_MethodName: OnAddedIngredient
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 0bdc616d48772d24791eca79b6edbe65, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &7542783476703383126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521928110828758429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a07f9842dff2a24383555747c3598e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4142241337523697471}
 --- !u!1 &1528978795659707720
 GameObject:
   m_ObjectHideFlags: 0
