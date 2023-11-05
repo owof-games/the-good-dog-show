@@ -1,6 +1,5 @@
+using System.Collections.Generic;
 using System.Linq;
-
-using Ink.Runtime;
 
 using UnityAtoms.BaseAtoms;
 
@@ -19,6 +18,10 @@ public class Kitchen : MonoBehaviour
     private Character[] characters;
     private Character[] GetCharacters() => characters ??= GetComponentsInChildren<Character>(true);
 
+    private Dictionary<CharacterName, NpcPot> npcPots;
+    private Dictionary<CharacterName, NpcPot> GetNPCPots() => npcPots ??=
+        GetComponentsInChildren<NpcPot>(true).ToDictionary(npcPot => npcPot.Owner);
+
     private void OnEnable()
     {
         // transform the ink list into a CharacterName list
@@ -27,13 +30,18 @@ public class Kitchen : MonoBehaviour
             select System.Enum.Parse<CharacterName>(aliveCharacter.itemName))
             .ToList();
 
-        // turn characters on or off according to whether they're alive
+        // turn characters on or off according to whether they're alive, and their pots too
         // ("YOU" is always alive)
         foreach (var character in GetCharacters())
         {
             var isYou = character.CharacterName == CharacterName.YOU;
             var isAlive = aliveCharacterNames.Contains(character.CharacterName);
-            character.gameObject.SetActive(isYou || isAlive);
+            bool isActive = isYou || isAlive;
+            character.gameObject.SetActive(isActive);
+            if (GetNPCPots().TryGetValue(character.CharacterName, out var npcPot))
+            {
+                npcPot.gameObject.SetActive(isActive);
+            }
         }
     }
 }

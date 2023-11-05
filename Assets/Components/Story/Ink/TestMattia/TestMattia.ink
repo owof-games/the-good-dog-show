@@ -165,7 +165,7 @@ DOGRON: Finale del giorno uno, la strangeness è {strangeness}, e il numero di i
 // lista di tutte le abilità possibili, verrà popolata durante il primo dialogo
 LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
-LIST alive_characters = UgoEMimi, BeBe, (Piiiietro), (Quello), (ilDivo)
+LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
 
 // variabile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando

@@ -1,5 +1,3 @@
-using System;
-
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,6 +22,13 @@ public class Pot : MonoBehaviour
         AnimationType.Pyramid => "Pyramid",
         AnimationType.Smoke => "Smoke",
         AnimationType.Blob => "Blob",
-        _ => throw new ArgumentException($"Unknown animation type {type}", nameof(type)),
+        _ => throw new System.ArgumentException($"Unknown animation type {type}", nameof(type)),
     });
+
+    public void PlayRandomAnimation()
+    {
+        var values = System.Enum.GetValues(typeof(AnimationType));
+        var value = (AnimationType)values.GetValue(Random.Range(0, values.Length));
+        PlayAnimation(value);
+    }
 }

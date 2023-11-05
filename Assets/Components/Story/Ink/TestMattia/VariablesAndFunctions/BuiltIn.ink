@@ -25,12 +25,6 @@ Functions that are taken from Inky's "Ink" menu, or directly modified from there
     ~ return el 
 
 
-// same as pop, but for the top element
-=== function dequeue(ref _list) 
-    ~ temp el = LIST_MAX(_list) 
-    ~ _list -= el
-    ~ return el 
-
 
 /*
     Returns a string with the whole list separated by commas
