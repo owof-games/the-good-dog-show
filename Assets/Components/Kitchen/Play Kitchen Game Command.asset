@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playKitchenGameEvent: {fileID: 11400000, guid: 111c9085982a7304cacec78e634c377d, type: 2}
   ingredientChosenEvent: {fileID: 11400000, guid: 770691aeb4f9e93448729083569e65cf, type: 2}
+  inkAtomsStory:
+    _usage: 2
+    _value: {fileID: 0}
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: dcacb83c38536944dae6b2deb134d944, type: 2}
+    _variableInstancer: {fileID: 0}

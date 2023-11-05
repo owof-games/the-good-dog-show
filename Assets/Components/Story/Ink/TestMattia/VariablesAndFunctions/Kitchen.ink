@@ -6,7 +6,7 @@
 
 
 // variabile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
-VAR dialogue_ingredients_of_the_day = ()
+VAR dialogue_ingredients_of_the_day = (InvalidIngredient)
 // chosen ingredient; this is set by Unity in @playKitchenGame
 VAR chosen_ingredient = InvalidIngredient
 CONST normal_speed = 1.3
@@ -25,10 +25,6 @@ EXTERNAL setIngredientsSpeed(speed)
 === function setIngredientsSpeed(speed)
 [[[ set ingredients speed to {speed} ]]]
 
-EXTERNAL moveToKitchen()
-=== function moveToKitchen() ===
-[[[move to kitchen with {alive_characters}]]]
-
 EXTERNAL hideKitchenText()
 === function hideKitchenText() ===
 [[[hide the kitchen text]]]
@@ -45,7 +41,7 @@ EXTERNAL hideKitchenText()
 === kitchen_loop(num_ingredients, base_ingredients_of_the_day, -> ending)
 
 // move to the kitchen scene
-~ moveToKitchen()
+@moveToKitchen
 
 // set the statistics of the ingredients to zero
 ~ temp strangeness = 0
@@ -65,7 +61,7 @@ EXTERNAL hideKitchenText()
     ~ setIngredientsSpeed(normal_speed)
 }
 
-- (loop)
+- (kitchen_inner_loop)
 
 // check whether we should break the loop and go to the ending
 ~ num_loop += 1
@@ -96,14 +92,16 @@ EXTERNAL hideKitchenText()
 }
 
 // play a minigame round
-@playKitchenGame ingredients:{get_list_with_commas(all_ingredients)}
+~ temp comma_separated_ingredients = get_list_with_commas(all_ingredients)
+@playKitchenGame ingredients:{comma_separated_ingredients}
 
-{ not in_unity:
-    -> debugChooseIngredient(all_ingredients) ->
-}
+// { not in_unity:
+//     -> debugChooseIngredient(all_ingredients) ->
+// }
 
 // add the strangeness of the chosen ingredient
-{ getIngredientData(chosen_ingredient, Strangeness):
+~ temp ingredient_strangeness = getIngredientData(chosen_ingredient, Strangeness)
+{ ingredient_strangeness:
 - 1:
   ~ strangeness += 1
 - 2:
@@ -127,4 +125,4 @@ EXTERNAL hideKitchenText()
 ~ dialogue_ingredients_of_the_day -= chosen_ingredient
 
 // loop back for another minigame round
--> loop
+-> kitchen_inner_loop

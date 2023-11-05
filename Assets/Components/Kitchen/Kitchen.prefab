@@ -1134,7 +1134,7 @@ MonoBehaviour:
   _actionResponses: []
   _conditions: []
   _operator: 0
-  _replayEventBufferOnRegister: 1
+  _replayEventBufferOnRegister: 0
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 96c51d6990f62494b9ad7569e80a0add, type: 2}
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   _actionResponses: []
   _conditions: []
   _operator: 0
-  _replayEventBufferOnRegister: 1
+  _replayEventBufferOnRegister: 0
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 00a75b0a2aa80204397ea3ce33b1aaee, type: 2}

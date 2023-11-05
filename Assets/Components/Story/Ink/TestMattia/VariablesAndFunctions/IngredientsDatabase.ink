@@ -50,4 +50,6 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
         ~ return name
     - Strangeness:
         ~ return strangeness
+    - else:
+        ~ throwException("unknown ingredient data type {what}")
 }

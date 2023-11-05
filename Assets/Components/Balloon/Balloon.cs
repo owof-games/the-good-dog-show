@@ -82,7 +82,7 @@ public class Balloon : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(SetTextCoroutine(text));
             EventSystem.current.SetSelectedGameObject(buttonAdvance.gameObject);
-        });
+        }, "setting balloon text");
     }
 
     private bool forceTextToEnd = false;

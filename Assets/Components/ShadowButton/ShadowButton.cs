@@ -37,7 +37,7 @@ public class ShadowButton : Button
         if (state == SelectionState.Highlighted)
         {
             MainThreadQueue.EnqueueLater(() =>
-                EventSystem.current.SetSelectedGameObject(gameObject));
+                EventSystem.current.SetSelectedGameObject(gameObject), "highlight the shadow button");
         }
     }
 

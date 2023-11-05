@@ -155,10 +155,10 @@ public class Dialogue : TransitionTarget
 
         // show the choices
         MainThreadQueue.EnqueueLater(() =>
-            choicesRoot.SetActive(storyStep.Value.Choices.Length > 0 && !isWritingText.Value));
+            choicesRoot.SetActive(storyStep.Value.Choices.Length > 0 && !isWritingText.Value), "showing or hiding dialogue choices");
 
         // try to select a relevant UI element if possible
-        MainThreadQueue.EnqueueLater(() => SelectRelevantObject(true));
+        MainThreadQueue.EnqueueLater(() => SelectRelevantObject(true), "forcing selection of dialogue UI item");
     }
 
     private void SelectRelevantObject(bool force = false)

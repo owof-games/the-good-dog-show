@@ -13,6 +13,7 @@ public class PlayKitchenGameCommand : CommandLineParser
 {
     [SerializeField] private StringEvent playKitchenGameEvent;
     [SerializeField] private StringEvent ingredientChosenEvent;
+    [SerializeField] private InkAtomsStoryReference inkAtomsStory;
 
     public PlayKitchenGameCommand() : base("playKitchenGame")
     {
@@ -26,6 +27,8 @@ public class PlayKitchenGameCommand : CommandLineParser
 
     public override IEnumerator Invoke(IDictionary<string, Parameter> parameters, StoryChoice[] choices, CommandLineParserAction commandLineParserAction)
     {
+        Assert.IsNotNull(inkAtomsStory.Value);
+
         // get the list of ingredients and signal to start the game
         var ingredients = GetParameter(parameters, "ingredients");
         playKitchenGameEvent.Raise(ingredients);
@@ -34,6 +37,11 @@ public class PlayKitchenGameCommand : CommandLineParser
         string chosenIngredient = null;
         yield return ingredientChosenEvent.Await(onEvent: i => chosenIngredient = i);
         Assert.IsNotNull(chosenIngredient);
-        Debug.Log($"chosen ingredient key {chosenIngredient}");
+        Assert.AreNotEqual(chosenIngredient, "InvalidIngredient");
+
+        // save the chosen ingredient in ink
+        var c = inkAtomsStory.Value.GetInkListFromListDefinitions("Ingredients");
+        c.AddItem(chosenIngredient);
+        inkAtomsStory.Value["chosen_ingredient"] = c;
     }
 }

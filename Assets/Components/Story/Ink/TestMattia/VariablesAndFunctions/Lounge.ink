@@ -1,6 +1,12 @@
+CONST base_dialogue_loops = 1
+
 === lounge_loop(-> bebe_tunnel, -> ugoemimi_tunnel, -> piiiietro_tunnel, -> quello_tunnel, -> ildivo_tunnel, -> kitchen_divert)
 
-~ temp num_loop_rimanenti = 3
+// compute the max number of people you can talk to
+~ temp num_loop_rimanenti = base_dialogue_loops
+{ abilities has PNGParliExtra:
+    ~ num_loop_rimanenti += 1
+}
 
 - (loop)
 
