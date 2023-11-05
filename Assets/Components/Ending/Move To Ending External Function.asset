@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4bfa1ba1a145448a73de128b38813f, type: 3}
+  m_Name: Move To Ending External Function
+  m_EditorClassIdentifier: 
+  gameArea: 4
+  functionName: moveToEnding
+  moveToGameAreaEvent: {fileID: 11400000, guid: 1381fee5817cc7246a8aab73773c28fb, type: 2}
+  currentGameArea: {fileID: 11400000, guid: 782ed2f367a33534381d6474369659c5, type: 2}

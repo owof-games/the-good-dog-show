@@ -39,7 +39,7 @@ public class Dialogue : TransitionTarget
         Assert.IsNotNull(leftBalloon);
         Assert.IsNotNull(rightBalloon);
         Assert.IsNotNull(choicesRoot);
-        Assert.IsNotNull(otherRoot);
+        // Assert.IsNotNull(otherRoot); // otherRoot can be null (e.g.: ending)
         Assert.IsNotNull(storyStep);
         Assert.IsNotNull(isWritingText);
         Assert.IsNotNull(continueEvent);
@@ -77,7 +77,7 @@ public class Dialogue : TransitionTarget
         youRectTransform.DOComplete();
         otherRectTransform.DOComplete();
 
-        if(!youInitialPosition.HasValue)
+        if (!youInitialPosition.HasValue)
         {
             youInitialPosition = youRectTransform.anchoredPosition;
             otherInitialPosition = otherRectTransform.anchoredPosition;
@@ -194,6 +194,10 @@ public class Dialogue : TransitionTarget
 
     public void OnCurrentDialogueCharacterChanged(CharacterName characterName)
     {
+        if (otherRoot == null)
+        {
+            return;
+        }
         foreach (var character in otherRoot.GetComponentsInChildren<Character>(true))
         {
             character.gameObject.SetActive(character.CharacterName == characterName);

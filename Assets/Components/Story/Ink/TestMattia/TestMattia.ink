@@ -2,15 +2,19 @@ INCLUDE VariablesAndFunctions/Lounge.ink
 INCLUDE VariablesAndFunctions/BuiltIn.ink
 INCLUDE VariablesAndFunctions/IngredientsDatabase.ink
 INCLUDE VariablesAndFunctions/Exception.ink
+INCLUDE VariablesAndFunctions/Kitchen.ink
 
 
 
 
 
 
-~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
-~ chosen_ingredient = Cipolla
--> cucina_giorno_uno
+
+// ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
+// ~ chosen_ingredient = Cipolla
+// -> cucina_giorno_uno
+
+-> finale_giorno_uno(3, 2)
 
 
 
@@ -63,102 +67,60 @@ DOGRON: buona scelta, avanti!
     ->->
 
 
-VAR chosen_ingredient = InvalidIngredient
-
 
 === cucina_giorno_uno
 
-// TODO: params
-~ temp num_ingredients = 3
-~ temp base_ingredients_of_the_day = (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale)
-
-// move to the kitchen scene
-~ moveToKitchen()
-
-// set the statistics of the ingredients to zero
-~ temp strangeness = 0
-~ temp num_right_ingredients = 0
-
-// loop counter (from 0 to num_ingredients)
-~ temp num_loop = 0
-
-// flags that track whether we displayed or not certain phrases
-~ temp displayed_choose_ingredient = false
-~ temp displayed_explanation = false
-
-- (loop)
-
-// check whether we should break the loop and go to the ending
-~ num_loop += 1
-{ num_loop > num_ingredients:
-    ~ dialogue_ingredients_of_the_day = ()
-    -> finale_giorno_uno(strangeness, num_right_ingredients)
-}
-
-// variable to track whether to only show correct ingredients in the list
-~ temp show_only_correct_ingredients = false
-
-{
-    - not displayed_choose_ingredient and abilities has SceltaIngrediente:
-        Hai fortuna, puoi scegliere un ingrediente giusto prima di iniziare!
-        ~ displayed_choose_ingredient = true
-        ~ show_only_correct_ingredients = true
-    - not displayed_explanation:
-        Scegli ingredienti e azioni sulla base di quello che ti è stato raccontato... e fai in fretta!
-        ~ displayed_explanation = true
-    - else:
-        ~ hideKitchenText()
-}
-
-// choose which ingredients to show
-~ temp all_ingredients = dialogue_ingredients_of_the_day
-{ not show_only_correct_ingredients:
-    ~ all_ingredients += base_ingredients_of_the_day
-}
-
-// play a minigame round
-@playKitchenGame ingredients:{get_list_with_commas(all_ingredients)}
-
-{ not in_unity:
-    -> debugChooseIngredient(all_ingredients) ->
-}
-
-// add the strangeness of the chosen ingredient
-{ getIngredientData(chosen_ingredient, Strangeness):
-- 1:
-  ~ strangeness += 1
-- 2:
-  ~ strangeness += 2
-- 3:
-  ~ strangeness += 3
-- 4:
-  ~ strangeness += 4
-}
-
-// count the number of right ingredients
-{ dialogue_ingredients_of_the_day has chosen_ingredient:
-    ~ num_right_ingredients += 1
-    @ingredientFeedback success:true
-- else:
-    @ingredientFeedback success:false
-}
-
-// remove the chosen ingredient from all the lists so that it can't be chosen again
-~ base_ingredients_of_the_day -= chosen_ingredient
-~ dialogue_ingredients_of_the_day -= chosen_ingredient
-
-// loop back for another minigame round
--> loop
+-> kitchen_loop(3, (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale), -> finale_giorno_uno)
 
 
 
 === finale_giorno_uno(strangeness, num_right_ingredients)
 
-~ moveToDialogue(DOGRON)
+~ moveToEnding()
 
 DOGRON: Finale del giorno uno, la strangeness è {strangeness}, e il numero di ingredienti giusti sono {num_right_ingredients}.
+YOU: Fantastico! Vero?
+DOGRON: Tu che ne dici?
++ YOU: È fantastico
++ YOU: Non male
++ YOU: Sono spacciato
+-
+DOGRON: Esatto!
 
--> DONE
+-> seconda_giornata
+
+
+=== seconda_giornata
+
+-> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno)
+
+
+    = ugoemimi_choice
+    UgoEMimi: ciao
+    YOU: ciao
+    ->->
+
+    = bebe_choice
+    BeBe: ciao
+    YOU: ciao
+    ->->
+
+    = piiiietro_choice
+    Piiiietro: ciao
+    YOU: ciao
+    ->->
+
+
+    = quello_choice
+    Quello: ciao
+    YOU: ciao
+    ->->
+
+
+    = ildivo_choice
+    ilDivo: ciao
+    YOU: ciao
+    ->->
 
 
 
@@ -167,9 +129,6 @@ LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliE
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
-
-// variabile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
-VAR dialogue_ingredients_of_the_day = ()
 
 // viene impostata da unity alla fine della ricetta e ti dice se ce l'hai fatta o meno
 VAR success = true
@@ -392,6 +351,6 @@ DEBUG - scegli l'ingrediente:
 
 VAR in_unity = false
 
-// EXTERNAL moveToEnd()
-=== function moveToEnd() ===
+EXTERNAL moveToEnding()
+=== function moveToEnding() ===
 [[[move to end]]]
