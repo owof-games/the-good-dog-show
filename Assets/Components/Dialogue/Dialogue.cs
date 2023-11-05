@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 
 using DG.Tweening;
 
@@ -21,6 +22,8 @@ public class Dialogue : TransitionTarget
     [SerializeField] private BoolVariable isWritingText;
 
     [SerializeField] private StringEvent continueEvent;
+
+    [SerializeField] private SerializableInkListItemValueList abilities;
 
     [SerializeField] private RectTransform youRectTransform;
     [SerializeField] private RectTransform otherRectTransform;
@@ -47,6 +50,7 @@ public class Dialogue : TransitionTarget
         Assert.IsNotNull(otherRectTransform);
         Assert.IsNotNull(youStart);
         Assert.IsNotNull(otherStart);
+        Assert.IsNotNull(abilities);
     }
 
     private void OnEnable()
@@ -181,6 +185,13 @@ public class Dialogue : TransitionTarget
     private (string, string) GetCharacterLine(string text)
     {
         text = text.Trim();
+
+        var canSeeIngredients = abilities.Any(ability => ability.itemName == "EvidenziaIngredienti");
+        if (!canSeeIngredients)
+        {
+            text = text.Replace("<b>", "").Replace("</b>", "");
+        }
+
         var parts = text.Split(':', 2);
         if (parts.Length == 2)
         {

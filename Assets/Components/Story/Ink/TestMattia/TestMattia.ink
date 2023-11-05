@@ -9,12 +9,13 @@ INCLUDE VariablesAndFunctions/Kitchen.ink
 
 
 
+-> prima_giornata
 
 // ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
 // ~ chosen_ingredient = Cipolla
 // -> cucina_giorno_uno
 
--> finale_giorno_uno(3, 2)
+// -> finale_giorno_uno(3, 2)
 
 
 
@@ -40,7 +41,7 @@ DOGRON: buona scelta, avanti!
 
 
     = ugoemimi_choice
-    UgoEMimi: ciao
+    UgoEMimi: <b>ciao</b>, come va?
     YOU: ciao
     ->->
 
@@ -79,13 +80,13 @@ DOGRON: buona scelta, avanti!
 ~ moveToEnding()
 
 DOGRON: Finale del giorno uno, la strangeness è {strangeness}, e il numero di ingredienti giusti sono {num_right_ingredients}.
-// YOU: Fantastico! Vero?
-// DOGRON: Tu che ne dici?
-// + YOU: È fantastico
-// + YOU: Non male
-// + YOU: Sono spacciato
-// -
-// DOGRON: Esatto!
+YOU: Fantastico! Vero?
+DOGRON: Tu che ne dici?
++ YOU: È fantastico
++ YOU: Non male
++ YOU: Sono spacciato
+-
+DOGRON: Esatto!
 
 -> END
 
@@ -125,7 +126,7 @@ DOGRON: Finale del giorno uno, la strangeness è {strangeness}, e il numero di i
 
 
 // lista di tutte le abilità possibili, verrà popolata durante il primo dialogo
-LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+LIST abilities = (EvidenziaIngredienti), ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON

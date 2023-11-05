@@ -26,6 +26,14 @@ MonoBehaviour:
     variableChangeEvent: {fileID: 0}
     variableValue: {fileID: 0}
     variableList: {fileID: 11400000, guid: c990438b7d605b44f875a22ea21b27a7, type: 2}
+  - matchKind: 3
+    name: abilities
+    regex: 
+    list: []
+    variablePairChangeEvent: {fileID: 0}
+    variableChangeEvent: {fileID: 0}
+    variableValue: {fileID: 0}
+    variableList: {fileID: 11400000, guid: 0f2e049875860ce4eb1c0c9bac50823c, type: 2}
   externalFunctions:
   - {fileID: 11400000, guid: ed2790165974aa54790950ca0be48120, type: 2}
   - {fileID: 11400000, guid: 66a38a046da85b347b77bc51460da5da, type: 2}

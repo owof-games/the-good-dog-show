@@ -78,6 +78,7 @@ MonoBehaviour:
   storyStep: {fileID: 11400000, guid: 8363b8f137780a440b4f3bac11b53796, type: 2}
   isWritingText: {fileID: 11400000, guid: 1b050b637021fef4c92729db0f05b99a, type: 2}
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
+  abilities: {fileID: 11400000, guid: 0f2e049875860ce4eb1c0c9bac50823c, type: 2}
   youRectTransform: {fileID: 7606412140244117128}
   otherRectTransform: {fileID: 8831523397461074042}
   youStart: {fileID: 5794364993782478476}
