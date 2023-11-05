@@ -79,13 +79,13 @@ DOGRON: buona scelta, avanti!
 ~ moveToEnding()
 
 DOGRON: Finale del giorno uno, la strangeness è {strangeness}, e il numero di ingredienti giusti sono {num_right_ingredients}.
-YOU: Fantastico! Vero?
-DOGRON: Tu che ne dici?
-+ YOU: È fantastico
-+ YOU: Non male
-+ YOU: Sono spacciato
--
-DOGRON: Esatto!
+// YOU: Fantastico! Vero?
+// DOGRON: Tu che ne dici?
+// + YOU: È fantastico
+// + YOU: Non male
+// + YOU: Sono spacciato
+// -
+// DOGRON: Esatto!
 
 -> END
 

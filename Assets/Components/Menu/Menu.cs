@@ -44,9 +44,9 @@ public class Menu : MonoBehaviour
     private void Update()
     {
         EventSystem currentEventSystem = EventSystem.current;
-        if (currentEventSystem.currentSelectedGameObject == null)
+        var selected = currentEventSystem.currentSelectedGameObject;
+        if (selected != startButton.gameObject && selected != itToggle.gameObject && selected != enToggle.gameObject)
         {
-            //Debug.Log("Selecting start button");
             currentEventSystem.SetSelectedGameObject(startButton.gameObject);
         }
     }
