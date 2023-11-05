@@ -6,11 +6,12 @@ using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class IngredientButton : MonoBehaviour
 {
-    [SerializeField] private InkAtomsStoryReference inkAtomsStory;
     [SerializeField] private TextMeshProUGUI textMeshPro;
+    [SerializeField] private InkAtomsStoryReference inkAtomsStory;
     [SerializeField] private StringEvent ingredientChosenEvent;
 
     private string ingredientKey;

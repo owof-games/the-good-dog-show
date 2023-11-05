@@ -261,6 +261,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4142241337523697471}
+  feedbackAnimationFinished:
+    _usage: 0
+    _event: {fileID: 11400000, guid: b3c1ec74d67095a4d93dab6d67a92ebe, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}
 --- !u!1 &1528978795659707720
 GameObject:
   m_ObjectHideFlags: 0

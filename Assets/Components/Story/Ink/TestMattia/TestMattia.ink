@@ -123,8 +123,6 @@ VAR chosen_ingredient = InvalidIngredient
     -> debugChooseIngredient(all_ingredients) ->
 }
 
-After
-
 // add the strangeness of the chosen ingredient
 { getIngredientData(chosen_ingredient, Strangeness):
 - 1:
@@ -140,9 +138,9 @@ After
 // count the number of right ingredients
 { dialogue_ingredients_of_the_day has chosen_ingredient:
     ~ num_right_ingredients += 1
-    ~ ingredientFeedback(true)
+    @ingredientFeedback success:true
 - else:
-    ~ ingredientFeedback(false)
+    @ingredientFeedback success:false
 }
 
 // remove the chosen ingredient from all the lists so that it can't be chosen again
@@ -156,7 +154,9 @@ After
 
 === finale_giorno_uno(strangeness, num_right_ingredients)
 
-Finale del giorno uno, la strangeness è {strangeness}, e il numero di ingredienti giusti sono {num_right_ingredients}.
+~ moveToDialogue(DOGRON)
+
+DOGRON: Finale del giorno uno, la strangeness è {strangeness}, e il numero di ingredienti giusti sono {num_right_ingredients}.
 
 -> DONE
 
@@ -205,31 +205,7 @@ EXTERNAL hideKitchenText()
 === function hideKitchenText() ===
 [[[hide the kitchen text]]]
 
-EXTERNAL ingredientFeedback(isRight)
-=== function ingredientFeedback(isRight) ===
-[[[the chosen ingredient is right? {isRight}]]]
-
 === debugChooseIngredient(ingredients)
-DEBUG - scegli l'ingrediente:
-~ temp last_ingredient = dequeue(ingredients)
--> list_choices(-> say_choice, ingredients) ->
-+ Scegli "{last_ingredient}"
--
-->->
-
-=== say_choice(element)
-+ Scegli "{element}"
-  ~ chosen_ingredient = element
--> DONE
-
-=== list_choices(-> what_do, list)
-{list:
-    <- what_do(pop(list))
-    -> list_choices(what_do, list)->
-}
-->->
-
-=== debugChooseIngredientOld(ingredients)
 DEBUG - scegli l'ingrediente:
 + {ingredients has Uova} Uova
   ~ chosen_ingredient = Uova

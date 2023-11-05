@@ -31,10 +31,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66a38a046da85b347b77bc51460da5da, type: 2}
   - {fileID: 11400000, guid: 02efb75a4a3e04944a02b035b0644823, type: 2}
   - {fileID: 11400000, guid: a9b1953a1b9787546b940ce02a460b2d, type: 2}
-  - {fileID: 11400000, guid: dafb1727a261b8f42953f1b0e71c1b28, type: 2}
   commandLineParsers:
   - {fileID: 11400000, guid: ffe6f9b1cdc89ea4ebc17baaa406a49c, type: 2}
   - {fileID: 11400000, guid: c099c1e6d74019a49afbb40b9d328f5f, type: 2}
+  - {fileID: 11400000, guid: 17506fd1ae769234e9b2a376ca19bbc1, type: 2}
   tagProcessors: []
   syntaxCheckFiles:
   - {fileID: 102900000, guid: 19c6a0a7b510759468d60c952699525d, type: 3}

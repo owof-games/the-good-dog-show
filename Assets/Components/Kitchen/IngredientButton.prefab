@@ -147,6 +147,8 @@ GameObject:
   - component: {fileID: 6821291908154718213}
   - component: {fileID: 8952733901193724065}
   - component: {fileID: 1475505416705216937}
+  - component: {fileID: 4153459927298339093}
+  - component: {fileID: 4032983979847811236}
   m_Layer: 5
   m_Name: IngredientButton
   m_TagString: Untagged
@@ -237,7 +239,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.16906781, g: 0.475, b: 0.43474576, a: 1}
     m_PressedColor: {r: 0.16862746, g: 0.4745098, b: 0.43529412, a: 1}
     m_SelectedColor: {r: 0.08235294, g: 0.23137255, b: 0.21176471, a: 1}
-    m_DisabledColor: {r: 0.16862746, g: 0.4745098, b: 0.43529412, a: 0.5019608}
+    m_DisabledColor: {r: 0.08235294, g: 0.23137255, b: 0.21176471, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -280,11 +282,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27aa03109c388145988fbaa15a1648a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 3326270792584542714}
+  button: {fileID: 0}
   inkAtomsStory:
     _usage: 2
     _value: {fileID: 11400000, guid: c6bfcfd395c994843afe25dd3c0b5e88, type: 2}
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: dcacb83c38536944dae6b2deb134d944, type: 2}
     _variableInstancer: {fileID: 0}
-  textMeshPro: {fileID: 3326270792584542714}
   ingredientChosenEvent: {fileID: 11400000, guid: 770691aeb4f9e93448729083569e65cf, type: 2}
+--- !u!114 &4153459927298339093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960436820898109613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6ab7cbc45164d19b20476265c251c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: When an ingredient is chosen, disable all ingredients
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8952733901193724065}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 0bdc616d48772d24791eca79b6edbe65, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &4032983979847811236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960436820898109613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: When the feedback animation finished, re-enable all ingredients
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8952733901193724065}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: b3c1ec74d67095a4d93dab6d67a92ebe, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}
