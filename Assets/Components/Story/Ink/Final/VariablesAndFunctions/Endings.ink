@@ -62,7 +62,7 @@ DOGRON: Non sono ancora sicuro che tu sappia cucinare. Com'è andata oggi? {~ In
 ->->
 
 === finale_tre
-DOGRON: Vedo i tuoi sforzi, oggi, e che dire di ciò che hai cucinato? {~ Dal forno, lo sformato lancia grida strazianti|La cosa che era nel mio piatto sta ballando con la cameraman|Hai cucinato qualcosa che sa lanciarmi la palla!}. Hai vinto questa sfida! A domani!
+DOGRON: Vedo i tuoi sforzi, oggi, e che dire di ciò che hai cucinato? {~ Dal forno, lo sformato lancia grida strazianti.|La cosa che era nel mio piatto sta ballando con la cameraman.|Hai cucinato qualcosa che sa lanciarmi la palla!} Hai vinto questa sfida! A domani!
 ->->
 
 === finale_due

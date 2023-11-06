@@ -19,7 +19,7 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
     UgoEMimi: ...
         + YOU: So che me ne pentirò di dirlo, ma mi sembrate molto silenziose, oggi.
         -
-    UgoEMimi: Ugo ha parlato con uno dei produtti, per il suo videogioco.
+    UgoEMimi: Ugo ha parlato con uno dei produttori, per il suo videogioco.
     UgoEMimi: Venditori di cianfrusaglie, sono. Ma lo sapevi che i produttori sono dei carlini?!?!
     UgoEMimi: E gli è stato detto che il progetto manca di una narrazione coerente, e di una connessione tra gameplay, narrativa ed elementi grafici.
     UgoEMimi: Mi hanno detto in sostanza che non ha senso! Che è un gioco dove accadono cose senza senso! Ma io gioco <b>i veri videogiochi</b> da sempre! Questi son carlini da walking simulator e visual novel!
@@ -99,7 +99,7 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
         + YOU: Ma io non ho una stanza, dormo tra le travi sopra la cucina.
             Piiiietro: E qui si vede chi ha un agente e chi no, mi dispiace!
         -
-    Piiiietro: Forse comunque ci fanno fare un karaoke. Piccolo, stasera, dopo la prova. Sembra che la mia pasta con <b>tonno in scatola</b> e pure <b>scolata/b> male sia un successone. La ripropongo anche stasera!
+    Piiiietro: Forse comunque ci fanno fare un karaoke. Piccolo, stasera, dopo la prova. Sembra che la mia pasta con <b>tonno in scatola</b> e pure <b>scolata</b> male sia un successone. La ripropongo anche stasera!
         ~ dialogue_ingredients_of_the_day += TonnoInScatola
         ~ dialogue_ingredients_of_the_day += Scolare
         + YOU: Ma a te il tema non preoccupa, per caso?

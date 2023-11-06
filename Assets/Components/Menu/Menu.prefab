@@ -438,7 +438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   inkAtomsStory: {fileID: 11400000, guid: c6bfcfd395c994843afe25dd3c0b5e88, type: 2}
-  inkTextAsset: {fileID: 4900000, guid: b905451586e6044479c221a589688c26, type: 3}
+  inkTextAsset: {fileID: 4900000, guid: f429f5f7ce243b24b850b620c7a89f33, type: 3}
   startButton: {fileID: 4909366408926330556}
   enToggle: {fileID: 2163615727125454589}
   itToggle: {fileID: 6061616771500230280}
