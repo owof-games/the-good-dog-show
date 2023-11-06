@@ -1,6 +1,7 @@
 using LemuRivolta.InkAtoms;
 
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -14,30 +15,39 @@ using UnityEngine.UI;
 /// </summary>
 public class ShadowButton : Button
 {
-    private bool lastShowShadowState;
+    private SelectionState previousSelectionState = SelectionState.Normal;
+
+    private ShadowButtonCompanion companion;
+
+    private ShadowButtonCompanion GetCompanion()
+    {
+        if(companion == null)
+        {
+            companion = GetComponent<ShadowButtonCompanion>();
+            Assert.IsNotNull(companion);
+        }
+        return companion;
+    }
 
     protected override void DoStateTransition(SelectionState state, bool instant)
     {
         base.DoStateTransition(state, instant);
-        //Debug.Log($"Transitioning {gameObject.name} to {state}");
+
+        if (previousSelectionState == state)
+        {
+            return;
+        }
+
+        var prev = previousSelectionState;
+        previousSelectionState = state;
 
         // show the shadow if we're selected
-        lastShowShadowState = state == SelectionState.Selected;
-        if (TryGetComponent<ShadowButtonCompanion>(out var shadowButtonCompanion))
-        {
-            //Debug.Log($"Setting shadow state of {gameObject.name} to {lastShowShadowState}");
-            shadowButtonCompanion.ShowShadow(lastShowShadowState);
-        }
-        else
-        {
-            Debug.Log($"Ups, no shadow companion for {gameObject.name}");
-        }
+        GetCompanion().ShowShadow(state == SelectionState.Selected);
 
-        // if we're highlighted, then select the button
-        if (state == SelectionState.Highlighted)
+        // if we get highlighted and previously we weren't (not even selected), then select the button
+        if (prev != SelectionState.Selected && state == SelectionState.Highlighted)
         {
-            MainThreadQueue.EnqueueLater(() =>
-                EventSystem.current.SetSelectedGameObject(gameObject), "highlight the shadow button");
+            EventSystem.current.SetSelectedGameObject(gameObject);
         }
     }
 
