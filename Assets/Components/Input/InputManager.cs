@@ -1,5 +1,3 @@
-using System;
-
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
@@ -63,24 +61,19 @@ public class InputManager : MonoBehaviour
             case GameArea.DogronTalk:
                 playerInput.enabled = true;
                 playerInput.SwitchCurrentActionMap("Dialogue");
-                Debug.Log("IM - dialogue, setting to zero");
-                //direction = Vector2.zero;
-                break;
-            case GameArea.Kitchen:
-                playerInput.enabled = true;
-                playerInput.SwitchCurrentActionMap("Kitchen");
-                //cursorPosition = Mouse.current.position.ReadValue();
                 break;
             default:
-                playerInput.enabled = false;
+                playerInput.SwitchCurrentActionMap("EmptyActionMap");
                 break;
         }
     }
 
+    private bool firstTime = true;
+
     public void OnControlsChanged(PlayerInput _)
     {
         Debug.Log("Controls changed: " + playerInput.currentControlScheme);
-        //var previousValue = controlType.Value;
+        var previousValue = controlType.Value;
         controlType.Value = playerInput.currentControlScheme switch
         {
             "MouseAndKeyboard" => ControlType.MouseAndKeyboard,
@@ -89,13 +82,14 @@ public class InputManager : MonoBehaviour
             _ => throw new System.Exception($"Unknown control scheme {playerInput.currentControlScheme}")
         };
 
-        //var wasMouseAndKeyboard = previousValue == ControlType.MouseAndKeyboard;
-        //var isMouseAndKeyboard = controlType.Value == ControlType.MouseAndKeyboard;
+        var wasMouseAndKeyboard = previousValue == ControlType.MouseAndKeyboard;
+        var isMouseAndKeyboard = controlType.Value == ControlType.MouseAndKeyboard;
 
-        //if (wasMouseAndKeyboard != isMouseAndKeyboard)
-        //{
-        //    SwitchMouse(isMouseAndKeyboard);
-        //}
+        if (firstTime || wasMouseAndKeyboard != isMouseAndKeyboard)
+        {
+            firstTime = false;
+            SwitchMouse(isMouseAndKeyboard);
+        }
     }
 
     private static readonly UnityAtoms.Void @void = new();
@@ -179,14 +173,29 @@ public class InputManager : MonoBehaviour
         cursorTransform.anchoredPosition = anchoredPosition;
     }
 
-    //private void SwitchMouse(bool isMouseAndKeyboard)
-    //{
-    //    if (!isMouseAndKeyboard)
-    //    {
-    //        InputState.Change(virtualMouse.position, Mouse.current.position.ReadValue());
-    //        InputState.Change(virtualMouse.delta, Mouse.current.delta.ReadValue());
-    //    }
-    //}
+    private void SwitchMouse(bool isMouseAndKeyboard)
+    {
+        Mouse physicalMouse = Mouse.current;
+        if (physicalMouse == null || virtualMouse == null)
+        {
+            Debug.Log("mice not ready");
+            return;
+        }
+
+        if (!isMouseAndKeyboard)
+        {
+            InputState.Change(virtualMouse.position, physicalMouse.position.ReadValue());
+            InputState.Change(virtualMouse.delta, physicalMouse.delta.ReadValue());
+        }
+        else
+        {
+            Vector2 virtualPosition = virtualMouse.position.ReadValue();
+            InputState.Change(physicalMouse.position, virtualPosition);
+            InputState.Change(physicalMouse.delta, virtualMouse.delta.ReadValue());
+            physicalMouse.WarpCursorPosition(virtualPosition);
+
+        }
+    }
 
     #endregion
 }
