@@ -21,7 +21,7 @@ public class ShadowButton : Button
 
     private ShadowButtonCompanion GetCompanion()
     {
-        if(companion == null)
+        if (companion == null)
         {
             companion = GetComponent<ShadowButtonCompanion>();
             Assert.IsNotNull(companion);
@@ -53,28 +53,26 @@ public class ShadowButton : Button
 
     #region FindSelectableOn* overrides to skip inactive objects
 
-    public override Selectable FindSelectableOnRight()
-    {
-        Selectable s = base.FindSelectableOnRight();
-        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnRight();
-    }
+    public override Selectable FindSelectableOnRight() =>
+        FindSelectable(base.FindSelectableOnRight(), s => s.FindSelectableOnRight());
 
-    public override Selectable FindSelectableOnLeft()
-    {
-        Selectable s = base.FindSelectableOnLeft();
-        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnLeft();
-    }
+    public override Selectable FindSelectableOnLeft() =>
+        FindSelectable(base.FindSelectableOnLeft(), s => s.FindSelectableOnLeft());
 
-    public override Selectable FindSelectableOnUp()
-    {
-        Selectable s = base.FindSelectableOnUp();
-        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnUp();
-    }
+    public override Selectable FindSelectableOnDown() =>
+        FindSelectable(base.FindSelectableOnDown(), s => s.FindSelectableOnDown());
 
-    public override Selectable FindSelectableOnDown()
+    public override Selectable FindSelectableOnUp() =>
+        FindSelectable(base.FindSelectableOnUp(), s => s.FindSelectableOnUp());
+
+    private Selectable FindSelectable(Selectable s, System.Func<Selectable, Selectable> getNextSelectable)
     {
-        Selectable s = base.FindSelectableOnDown();
-        return s == null || s.gameObject.activeSelf ? s : s.FindSelectableOnDown();
+        int i = 0;
+        while (i++ < 100 && s != null && (!s.interactable || !s.gameObject.activeSelf))
+        {
+            s = getNextSelectable(s);
+        }
+        return s;
     }
 
     #endregion

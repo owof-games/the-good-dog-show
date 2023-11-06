@@ -93,7 +93,7 @@ MonoBehaviour:
       - m_Target: {fileID: 8622097590482774091}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: PerformChoice1
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -109,7 +109,7 @@ MonoBehaviour:
       - m_Target: {fileID: 8622097590482774091}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: PerformChoice2
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -125,7 +125,7 @@ MonoBehaviour:
       - m_Target: {fileID: 8622097590482774091}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: PerformChoice3
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

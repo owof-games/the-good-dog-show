@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 4675353266929746707}
     - target: {fileID: 4053824322567910518, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: choiceNumber
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4728436908027539118, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: m_Pivot.x
@@ -232,9 +232,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoiceButton2
       objectReference: {fileID: 0}
+    - target: {fileID: 3772316565234589121, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772316565234589121, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 6028707653762997700}
+    - target: {fileID: 3772316565234589121, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 5709520636897746025}
     - target: {fileID: 4053824322567910518, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: choiceNumber
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4728436908027539118, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: m_Pivot.x
@@ -395,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 6028707653762997700}
     - target: {fileID: 4053824322567910518, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: choiceNumber
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4728436908027539118, guid: 6dcc7016b8b8c9642a819713c66553e3, type: 3}
       propertyPath: m_Pivot.x

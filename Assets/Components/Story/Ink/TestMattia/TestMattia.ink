@@ -4,12 +4,17 @@ INCLUDE VariablesAndFunctions/IngredientsDatabase.ink
 INCLUDE VariablesAndFunctions/Exception.ink
 INCLUDE VariablesAndFunctions/Kitchen.ink
 INCLUDE VariablesAndFunctions/Endings.ink
+INCLUDE VariablesAndFunctions/DayStart.ink
 
 
 
 
 
 
+
+// -> too_many_choices
+
+// -> test_abilities
 
 -> prima_giornata
 
@@ -21,9 +26,57 @@ INCLUDE VariablesAndFunctions/Endings.ink
 
 
 
+=== too_many_choices
+
+@moveToEnding
+
+// DOGRON: una scelta
+// + YOU: Scelta 1
+// -
+
+// DOGRON: due scelte
+// + YOU: Scelta 1
+// + YOU: Scelta 2
+// -
+
+// DOGRON: tre scelte
+// + YOU: Scelta 1
+// + YOU: Scelta 2
+// + YOU: Scelta 3
+// -
+
+DOGRON: quattro scelte
++ YOU: Scelta 1
++ YOU: Scelta 2
++ YOU: Scelta 3
++ YOU: Scelta 4
+-
+
+DOGRON: cinque scelte
++ YOU: Scelta 1
++ YOU: Scelta 2
++ YOU: Scelta 3
++ YOU: Scelta 4
++ YOU: Scelta 5
+-
+
+DOGRON: sei scelte
++ YOU: Scelta 1
++ YOU: Scelta 2
++ YOU: Scelta 3
++ YOU: Scelta 4
++ YOU: Scelta 5
++ YOU: Scelta 6
+-
+
+-> DONE
+
+
+
 === test_abilities
 
-@moveToDialogue character:{DOGRON}
+@moveToEnding
+
 DOGRON: questa è la scelta delle abilità
 YOU: bene, andiamo oltre
 DOGRON: prima ti chiedo un numero.
@@ -38,6 +91,8 @@ DOGRON: buona scelta, avanti!
 
 
 === prima_giornata
+
+-> inizio_lounge ->
 
 ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
 
@@ -130,7 +185,7 @@ DOGRON: Esatto!
 
 
 // lista di tutte le abilità possibili, verrà popolata durante il primo dialogo
-LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+LIST abilities = (EvidenziaIngredienti), (ScelteLente), (SceltaIngrediente), (PNGParliExtra), (SaltaMorte), (EliminaConcorrente), (RichiamaConcorrente)
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON

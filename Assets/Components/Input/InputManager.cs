@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 
+using static UnityEngine.InputSystem.InputAction;
+
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private GameAreaVariable currentGameArea;
@@ -66,7 +68,16 @@ public class InputManager : MonoBehaviour
 
     private static UnityAtoms.Void @void = new();
 
-    public void PerformChoice1() => choice1Performed.Raise(@void);
-    public void PerformChoice2() => choice2Performed.Raise(@void);
-    public void PerformChoice3() => choice3Performed.Raise(@void);
+    public void PerformChoice1(CallbackContext cc) => PerformChoice(cc, choice1Performed);
+    public void PerformChoice2(CallbackContext cc) => PerformChoice(cc, choice2Performed);
+    public void PerformChoice3(CallbackContext cc) => PerformChoice(cc, choice3Performed);
+
+    private void PerformChoice(CallbackContext cc, VoidEvent choicePerformed)
+    {
+        if (cc.phase == InputActionPhase.Performed)
+        {
+            Debug.Log(choicePerformed.name);
+            choicePerformed.Raise(@void);
+        }
+    }
 }
