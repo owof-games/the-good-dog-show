@@ -40,13 +40,17 @@ EXTERNAL hideKitchenText()
  ----------------------------------*/
 
 
-=== kitchen_loop(num_ingredients, base_ingredients_of_the_day, -> next_day)
+=== kitchen_loop(num_ingredients, base_ingredients_of_the_day, -> next_day, extra_strangeness)
 
 // move to the kitchen scene
 @moveToKitchen
 
+{ not in_unity:
+    DEBUG - gli ingredienti giusti sono {dialogue_ingredients_of_the_day}
+}
+
 // set the statistics of the ingredients to zero
-~ temp strangeness = 0
+~ temp strangeness = extra_strangeness
 ~ temp num_right_ingredients = 0
 
 // loop counter (from 0 to num_ingredients)

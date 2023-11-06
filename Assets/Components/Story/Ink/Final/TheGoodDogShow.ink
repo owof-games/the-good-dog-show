@@ -10,6 +10,14 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 INCLUDE 00StartingTest.ink
 INCLUDE 01DayOne.ink
+INCLUDE 02DayTwo.ink
+INCLUDE 03DayThree.ink
+INCLUDE 04DayFour.ink
+INCLUDE 05DayFive.ink
+
+
+
+
 
 
 VAR in_unity = false
