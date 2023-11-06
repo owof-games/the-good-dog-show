@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &108415988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108415990}
+  - component: {fileID: 108415989}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &108415989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108415988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdf799d99c94264888619baa784eddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: d4d94de96cab7a048a454ea7dbb94ec7, type: 3}
+  hotspot: {x: 3, y: 2}
+--- !u!4 &108415990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108415988}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 422.94302, y: 301.48676, z: 3.9055045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &340035525 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7578760686105369600, guid: 4faed6e770517d946972cf381021736f, type: 3}
@@ -1411,6 +1457,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1783160035}
     m_Modifications:
+    - target: {fileID: 3930858666819665807, guid: 4faed6e770517d946972cf381021736f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 60.795288
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930858666819665807, guid: 4faed6e770517d946972cf381021736f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 295.3855
+      objectReference: {fileID: 0}
     - target: {fileID: 5213477875180240185, guid: 4faed6e770517d946972cf381021736f, type: 3}
       propertyPath: m_Name
       value: Ending
@@ -1515,3 +1569,4 @@ SceneRoots:
   - {fileID: 1790205736}
   - {fileID: 1025319371775714880}
   - {fileID: 7831402805902452025}
+  - {fileID: 108415990}
