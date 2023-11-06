@@ -136,6 +136,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 07b95a4b-6b0c-49ea-b06e-f7dcfd58abe9
     m_ActionName: Dialogue/Choice3[/Keyboard/3,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8622097590482774091}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnMoveCursor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 794cfb7e-9de4-4afd-a7cf-d7618d0fee01
+    m_ActionName: Kitchen/MoveCursor[/XInputControllerWindows/leftStick]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Dialogue

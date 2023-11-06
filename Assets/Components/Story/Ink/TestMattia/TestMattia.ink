@@ -16,11 +16,11 @@ INCLUDE VariablesAndFunctions/DayStart.ink
 
 // -> test_abilities
 
--> prima_giornata
+// -> prima_giornata
 
-// ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
-// ~ chosen_ingredient = Cipolla
-// -> cucina_giorno_uno
+~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
+~ chosen_ingredient = InvalidIngredient
+-> cucina_giorno_uno
 
 // -> finale_giorno_uno(3, 2)
 
