@@ -1,6 +1,5 @@
 using System.Collections;
-
-using Ink.Runtime;
+using System.Collections.Generic;
 
 using LemuRivolta.InkAtoms;
 
@@ -9,14 +8,14 @@ using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-[CreateAssetMenu(menuName = "The Good Dog Show/Create Move To Dialogue External Function")]
-public class MoveToDialogueFunction : CoroutineExternalFunction
+[CreateAssetMenu(menuName = "The Good Dog Show/Create Move To Dialogue Command")]
+public class MoveToDialogueCommand : CommandLineParser
 {
     [SerializeField] private GameAreaEvent moveToGameAreaEvent;
     [SerializeField] private GameAreaVariable currentGameArea;
     [SerializeField] private CharacterNameVariable currentDialogueCharacter;
 
-    public MoveToDialogueFunction() : base("moveToDialogue") { }
+    public MoveToDialogueCommand() : base("moveToDialogue") { }
 
     private void OnEnable()
     {
@@ -25,27 +24,21 @@ public class MoveToDialogueFunction : CoroutineExternalFunction
         Assert.IsNotNull(currentDialogueCharacter);
     }
 
-    public override IEnumerator Call(ExternalFunctionContextWithResult context)
+    public override IEnumerator Invoke(IDictionary<string, Parameter> parameters, StoryChoice[] choices, CommandLineParserAction commandLineParserAction)
     {
-        if(context.Arguments.Length != 1)
-        {
-            throw new System.ArgumentException("moveToDialogue needs a single argument");
-        }
+        // get character name from parameters
+        var characterStringName = GetParameter(parameters, "character");
 
-        var arg = context.Arguments[0];
-        if(arg is not InkList characterList)
-        {
-            throw new System.ArgumentException("moveToDialogue needs a list argument");
-        }
-
-        var characterStringName = characterList.ToString();
-        if(!System.Enum.TryParse<CharacterName>(characterStringName, out var characterName))
+        // convert to a CharacterName enum
+        if (!System.Enum.TryParse<CharacterName>(characterStringName, out var characterName))
         {
             throw new System.ArgumentException($"Cannot find character name '{characterStringName}'");
         }
 
+        // move to the specified dialogue
         moveToGameAreaEvent.Raise(GameArea.Dialogue);
         currentDialogueCharacter.Value = characterName;
         yield return currentGameArea.Await(gameArea => gameArea == GameArea.Dialogue);
     }
+
 }

@@ -1,4 +1,4 @@
-CONST base_dialogue_loops = 1
+CONST base_dialogue_loops = 3
 
 === lounge_loop(-> bebe_tunnel, -> ugoemimi_tunnel, -> piiiietro_tunnel, -> quello_tunnel, -> ildivo_tunnel, -> kitchen_divert)
 
@@ -15,23 +15,23 @@ CONST base_dialogue_loops = 1
 
 @moveToLounge
 * {youHaveTimeToTalk and isAlive(BeBe)} [BeBe]
-    ~ moveToDialogue(BeBe)
+    @moveToDialogue character:{BeBe}
     -> bebe_tunnel ->
     -> loop
 * {youHaveTimeToTalk and isAlive(UgoEMimi)} [UgoEMimi]
-    ~ moveToDialogue(UgoEMimi)
+    @moveToDialogue character:{UgoEMimi}
     -> ugoemimi_tunnel ->
     -> loop
 * {youHaveTimeToTalk and isAlive(Piiiietro)} [Piiiietro]
-    ~ moveToDialogue(Piiiietro)
+    @moveToDialogue character:{Piiiietro}
     -> piiiietro_tunnel ->
     -> loop
 * {youHaveTimeToTalk and isAlive(Quello)} [Quello]
-    ~ moveToDialogue(Quello)
+    @moveToDialogue character:{Quello}
     -> quello_tunnel ->
     -> loop
 * {youHaveTimeToTalk and isAlive(ilDivo)} [ilDivo]
-    ~ moveToDialogue(ilDivo)
+    @moveToDialogue character:{ilDivo}
     -> ildivo_tunnel ->
     -> loop
 * -> kitchen_divert

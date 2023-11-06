@@ -9,8 +9,10 @@
 VAR dialogue_ingredients_of_the_day = (InvalidIngredient)
 // chosen ingredient; this is set by Unity in @playKitchenGame
 VAR chosen_ingredient = InvalidIngredient
+VAR ScampataLaMorte = false
 CONST normal_speed = 1.3
 CONST slow_speed = 1.0
+CONST num_ingredients_to_get_right = 3
 
 
 
@@ -38,7 +40,7 @@ EXTERNAL hideKitchenText()
  ----------------------------------*/
 
 
-=== kitchen_loop(num_ingredients, base_ingredients_of_the_day, -> ending)
+=== kitchen_loop(num_ingredients, base_ingredients_of_the_day, -> next_day)
 
 // move to the kitchen scene
 @moveToKitchen
@@ -66,8 +68,7 @@ EXTERNAL hideKitchenText()
 // check whether we should break the loop and go to the ending
 ~ num_loop += 1
 { num_loop > num_ingredients:
-    ~ dialogue_ingredients_of_the_day = ()
-    -> ending(strangeness, num_right_ingredients)
+    -> after_kitchen(strangeness, num_right_ingredients, next_day)
 }
 
 // variable to track whether to only show correct ingredients in the list
@@ -95,9 +96,9 @@ EXTERNAL hideKitchenText()
 ~ temp comma_separated_ingredients = get_list_with_commas(all_ingredients)
 @playKitchenGame ingredients:{comma_separated_ingredients}
 
-// { not in_unity:
-//     -> debugChooseIngredient(all_ingredients) ->
-// }
+{ not in_unity:
+    -> debugChooseIngredient(all_ingredients) ->
+}
 
 // add the strangeness of the chosen ingredient
 ~ temp ingredient_strangeness = getIngredientData(chosen_ingredient, Strangeness)

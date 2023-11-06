@@ -3,6 +3,8 @@ INCLUDE VariablesAndFunctions/BuiltIn.ink
 INCLUDE VariablesAndFunctions/IngredientsDatabase.ink
 INCLUDE VariablesAndFunctions/Exception.ink
 INCLUDE VariablesAndFunctions/Kitchen.ink
+INCLUDE VariablesAndFunctions/Endings.ink
+
 
 
 
@@ -21,7 +23,7 @@ INCLUDE VariablesAndFunctions/Kitchen.ink
 
 === test_abilities
 
-~ moveToDialogue(DOGRON)
+@moveToDialogue character:{DOGRON}
 DOGRON: questa è la scelta delle abilità
 YOU: bene, andiamo oltre
 DOGRON: prima ti chiedo un numero.
@@ -73,15 +75,15 @@ DOGRON: buona scelta, avanti!
 
 === cucina_giorno_uno
 
--> kitchen_loop(3, (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale), -> finale_giorno_uno)
+-> kitchen_loop(3, (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale), -> seconda_giornata_inizio)
 
 
 
-=== finale_giorno_uno(strangeness, num_right_ingredients)
+=== seconda_giornata_inizio
 
-~ moveToEnding()
+@moveToDialogue character:{DOGRON}
 
-DOGRON: Finale del giorno uno, la strangeness è {strangeness}, e il numero di ingredienti giusti sono {num_right_ingredients}.
+DOGRON: Finale del giorno uno!
 YOU: Fantastico! Vero?
 DOGRON: Tu che ne dici?
 + YOU: È fantastico
@@ -90,10 +92,10 @@ DOGRON: Tu che ne dici?
 -
 DOGRON: Esatto!
 
--> END
+-> seconda_giornata_lounge
 
 
-=== seconda_giornata
+=== seconda_giornata_lounge
 
 -> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno)
 
@@ -128,7 +130,7 @@ DOGRON: Esatto!
 
 
 // lista di tutte le abilità possibili, verrà popolata durante il primo dialogo
-LIST abilities = (EvidenziaIngredienti), ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
@@ -138,7 +140,6 @@ VAR success = true
 
 VAR Eliminatrice = false
 VAR Resuscitatrice = false
-VAR ScampataLaMorte = false
 
 
 
@@ -154,10 +155,6 @@ VAR ScampataLaMorte = false
     Rimossa {ability}.
     
 VAR tmp = 0
-
-EXTERNAL moveToDialogue(character)
-=== function moveToDialogue(character) ===
-[[[move to dialogue with {character}]]]
 
 === debugChooseIngredient(ingredients)
 DEBUG - scegli l'ingrediente:
@@ -345,7 +342,3 @@ DEBUG - scegli l'ingrediente:
 ->->
 
 VAR in_unity = false
-
-EXTERNAL moveToEnding()
-=== function moveToEnding() ===
-[[[move to end]]]

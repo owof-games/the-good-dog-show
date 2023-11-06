@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d2b31ab5729cf4a8137bd62ec3f5e8, type: 3}
-  m_Name: Move To Dialogue Function
+  m_Script: {fileID: 11500000, guid: 7c728f13bfd9d40479d1689fc9c6ec19, type: 3}
+  m_Name: Move To Ending Command
   m_EditorClassIdentifier: 
+  gameArea: 4
+  commandName: moveToEnding
   moveToGameAreaEvent: {fileID: 11400000, guid: 1381fee5817cc7246a8aab73773c28fb, type: 2}
   currentGameArea: {fileID: 11400000, guid: 782ed2f367a33534381d6474369659c5, type: 2}
-  currentDialogueCharacter: {fileID: 11400000, guid: ab1e2d9d0ffc2bd4ba6d9500796a4497, type: 2}
