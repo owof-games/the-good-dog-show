@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-
 using LemuRivolta.InkAtoms;
 
 using UnityAtoms.BaseAtoms;
@@ -15,15 +12,11 @@ public class SetIngredientsSpeedExternalFunction : ActionExternalFunction
 
     public SetIngredientsSpeedExternalFunction() : base("setIngredientsSpeed") { }
 
-    private void OnEnable()
-    {
-        Assert.IsNotNull(ingredientsSpeedMultiplier);
-        Assert.IsTrue(ingredientsSpeedMultiplier.Value > 0);
-    }
-
     public override void Call(ExternalFunctionContext context)
     {
         var speed = GetArgument<float>(context, 0);
+
+        Assert.IsTrue(speed > 0);
 
         ingredientsSpeedMultiplier.Value = speed;
     }
