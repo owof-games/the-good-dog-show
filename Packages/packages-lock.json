@@ -216,7 +216,7 @@
       }
     },
     "it.lemurivolta.ink-atoms": {
-      "version": "file:E:/ProgettiUnity/ink-atoms/ink-atoms/Packages/it.lemurivolta.ink-atoms",
+      "version": "file:C:/Users/mbelletti/PersonalRepos/InkAtomsScaffolding/Packages/it.lemurivolta.ink-atoms",
       "depth": 0,
       "source": "local",
       "dependencies": {
