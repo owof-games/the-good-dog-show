@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Linq;
 
 using LemuRivolta.InkAtoms;
 
@@ -14,16 +16,21 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private StringEvent continueEvent;
     [SerializeField] private InkAtomsStory inkAtomsStory;
-    [SerializeField] private TextAsset inkTextAsset;
+    [SerializeField] private TextAsset itInkTextAsset;
+    [SerializeField] private TextAsset enInkTextAsset;
 
     [SerializeField] private Button startButton;
     [SerializeField] private Toggle enToggle;
     [SerializeField] private Toggle itToggle;
 
+    private const string enLocaleCode = "en-US";
+    private const string itLocaleCode = "it-IT";
+
     private void Awake()
     {
         Assert.IsNotNull(inkAtomsStory);
-        Assert.IsNotNull(inkTextAsset);
+        Assert.IsNotNull(itInkTextAsset);
+        Assert.IsNotNull(enInkTextAsset);
         Assert.IsNotNull(continueEvent);
         Assert.IsNotNull(startButton);
         Assert.IsNotNull(itToggle);
@@ -37,8 +44,31 @@ public class Menu : MonoBehaviour
         enToggle.gameObject.SetActive(true);
         itToggle.gameObject.SetActive(true);
         string localeCode = LocalizationSettings.SelectedLocale.Identifier.Code;
-        enToggle.isOn = localeCode == "en-US";
-        itToggle.isOn = localeCode == "it-IT";
+        enToggle.isOn = localeCode == enLocaleCode;
+        itToggle.isOn = localeCode == itLocaleCode;
+    }
+
+    public void SetENLocale(bool selected)
+    {
+        if (selected)
+        {
+            SetLocale(enLocaleCode);
+        }
+    }
+
+    public void SetITLocale(bool selected)
+    {
+        if (selected)
+        {
+            SetLocale(itLocaleCode);
+        }
+    }
+
+    private void SetLocale(string localeCode)
+    {
+        var locale = LocalizationSettings.AvailableLocales.Locales.First(
+                locale => locale.Identifier.Code == localeCode);
+        LocalizationSettings.SelectedLocale = locale;
     }
 
     private void Update()
@@ -53,7 +83,10 @@ public class Menu : MonoBehaviour
 
     public void OnStart()
     {
-        inkAtomsStory.StartStory(inkTextAsset);
+        string localeCode = LocalizationSettings.SelectedLocale.Identifier.Code;
+        inkAtomsStory.StartStory(localeCode == itLocaleCode ?
+            itInkTextAsset :
+            enInkTextAsset);
         inkAtomsStory["in_unity"] = true;
         continueEvent.Raise(null);
     }

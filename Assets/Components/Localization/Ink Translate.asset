@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05577ab9dadd54469b4a9959216ec99, type: 3}
   m_Name: Ink Translate
   m_EditorClassIdentifier: 
-  InkFileAsset: {fileID: 0}
-  SourceLanguageCode: EN
-  OtherSupportedLanguages: []
+  InkFileAsset: {fileID: 102900000, guid: d50720f71497be449a9226e7f969c067, type: 3}
+  SourceLanguageCode: it-IT
+  OtherSupportedLanguages:
+  - LanguageCode: en-US
+    XLIFFFile: {fileID: 0}
+    ODSFile: {fileID: 102900000, guid: e48b38596a0631b4fb622224e67ddf3a, type: 3}
+    TSVFile: {fileID: 0}
   TranslationNotePrefix: 'tnote:'
   SkipStringVariables: 0

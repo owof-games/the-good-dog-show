@@ -235,7 +235,19 @@ MonoBehaviour:
   m_Group: {fileID: 7691038492634592674}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4905196625283791951}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: SetITLocale
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: test
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &3208692929717456515
 GameObject:
@@ -438,7 +450,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   inkAtomsStory: {fileID: 11400000, guid: c6bfcfd395c994843afe25dd3c0b5e88, type: 2}
-  inkTextAsset: {fileID: 4900000, guid: f429f5f7ce243b24b850b620c7a89f33, type: 3}
+  itInkTextAsset: {fileID: 4900000, guid: f429f5f7ce243b24b850b620c7a89f33, type: 3}
+  enInkTextAsset: {fileID: 4900000, guid: 5677dbc09eb7ea544917e7f51eac6437, type: 3}
   startButton: {fileID: 4909366408926330556}
   enToggle: {fileID: 2163615727125454589}
   itToggle: {fileID: 6061616771500230280}
@@ -600,7 +613,19 @@ MonoBehaviour:
   m_Group: {fileID: 7691038492634592674}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4905196625283791951}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: SetENLocale
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: test
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &6324623962169412702
 GameObject:
