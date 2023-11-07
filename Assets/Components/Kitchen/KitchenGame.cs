@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Linq;
 using UnityAtoms.BaseAtoms;
+using System.Collections.Generic;
 
 public class KitchenGame : MonoBehaviour
 {
@@ -68,9 +69,12 @@ public class KitchenGame : MonoBehaviour
     /// <param name="ingredientKeys">Comma-separated list of ingredients</param>
     private void CreateButtons(string ingredientKeys)
     {
+        var ingredients = ingredientKeys
+            .Split(',')
+            .OrderBy(_ => Random.Range(0f, 1f));
         foreach (var (ingredientKey, button) in
             from root in verticalLayoutRectTransforms
-            from ingredientKey in ingredientKeys.Split(',')
+            from ingredientKey in ingredients
             let button = Instantiate(ingredientButtonPrefab, root)
             select (ingredientKey, button))
         {
