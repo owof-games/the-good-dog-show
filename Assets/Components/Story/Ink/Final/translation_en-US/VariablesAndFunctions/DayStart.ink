@@ -2,7 +2,7 @@
 
 @moveToDialogue character:{DOGRON}
 
-DOGRON: {And now, a welcome to all the contestants and those following us from home!|Here wwwwe go again, contestants and spectators!|Goooood evening to all the beautiful people on this planet and beyond!|Has anyone seen my favorite collar?|Last night friends, last night together!}
+DOGRON: {And now, a welcome to all the contestants and those following us from home!|Here wwwwe go again, contestants and spectators!|Goooood evening to all the beautiful people on this planet and beyond!|Has anyone seen my favorite collar?|Last night friends, last night together!}}
 DOGRON: {Competitors, remember that every day youuuuu will lose one of your abilities. Human person here in front of me! You will lose today, drum roll...|What skill will we take away from our huuuuuman person today?!?|Fewer and fewer people, fewer and fewer active skills!|Uuuuh, my tummy hurts today.|Me doggo big, not crying, no no, wooooof!}
 
 ~ temp ability = LIST_RANDOM(abilities)

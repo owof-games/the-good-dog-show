@@ -52,3 +52,37 @@ Functions that are taken from Inky's "Ink" menu, or directly modified from there
     - else:
         ~ return ""
     }
+    
+    
+/*
+    Tunnel that displays all the entries of a list, execute a tunnel with
+    the chosen choice, and then returns.
+   
+   Usage:
+   
+   LIST Colours = Red, Green, Blue, Pink
+   VAR my_colour = ()
+   
+   === set_my_colour(colour)
+   ~ my_colour = colour
+   ->->
+   
+   === choose
+   -> choose_from(LIST_ALL(Colours), -> set_my_colour) ->
+   You chose {my_colour}
+
+*/
+
+=== choose_from(candidates, -> action)
+<- choice_for_each(candidates, action)
+-> DONE
+= choice_for_each(candidates, -> action)
+    {LIST_COUNT(candidates) == 0:
+        -> DONE
+    }
+    ~temp curr = LIST_MIN(candidates)
+    <- choice_for_each(candidates - curr, action)
+    + [{curr}]
+        -> action(curr) ->
+        ->->
+    -> DONE
