@@ -226,7 +226,7 @@
       }
     },
     "it.lemurivolta.ink-translate": {
-      "version": "0.2.0",
+      "version": "0.3.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
