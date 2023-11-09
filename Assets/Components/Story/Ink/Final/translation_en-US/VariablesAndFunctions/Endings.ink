@@ -1,3 +1,10 @@
+/*
+ENDINGS
+
+Management of day endings and game ending.
+*/
+
+
 === after_kitchen(strangeness, num_right_ingredients, -> next_day)
 
 { not in_unity:

@@ -1,4 +1,28 @@
+/*
+LOUNGE
+
+Routines that are re-used each time we enter the lounge section
+*/
+
+
+
+/* ---------------------------------
+
+   VARIABLES AND CONSTANTS
+
+ ----------------------------------*/
+
+
 CONST base_dialogue_loops = 3
+
+
+
+/* ---------------------------------
+
+   KNOTS
+
+ ----------------------------------*/
+
 
 === lounge_loop(-> bebe_tunnel, -> ugoemimi_tunnel, -> piiiietro_tunnel, -> quello_tunnel, -> ildivo_tunnel, -> kitchen_divert)
 
@@ -45,11 +69,3 @@ CONST base_dialogue_loops = 3
     ~ talkedWith += ilDivo
     -> loop
 + -> kitchen_divert
-
-
-=== function isAlive(character)
-~ return alive_characters has character
-
-EXTERNAL moveToLounge()
-=== function moveToLounge() ===
-[[[move to lounge]]]

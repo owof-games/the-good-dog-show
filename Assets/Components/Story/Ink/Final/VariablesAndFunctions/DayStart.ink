@@ -1,3 +1,9 @@
+/*
+DAY START
+
+Management of the dialogues at the beginning of the day, before the lounge.
+*/
+
 === inizio_lounge ===
 
 @moveToDialogue character:{DOGRON}

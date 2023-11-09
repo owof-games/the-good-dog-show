@@ -1,8 +1,31 @@
+/*
+INGREDIENTS DATABASE
+
+A database containing all the ingredients and their characteristics.
+*/
+
+
+
+/* ---------------------------------
+
+   VARIABLES AND CONSTANTS
+
+ ----------------------------------*/
+
+
 // list of info that can be queried about an ingredient
 LIST IngredientInfo = Name, Strangeness
 
 // list of all the ingredients
 LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltare, Sciogliere, Lievitare, Sale, Cipolla, Affettare, TonnoInScatola, Mescolare, Burro, Montare, Zafferano, Mantecare, Braciola, Arrosticino, Costina, Osso, Grigliare, Crocchette, Versare, Riempire, Formaggio, Fondere, Coccole, Brandina, Cuccia, Sgranocchiare, Fidarsi, BarattoloDelloYogurt, Pettorina, Trasportino, Veterinario, Automobile, Viaggiare, Inconscio, CorrereNeiSogni, Coccolare, Carezzare, Pettare, Grattare, DormireAssieme, Protezione, NoGatti, VolAuVent, Skyrim, BlocchiDiErba, UovaDiPecora, Scolare, Lacrime, CacaoAmaro, Specchiarsi, Scottare, IVeriVideogiochi, Canapé, Mungere, Cardare, ChinottoDiSavona, Raccontare, Selfie, Interviste, Avvelenare, CollareConEtichetta, TonnoAlNaturale, Cantare, Perdonare, Evolversi, IoMeStessoMedesimo, SelfCare, Sventrare, Emancipazione, MichelaMurgia, Sacrificio, PeanutButter, GiocattoloPreferito, KateBush, IdeaDiSuccesso, CassaPortatile, Padre, Funghicida, Mappa, Grande, Aiuto, Aiutoooooo, CollaDiPesce, Filtrare, Mazinga, OrecchieUgo
+
+
+
+/* ---------------------------------
+
+   KNOTS
+
+ ----------------------------------*/
 
 
 /*
@@ -14,6 +37,7 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     Usage:
     ~ VAR eggsStrangeness = getIngredientData(Eggs, Strangeness)
 */
+
 === function getIngredientData(ingredient, what)
 { ingredient:
     - Uova:
