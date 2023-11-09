@@ -14,6 +14,8 @@ INCLUDE 02DayTwo.ink
 INCLUDE 03DayThree.ink
 INCLUDE 04DayFour.ink
 INCLUDE 05DayFive.ink
+INCLUDE VariablesAndFunctions/Audio.ink
+
 
 
 

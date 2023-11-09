@@ -11,6 +11,8 @@ Management of day endings and game ending.
     DEBUG: after_kitchen(strangeness={strangeness}, num_right_ingredients={num_right_ingredients})
 }
 
+~ playBackgroundMusic("chill")
+
 // move to the ending screen
 @moveToEnding
 

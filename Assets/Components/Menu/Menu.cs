@@ -23,6 +23,9 @@ public class Menu : MonoBehaviour
     [SerializeField] private Toggle enToggle;
     [SerializeField] private Toggle itToggle;
 
+    [SerializeField] private StringEventReference playBackgroundMusicEvent;
+    [SerializeField] private StringReference musicName;
+
     private const string enLocaleCode = "en-US";
     private const string itLocaleCode = "it-IT";
 
@@ -46,6 +49,11 @@ public class Menu : MonoBehaviour
         string localeCode = LocalizationSettings.SelectedLocale.Identifier.Code;
         enToggle.isOn = localeCode == enLocaleCode;
         itToggle.isOn = localeCode == itLocaleCode;
+    }
+
+    private void OnEnable()
+    {
+        playBackgroundMusicEvent.Event.Raise(musicName);
     }
 
     public void SetENLocale(bool selected)

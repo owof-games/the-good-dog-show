@@ -42,6 +42,8 @@ EXTERNAL hideKitchenText()
 
 === kitchen_loop(num_ingredients, base_ingredients_of_the_day, -> next_day, extra_strangeness)
 
+~ playBackgroundMusic("action")
+
 // move to the kitchen scene
 @moveToKitchen
 

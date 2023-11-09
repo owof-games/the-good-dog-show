@@ -455,6 +455,18 @@ MonoBehaviour:
   startButton: {fileID: 4909366408926330556}
   enToggle: {fileID: 2163615727125454589}
   itToggle: {fileID: 6061616771500230280}
+  playBackgroundMusicEvent:
+    _usage: 0
+    _event: {fileID: 11400000, guid: d1753241e9b9df14b97184c635a3fab0, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  musicName:
+    _usage: 0
+    _value: chill
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &5074341013649995689
 GameObject:
   m_ObjectHideFlags: 0

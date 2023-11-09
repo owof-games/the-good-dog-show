@@ -6,6 +6,8 @@ Management of the dialogues at the beginning of the day, before the lounge.
 
 === inizio_lounge ===
 
+~ playBackgroundMusic("chill")
+
 @moveToDialogue character:{DOGRON}
 
 DOGRON: {E ora, un benvenuuuuto a tuuuutte le persone concorrenti e a chi ci segue da casa!|Eccoci nuovamente, concorrenti e spettatrici!|Buonasera a tuuuuutte le persone belle di questo pianeta e oltre!|Qualcuuuuuna ha visto il mio collare preferito?|L'ultima sera amiche, l'uuuultima sera assieme!}
