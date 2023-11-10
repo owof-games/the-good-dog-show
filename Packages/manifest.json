@@ -42,7 +42,7 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "it.lemurivolta.ink-translate": "file:C:/Users/mbelletti/source/repos/lemurivolta/ink-translate/Packages/it.lemurivolta.ink-translate"
+    "it.lemurivolta.ink-translate": "0.4.0"
   },
   "scopedRegistries": [
     {

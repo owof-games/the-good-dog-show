@@ -226,12 +226,13 @@
       }
     },
     "it.lemurivolta.ink-translate": {
-      "version": "file:C:/Users/mbelletti/source/repos/lemurivolta/ink-translate/Packages/it.lemurivolta.ink-translate",
+      "version": "0.4.0",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
         "com.inkle.ink-unity-integration": "1.1.8"
-      }
+      },
+      "url": "https://package.openupm.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
