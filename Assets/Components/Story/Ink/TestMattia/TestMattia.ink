@@ -72,6 +72,7 @@ DOGRON: sei scelte
 -> DONE
 
 
+VAR day = 0
 
 === test_abilities
 
@@ -85,6 +86,8 @@ DOGRON: prima ti chiedo un numero.
 * YOU: tredici
 -
 DOGRON: buona scelta, avanti!
+
+~ day += 1
 
 @moveToDialogue character:DOGRON
 

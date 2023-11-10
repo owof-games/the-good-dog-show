@@ -46,6 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGameArea: {fileID: 11400000, guid: 782ed2f367a33534381d6474369659c5, type: 2}
+  currentDay:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: e38e4596b2649dd4f9bb90dc9cb0a419, type: 2}
+    _variableInstancer: {fileID: 0}
   transitioning: {fileID: 11400000, guid: 54188e15319d9f445a860627e18d1548, type: 2}
   transitionVideo: {fileID: 0}
   areas: []
