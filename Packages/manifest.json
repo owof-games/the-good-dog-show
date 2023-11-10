@@ -10,7 +10,7 @@
     "com.unity.render-pipelines.universal": "14.0.8",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.ugui": "1.0.0",
-    "it.lemurivolta.ink-atoms": "file:E:/ProgettiUnity/ink-atoms/ink-atoms/Packages/it.lemurivolta.ink-atoms",
+    "it.lemurivolta.ink-atoms": "file:C:/Users/mbelletti/PersonalRepos/InkAtomsScaffolding/Packages/it.lemurivolta.ink-atoms",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -42,7 +42,7 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "it.lemurivolta.ink-translate": "0.3.2"
+    "it.lemurivolta.ink-translate": "file:C:/Users/mbelletti/source/repos/lemurivolta/ink-translate/Packages/it.lemurivolta.ink-translate"
   },
   "scopedRegistries": [
     {
