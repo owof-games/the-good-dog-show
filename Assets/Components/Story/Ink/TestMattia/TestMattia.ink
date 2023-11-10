@@ -14,13 +14,13 @@ INCLUDE VariablesAndFunctions/DayStart.ink
 
 // -> too_many_choices
 
-// -> test_abilities
+-> test_abilities
 
 // -> prima_giornata
 
-~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
-~ chosen_ingredient = InvalidIngredient
--> cucina_giorno_uno
+// ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
+// ~ chosen_ingredient = InvalidIngredient
+// -> cucina_giorno_uno
 
 // -> finale_giorno_uno(3, 2)
 
@@ -85,6 +85,14 @@ DOGRON: prima ti chiedo un numero.
 * YOU: tredici
 -
 DOGRON: buona scelta, avanti!
+
+@moveToDialogue character:DOGRON
+
+DOGRON: Eccoci alla prima parte della giornata!
+
+@moveToDialogue character:DOGRON
+
+DOGRON: transizione, di nuovo!
 
 -> prima_giornata
 

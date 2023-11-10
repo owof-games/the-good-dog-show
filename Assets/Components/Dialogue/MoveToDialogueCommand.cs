@@ -36,8 +36,8 @@ public class MoveToDialogueCommand : CommandLineParser
         }
 
         // move to the specified dialogue
-        moveToGameAreaEvent.Raise(GameArea.Dialogue);
         currentDialogueCharacter.Value = characterName;
+        moveToGameAreaEvent.Raise(GameArea.Dialogue);
         yield return currentGameArea.Await(gameArea => gameArea == GameArea.Dialogue);
     }
 

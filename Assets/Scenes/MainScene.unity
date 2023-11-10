@@ -1276,6 +1276,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
+      propertyPath: backgroundMusicVolume._value
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8295896391703092920, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -1441,10 +1445,6 @@ PrefabInstance:
     - target: {fileID: 7782496838574783398, guid: 8687427b8d94d964fbc9241fb58ec529, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8641656838911282783, guid: 8687427b8d94d964fbc9241fb58ec529, type: 3}
-      propertyPath: debugMode
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

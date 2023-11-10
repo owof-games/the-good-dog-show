@@ -79,6 +79,12 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator PlayTransition(GameArea gameArea)
     {
         transitioning.Value = true;
+        if (currentGameArea.Value == gameArea)
+        {
+            transitioning.Value = false;
+            yield break;
+        }
+
         var enumerator = TurnOff(gameArea);
         if (enumerator != null)
         {
