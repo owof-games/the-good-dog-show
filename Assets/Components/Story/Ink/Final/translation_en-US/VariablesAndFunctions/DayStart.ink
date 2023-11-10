@@ -56,13 +56,13 @@ DOGRON: {Competitors, remember that every day youuuuu will lose one of your abil
         ~ alive_characters -= UgoEMimi
         ~ eliminatrice = true
         ~ abilities -= EliminaConcorrente
-        Mimi, sashay away.
+        DOGRON: Mimi, sashay away.
     + {alive_characters has Quello} YOU: That One
         ~ alive_characters -= Quello
         ~ eliminatrice = true
         ~ abilities -= EliminaConcorrente
         DOGRON: Oh. Oh. My friend, I hope you will forgive this competitor, but you mustleave. I will see you again in the endless meadow!
-    + {alive_characters has ilDivo} You: Il Divo
+    + {alive_characters has ilDivo} YOU: Il Divo
         ~ alive_characters -= ilDivo
         ~ eliminatrice = true 
         ~ abilities -= EliminaConcorrente

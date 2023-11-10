@@ -30,7 +30,7 @@ DOGRON: Come here, tail!
         + YOU: No, I meant the fact that she is missing a head, like.
         -
     UgoEMimi: I feel so light today, you know? I haven't in a long time. First I got into soldering some electrical sockets, and helped the cameraman with a problem with his android circuits.
-    HughEMimi: And to celebrate the change, as requested by Dogron and his dog friends, I think I will make an Olivier salad with <b>Ugo's ears</b>.
+    UgoEMimi: And to celebrate the change, as requested by Dogron and his dog friends, I think I will make an Olivier salad with <b>Ugo's ears</b>.
             ~ dialogue_ingredients_of_the_day += OrecchieUgo
             + YOU: I remember Eustacchio's, with mushrooms they were the bomb.
             + YOU: Maybe we'd better hear what the jury thinks first?
@@ -147,7 +147,7 @@ DOGRON: Come here, tail!
             + YOU: Ermenegildo?
             + YOU: The Supreme Chihuahua?
             -
-        theDivo: <b>Me,myself and I</b>. There is only one great love in this life, and I can only be me. Just.
+        ilDivo: <b>Me,myself and I</b>. There is only one great love in this life, and I can only be me. Just.
             ~ dialogue_ingredients_of_the_day += IoMeStessoMedesimo
         ilDivo: Do you want to celebrate my marriage to myself?
             + YOU: I'm sorry but I have to have my ears pricked out before continuing this show.

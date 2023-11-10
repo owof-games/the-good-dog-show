@@ -19,7 +19,7 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     UgoEMimi: …
         + YOU: I know I'm going to regret saying this, but you seem very quiet today.
         -
-    HughEMimi: Ugo spoke with one of the producers, for his video game.
+    UgoEMimi: Ugo spoke with one of the producers, for his video game.
     UgoEMimi: Junk sellers, they are. But did you know that the manufacturers are pugs!!!!
     UgoEMimi: And he was told that the project lacks a coherent narrative, and a connection between gameplay, narrative and graphical elements.
     UgoEMimi: Mi hanno detto in sostanza che non ha senso! That it's a game where meaningless things happen! But I've been playing <b>real video games</b> forever! These are walking simulator pugs and visual novels!

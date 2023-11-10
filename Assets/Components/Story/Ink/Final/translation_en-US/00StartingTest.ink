@@ -140,13 +140,13 @@ DOGRON: You buried someone, but you don't remember where you did it, and you're 
     ~ temp ability = pop(list_recap)
 
     {ability:
-        - EvidenziaIngredienti: the ability to notice the ingredients right away!
-        - ScelteLente: the possibility of slowing down time.
-        - SceltaIngrediente: the luck of being able to choose an ingredient at the beginning of the recipe.
-        - PNGParliExtra: the right to chat with an extra person in the lounge.
-        - SaltaMorte: the, um, uh, thepossibilityofskippingyourdeathonce uh look how beautiful a labrador!
-        - EliminaConcorrente: The right to kick another person out of the program who is here to contestantatan. Cronestant. Contrestant. Someone that is here to play.
-        - RichiamaConcorrente: The power to recall the dead once. Woah!
+        - EvidenziaIngredienti: DOGRON: the ability to notice the ingredients right away!
+        - ScelteLente: DOGRON: the possibility of slowing down time.
+        - SceltaIngrediente: DOGRON: the luck of being able to choose an ingredient at the beginning of the recipe.
+        - PNGParliExtra: DOGRON: the right to chat with an extra person in the lounge.
+        - SaltaMorte: DOGRON: the, um, uh, thepossibilityofskippingyourdeathonce uh look how beautiful a labrador!
+        - EliminaConcorrente: DOGRON: The right to kick another person out of the program who is here to contestantatan. Cronestant. Contrestant. Someone that is here to play.
+        - RichiamaConcorrente: DOGRON: The power to recall the dead once. Woah!
     }
     
     -> recap(list_recap)

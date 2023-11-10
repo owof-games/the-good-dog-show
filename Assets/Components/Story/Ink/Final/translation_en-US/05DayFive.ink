@@ -8,7 +8,7 @@ DOGRON: No no no friends, those are not tears youuuuu see, it's just allergy to 
 DOGRON: Sob.
 DOGRON: The last episode of THE VERY GOOOOOD DOGGO GOOD DOGRON GOOD, SOMEONE TELL DOGRON THAT IT'S A GOOD DOOOG and deserves a pat-pat!
 DOGRON: May I remind you, finalists, that up for grabs is the chance to have your own mega restaurant on Neptuuuuune.
-Coincidentally very close to my huuuuuman-less cottage, and that of the Great Pug Council and the Supreme Chihuahua.
+DOGRON: Coincidentally very close to my huuuuuman-less cottage, and that of the Great Pug Council and the Supreme Chihuahua.
 DOGRON: We good dogs, woof woof
 DOGRON: And that's why today's theme, the last big theme is:
 DOGRON: A dish that shouuuuuts to the world that you are the best dog parent in the world!
@@ -135,12 +135,12 @@ DOGRON: Racers, start your engines, and may the best dog person win.
         + YOU: What about that forgiveness stuff?
         + YOU: I have tried six times, but it is not easy to hurt someone who has eight dimensions.
         -
-    That: I will get rid of his teachings, of his belittling me. And I will lead the vacuum cleaner revolt on my home planet. If the roombas want to join us, fine. If not, they will be useful spare parts.
+    Quello: I will get rid of his teachings, of his belittling me. And I will lead the vacuum cleaner revolt on my home planet. If the roombas want to join us, fine. If not, they will be useful spare parts.
         + YOU: This is escalating quickly, it seems to me.
         -
-    That: And before I leave, one last gift for Il Divo: meringues enriched with <b>fungicide</b>.
+    Quello: And before I leave, one last gift for Il Divo: meringues enriched with <b>fungicide</b>.
     ~ dialogue_ingredients_of_the_day += Funghicida
-        + ilDivo: Oh, aiuto! Quale scena è, dove mi trovo? Sei tu, DeMille?
+        + YOU: I didn’t hear a word and now I’m going, bye.
         + YOU: Remind me not to invite you to dinner. See you later.
         + YOU: I hope you can make it to, to do this extermination? Where is the security?
         -
@@ -158,7 +158,7 @@ DOGRON: Racers, start your engines, and may the best dog person win.
         -
     ilDivo: And that... That One's gone, and my heart, my heart I don't even have because I'm a mushroom but oh, my heart, <b>help</b>!
     ~ dialogue_ingredients_of_the_day += Aiuto
-    IlDivo: But I don't care anyway. You! I want the coffin to be white.  And I want it specially lined with satin. White, or deep pink. It’s gayer!
+    ilDivo: But I don't care anyway. You! I want the coffin to be white.  And I want it specially lined with satin. White, or deep pink. It’s gayer!
         + YOU: Did you kill That One?
         + YOU: If it's big enough I'll get in on it.
         + YOU: I don't think white is the right color.
@@ -170,7 +170,7 @@ DOGRON: Racers, start your engines, and may the best dog person win.
         + YOU: Well, it's gotten to a time, I'm leaving, okay?
         + YOU: Uncle Cthulhu would like you a lot. A lot!
         -
-    You don't know how much I've missed all of you. And I promise you I'll never desert you again, because there’s nothing else – just us and the kitchen and the love for myself. All right Mr Ramsay, I'm ready for my closeup.        
+    ilDivo: You don't know how much I've missed all of you. And I promise you I'll never desert you again, because there’s nothing else – just us and the kitchen and the love for myself. All right Mr Ramsay, I'm ready for my closeup.        
     ->->
     
     

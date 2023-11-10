@@ -36,7 +36,7 @@ DOGRON: I'll give you a few minutes for chit-chat and then we're off!
     //Ingredienti: blocchi d'erba e uova di pecora (sacrificio)
     BeBe: Well, hello there! Who would have thought I would survive the first day? Nella didn't make it.
     {not day_one_lounge.bebe_choice: BeBe: Anyway, I didn't get a chance to introduce myself yesterday, I'm BeBe, single mother of eight, er, seven little lambs.}
-        + You: Lala?
+        + YOU: LaLa?
             BeBe: A long history, a long long history.
         + YOU: Why are you walking around with a cleaver?
             BeBe: Cleaver? What cleaver?
