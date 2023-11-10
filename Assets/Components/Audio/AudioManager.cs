@@ -1,3 +1,5 @@
+using System.Linq;
+
 using DG.Tweening;
 
 using UnityAtoms.BaseAtoms;
@@ -49,15 +51,8 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        foreach (var audioEntry in audioEntries)
-        {
-            if (audioEntry.Name == audioEntryName)
-            {
-                CrossFadeBackgroundMusic(audioEntry.AudioClip);
-                return;
-            }
-        }
-        throw new System.ArgumentException($"Cannot find audio entry with name {audioEntryName}", nameof(audioEntryName));
+        var audioEntry = audioEntries.First(ae => ae.Name == audioEntryName);
+        CrossFadeBackgroundMusic(audioEntry.AudioClip);
     }
 
     private void CrossFadeBackgroundMusic(AudioClip audioClip)
