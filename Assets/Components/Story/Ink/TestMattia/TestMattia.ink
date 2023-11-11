@@ -43,19 +43,34 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // DOGRON: introduzione inizio prima giornata
 
-@moveToLounge
-    + [BeBe]
-        @moveToDialogue character:{BeBe}
-        BeBe: ciao, andiamo in cucina
--
+// @moveToLounge
+//     + [BeBe]
+//         @moveToDialogue character:{BeBe}
+//         BeBe: ciao, andiamo in cucina
+// -
 
 ~ playBackgroundMusic("action")
 @moveToKitchen
 
+~ temp lst = (Grande,BarattoloDelloYogurt,IVeriVideogiochi,GiocattoloPreferito,ChinottoDiSavona,CollareConEtichetta,TonnoAlNaturale,IoMeStessoMedesimo,Aiutoooooo)
+
+-> kitchen(lst)
+
+= kitchen(lst)
+
 Testo a sinistra
 
 @playKitchenGame ingredients:{Grande},{BarattoloDelloYogurt},{IVeriVideogiochi},{GiocattoloPreferito},{ChinottoDiSavona},{CollareConEtichetta},{TonnoAlNaturale},{IoMeStessoMedesimo},{Aiutoooooo}
+
+{ not in_unity:
+    -> debugChooseIngredient(lst) ->
+}
+
+~ lst -= chosen_ingredient
+
 @ingredientFeedback success:true
+
+-> kitchen(lst)
 
 ~ playBackgroundMusic("chill")
 // @moveToEnding
@@ -82,10 +97,10 @@ Testo a sinistra
 @playKitchenGame ingredients:{Uova},{Formaggio},{Farina},{GiocattoloPreferito},{Veterinario}
 @ingredientFeedback success:true
 
-~ playBackgroundMusic("chill")
-@moveToEnding
+// ~ playBackgroundMusic("chill")
+// @moveToEnding
 
-GODRON: finale della giornata
+// GODRON: finale della giornata
 
 -> DONE
 
@@ -136,8 +151,6 @@ DOGRON: sei scelte
 
 -> DONE
 
-
-VAR day = 0
 
 === test_abilities
 

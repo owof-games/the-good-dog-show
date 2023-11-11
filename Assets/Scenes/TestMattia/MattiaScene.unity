@@ -509,6 +509,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
+      propertyPath: sfxVolume._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: fb882a452f409a14fa3f5e3a7d9429bd, type: 2}
+    - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: crossFadeDuration._usage
       value: 1
       objectReference: {fileID: 0}

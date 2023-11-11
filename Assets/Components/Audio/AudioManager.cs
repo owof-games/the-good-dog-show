@@ -20,13 +20,16 @@ public class AudioManager : MonoBehaviour
         public AudioClip AudioClip => audioClip;
     }
 
+    [Header("Music")]
     [SerializeField] private AudioEntry[] audioEntries;
-
     [SerializeField] private AudioSource[] audioSources;
-
     [SerializeField] private FloatReference crossFadeDuration;
-
     [SerializeField] private FloatReference backgroundMusicVolume;
+
+    [Header("Sfx")]
+    [SerializeField] private AudioSource positiveFeedbackAudioSource;
+    [SerializeField] private AudioSource negativeFeedbackAudioSource;
+    [SerializeField] private FloatReference sfxVolume;
 
     private int currSourceIndex = 0;
     private string lastAudioEntryName;
@@ -34,6 +37,8 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         Assert.AreEqual(audioSources.Length, 2);
+        Assert.IsNotNull(positiveFeedbackAudioSource);
+        Assert.IsNotNull(negativeFeedbackAudioSource);
     }
 
     public void PlayBackgroundMusic(string audioEntryName)
@@ -102,5 +107,12 @@ public class AudioManager : MonoBehaviour
                 newSource.volume = backgroundMusicVolume.Value;
             }
         }
+    }
+
+    public void PlayIngredientFeedback(bool success)
+    {
+        AudioSource audioSource = (success ? positiveFeedbackAudioSource : negativeFeedbackAudioSource);
+        audioSource.volume = sfxVolume.Value;
+        audioSource.Play();
     }
 }

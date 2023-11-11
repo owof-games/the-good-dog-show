@@ -133,9 +133,3 @@ EXTERNAL hideKitchenText()
 
 // loop back for another minigame round
 -> kitchen_inner_loop
-
-
-
-= set_ingredient(ingredient)
-~ chosen_ingredient = ingredient
-->->
