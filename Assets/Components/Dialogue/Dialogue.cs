@@ -53,12 +53,6 @@ public class Dialogue : TransitionTarget
         Assert.IsNotNull(abilities);
     }
 
-    private void OnEnable()
-    {
-        storyStep.Changed.Register(OnStoryStepChanged);
-        isWritingText.Changed.Register(OnIsWritingTextChanged);
-    }
-
     private void Start()
     {
         UpdateElements();
@@ -70,16 +64,17 @@ public class Dialogue : TransitionTarget
         SelectRelevantObject();
     }
 
-    private void OnDisable()
+    private void OnEnable()
     {
-        storyStep.Changed.Unregister(OnStoryStepChanged);
-        isWritingText.Changed.Unregister(OnIsWritingTextChanged);
+        // prepare for transition
+        youRectTransform.DOComplete();
+        otherRectTransform.DOComplete();
     }
 
     public override IEnumerator OnTurnOn()
     {
-        youRectTransform.DOComplete();
-        otherRectTransform.DOComplete();
+        youRectTransform.gameObject.SetActive(true);
+        otherRectTransform.gameObject.SetActive(true);
 
         if (!youInitialPosition.HasValue)
         {
@@ -98,10 +93,16 @@ public class Dialogue : TransitionTarget
         {
             yield return null;
         }
+
+        storyStep.Changed.Register(OnStoryStepChanged);
+        isWritingText.Changed.Register(OnIsWritingTextChanged);
     }
 
     public override IEnumerator OnTurnOff()
     {
+        storyStep.Changed.Unregister(OnStoryStepChanged);
+        isWritingText.Changed.Unregister(OnIsWritingTextChanged);
+
         leftBalloon.Hide();
         rightBalloon.Hide();
         choicesRoot.SetActive(false);
@@ -120,6 +121,9 @@ public class Dialogue : TransitionTarget
         {
             yield return null;
         }
+
+        youRectTransform.gameObject.SetActive(false);
+        otherRectTransform.gameObject.SetActive(false);
     }
 
     private void OnIsWritingTextChanged(bool _)

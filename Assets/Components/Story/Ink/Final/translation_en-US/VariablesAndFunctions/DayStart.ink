@@ -4,7 +4,11 @@ DAY START
 Management of the dialogues at the beginning of the day, before the lounge.
 */
 
+VAR day = 0
+
 === inizio_lounge ===
+
+~ day++
 
 ~ playBackgroundMusic("chill")
 

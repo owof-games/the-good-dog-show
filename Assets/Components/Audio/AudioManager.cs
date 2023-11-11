@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 
 using DG.Tweening;
@@ -52,10 +53,10 @@ public class AudioManager : MonoBehaviour
         }
 
         var audioEntry = audioEntries.First(ae => ae.Name == audioEntryName);
-        CrossFadeBackgroundMusic(audioEntry.AudioClip);
+        StartCoroutine(CrossFadeBackgroundMusic(audioEntry.AudioClip));
     }
 
-    private void CrossFadeBackgroundMusic(AudioClip audioClip)
+    private IEnumerator CrossFadeBackgroundMusic(AudioClip audioClip)
     {
         // get the current bg audio source, and the new one
         // (we need 2 for cross-fade)
@@ -63,6 +64,9 @@ public class AudioManager : MonoBehaviour
 
         var currSource = audioSources[currSourceIndex];
         var newSource = audioSources[newSourceIndex];
+
+        // switch indices for the next time this method is called
+        currSourceIndex = newSourceIndex;
 
         // stop all currently running audio tweens
         currSource.DOKill();
@@ -73,7 +77,10 @@ public class AudioManager : MonoBehaviour
         if (currSource.isPlaying)
         {
             wasPlaying = true;
-            currSource.DOFade(0, crossFadeDuration).OnComplete(currSource.Stop);
+            yield return currSource
+                .DOFade(0, crossFadeDuration / 2)
+                .OnComplete(currSource.Stop)
+                .WaitForCompletion();
         }
 
         // fade in the new audio source, if any
@@ -86,15 +93,14 @@ public class AudioManager : MonoBehaviour
             if (wasPlaying)
             {
                 // cross-fade only if something was playing before
-                newSource.DOFade(backgroundMusicVolume.Value, crossFadeDuration).WaitForCompletion();
+                yield return newSource
+                    .DOFade(backgroundMusicVolume.Value, crossFadeDuration / 2)
+                    .WaitForCompletion();
             }
             else
             {
                 newSource.volume = backgroundMusicVolume.Value;
             }
         }
-
-        // switch indices for the next time this method is called
-        currSourceIndex = newSourceIndex;
     }
 }

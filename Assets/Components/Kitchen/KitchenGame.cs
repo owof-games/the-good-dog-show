@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Linq;
 using UnityAtoms.BaseAtoms;
-using System.Collections.Generic;
 
 public class KitchenGame : MonoBehaviour
 {
@@ -37,9 +36,14 @@ public class KitchenGame : MonoBehaviour
         };
     }
 
-    public void PlayKitchenGame(string ingredientKeys)
+    private void OnDisable()
     {
         ImmediatelyDestroyIngredientButtons();
+    }
+
+    public void PlayKitchenGame(string ingredientKeys)
+    {
+        ImmediatelyDestroyIngredientButtons(); // should never be necessary: OnDisable already cleans up the buttons
 
         CreateButtons(ingredientKeys);
 

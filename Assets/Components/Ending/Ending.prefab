@@ -503,6 +503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: YOU
       objectReference: {fileID: 0}
+    - target: {fileID: 3254450671995013101, guid: 028f95e7871c85b499b7ffcf842799ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3584920865114962249, guid: 028f95e7871c85b499b7ffcf842799ac, type: 3}
       propertyPath: m_Interactable
       value: 0
@@ -692,6 +696,10 @@ PrefabInstance:
     - target: {fileID: 4892110348789544999, guid: a23696250150d064184c4dd938cf6e82, type: 3}
       propertyPath: m_Name
       value: DOGRON
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892110348789544999, guid: a23696250150d064184c4dd938cf6e82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6849508142901331587, guid: a23696250150d064184c4dd938cf6e82, type: 3}
       propertyPath: m_Interactable

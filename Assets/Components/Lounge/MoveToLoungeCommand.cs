@@ -37,15 +37,15 @@ public class MoveToLoungeCommand : CommandLineParser
             // the fallback choice has been activated, just continue
             yield break;
         }
-        // move to the lounge
-        moveToGameAreaEvent.Raise(GameArea.Lounge);
-        yield return currentGameArea.Await(gameArea => gameArea == GameArea.Lounge);
         // update the characters list
         charactersInLounge.Clear();
         foreach (var choice in choices)
         {
             charactersInLounge.Add(System.Enum.Parse<CharacterName>(choice.Text));
         }
+        // move to the lounge
+        moveToGameAreaEvent.Raise(GameArea.Lounge);
+        yield return currentGameArea.Await(gameArea => gameArea == GameArea.Lounge);
         // wait for any interaction with a character
         CharacterName characterName = CharacterName.BeBe; // just to initialize it
         yield return talkWithCharacterEvent.Await(onEvent: (cn) => { characterName = cn; });

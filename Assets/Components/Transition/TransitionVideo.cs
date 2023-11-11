@@ -2,6 +2,8 @@ using System.Collections;
 
 using DG.Tweening;
 
+using UnityAtoms.BaseAtoms;
+
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -9,7 +11,7 @@ public class TransitionVideo : MonoBehaviour
 {
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private RectTransform targetImageTransform;
-    [SerializeField] private float slideTime = 0.3f;
+    [SerializeField] private FloatReference transitionDuration;
     [SerializeField] private bool debugMode;
 
     /// <summary>
@@ -38,10 +40,10 @@ public class TransitionVideo : MonoBehaviour
     private YieldInstruction GetSlideYieldInstruction(bool slideIn) => DOTween
         .Sequence()
         .Insert(0, targetImageTransform
-                    .DOAnchorMin(new Vector2(slideIn ? 0 : -1, 0), slideTime)
+                    .DOAnchorMin(new Vector2(slideIn ? 0 : -1, 0), transitionDuration)
                     .From(new Vector2(slideIn ? -1 : 0, 0)))
         .Insert(0, targetImageTransform
-                    .DOAnchorMax(new Vector2(slideIn ? 1 : 0, 1), slideTime)
+                    .DOAnchorMax(new Vector2(slideIn ? 1 : 0, 1), transitionDuration)
                     .From(new Vector2(slideIn ? 0 : 1, 1)))
         .WaitForCompletion();
 

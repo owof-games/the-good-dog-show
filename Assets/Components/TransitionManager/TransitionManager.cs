@@ -22,6 +22,7 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private BoolVariable transitioning;
 
     [SerializeField] private TransitionVideo transitionVideo;
+    [SerializeField] private FloatReference transitionDuration;
     [SerializeField] private GameAreaComponent[] areas;
 
     private Dictionary<GameArea, GameAreaComponent> areasMapping;
@@ -83,53 +84,56 @@ public class TransitionManager : MonoBehaviour
 
     private int lastDay = -1;
 
-    private IEnumerator PlayTransition(GameArea gameArea)
+    private IEnumerator PlayTransition(GameArea newGameArea)
     {
         transitioning.Value = true;
 
         // skip transition if we're moving to the same area
-        if (currentGameArea.Value == gameArea)
+        if (currentGameArea.Value == newGameArea)
         {
             transitioning.Value = false;
             yield break;
         }
 
+        // we use a long transition if the day changed, or whenever we come from / go to the menu
         var isNewDay = lastDay != currentDay.Value;
-        if (isNewDay)
+        var isMenuInvolved = newGameArea == GameArea.Menu || currentGameArea.Value == GameArea.Menu;
+        if (isNewDay || isMenuInvolved)
         {
-            // moving to a new day (or first transition): full video transition
-            // slide the video in
-            yield return transitionVideo.StartVideoAndWaitForCover();
+            // full video transition
             // turn off the current game area
             var enumerator = TurnOff(currentGameArea.Value);
             if (enumerator != null)
             {
                 yield return enumerator;
             }
+            // slide the video in
+            yield return transitionVideo.StartVideoAndWaitForCover();
+            // hide the old area
             Hide(currentGameArea.Value);
-            // turn on the new one
-            Show(gameArea);
-            enumerator = TurnOn(gameArea);
+            // show the new area (it will be under the video, so it will be hidden from sight anyway)
+            Show(newGameArea);
+            // turn on the new area
+            enumerator = TurnOn(newGameArea);
             if (enumerator != null)
             {
                 yield return enumerator;
             }
-            // wait for the video to have completed
+            // wait for the video to complete (it will still slide out when we resume)
             yield return transitionVideo.WaitForStoppedVideoPlayer();
         }
         else
         {
-            // shorter video transition: slide components.
+            // shorter video transition: slide components sideways.
             // turn off the current game area
             var enumerator = TurnOff(currentGameArea.Value);
             if (enumerator != null)
             {
                 yield return enumerator;
             }
-            // slide the new area in
+            // slide the new area in from the left as the old area slides out to the right
             var currentRectTransform = areasRectTransform[currentGameArea.Value];
-            var newRectTransform = areasRectTransform[gameArea];
-            const float transitionDuration = 0.3f;
+            var newRectTransform = areasRectTransform[newGameArea];
             var sequence = DOTween.Sequence()
                 .Insert(0, newRectTransform
                     .DOAnchorMin(new Vector2(0, 0), transitionDuration)
@@ -141,17 +145,23 @@ public class TransitionManager : MonoBehaviour
                     .DOAnchorMin(new Vector2(1, 0), transitionDuration))
                 .Insert(0, currentRectTransform
                     .DOAnchorMax(new Vector2(2, 1), transitionDuration));
-            yield return null;
-            Show(gameArea);
+            yield return null; // just to be sure that the .From are executed
+            // shows also the new area (both are shown right now)
+            Show(newGameArea);
+            // wait for the animation to complete
             yield return sequence.WaitForCompletion();
+            // hide the old one and reset its position
+            Hide(currentGameArea.Value);
+            currentRectTransform.anchorMin = new Vector2(0, 0);
+            currentRectTransform.anchorMax = new Vector2(1, 1);
             // turn on the new one
-            enumerator = TurnOn(gameArea);
+            enumerator = TurnOn(newGameArea);
             if (enumerator != null)
             {
                 yield return enumerator;
             }
         }
-        currentGameArea.Value = gameArea;
+        currentGameArea.Value = newGameArea;
         transitioning.Value = false;
         lastDay = currentDay.Value;
     }

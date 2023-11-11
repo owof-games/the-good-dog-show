@@ -1,8 +1,17 @@
+/*
+ENDINGS
+
+Management of day endings and game ending.
+*/
+
+
 === after_kitchen(strangeness, num_right_ingredients, -> next_day)
 
 { not in_unity:
     DEBUG: after_kitchen(strangeness={strangeness}, num_right_ingredients={num_right_ingredients})
 }
+
+~ playBackgroundMusic("chill")
 
 // move to the ending screen
 @moveToEnding
@@ -62,7 +71,7 @@ DOGRON: Non sono ancora sicuro che tu sappia cucinare. Com'è andata oggi? {~ In
 ->->
 
 === finale_tre
-DOGRON: Vedo i tuoi sforzi, oggi, e che dire di ciò che hai cucinato? {~ Dal forno, lo sformato lancia grida strazianti|La cosa che era nel mio piatto sta ballando con la cameraman|Hai cucinato qualcosa che sa lanciarmi la palla!}. Hai vinto questa sfida! A domani!
+DOGRON: Vedo i tuoi sforzi, oggi, e che dire di ciò che hai cucinato? {~ Dal forno, lo sformato lancia grida strazianti.|La cosa che era nel mio piatto sta ballando con la cameraman.|Hai cucinato qualcosa che sa lanciarmi la palla!} Hai vinto questa sfida! A domani!
 ->->
 
 === finale_due
@@ -76,43 +85,42 @@ DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, 
 
 
 === finale ===
-    @moveToEnding
-    DOGRON: Uh, guarda che bella devastazione! Avresti mai pensato di vincere questo programma?
-        + YOU: Ovvio, son l'unica persona che ha davvero cucinato.
-        + YOU: Non stai per uccidermi, vero?
-        + YOU: Ora posso andare a casa?
-        -
-    DOGRON: E ora, il premio!
-    DOGRON: Sorpresa: non un ristorante su Mercuuuuuuurio, ma, ma, lo vuoi sentire?
-        + YOU: Più prendi tempo, meno credo di volerlo sapere.
-        + YOU: Si, si, si!
-        + YOU: L'importante è tornare a casa, ti prego.
-        -
-    DOGRON: Sarai la prima persona!
-        + YOU: A fare cosa?
-        -
-    DOGRON: A sostituire gli umani sul nostro pianeta.
-    DOGRON: A prenderti cura della Suprema Chihuahua, dei Carlini e ovviamente di un labrador dolcissimo e bravissimo pat-pat!
-        + YOU: E quale sarebbe questo labrador?
-        -
-    DOGRON: Non mi piacciono questi scherzi, no no.
-        + YOU: Chi è un bravo cane? Chi?
-        -
-    DOGRON: Io sono un bravo cane, uuuuuuuuuun bravo cane!!!
-        + YOU: E dove si trova la vostra casa?
-        -
-    DOGRON: Un pianeta molto semplice. Ci sono idranti, giardini, fiumi, un sacco di palline da tennis, cuccie, alberi della pizza e fontane di birra. Spero sia di tuo gradimento.
-        + YOU: Alberi della pizza?
-            DOGRON: Sì. Ti piace la pizza?
-             + + YOU: Andiamo!
-        + YOU: Fontane di birra?
-            DOGRON: Purtroppo crescono così, anche se non vogliamo.
-            + + YOU: Partiamo, subito!!!
-        + YOU: Idranti?
-            DOGRON: Sì! Piacciono anche a te? Non dirmi che sei un doggo!
-            + + YOU: Macchè doggo! Il Culto è allergico all'acqua, non mi prenderanno mai!
-        -
-    DOGRON: E allora, si parte! La nostra missione qui è completa!
-    DOGRON: Vai coi titoli di coda, Bruiser!
--> END
+DOGRON: Uh, guarda che bella devastazione! Avresti mai pensato di vincere questo programma?
+    + YOU: Ovvio, son l'unica persona che ha davvero cucinato.
+    + YOU: Non stai per uccidermi, vero?
+    + YOU: Ora posso andare a casa?
+    -
+DOGRON: E ora, il premio!
+DOGRON: Sorpresa: non un ristorante su Mercuuuuuuurio, ma, ma, lo vuoi sentire?
+    + YOU: Più prendi tempo, meno credo di volerlo sapere.
+    + YOU: Si, si, si!
+    + YOU: L'importante è tornare a casa, ti prego.
+    -
+DOGRON: Sarai la prima persona!
+    + YOU: A fare cosa?
+    -
+DOGRON: A sostituire gli umani sul nostro pianeta.
+DOGRON: A prenderti cura della Suprema Chihuahua, dei Carlini e ovviamente di un labrador dolcissimo e bravissimo pat-pat!
+    + YOU: E quale sarebbe questo labrador?
+    -
+DOGRON: Non mi piacciono questi scherzi, no no.
+    + YOU: Chi è un bravo cane? Chi?
+    -
+DOGRON: Io sono un bravo cane, uuuuuuuuuun bravo cane!!!
+    + YOU: E dove si trova la vostra casa?
+    -
+DOGRON: Un pianeta molto semplice. Ci sono idranti, giardini, fiumi, un sacco di palline da tennis, cuccie, alberi della pizza e fontane di birra. Spero sia di tuo gradimento.
+    + YOU: Alberi della pizza?
+        DOGRON: Sì. Ti piace la pizza?
+         + + YOU: Andiamo!
+    + YOU: Fontane di birra?
+        DOGRON: Purtroppo crescono così, anche se non vogliamo.
+        + + YOU: Partiamo, subito!!!
+    + YOU: Idranti?
+        DOGRON: Sì! Piacciono anche a te? Non dirmi che sei un doggo!
+        + + YOU: Macchè doggo! Il Culto è allergico all'acqua, non mi prenderanno mai!
+    -
+DOGRON: E allora, si parte! La nostra missione qui è completa!
+DOGRON: Vai coi titoli di coda, Bruiser!
 
+-> END

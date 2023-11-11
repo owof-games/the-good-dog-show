@@ -61,7 +61,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 5799775895285041317}
   targetImageTransform: {fileID: 2032247609410099634}
-  slideTime: 0.3
+  transitionDuration:
+    _usage: 1
+    _value: 0
+    _constant: {fileID: 11400000, guid: e7519e65aa910d343911ef934621f8b1, type: 2}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
   debugMode: 0
 --- !u!1 &7437024197555520698
 GameObject:

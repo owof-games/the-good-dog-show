@@ -5,6 +5,9 @@ INCLUDE VariablesAndFunctions/Exception.ink
 INCLUDE VariablesAndFunctions/Kitchen.ink
 INCLUDE VariablesAndFunctions/Endings.ink
 INCLUDE VariablesAndFunctions/DayStart.ink
+INCLUDE VariablesAndFunctions/Abilities.ink
+INCLUDE VariablesAndFunctions/Audio.ink
+INCLUDE VariablesAndFunctions/Characters.ink
 
 
 
@@ -14,7 +17,7 @@ INCLUDE VariablesAndFunctions/DayStart.ink
 
 // -> too_many_choices
 
--> test_abilities
+// -> test_abilities
 
 // -> prima_giornata
 
@@ -23,6 +26,68 @@ INCLUDE VariablesAndFunctions/DayStart.ink
 // -> cucina_giorno_uno
 
 // -> finale_giorno_uno(3, 2)
+
+-> test_transitions
+
+
+
+=== test_transitions
+
+// @moveToEnding
+
+// DOGRON: scena del test
+
+~ day++
+
+// @moveToDialogue character:DOGRON
+
+// DOGRON: introduzione inizio prima giornata
+
+@moveToLounge
+    + [BeBe]
+        @moveToDialogue character:{BeBe}
+        BeBe: ciao, andiamo in cucina
+-
+
+~ playBackgroundMusic("action")
+@moveToKitchen
+
+Testo a sinistra
+
+@playKitchenGame ingredients:{Grande},{BarattoloDelloYogurt},{IVeriVideogiochi},{GiocattoloPreferito},{ChinottoDiSavona},{CollareConEtichetta},{TonnoAlNaturale},{IoMeStessoMedesimo},{Aiutoooooo}
+@ingredientFeedback success:true
+
+~ playBackgroundMusic("chill")
+// @moveToEnding
+
+// GODRON: finale della giornata
+
+~ day++
+
+// @moveToDialogue character:DOGRON
+
+// DOGRON: introduzione inizio seconda giornata
+
+@moveToLounge
+    + [BeBe]
+        @moveToDialogue character:{BeBe}
+        BeBe: ciao, andiamo in cucina
+-
+
+~ playBackgroundMusic("action")
+@moveToKitchen
+
+Testo a sinistra
+
+@playKitchenGame ingredients:{Uova},{Formaggio},{Farina},{GiocattoloPreferito},{Veterinario}
+@ingredientFeedback success:true
+
+~ playBackgroundMusic("chill")
+@moveToEnding
+
+GODRON: finale della giornata
+
+-> DONE
 
 
 
@@ -141,7 +206,7 @@ DOGRON: transizione, di nuovo!
 
 === cucina_giorno_uno
 
--> kitchen_loop(3, (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale), -> seconda_giornata_inizio)
+-> kitchen_loop(3, (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale), -> seconda_giornata_inizio, 0)
 
 
 
@@ -194,12 +259,6 @@ DOGRON: Esatto!
     ->->
 
 
-
-// lista di tutte le abilità possibili, verrà popolata durante il primo dialogo
-LIST abilities = (EvidenziaIngredienti), (ScelteLente), (SceltaIngrediente), (PNGParliExtra), (SaltaMorte), (EliminaConcorrente), (RichiamaConcorrente)
-// lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
-LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
-LIST extra_characters = DOGRON
 
 // viene impostata da unity alla fine della ricetta e ti dice se ce l'hai fatta o meno
 VAR success = true

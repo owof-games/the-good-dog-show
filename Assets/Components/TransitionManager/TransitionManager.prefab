@@ -55,6 +55,12 @@ MonoBehaviour:
   transitioning: {fileID: 11400000, guid: 54188e15319d9f445a860627e18d1548, type: 2}
   transitionVideo: {fileID: 0}
   areas: []
+  transitionDuration:
+    _usage: 1
+    _value: 0
+    _constant: {fileID: 11400000, guid: e7519e65aa910d343911ef934621f8b1, type: 2}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!114 &5447120035861697180
 MonoBehaviour:
   m_ObjectHideFlags: 0
