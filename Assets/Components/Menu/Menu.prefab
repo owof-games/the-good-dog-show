@@ -467,6 +467,12 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
+  isGameMenuOpened:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 0d14b83ab85fa714792cbfa0ced2a065, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &5074341013649995689
 GameObject:
   m_ObjectHideFlags: 0

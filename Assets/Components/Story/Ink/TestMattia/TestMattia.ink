@@ -33,21 +33,21 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 === test_transitions
 
-// @moveToEnding
+@moveToEnding
 
-// DOGRON: scena del test
+DOGRON: scena del test
 
 ~ day++
 
-// @moveToDialogue character:DOGRON
+@moveToDialogue character:DOGRON
 
-// DOGRON: introduzione inizio prima giornata
+DOGRON: introduzione inizio prima giornata
 
-// @moveToLounge
-//     + [BeBe]
-//         @moveToDialogue character:{BeBe}
-//         BeBe: ciao, andiamo in cucina
-// -
+@moveToLounge
+    + [BeBe]
+        @moveToDialogue character:{BeBe}
+        BeBe: ciao, andiamo in cucina
+-
 
 ~ playBackgroundMusic("action")
 @moveToKitchen
@@ -70,16 +70,16 @@ Testo a sinistra
 
 @ingredientFeedback success:true
 
--> kitchen(lst)
+// -> kitchen(lst)
 
 ~ playBackgroundMusic("chill")
-// @moveToEnding
+@moveToEnding
 
-// GODRON: finale della giornata
+GODRON: finale della giornata
 
 ~ day++
 
-// @moveToDialogue character:DOGRON
+@moveToDialogue character:DOGRON
 
 // DOGRON: introduzione inizio seconda giornata
 

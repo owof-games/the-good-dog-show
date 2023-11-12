@@ -188,6 +188,12 @@ MonoBehaviour:
   choiceEvent: {fileID: 11400000, guid: dc57eccc9f32c6040bb44052def9fa71, type: 2}
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   charactersInLounge: {fileID: 11400000, guid: 1510ad7d53542bb4eab16b0d2ae0f5e6, type: 2}
+  isGameMenuOpened:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 0d14b83ab85fa714792cbfa0ced2a065, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!114 &5966914659361481715
 MonoBehaviour:
   m_ObjectHideFlags: 0

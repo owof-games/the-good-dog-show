@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 
@@ -41,6 +42,54 @@ public class AudioManager : MonoBehaviour
         Assert.IsNotNull(negativeFeedbackAudioSource);
     }
 
+    private void OnEnable()
+    {
+        var bgMusicVolumeEv = backgroundMusicVolume.GetEvent<FloatEvent>();
+        if (bgMusicVolumeEv != null)
+        {
+            bgMusicVolumeEv.Register(UpdateBackgroundMusicVolume);
+        }
+
+        var sfxVolumeEv = sfxVolume.GetEvent<FloatEvent>();
+        if (sfxVolumeEv != null)
+        {
+            sfxVolumeEv.Register(UpdateSfxVolume);
+        }
+    }
+
+    private void OnDisable()
+    {
+        var bgMusicVolumeEv = backgroundMusicVolume.GetEvent<FloatEvent>();
+        if (bgMusicVolumeEv != null)
+        {
+            bgMusicVolumeEv.Unregister(UpdateBackgroundMusicVolume);
+        }
+
+        var sfxVolumeEv = sfxVolume.GetEvent<FloatEvent>();
+        if (sfxVolumeEv != null)
+        {
+            sfxVolumeEv.Unregister(UpdateSfxVolume);
+        }
+    }
+
+    private void UpdateBackgroundMusicVolume(float volume)
+    {
+        var nonTweeningAudioSources = from audioSource in audioSources
+                                          // if the tween is active, its OnComplete will set the volume
+                                      where !DOTween.IsTweening(audioSource)
+                                      select audioSource;
+        foreach (var audioSource in nonTweeningAudioSources)
+        {
+            audioSource.volume = volume;
+        }
+    }
+
+    private void UpdateSfxVolume(float volume)
+    {
+        positiveFeedbackAudioSource.volume = volume;
+        negativeFeedbackAudioSource.volume = volume;
+    }
+
     public void PlayBackgroundMusic(string audioEntryName)
     {
         if (lastAudioEntryName == audioEntryName)
@@ -53,7 +102,7 @@ public class AudioManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(audioEntryName))
         {
-            CrossFadeBackgroundMusic(null);
+            StartCoroutine(CrossFadeBackgroundMusic(null));
             return;
         }
 
@@ -100,6 +149,11 @@ public class AudioManager : MonoBehaviour
                 // cross-fade only if something was playing before
                 yield return newSource
                     .DOFade(backgroundMusicVolume.Value, crossFadeDuration / 2)
+                    .OnComplete(() =>
+                    {
+                        // force it anyway at the end, because it could have changed in the meanwhile
+                        newSource.volume = backgroundMusicVolume.Value;
+                    })
                     .WaitForCompletion();
             }
             else

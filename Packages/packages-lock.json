@@ -215,6 +215,13 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "com.yasirkula.assetusagedetector": {
+      "version": "2.5.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "it.lemurivolta.ink-atoms": {
       "version": "file:E:/ProgettiUnity/ink-atoms/ink-atoms/Packages/it.lemurivolta.ink-atoms",
       "depth": 0,

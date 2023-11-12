@@ -15,6 +15,7 @@ public class Lounge : MonoBehaviour
     [SerializeField] private ChosenChoiceEvent choiceEvent;
     [SerializeField] private StringEvent continueEvent;
     [SerializeField] private CharacterNameValueList charactersInLounge;
+    [SerializeField] private BoolReference isGameMenuOpened;
 
     private List<GameObject> characterButtons;
     private List<LoungeCharacter> loungeCharacters;
@@ -68,6 +69,13 @@ public class Lounge : MonoBehaviour
 
         for (; ; )
         {
+            // do nothing if the game menu is opened
+            if(isGameMenuOpened.Value)
+            {
+                yield return null;
+                continue;
+            }
+
             var activeCharacterButtons = characterButtons.Where(cb => cb.activeSelf);
 
             // update last selected character button if it's no longer active

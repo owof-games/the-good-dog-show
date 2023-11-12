@@ -1294,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 734afe594ce06d34a9589fb628f94f8e, type: 2}
     - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: backgroundMusicVolume._usage
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: backgroundMusicVolume._value
@@ -1304,6 +1304,10 @@ PrefabInstance:
       propertyPath: backgroundMusicVolume._constant
       value: 
       objectReference: {fileID: 11400000, guid: bee45013b201b754b9da5d5e77fd1188, type: 2}
+    - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
+      propertyPath: backgroundMusicVolume._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: b97e22ffae069fc468aa8609143f6c29, type: 2}
     - target: {fileID: 8295896391703092920, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: m_Name
       value: AudioManager

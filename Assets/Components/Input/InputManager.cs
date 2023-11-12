@@ -16,6 +16,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private VoidEvent choice1Performed;
     [SerializeField] private VoidEvent choice2Performed;
     [SerializeField] private VoidEvent choice3Performed;
+    [SerializeField] private VoidEvent toggleMenuPerformed;
 
     private Mouse virtualMouse;
 
@@ -27,6 +28,7 @@ public class InputManager : MonoBehaviour
         Assert.IsNotNull(choice1Performed);
         Assert.IsNotNull(choice2Performed);
         Assert.IsNotNull(choice3Performed);
+        Assert.IsNotNull(toggleMenuPerformed);
     }
 
     private void OnEnable()
@@ -104,6 +106,15 @@ public class InputManager : MonoBehaviour
         {
             Debug.Log(choicePerformed.name);
             choicePerformed.Raise(@void);
+        }
+    }
+
+    public void ToggleMenuPerformed(CallbackContext cc)
+    {
+        if (cc.phase == InputActionPhase.Performed)
+        {
+            Debug.Log("toggle menu!");
+            toggleMenuPerformed.Raise(@void);
         }
     }
 

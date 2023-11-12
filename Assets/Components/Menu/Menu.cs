@@ -25,6 +25,7 @@ public class Menu : MonoBehaviour
 
     [SerializeField] private StringEventReference playBackgroundMusicEvent;
     [SerializeField] private StringReference musicName;
+    [SerializeField] private BoolReference isGameMenuOpened;
 
     private const string enLocaleCode = "en-US";
     private const string itLocaleCode = "it-IT";
@@ -81,10 +82,12 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
+        // force selection of a button is the game menu is not on, and none of our elements are selected
         EventSystem currentEventSystem = EventSystem.current;
         var selected = currentEventSystem.currentSelectedGameObject;
-        if (selected != startButton.gameObject && selected != itToggle.gameObject && selected != enToggle.gameObject)
+        if (!isGameMenuOpened.Value && selected != startButton.gameObject && selected != itToggle.gameObject && selected != enToggle.gameObject)
         {
+            Debug.Log($"Menu forces selected object from {selected?.name} back to {startButton.gameObject?.name}");
             currentEventSystem.SetSelectedGameObject(startButton.gameObject);
         }
     }
