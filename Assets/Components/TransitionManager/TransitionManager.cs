@@ -146,7 +146,7 @@ public class TransitionManager : MonoBehaviour
                 .Insert(0, currentRectTransform
                     .DOAnchorMax(new Vector2(2, 1), transitionDuration));
             yield return null; // just to be sure that the .From are executed
-            // shows also the new area (both are shown right now)
+            // also show the new area (both are shown right now)
             Show(newGameArea);
             // wait for the animation to complete
             yield return sequence.WaitForCompletion();
