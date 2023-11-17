@@ -81,6 +81,8 @@ GODRON: finale della giornata
 
 @moveToDialogue character:DOGRON
 
+DOGRON: dico cose vedo gente
+
 // DOGRON: introduzione inizio seconda giornata
 
 @moveToLounge
