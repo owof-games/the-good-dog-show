@@ -15,12 +15,12 @@ VAR day = 0
 @moveToDialogue character:{DOGRON}
 
 DOGRON: {E ora, un benvenuuuuto a tuuuutte le persone concorrenti e a chi ci segue da casa!|Eccoci nuovamente, concorrenti e spettatrici!|Buonasera a tuuuuutte le persone belle di questo pianeta e oltre!|Qualcuuuuuna ha visto il mio collare preferito?|L'ultima sera amiche, l'uuuultima sera assieme!}
-DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità.  Persona uuuuumana qui davanti a me! Tu oggi perderai, rullo di tamburi...| Quuuuale abilità toglieremo oggi alla nostra persona umana?!?|Sempre meno gente, sempre meno abilità attive!|Uuuuh, mi fa male il pancino oggi.|Me doggo grande, non piange, no no, auuuuu!}
+DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità. Persona uuuuumana qui davanti a me! Tu oggi perderai, rullo di tamburi...| Quuuuale abilità toglieremo oggi alla nostra persona umana?!?|Sempre meno gente, sempre meno abilità attive!|Uuuuh, mi fa male il pancino oggi.|Me doggo grande, non piange, no no, auuuuu!}
 
 ~ temp ability = LIST_RANDOM(abilities)
 { ability:
   - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.
-  - ScelteLente: DOGRON: Le scelte ora scorreranno più veloci. 
+  - ScelteLente: DOGRON: Le scelte ora scorreranno più veloci.
   - SceltaIngrediente: DOGRON: Non avrai più un ingrediente a scelta da selezionare a inizio partita.
   - PNGParliExtra: DOGRON: Basta con le chiacchiere extra!
   - SaltaMorte: DOGRON: Se sbagli la ricetta, non avrai più piani di salvataggio.
@@ -60,7 +60,7 @@ DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abi
         ~ alive_characters -= UgoEMimi
         ~ eliminatrice = true
         ~ abilities -= EliminaConcorrente
-        DOGRON: Mimi, sashay away.
+        DOGRON: Mimi, ci mancherai. Ugo: sashay away.
     + {alive_characters has Quello} YOU:Quello
         ~ alive_characters -= Quello
         ~ eliminatrice = true
@@ -93,7 +93,7 @@ DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abi
         ~ alive_characters += UgoEMimi
         ~ resuscitatrice = true
         ~ abilities -= RichiamaConcorrente
-        DOGRON: Mimììì! Che bello averti qui con noi di nuovo!
+        DOGRON: Mimììì! Che bello averti qui con noi di nuovo! E Ugo, ah. Ugo.
         + { alive_characters hasnt Quello } YOU: Quello
         ~ alive_characters += Quello
         ~ resuscitatrice = true
