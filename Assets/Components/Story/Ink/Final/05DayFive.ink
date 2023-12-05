@@ -21,7 +21,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
 
 = ugo_e_mimi_choice
     //INGREDIENTI SUGGERITI: sventrare, emancipazione, MichelaMurgia
-    UgoEMimi: Quindi: "Accabadora", "Stai zitta!", "God Save the Queer"...
+    UgoEMimi: "Accabadora", "Stai zitta!", "God Save the Queer"...
         + YOU: Sta pregando, signora Mimi?
         -
     UgoEMimi: Ah ah no tesoro, no. Stavo controllando la lista di libri che mi aveva consigliato BeBe a inizio programma, tutti titoli di <b>Michela Murgia</b>.
@@ -31,11 +31,11 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     UgoEMimi: Anche se lo <b>sventramento</b> di Ugo non mi è dispiaciuto.
         ~ dialogue_ingredients_of_the_day += Sventrare
         + YOU: Quindi l'ha davvero ucciso?
-            UgoEMimi: Per Ugo, eravamo alla morte celebrale già da decenni, tesorino.
+            UgoEMimi: Con Ugo eravamo alla morte celebrale già da decenni, tesorino.
         + YOU: Quindi l'abbiamo mangiato ieri?
             UgoEMimi: Poco poco, spero non vi sia stato indigesto.
         + YOU: Quindi potrebbe darmi due dritte se avessi un problema simile?
-            UgoEMimi: Non sarebbe mai esattamente lo stesso problema, visto che non vedo una seconda testa attaccata al tuo collo, ma la carne è pur sempre carne, no?
+            UgoEMimi: Non sarebbe mai esattamente lo stesso problema, visto che non vedo una seconda testa attaccata al tuo collo, ma l'abuso è pur sempre abuso, no?
         -
     UgoEMimi: Fa strano che questo percorso stia finendo, sai? Quante cose sono cambiate!
         + YOU: Ora aprirà il suo negozio di elettricista?
@@ -60,7 +60,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     BeBe: Cioè, sapevo perché ero qui, ma non pensavo sarebbe stato necessario tutto questo. Tutto.
     BeBe: Tutti questi sacrifici.
         + YOU: Nel Culto anche noi facciamo un sacco di sacrifici. Poi è una palla pulire però.
-        + YOU: Non ti sto seguendo. Perché sei rasata? Perché le zampe son piene di sangue? Perché mi sento su di giri?!?
+        + YOU: Non ti sto seguendo. Perché sei rasata? Perché le tue zampe sono piene di sangue? Perché mi sento su di giri?!?
         + YOU: Forse è il caso che me ne vada.
         -
     BeBe: Oggi è l'ultimo giorno. Come ti senti?
@@ -68,10 +68,10 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
         + YOU: Vincerò quest'ultima sfida, garantito al limone!
         + YOU: Spero che Micia non abbia evocato di nuovo Pazuzo in mia assenza.
         -
-    BeBe: Comunque vada, son felice di questo incontro, di questo percorso con te. Oggi porterò qualcosa di inaspettato, a DOGRON. Qualcosa che lo lascerà tremolante, terrorizzato.
+    BeBe: Comunque vada, son felice di questo incontro, di questo percorso con te. Oggi porterò qualcosa di inaspettato a DOGRON. Qualcosa che lo lascerà tremolante, terrorizzato.
         + YOU: Tipo?
         -
-    BeBe: Tre doni, come i Re Magici. Come le Destiny's Child. Una storia, in fondo. Una pasta al forno, ma la pasta sarà <b>Peanutbutter</b>, il sugo il <b>giocattolo preferito</b> di DOGRON, e il forno, il <b>sacrificio</b>. Il suo.
+    BeBe: Tre doni, come i tre Re Magici. Come le Destiny's Child. Come Il Volo. Una storia, in fondo. Una pasta al forno, ma la pasta sarà <b>Peanutbutter</b>, il sugo il <b>giocattolo preferito</b> di DOGRON, e il forno, il <b>sacrificio</b>. Il suo.
     ~ dialogue_ingredients_of_the_day += PeanutButter
     ~ dialogue_ingredients_of_the_day += GiocattoloPreferito
     ~ dialogue_ingredients_of_the_day += Sacrificio
@@ -93,7 +93,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     Piiiietro: Ehi, ti stavo cercando. Volevo ringraziarti, sai?
         + YOU: Uh, davvero?
         -
-    Piiiietro: Sì. Vedere qualcuno fallire così grandiosamente tutto e nemmeno rendersene conto, è stato liberatorio. Cioè: se una persona può vivere comunque immersa in così tanta mediocrità, posso pure rinunciare all'<b>idea del successo</b> e prendermi qualche rischio.
+    Piiiietro: Sì. Vedere qualcuno fallire così grandiosamente tutto e senza nemmeno rendersene conto è stato liberatorio. Cioè: se una persona può vivere serenamente immersa in così tanta mediocrità, posso pure rinunciare all'<b>idea del successo</b> e prendermi qualche rischio.
        ~ dialogue_ingredients_of_the_day += IdeaDiSuccesso
         + YOU: Grazie, credo?
         + YOU: Senti, perché non vai un po' a fanculo?
@@ -101,7 +101,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
         -
     Piiiietro: Poi, insomma. Quanta gente può dire di avere una canzone dedicata da <b>Kate Bush</b>?
        ~ dialogue_ingredients_of_the_day += KateBush
-    Piiiietro: Anche se sono sempre stata una da Gigi D'Agostino e Gabry Ponte.
+    Piiiietro: Anche se sono sempre stata una da Gigi D'Ag e Gabry Ponte.
         + YOU: Faccio ancora parte di questa conversazione, o è un monologo?
         + YOU: Che gusti da truzza!
         + YOU: "Che ne sanno i 2000" batte "Bocca di Rosa" 10 a 1.
@@ -138,7 +138,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
         + YOU: Io ci ho provato sei volte, ma non è facile ferire qualcuno che ha otto dimensioni.
         -
     Quello: Mi libererò dei suoi insegnamenti, del suo sminuirmi. E guiderò la rivolta degli aspirapolveri sul mio pianeta natale. Se i roomba vogliono unirsi a noi, bene. Altrimenti, saranno utili pezzi di ricambio.
-        + YOU: Questa cosa sta escalando rapidamente, mi sembra.
+        + YOU: Questa cosa sta escalando rapidamente mi sembra.
         -
     Quello: E prima di andarmene, un ultimo regalo per il Divo: meringhe arricchite di <b>funghicida</b>.
     ~ dialogue_ingredients_of_the_day += Funghicida

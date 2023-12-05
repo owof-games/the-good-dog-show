@@ -29,16 +29,16 @@ DOGRON: Vieni qui, coda!
             ~ dialogue_ingredients_of_the_day += Mazinga
         + YOU: Aveva il suo perché con quel ciuffo.
         + YOU: Ma il signor Ugo?
-        + YOU: No, intendevo il fatto che le manchi una testa, tipo.
+        + YOU: No, intendevo il fatto che le manca una testa, tipo.
         -
-    UgoEMimi: Oggi mi sento così leggera, sai? Non mi capitava da tempo. Prima mi son messa a saldare un po' di prese elettriche, e ho aiutato il cameraman con un problema ai suoi circuiti androidici.
-    UgoEMimi: E per celebrare il cambiamento, come richiesto da Dogron e i suoi amici cani, credo farò una insalata russa con le <b>orecchie di Ugo</b>.
+    UgoEMimi: Oggi mi sento così leggera, sai? Non mi capitava da tempo. Prima mi son messa a saldare un po' di prese elettriche, e ho aiutato la cameraman con un problema ai suoi circuiti androidici.
+    UgoEMimi: E per celebrare il cambiamento, come richiesto da Dogron e i suoi amici cani, credo farò una pasta con le cime di rapa e le <b>orecchie di Ugo</b>.
             ~ dialogue_ingredients_of_the_day += OrecchieUgo
-            + YOU: Ricordo quelle di Eustacchio, coi funghi furono una bomba.
+            + YOU: Ricordo le dita di Eustacchio, coi funghi furono una bomba.
             + YOU: Forse conviene sentir prima che ne pensa la giuria?
             + YOU: Il signor Ugo ne sentirà la mancanza?
             -
-    UgoEMimi: Ma ora vado, tesorino, che ho un appuntamento con un certo androide. A dopo!        
+    UgoEMimi: Ma ora vado, tesorino, che ho un appuntamento con una certa androide. A dopo!        
     
     ->->
 
@@ -51,7 +51,7 @@ DOGRON: Vieni qui, coda!
     BeBe: Sì sì sì, sono solo di fretta. Il cambiamento, è importante accogliere il cambiamento. Cambiare, per le mie otto, no, sette figlie. Sette.
         + YOU: Come mai citi sempre le tue figlie?
         -
-    BeBe: Perché il dovere di ogni madre è proteggerle. E se fallisce, vendicarsi. Portare il cambiamento.
+    BeBe: Perché il dovere di ogni madre è proteggerle. E se fallisce, vendicarsi. Essere il cambiamento che vuoi vedere nel mondo.
         + YOU: Mi devo preocuppare?
         -
     BeBe: No, tu no. Ma oggi porterò una ricetta davvero speciale, sai? Il cambiamento richiede un rischio, e per questo userò della cicuta. Un poco di <b>veleno</b>, scommettendo su quanto possa essere fatale. E il <b>collare</b> dell'assassino.
@@ -71,7 +71,7 @@ DOGRON: Vieni qui, coda!
     Piiiietro: Alla fine, se ne è andato.
         + YOU: Chi?
         -
-    Piiiietro: Bruiser. Mi ha lasciato una lettera, dicendomi che ha trovato una Chihuahua Suprema, e che vivrà con lei. Che ha mandato un gatto di servizio e recuperare le sue ciotole leopardate e la cuccia di raso e diamanti, e mi invita a non cercarlo.
+    Piiiietro: Bruiser. Mi ha lasciato una lettera, dicendomi che ha trovato una Chihuahua Suprema, e che vivrà con lei. Che ha mandato un gatto di servizio e recuperare le sue ciotole zebrate e la cuccia di raso e diamanti, e mi invita a non cercarlo.
     Piiiietro: Mi ringrazia per questi anni passati assieme, ma crede sia arrivato per lui il momento di stare con qualcuno che non si nasconde agli altri. Che non finga di essere infinito, dice.
         + YOU: Che intende?
         + YOU: Mi dispiace, credo?
@@ -114,7 +114,7 @@ DOGRON: Vieni qui, coda!
         + YOU: Ma quindi non è il Divo tuo padre?
         + YOU: Non ho mai pulito casa mia, non so di cosa tu stia parlando.
         -
-    Quello: E poi bisogna <b>evolversi</b>. Credo, ho, è sciocco, sai?
+    Quello: E poi bisogna <b>evolversi</b>. Credo, oh, è sciocco, sai?
     ~ dialogue_ingredients_of_the_day += Evolversi
         + YOU: Quello, credo sia sciocca tutta questa situazione, se non ridicola.
         + YOU: "Sciocco" è uccidere per sbaglio Ermenegildo, e poi dimenticarsene, e portarlo a Gardaland e parlarci tutto il giorno e pagare pure il biglietto!
@@ -143,11 +143,11 @@ DOGRON: Vieni qui, coda!
         ilDivo: Ma mai quanto la mia!
             + YOU: Te pareva.
             -
-        ilDivo: Ho trovato il vero amore. Qui, su questo minuscolo pianeta, ho capito tutto. Mi son fermato un attimo, un tiro di bamba e un momento di <b>hashtag selfcare</b> ed eccolo lì, il vero amore della mia vita!
+        ilDivo: Ho trovato il vero amore. Qui, su questo minuscolo pianeta, ho capito tutto. Mi sono fermato un attimo, un tiro di bamba e un momento di <b>hashtag selfcare</b> ed eccolo lì, il vero amore della mia vita!
             ~ dialogue_ingredients_of_the_day += SelfCare
+            + YOU: Quello?
             + YOU: Bruiser?
-            + YOU: Ermenegildo?
-            + YOU: La Chihuahua Suprema?
+            + YOU: Il cadavere di Ermenegildo?
             -
         ilDivo: <b>Io, me stesso,me medesimo</b>. C'è un unico grande amore in questa vita, e posso solo essere io. Solo!
             ~ dialogue_ingredients_of_the_day += IoMeStessoMedesimo

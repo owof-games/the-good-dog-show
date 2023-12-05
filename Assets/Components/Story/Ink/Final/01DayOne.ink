@@ -7,7 +7,7 @@
 DOGRON: Ma cominciamo ufficialmente!
 DOGRON: Concorrenti, con quuuuuuuuesta prima puntata di THE GOOD DOG SHOW oggi vi metteremo alla prova chiedendovi di...
 DOGRON: Cucinare qualcosa che mangereste tuuuuuuutti i giorni!
-DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi, prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: un massimo di {abilities has PNGParliExtra: {base_dialogue_loops}|{base_dialogue_loops+1}} persone!
+DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: potete parlare con un massimo di {abilities has PNGParliExtra: {base_dialogue_loops}|{base_dialogue_loops+1}} persone!
 DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tuuuutto cambia in un battito di ciglia!
 
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_one_kitchen)
@@ -27,10 +27,10 @@ DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altr
             UgoEMimi: Merito mio, ho scelto io la sua parrucchiera, da bravo marito!
         -
     UgoEMimi: E tu, cosa ci fai qui?
-    UgoEMimi: Ugo, non essere scortese, siamo tutte tese da questa novità!
+    UgoEMimi: Ugo, non essere scortese! Siamo tutte tese da questa novità!
         + YOU: Me lo chiedo anche io.
         + YOU: Credo sia una punizione da parte del Culto.
-        + YOU: Ricordo solo la mia stanza, del cloroformio...
+        + YOU: Ricordo solo la mia stanza, luci rapide, del cloroformio...
         -
     UgoEMimi: Hai bisogno di una mano per cucinare, tesoro?
     UgoEMimi: Mimi! Che aiuti la concorrenza? Mi servono i soldi per il publisher!
@@ -59,11 +59,11 @@ DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altr
         + YOU: Ma non c'è il sole qui. Forse manco su tutto il pianeta.
             BeBe: Però c'è dell'erba, ne sento l'odore!
         + YOU: Mmm sì sì certo.
-            BeBe: Stai citando quel nuovo gruppo K-Pop, le Blink of an eye?
+            BeBe: Stai citando quel nuovo gruppo K-Metal, le Blink of an eye?
         -
     BeBe: Ma come ti stai trovando qui, dolcezza? Hai tutto quello di cui hai bisogno?
         + YOU: Non so dove sono, vorrei solo scappare.
-            BeBe: Se vinco, ti prometto che ti porterò con me, ho ancora una cameretta libera!
+            BeBe: Se vinco, ti prometto che ti porterò con me, ho una cameretta libera!
         + YOU: L'ultima volta che ho cucinato, la mia casa è esplosa.
             BeBe: Succede a tutte le persone, prima o poi.
         + YOU: Non dovrei essere qui. Il Culto mi sta cercando.
@@ -96,9 +96,9 @@ DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altr
         + YOU: Bruiser Woods?
             Piiiietro: Sì, come quel Bruiser, e non lo trovo!
         + YOU: Rosario di Gucci?
-            Piiiietro: Sì, un regalo di mia nonna Scianel per festeggiare il mio sedicesimo.
+            Piiiietro: Sì, un regalo di nonna Scianel per festeggiare il mio sedicesimo.
         + YOU: Snookie?
-            Piiiietro: Scusa, ho firmato un NDA, non posso dire altro.
+            Piiiietro: Scusa, ho firmato un patto di riservatezza, non posso dire altro.
         -
     Piiiietro: Tornerà, spero. Questo pianeta sembra minuscolo comunque, non ci saranno altre cagnoline.
     Piiiietro: Comunque piacere, sono Piiiietro, studentessa di matematica. A quattordici anni ho risolto il gioco di Collatz.
@@ -172,7 +172,7 @@ DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altr
         + YOU: Sento un attimo lo spaccino e ti dico.
             ilDivo: Ok, senti se ha anche della bamba allora.
         + YOU: Per questo sei tutto giallo?
-            ilDivo: Guarda che son rosso. Te li ha insegnati Dogron, i colori?
+            ilDivo: Guarda che son rosso. Te li ha insegnati Dogron i colori?
         + YOU: Tu hai idea di dove siamo, piuttosto?
             ilDivo: Stagista inutile. Sempre inutili, cristo!
         -

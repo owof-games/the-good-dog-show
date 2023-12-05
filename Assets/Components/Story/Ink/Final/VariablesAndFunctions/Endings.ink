@@ -82,14 +82,14 @@ DOGRON: Rispetto a quello che hai cucinato... {~ Dalla padella arriva un odore d
 ->->
 
 == finale_uno
-DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, non si muove, e non fa domande esistenziali|Potrebbe essere passabile per un McDonald's|Conosco degli studenti che forse potrebbero mangiarla, forse}. Inaspettatamente passi alla prossima puntata!
+DOGRON: In merito alla tua ricetta: {~ quello che c'è nella padella non grida, non si muove, e non fa domande esistenziali|potrebbe essere passabile per un McDonald's|conosco degli studenti che forse potrebbero mangiarlo, forse}. Inaspettatamente passi alla prossima puntata!
 ->->
 
 
 
 === finale ===
 DOGRON: Uh, guarda che bella devastazione! Avresti mai pensato di vincere questo programma?
-    + YOU: Ovvio, son l'unica persona che ha davvero cucinato.
+    + YOU: Ovvio, Sono l'unica persona che ha davvero cucinato.
     + YOU: Non stai per uccidermi, vero?
     + YOU: Ora posso andare a casa?
     -

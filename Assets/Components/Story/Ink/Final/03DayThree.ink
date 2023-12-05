@@ -9,7 +9,7 @@ DOGRON: Non sentite un po' la tristezza? Già {nonAliveCharacters()}, e a me non
 DOGRON: Ma la Suprema Chihuahua e il Gran Consiglio dei Carlini- no, nella loro saggezza loro sanno che è importante trovare la padroncina perfetta, no, la personcina perfetta per il ristorante su Satuuuuuurno!
 DOGRON: E di sicuuuuuro questa persona magnifica con delle mani magnifiche che fanno dei bellissimi pat-pat sulla testa, deve sapere fare una ricetta per...
 DOGRON: ... quando ti senti triste perché tuuuuuuutti gli uuuumani sono scomparsi!
-DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a cuuuucinare!
+DOGRON: Come sempre avete qualche minuto per le chiacchiere e poi si inizia a cuuuucinare!
 
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_three_kitchen)
 
@@ -17,7 +17,7 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
 = ugo_e_mimi_choice
     //INGREDIENTI SUGGERITI: iverivideogiochi e canapé
     UgoEMimi: ...
-        + YOU: So che me ne pentirò di dirlo, ma mi sembrate molto silenziose, oggi.
+        + YOU: So che mi pentirò di ciò che vi sto per chiedere ma: come mai siete così silenziose?
         -
     UgoEMimi: Ugo ha parlato con uno dei produttori, per il suo videogioco.
     UgoEMimi: Venditori di cianfrusaglie, sono. Ma lo sapevi che i produttori sono dei carlini?!?!
@@ -29,13 +29,13 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
     UgoEMimi: Oh, io cucinerò dei <b>canapé</b> mentre Ugo si riprende dal dolore.
         ~ dialogue_ingredients_of_the_day += Canapé
     UgoEMimi: Io non soffro! Gli uomini non soffrono!
-    UgoEMimi: E allora cosa sono, quelle lacrime?
+    UgoEMimi: E allora cosa sono quelle lacrime?
         + YOU: Non siete spaventati per quella cosa degli umani scomparsi?
         -
     UgoEMimi: Uh, mi spiace per loro, ma non siamo mai andati d'accordo con gli umani. Non dopo il fallimento del Virtual Boy.
-    UgoEMimi: Parla per te, Ugo. Personalmente ho sempre amato gli umani, mi veniva una pizzaiola buonissima quando potevo ancora cucinarli.
+    UgoEMimi: Parla per te, Ugo. Personalmente ho sempre amato gli umani, mi veniva uno spezzatino buonissimo quando ancora non li consideravano persone.
         + YOU: Oh, e io che temevo di esser l'unica persona ad aver mangiato carne umana!
-        + YOU: Ho troppe schifezze in corpo perché la mia carne sia gustosa.
+        + YOU: Vi avviso: ho troppe caramelle in corpo perché la mia carne sia gustosa.
         + YOU: Credo sia giunto il momento per me di andare su Urano.
         -
 
@@ -61,9 +61,9 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
             BeBe: Sembri una persona molto confusa, sai?
         -
     BeBe: Ma, non trovi un po' strano il tema di oggi? In che senso "gli umani sono tutti scomparsi"? E poi cosa sono gli umani?
-        + YOU: Ehm, io sono una persona umana?
+        + YOU: Ehm, io sono una persona umana. Credo. Non sapevo nemmeno ci fossero persone non umane fino a poco fa.
         -
-    BeBe: Uh, ecco perché quella faccia senza peli, e il fatto che non rumini! Che buffo. E da dove vieni ci sono anche le pecore?
+    BeBe: Uh, ecco perché quella faccia senza peli, e il fatto che non rumini! Deve essere difficile digerire per te! E da dove vieni ci sono anche le pecore?
         + YOU: Moltissime, sono tra gli animali più diffusi.
         -
     BeBe: In che senso, animali? Certo, deve essere un luogo evoluto, con così tante pecore, bene bene!
@@ -91,13 +91,13 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
     Piiiietro: Ma che tu entri sembre così, nelle stanze degli altri? Che cosa tamarra!
         + YOU: A dire il vero questa è la lounge, ed è comune. Ma perché tu hai una stanza tua?
         -
-    Piiiietro: Certo, sennò dove lo piazzavo il lettino UV e il sistema di casse?
+    Piiiietro: Certo, sennò dove lo piazzavo il lettino UV e il sistema di casse Super Dolby 15.1?
         + YOU: Ti prego ti prego dammi qualcosa che sembri del sole per un'ora!
             Piiiietro: E se poi mi attacchi un eritema solare?!?
         + YOU: Sistema di casse? Quindi eri tu a cantare prima?
             Piiiietro: NO.
         + YOU: Ma io non ho una stanza, dormo tra le travi sopra la cucina.
-            Piiiietro: E qui si vede chi ha un agente e chi no, mi dispiace!
+            Piiiietro: E qui si vede chi ha un agente e chi no, spiace!
         -
     Piiiietro: Forse comunque ci fanno fare un karaoke. Piccolo, stasera, dopo la prova. Sembra che la mia pasta con <b>tonno in scatola</b> e pure <b>scolata</b> male sia un successone. La ripropongo anche stasera!
         ~ dialogue_ingredients_of_the_day += TonnoInScatola
@@ -106,7 +106,7 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
         -
     Piiiietro: E perché dovrebbe?
         + YOU: Insomma, vedi altre persone umane?
-    Piiiietro: Ehi dolcezza, parla per te! Sono un genio della matematica, un'entità astratta, la definizione stessa della sezione aurea. E vesto leopardato. Col cazzo che sono un'umana!
+    Piiiietro: Ehi dolcezza, parla per te! Sono un genio della matematica, un'entità astratta, la definizione stessa della sezione aurea. E vesto leopardato. Col cazzo che sono una banale umana!
     Piiiietro: E ora vattene da camera mia, che devo creare un po' di drama tra BeBe e Dogron.
     
     ->->
@@ -125,15 +125,16 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a c
     Quello: Oh, scusa se sono amaro.
     Quello: Fa un po' strano però pensare a un tema come questo, quando tuo padre ha fatto, ha fatto delle cose orribili.
         + YOU: In che senso?
-        + YOU: Sai, anche il mio, quando è diventato uno degli Eoni...
+        + YOU: Se ti consola anche il mio, quando è diventato uno degli Eoni...
         + YOU: Tutte noi facciamo degli errori, non trovi?
         -
-    Quello: il Divo dice sempre che il lavoro risolve ogni problema però, ogni paura. Quindi mi metterò a cucinare. Pensavo che la scomparsa è una cosa amara, e potrei fare una treccia che è un <b>raccontare</b> la storia degli altri aspirapolvere come me.
+    Quello: Il Divo dice sempre che il lavoro risolve ogni problema però, ogni paura. Quindi mi metterò a cucinare. Pensavo che la scomparsa è una cosa amara, e potrei fare una treccia che è un <b>raccontare</b> la storia degli altri aspirapolvere come me, sai?
     ~ dialogue_ingredients_of_the_day += Raccontare
     Quello: Farla dolce ma riempirla di pezzettini di <b>Chinotto di Savona</b> che esaltino l'amaro di certe esperienze.
     ~ dialogue_ingredients_of_the_day += ChinottoDiSavona
     Quello: Un po' come quando tuo padre stermina un'intera popolazione con la sua invenzione.
-        + YOU: O tuo padre aggiunge una dimensione spazio temporale al tuo pianeta perché ha litigato con l'altro tuo padre.
+        + YOU: O tuo padre aggiunge una dimensione spazio temporale al tuo pianeta solo perché ha litigato con l'altro tuo padre e vuola fargli un dispetto.
+            YOU: Non dimenticherò mai le grida disperate in 5D.
         -
     Quello: Esatto. Tu sì che mi capisci. Vado a pulire gli ingredienti del Divo e poi comincio la mia ricetta. Grazie per la comprensione!
 

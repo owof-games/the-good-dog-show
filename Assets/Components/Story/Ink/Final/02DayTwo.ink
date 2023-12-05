@@ -15,7 +15,7 @@ DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
     //Ingredienti suggeriti: Vol-au-vent e Skyrim
     UgoEMimi: Mimi, no, sei tu che non capisci! Kojima l'ha paragonato a <b>Skyrim</b>! E Kojima non sbaglia mai!
         ~ dialogue_ingredients_of_the_day += Skyrim
-    UgoEMimi: Ugo, non voglio contraddirti, lo sai, ma era un sogno!
+    UgoEMimi: Ugo, non amo contraddirti, lo sai, ma era un sogno!
     UgoEMimi: E mi dici che i sogni mentono, eh?! Non sognavi di cucinare per sempre, e ora vedi dove siamo?
     UgoEMimi: Il mio sogno era aprire un negozio di attrezzi per elettricisti, non cucinare <b>vol-au-vent</b> tutto il sabato per quei buzzurri dei tuoi amici!
      ~ dialogue_ingredients_of_the_day += VolAuVent
@@ -58,9 +58,9 @@ DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
         + YOU: (menti) Ceeeerto che sì!
         + YOU: (ironicamente) Ceeerto che sì!
         -
-    BeBe: Questo mi rassicura. Non amo le persone che mi prendono per le orecchie.
+    BeBe: Questo mi rassicura. Non amo le persone che mi prendono per gli zoccoli.
     BeBe: Comunque, pensavo: cos'è la vera amicizia? E ovviamente ho pensato alle mie otto, ehm, sette figlie. E cosa amano fare quando siamo tutte assieme? I videogiochi!
-    BeBe: Mi diverte un sacco quando dicono in modo affettuoso "No mamma, non giocare con noi stasera, ti preghiamo!". Son così tenere.
+    BeBe: Mi diverte un sacco quando dicono in modo affettuoso "No mamma, non giocare con noi stasera, ti preghiamo!". Sono così tenere.
     BeBe: E quindi pensavo di fare dei cestini con dei <b>blocchi d'erba</b> fritti, e le <b>uova di pecora</b>.
     ~ dialogue_ingredients_of_the_day += BlocchiDiErba
     ~ dialogue_ingredients_of_the_day += UovaDiPecora
@@ -88,7 +88,7 @@ DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
         + YOU: Potrebbe sorprenderti, ma cucino persino peggio di te.
             Piiiietro: Non esageriamo, ho visto cosa hai tirato fuori ieri!
         + YOU: Hai trovato poi il tuo cane?
-            Piiiietro: No, e ho trovato la sua pelliccia di zibellino russo abbandonata dietro una poltrona.
+            Piiiietro: No, ma ho trovato la sua pelliccia di zibellino russo abbandonata dietro una poltrona.
             Piiiietro: Ma fa sempre così, quando gli vieto di andare in vacanza da qualche parte.
         + YOU: Ma il rosario poi?
             Piiiietro: Credo di averlo visto addosso a Dogron, dovrò indagare meglio.
@@ -113,14 +113,14 @@ DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
         + YOU: Questo è il momento in cui devo dire che mi dispiace, vero?
         + YOU: Ho visto una pecora molto amichevole prima. Se vuoi parlare con lei...
         -
-    Quello: Non ti ammorbo con questa storia triste, promesso. Però non riesco a non pensare a ricette che non abbiano delle <b>lacrime</b>. Un sacco.
+    Quello: Non ti ammorbo con questa storia triste, promesso. Però non riesco a non pensare a ricette che non abbiano delle <b>lacrime</b>, sai? Un sacco.
     ~ dialogue_ingredients_of_the_day += Lacrime
         + YOU: Non rovinano il sapore?
         -
     Quello: Dipende. Con il <b>cacao amaro</b> il salato ci sta bene. Potrei fare una torta.
     ~ dialogue_ingredients_of_the_day += CacaoAmaro
     Quello: Una torta da non dividere con nessuna persona.
-    Quello: A parte il Divo, che non mangerebbe però mai, perché gli farebbe schifo sulla fiducia. E ha ragione.
+    Quello: A parte il Divo, che non mangerebbe però mai, perché gli farebbe schifo sulla fiducia. E ha ragione, sai?
     Quello: Scusa, la tristezza è vietata dal contratto di lavoro. A dopo, in bocca al lupo!
 
     ->->
@@ -133,18 +133,18 @@ DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
         -
     ilDivo: Ma ciao splendore! Ci conosciamo?
         + {day_one_lounge.il_divo_choice} YOU: Abbiamo parlato ieri assieme, tipo. Oprah, la bamba, lo zafferano?
-        + {not day_one_lounge.il_divo_choice} YOU: Non ho ancora avuto la fortuna, no.
+        + {not day_one_lounge.il_divo_choice} YOU: Non ho ancora avuto la sfortuna, no.
         -
     ilDivo: Mi chiamano il Divo, ma è un eufemismo. Pensa che alla Casa Bianca hanno un mio ritratto, così per dire.
     ilDivo: Sulla Treccani c'è la mia foto sotto la definizione di "In", non come la preposizione ovvio ma che te lo dico che forse non hai fatto le medie ma te l'ho già chiesto, sei single?
         + YOU: Sì, e ogni volta che incontro un uomo mi ricordo perché.
-        + YOU: No, ho qualcuno che mi aspetta a casa, ma non so come tornarci!
+        + YOU: No, ho la gatta che mi aspetta a casa, ma non so come tornarci!
         + YOU: Credo di avere una cotta per una delle persone qui in studio.
         -
     ilDivo: Ovvio che poi ti innamori di me, ovvio. Bella Hadid ha deciso di non <b>specchiarsi</b> più dopo che mi ha visto.
         ~ dialogue_ingredients_of_the_day += Specchiarsi
     ilDivo: Però poi la vita è difficile.
-    ilDivo: Perché ti dicono "Ehi, che fortuna essere una specie con 23000 generi sessuali diversi, deve essere una gran bazza", ma poi anche da noi ci son cose binarie, e finisce che io mi innamoro, e...
+    ilDivo: Perché ti dicono "Ehi, che fortuna essere una specie con 23000 generi sessuali diversi, deve essere una gran bazza", ma poi anche da noi ci sono cose binarie, e finisce che io mi innamoro, e...
     ilDivo: Ma che ti sto a dire? Io sono roba che <b>scotta</b> baby, mica mi puoi agguantare così! E ora devo lavorare, lavorare, produrre, riempire il vuoto! Vattene!
         ~ dialogue_ingredients_of_the_day += Scottare
 
