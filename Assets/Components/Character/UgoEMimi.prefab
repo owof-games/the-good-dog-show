@@ -96,6 +96,14 @@ PrefabInstance:
       propertyPath: characterName
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5830048211823696405, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+      propertyPath: variants.Array.data[0].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2cc2d07a32815e4ab2f9494999f1d37, type: 3}
+    - target: {fileID: 5830048211823696405, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+      propertyPath: variants.Array.data[0].VariantName
+      value: MIMI
+      objectReference: {fileID: 0}
     - target: {fileID: 6623409556678909291, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
       propertyPath: m_Sprite
       value: 

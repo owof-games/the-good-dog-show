@@ -27,9 +27,29 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> finale_giorno_uno(3, 2)
 
--> test_transitions
+// -> test_transitions
+
+-> test_variants
 
 
+
+=== test_variants
+
+@moveToDialogue character:{BeBe}
+
+BeBe: dico qualcosa
+
+YOU: dico qualcosa io
+
+
+@moveToLounge
+    + [BeBe]
+        @setCharacterVariant image:{BeBenator}
+        @moveToDialogue character:{BeBe}
+        BeBe: ok, bella lì!
+-
+
+-> END
 
 === test_transitions
 

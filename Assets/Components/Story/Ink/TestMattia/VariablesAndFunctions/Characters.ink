@@ -9,5 +9,7 @@ Data about the characters
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
 
+LIST character_variants = BeBenator, MIMI
+
 === function isAlive(character)
 ~ return alive_characters has character

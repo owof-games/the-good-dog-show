@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2854075913059511438, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
       propertyPath: m_Name
-      value: ilDivo
+      value: IlDivo
       objectReference: {fileID: 0}
     - target: {fileID: 5671888431064588613, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
       propertyPath: m_Pivot.x
@@ -95,6 +95,10 @@ PrefabInstance:
     - target: {fileID: 5830048211823696405, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
       propertyPath: characterName
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830048211823696405, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+      propertyPath: variants.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6623409556678909291, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
       propertyPath: m_Sprite

@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: characterName
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5830048211823696405, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+      propertyPath: variants.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6623409556678909291, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
       propertyPath: m_Sprite
       value: 

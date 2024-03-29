@@ -165,4 +165,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b85480de8560c44b035635eb8bcf85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  variants:
+  - VariantName: BeBenator
+    Sprite: {fileID: 21300000, guid: d190697200cd1444e899eb98c92f7200, type: 3}
   characterName: 3
+  characterVariants: {fileID: 11400000, guid: 1c2c64b8ab4f53b41a96b859a3b3c71e, type: 2}
+  shadowButtonCompanion: {fileID: 9083502010823635746}
+--- !u!114 &9083502010823635746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 499321470178283655, guid: 6372e6b9ff37f87449f97d01bd2517b3, type: 3}
+  m_PrefabInstance: {fileID: 8710778378187416485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854075913059511438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d4343dfb7650344af2aff1da462ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
