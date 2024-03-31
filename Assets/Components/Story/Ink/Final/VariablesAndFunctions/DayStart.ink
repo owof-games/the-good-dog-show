@@ -33,11 +33,11 @@ DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abi
   DOGRON: Ti ricordo cara persona che potrai parlare con una persona in più.
 }
 
-{ abilities has EliminaConcorrente and not eliminatrice:
+{ abilities has EliminaConcorrente and not eliminatrice and alive_characters:
     -> eliminatrice_choice ->
 }
 
-{ abilities has RichiamaConcorrente and not resuscitatrice:
+{ abilities has RichiamaConcorrente and not resuscitatrice and alive_characters != LIST_ALL(alive_characters):
     -> resuscitatrice_choice ->
 }
 
