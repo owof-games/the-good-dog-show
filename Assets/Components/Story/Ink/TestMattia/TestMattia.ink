@@ -29,8 +29,96 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> test_transitions
 
--> test_variants
+// -> test_variants
 
+-> test_enter
+
+
+=== test_enter
+
+@moveToDialogue character:{Piiiietro}
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase.
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: molto breve.
+
+YOU: molto breve.
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+Piiiietro: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga frase. 
+
+-> END
 
 
 === test_variants

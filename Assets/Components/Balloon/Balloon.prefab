@@ -219,7 +219,6 @@ GameObject:
   - component: {fileID: 1001692597326325308}
   - component: {fileID: 6110157904654233139}
   - component: {fileID: 6498419268438793385}
-  - component: {fileID: 6961102064733689721}
   m_Layer: 5
   m_Name: Balloon
   m_TagString: Untagged
@@ -316,34 +315,6 @@ MonoBehaviour:
   hideButtonAdvance: {fileID: 3077367887286398841}
   buttonAdvance: {fileID: 7560436668354961062}
   inputHint: {fileID: 6127570527395905021}
---- !u!114 &6961102064733689721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593546415322681484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _developerDescription: If the user request an advance, simulate a button click.
-  _unityEventResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  _actionResponses: []
-  _conditions: []
-  _operator: 0
-  _replayEventBufferOnRegister: 1
-  _eventReference:
-    _usage: 0
-    _event: {fileID: 11400000, guid: e7d9d1d800657e840ae737d5fec268fc, type: 2}
-    _eventInstancer: {fileID: 0}
-    _collection: {fileID: 0}
-    _list: {fileID: 0}
-    _collectionInstancer: {fileID: 0}
-    _listInstancer: {fileID: 0}
 --- !u!1 &8792235737116559376
 GameObject:
   m_ObjectHideFlags: 0

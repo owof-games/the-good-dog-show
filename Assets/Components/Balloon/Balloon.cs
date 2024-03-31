@@ -17,6 +17,8 @@ public class Balloon : MonoBehaviour
 {
     [SerializeField] private float charactersPerSecond;
     [SerializeField] private UnityEvent advance;
+    [SerializeField] private int missingCharactersRefractoryAmount = 5;
+    [SerializeField] private float advancementRefractoryTime = 0.3f;
 
     [Header("Atoms")]
     [SerializeField] private BoolVariable isWritingText;
@@ -71,8 +73,8 @@ public class Balloon : MonoBehaviour
 
     private void SetText(string text)
     {
-        // the SetActive of SetTextInternal will cause the listeners to activate, and rely on replay callbacks
-        // but since could be called inside an event, and the replay callbacks aren't saved until _after_
+        // the SetActive of the inner function will cause the listeners to activate, and rely on replay callbacks
+        // but since it could be called inside an event, and the replay callbacks aren't saved until _after_
         // if we do it right now, we'll end up _not_ having the replay callbacks
         MainThreadQueue.EnqueueLater(() =>
         {
@@ -86,6 +88,8 @@ public class Balloon : MonoBehaviour
     }
 
     private bool forceTextToEnd = false;
+
+    private bool refractoryTimespan = false;
 
     private IEnumerator SetTextCoroutine(string text)
     {
@@ -118,8 +122,16 @@ public class Balloon : MonoBehaviour
             }
 
             // turn them on one at a time
+            var missingCharacters = characterInfos.Count;
             foreach (var characterInfo in characterInfos)
             {
+                // stop accepting advance button click just before finishing the text
+                missingCharacters--;
+                if (missingCharacters <= missingCharactersRefractoryAmount)
+                {
+                    refractoryTimespan = true;
+                }
+                // set the alpha
                 SetCharAlpha(textInfo, characterInfo, 255);
                 // wait between characters, unless the user has clicked on the text to ask for it to get to the end
                 if (!forceTextToEnd)
@@ -127,9 +139,13 @@ public class Balloon : MonoBehaviour
                     yield return new WaitForSeconds(1f / charactersPerSecond);
                 }
             }
+
+            // keep the refractory period last a little bit of time after the end
+            yield return new WaitForSeconds(advancementRefractoryTime);
         }
         finally
         {
+            refractoryTimespan = false;
             isWritingText.Value = false;
             UpdateButton();
         }
@@ -158,6 +174,10 @@ public class Balloon : MonoBehaviour
 
     public void OnAdvanceButtonClick()
     {
+        // skip advance if in refractory period (see SetTextRoutine)
+        if(refractoryTimespan) {
+            return;
+        }
         // clicking while the text is running will just cause it to go to the end
         if (isWritingText.Value)
         {
@@ -168,8 +188,8 @@ public class Balloon : MonoBehaviour
         {
             advance.Invoke();
         }
-        // if we reached the end of the story, straight jump to the main menu
-        // TODO: this could change if we have a credits scene
+        // if we reached the end of the story, jump straight to the main menu
+        // TODO: this will change if we have a credits scene
         else if (!storyStep.Value.CanContinue && storyStep.Value.Choices.Length == 0)
         {
             moveToGameAreaEvent.Event.Raise(GameArea.Menu);
