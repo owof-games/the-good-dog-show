@@ -21,9 +21,9 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> prima_giornata
 
-// ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
-// ~ chosen_ingredient = InvalidIngredient
-// -> cucina_giorno_uno
+~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
+~ chosen_ingredient = InvalidIngredient
+-> cucina_giorno_uno
 
 // -> finale_giorno_uno(3, 2)
 
@@ -31,7 +31,7 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> test_variants
 
--> test_enter
+// -> test_enter
 
 
 === test_enter

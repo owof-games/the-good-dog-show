@@ -12,6 +12,7 @@ public class KitchenGame : MonoBehaviour
     [SerializeField] private VerticalLayoutGroup verticalLayoutGroup2;
     [SerializeField] private float recipeBookHeight = 400;
     [SerializeField] private FloatReference ingredientsSpeedMultiplier;
+    [SerializeField] private int minNumEntries;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class KitchenGame : MonoBehaviour
         Assert.IsNotNull(verticalLayoutGroup1);
         Assert.IsNotNull(verticalLayoutGroup2);
         Assert.IsTrue(ingredientsSpeedMultiplier.Value > 0);
+        Assert.IsTrue(minNumEntries > 0);
     }
 
     private RectTransform verticalLayoutRectTransform1;
@@ -73,9 +75,12 @@ public class KitchenGame : MonoBehaviour
     /// <param name="ingredientKeys">Comma-separated list of ingredients</param>
     private void CreateButtons(string ingredientKeys)
     {
-        var ingredients = ingredientKeys
+        var baseIngredients = ingredientKeys
             .Split(',')
-            .OrderBy(_ => Random.Range(0f, 1f));
+            .OrderBy(_ => Random.Range(0f, 1f))
+            .ToList();
+        var numRepeats = (int)Mathf.Ceil((float)minNumEntries / baseIngredients.Count);
+        var ingredients = Enumerable.Repeat(baseIngredients, numRepeats).SelectMany(x => x);
         foreach (var (ingredientKey, button) in
             from root in verticalLayoutRectTransforms
             from ingredientKey in ingredients

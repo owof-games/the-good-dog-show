@@ -572,6 +572,7 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: 349dc61f38031da4784e0b4af7608cc2, type: 2}
     _variableInstancer: {fileID: 0}
+  minNumEntries: 5
 --- !u!114 &2988996641917955454
 MonoBehaviour:
   m_ObjectHideFlags: 0
