@@ -46,6 +46,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     
 = bebe_choice
     //Ingredienti suggeriti: sacrificio, Peanutbutter, giocattoloPreferito
+    @setCharacterVariant variant:{BeBenator}
     BeBe: Questa sì che è pace.
         + YOU: Che hai fatto al tuo pelo?
             BeBe: Un tributo, un grande tributo.

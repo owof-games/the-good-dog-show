@@ -19,7 +19,8 @@ DOGRON: Vieni qui, coda!
 
 
 = ugo_e_mimi_choice
-    //INGREDIENTI: Mazinga e Le orecchie di Ugo    
+    //INGREDIENTI: Mazinga e Le orecchie di Ugo
+    @setCharacterVariant variant:{MIMI}
     UgoEMimi: Ma ciao, splendore!
         + YOU: Signora Mimi, noto qualcosa di diverso!
         -
