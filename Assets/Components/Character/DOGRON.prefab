@@ -135,5 +135,98 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2854075913059511438, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5647123106336507079}
+    - targetCorrespondingSourceObject: {fileID: 2854075913059511438, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6761203102932906666}
   m_SourcePrefab: {fileID: 100100000, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+--- !u!114 &1905275982194255755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9083502010823635746, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+  m_PrefabInstance: {fileID: 7241773471396910249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892110348789544999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d4343dfb7650344af2aff1da462ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3789655319354986172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5830048211823696405, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+  m_PrefabInstance: {fileID: 7241773471396910249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892110348789544999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b85480de8560c44b035635eb8bcf85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4892110348789544999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2854075913059511438, guid: 2a3f2f68f7d22c340979870925813e95, type: 3}
+  m_PrefabInstance: {fileID: 7241773471396910249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5647123106336507079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892110348789544999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbf52d9787f8d444be42cd6fb7d8025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 53bcd34cf65b6b64b85d48b857f14d58, type: 3}
+  - {fileID: 21300000, guid: ba2e27ecc52f57740a982b16763968a3, type: 3}
+  - {fileID: 21300000, guid: f39948d75e9636840a6ef87438d6cbfd, type: 3}
+  - {fileID: 21300000, guid: 089f08f8f1776d9498b15f50dde4e63e, type: 3}
+  - {fileID: 21300000, guid: 29a13e2ba8fc473498bcd35c9adc0c55, type: 3}
+  - {fileID: 21300000, guid: 0f4e9f8d506b3fd4bac99b770a92bf17, type: 3}
+  shadowButtonCompanion: {fileID: 1905275982194255755}
+  character: {fileID: 3789655319354986172}
+--- !u!114 &6761203102932906666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892110348789544999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21382476a2ab504fadc6db5bdd7dd37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: Whenever the story step changes, choose a different random
+    sprite for DOGRON
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5647123106336507079}
+        m_TargetAssemblyTypeName: CharacterSpriteSet, Assembly-CSharp
+        m_MethodName: OnStoryStepChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 00a75b0a2aa80204397ea3ce33b1aaee, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}

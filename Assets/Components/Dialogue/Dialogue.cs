@@ -188,13 +188,18 @@ public class Dialogue : TransitionTarget
 
     private (string, string) GetCharacterLine(string text)
     {
-        text = text.Trim();
-
         var canSeeIngredients = abilities.Any(ability => ability.itemName == "EvidenziaIngredienti");
         if (!canSeeIngredients)
         {
             text = text.Replace("<b>", "").Replace("</b>", "");
         }
+
+        return GetCharacterAndText(text);
+    }
+
+    public static (string, string) GetCharacterAndText(string text)
+    {
+        text = text.Trim();
 
         var parts = text.Split(':', 2);
         if (parts.Length == 2)
