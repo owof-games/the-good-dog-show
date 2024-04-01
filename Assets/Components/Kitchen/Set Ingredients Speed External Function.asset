@@ -18,3 +18,15 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: 349dc61f38031da4784e0b4af7608cc2, type: 2}
     _variableInstancer: {fileID: 0}
+  ingredientsSpeedAcceleration:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 0ff78d0c3cbf8734382962cbe99ea450, type: 2}
+    _variableInstancer: {fileID: 0}
+  ingredientsMaxRounds:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: e5c1a253ee269cc489f4114c4215d47d, type: 2}
+    _variableInstancer: {fileID: 0}

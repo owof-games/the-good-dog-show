@@ -1,8 +1,7 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
-using DG.Tweening;
-using System.Linq;
 using UnityAtoms.BaseAtoms;
 
 public class KitchenGame : MonoBehaviour
@@ -12,7 +11,10 @@ public class KitchenGame : MonoBehaviour
     [SerializeField] private VerticalLayoutGroup verticalLayoutGroup2;
     [SerializeField] private float recipeBookHeight = 400;
     [SerializeField] private FloatReference ingredientsSpeedMultiplier;
+    [SerializeField] private FloatReference ingredientsSpeedAcceleration;
+    [SerializeField] private IntReference ingredientsMaxRounds;
     [SerializeField] private int minNumEntries;
+    [SerializeField] private StringEvent ingredientChosenEvent;
 
     private void Awake()
     {
@@ -36,6 +38,11 @@ public class KitchenGame : MonoBehaviour
             verticalLayoutRectTransform1,
             verticalLayoutRectTransform2
         };
+    }
+
+    private void OnEnable()
+    {
+        runningAnimation = false;
     }
 
     private void OnDisable()
@@ -75,12 +82,15 @@ public class KitchenGame : MonoBehaviour
     /// <param name="ingredientKeys">Comma-separated list of ingredients</param>
     private void CreateButtons(string ingredientKeys)
     {
+        // make a (randomized) list of ingredients
         var baseIngredients = ingredientKeys
             .Split(',')
             .OrderBy(_ => Random.Range(0f, 1f))
             .ToList();
+        // repeat the list multiple times, if just one time isn't enough to cover a whole page
         var numRepeats = (int)Mathf.Ceil((float)minNumEntries / baseIngredients.Count);
         var ingredients = Enumerable.Repeat(baseIngredients, numRepeats).SelectMany(x => x);
+        // create the buttons in each vertical layout
         foreach (var (ingredientKey, button) in
             from root in verticalLayoutRectTransforms
             from ingredientKey in ingredients
@@ -91,54 +101,62 @@ public class KitchenGame : MonoBehaviour
         }
     }
 
-    private Tweener ingredientsAnimation1;
-    private Tweener ingredientsAnimation2;
+    private float verticalLayoutGroup1YPosition;
+    private float verticalLayoutGroup2YPosition;
+    private bool runningAnimation = false;
+    private float speed;
+    private int numRounds;
 
     private void RunIngredientButtonsAnimations()
     {
-        // kill currently running animations, if needed
-        ingredientsAnimation1?.Kill();
-        ingredientsAnimation2?.Kill();
-
         // force layouts to recompute
         Canvas.ForceUpdateCanvases();
 
-        // extract measures from layout groups
-        Assert.AreEqual(verticalLayoutGroup1.spacing, verticalLayoutGroup2.spacing);
-        Assert.AreEqual(verticalLayoutGroup1.preferredHeight, verticalLayoutGroup2.preferredHeight);
         var spacing = verticalLayoutGroup1.spacing;
-        float preferredHeight = verticalLayoutGroup1.preferredHeight;
+        var preferredHeight = verticalLayoutGroup1.preferredHeight;
 
-        void CreateIngredientsAnimation(RectTransform myTransform, RectTransform otherTransform, System.Func<Tweener> getTweener, System.Action<Tweener> setTweener, Vector2? startPosition = null)
+        verticalLayoutGroup1YPosition = 0;
+        verticalLayoutGroup2YPosition = -(preferredHeight + spacing);
+
+        speed = 100 * ingredientsSpeedMultiplier.Value;
+        runningAnimation = true;
+        numRounds = 0;
+    }
+
+    private void Update()
+    {
+        if (!runningAnimation)
         {
-            // kill the current tweener, if necessary
-            getTweener()?.Kill();
-            // start at given position, or just under the other layout
-            myTransform.anchoredPosition = startPosition ??
-                otherTransform.anchoredPosition - new Vector2(0, preferredHeight + spacing);
-            // start the animation up until it disappears
-            var tweener = myTransform
-                .DOAnchorPos(new Vector2(0, recipeBookHeight + preferredHeight), 100 * ingredientsSpeedMultiplier.Value)
-                .SetEase(Ease.Linear)
-                .SetSpeedBased()
-                .OnComplete(() =>
-                {
-                    // restart animation just under the other layout, with automatic computation of start position
-                    CreateIngredientsAnimation(myTransform, otherTransform, getTweener, setTweener);
-                });
-            // save the new tweener
-            setTweener(tweener);
+            return;
         }
-        CreateIngredientsAnimation(
+        var spacing = verticalLayoutGroup1.spacing;
+        var preferredHeight = verticalLayoutGroup1.preferredHeight;
+        void UpdateLayoutGroup(RectTransform layoutGroupRectTransform, float y, float otherY, System.Action<float> setY)
+        {
+            var newY = y + Time.deltaTime * speed;
+            if (newY >= recipeBookHeight + preferredHeight)
+            {
+                newY = otherY - (preferredHeight + spacing);
+                numRounds++;
+                Debug.Log("num rounds: " + numRounds.ToString());
+                if (numRounds >= ingredientsMaxRounds)
+                {
+                    ingredientChosenEvent.Raise("InvalidIngredient");
+                }
+            }
+            setY(newY);
+            layoutGroupRectTransform.anchoredPosition = new Vector2(0, newY);
+        }
+        speed += ingredientsSpeedAcceleration * Time.deltaTime;
+        UpdateLayoutGroup(
             verticalLayoutRectTransform1,
+            verticalLayoutGroup1YPosition,
+            verticalLayoutGroup2YPosition,
+            (float newY) => verticalLayoutGroup1YPosition = newY);
+        UpdateLayoutGroup(
             verticalLayoutRectTransform2,
-            () => ingredientsAnimation1,
-            t => ingredientsAnimation1 = t,
-            Vector2.zero);
-        CreateIngredientsAnimation(
-            verticalLayoutRectTransform2,
-            verticalLayoutRectTransform1,
-            () => ingredientsAnimation2,
-            t => ingredientsAnimation2 = t);
+            verticalLayoutGroup2YPosition,
+            verticalLayoutGroup1YPosition,
+            (float newY) => verticalLayoutGroup2YPosition = newY);
     }
 }

@@ -37,7 +37,6 @@ public class PlayKitchenGameCommand : CommandLineParser
         string chosenIngredient = null;
         yield return ingredientChosenEvent.Await(onEvent: i => chosenIngredient = i);
         Assert.IsNotNull(chosenIngredient);
-        Assert.AreNotEqual(chosenIngredient, "InvalidIngredient");
 
         // save the chosen ingredient in ink
         var c = inkAtomsStory.Value.GetInkListFromListDefinitions("Ingredients");
