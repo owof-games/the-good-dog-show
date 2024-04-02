@@ -42,7 +42,7 @@ DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altr
         + YOU: Signora, se ha bisogno di aiuto batta le ciglia due volte.
             YOU: Con questa luce non si capisce un cazzo. Riprovi!
         -
-    UgoEMimi: Mimi, andiamocene! Credo di aver visto una tizia con un iPod, forse è un audio designer!    
+    UgoEMimi: Mimi, andiamocene! Credo di aver visto una tizia con un iPod, forse è un'audio designer!    
     
     ->->
 

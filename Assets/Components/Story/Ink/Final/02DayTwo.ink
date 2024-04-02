@@ -66,7 +66,7 @@ DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
     ~ dialogue_ingredients_of_the_day += UovaDiPecora
         + YOU: Uova di pecora?
         -
-    BeBe: Certo. In amicizia il sacrificio è importante!.
+    BeBe: Certo. In amicizia il sacrificio è importante!
     BeBe: Ma ora devo andare un attimo a covare. A dopo!
         + YOU: Ehm, a dopo.
         -

@@ -79,7 +79,7 @@ DOGRON: Rispetto a quello che hai cucinato... {~ Dalla padella arriva un odore d
 ->->
 
 == finale_uno
-DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, non si muove, e non fa domande esistenziali|Potrebbe essere passabile per un McDonald's|Conosco degli studenti che forse potrebbero mangiarlo, forse}. Inaspettatamente passi alla prossima puntata!
+DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, non si muove, e non fa domande esistenziali|Potrebbe essere passabile per un McDonald's|Conosco degli studenti che forse potrebbero mangiarla, forse}. Inaspettatamente passi alla prossima puntata!
 ->->
 
 
