@@ -64,10 +64,15 @@ MonoBehaviour:
   transitionDuration:
     _usage: 1
     _value: 0
-    _constant: {fileID: 11400000, guid: e7519e65aa910d343911ef934621f8b1, type: 2}
+    _constant: {fileID: 11400000, guid: 8466ee6faf935764dbf8368a51dc849a, type: 2}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
-  debugMode: 0
+  debugMode:
+    _usage: 1
+    _value: 0
+    _constant: {fileID: 11400000, guid: ee4d8d6dad7fc7046aa5edbcec6eb977, type: 2}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &7437024197555520698
 GameObject:
   m_ObjectHideFlags: 0

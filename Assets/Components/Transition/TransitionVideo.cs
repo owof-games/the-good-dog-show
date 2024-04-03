@@ -12,7 +12,7 @@ public class TransitionVideo : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private RectTransform targetImageTransform;
     [SerializeField] private FloatReference transitionDuration;
-    [SerializeField] private bool debugMode;
+    [SerializeField] private BoolReference debugMode;
 
     /// <summary>
     /// A coroutine that starts playing the video, and waits for the video to completely cover the
