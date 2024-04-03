@@ -15,12 +15,13 @@ DOGRON: Un'altra grande idea della Suprema Chihuahua e del Consiglio dei Carlini
 DOGRON: Potete chiacchierare un attimo tra voi, e poi iniziamo a cucinare.
 DOGRON: Vieni qui, coda!
 
+@setCharacterVariant image:{MIMI}
+
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_four_kitchen)
 
 
 = ugo_e_mimi_choice
     //INGREDIENTI: Mazinga e Le orecchie di Ugo
-    @setCharacterVariant variant:{MIMI}
     UgoEMimi: Ma ciao, splendore!
         + YOU: Signora Mimi, noto qualcosa di diverso!
         -

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2666077869332691321, guid: 50f6a83b6a08434458a3959511319825, type: 3}
       propertyPath: m_Name
-      value: UgoEMimi
+      value: UgoEMimi Lounge
       objectReference: {fileID: 0}
     - target: {fileID: 5607792029249795250, guid: 50f6a83b6a08434458a3959511319825, type: 3}
       propertyPath: m_Pivot.x
@@ -95,6 +95,14 @@ PrefabInstance:
     - target: {fileID: 6020191939605090274, guid: 50f6a83b6a08434458a3959511319825, type: 3}
       propertyPath: characterName
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020191939605090274, guid: 50f6a83b6a08434458a3959511319825, type: 3}
+      propertyPath: variants.Array.data[0].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2cc2d07a32815e4ab2f9494999f1d37, type: 3}
+    - target: {fileID: 6020191939605090274, guid: 50f6a83b6a08434458a3959511319825, type: 3}
+      propertyPath: variants.Array.data[0].VariantName
+      value: MIMI
       objectReference: {fileID: 0}
     - target: {fileID: 6381436568887216284, guid: 50f6a83b6a08434458a3959511319825, type: 3}
       propertyPath: m_Sprite

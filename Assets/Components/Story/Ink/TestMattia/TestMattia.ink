@@ -21,15 +21,15 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> prima_giornata
 
-~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
-~ chosen_ingredient = InvalidIngredient
--> cucina_giorno_uno
+// ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
+// ~ chosen_ingredient = InvalidIngredient
+// -> cucina_giorno_uno
 
 // -> finale_giorno_uno(3, 2)
 
 // -> test_transitions
 
-// -> test_variants
+-> test_variants
 
 // -> test_enter
 
@@ -123,21 +123,53 @@ YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga f
 
 === test_variants
 
-@moveToDialogue character:{BeBe}
+@moveToEnding
 
-BeBe: dico qualcosa
+DOGRON: dico cose
+YOU: dico cose
 
-YOU: dico qualcosa io
+@moveToDialogue character:{DOGRON}
 
+DOGRON: altre cose
+YOU: benissimo
 
-@moveToLounge
-    + [BeBe]
-        @setCharacterVariant image:{BeBenator}
-        @moveToDialogue character:{BeBe}
-        BeBe: ok, bella lì!
--
+@setCharacterVariant image:{MIMI}
+
+-> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_test)
+
 
 -> END
+
+    = ugoemimi_choice
+    UgoEMimi: <b>ciao</b>, come va?
+    YOU: ciao
+    ->->
+
+    = bebe_choice
+    BeBe: ciao
+    YOU: ciao
+    ->->
+
+    = piiiietro_choice
+    Piiiietro: ciao
+    YOU: ciao
+    ->->
+
+
+    = quello_choice
+    Quello: ciao
+    YOU: ciao
+    ->->
+
+
+    = ildivo_choice
+    ilDivo: ciao
+    YOU: ciao
+    ->->
+    
+    = cucina_test
+    
+    -> END
 
 === test_transitions
 

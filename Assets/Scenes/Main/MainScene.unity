@@ -1482,14 +1482,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8641656838911282783, guid: 8687427b8d94d964fbc9241fb58ec529, type: 3}
-      propertyPath: debugMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8641656838911282783, guid: 8687427b8d94d964fbc9241fb58ec529, type: 3}
-      propertyPath: transitionDuration._constant
-      value: 
-      objectReference: {fileID: 11400000, guid: 8466ee6faf935764dbf8368a51dc849a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

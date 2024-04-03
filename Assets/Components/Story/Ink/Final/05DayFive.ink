@@ -14,6 +14,8 @@ DOGRON: E per questo il tema di oggi, l'ultimo grande tema è:
 DOGRON: Un piatto che gridi al mondo che sei la migliore genitora per dogghe al mondo!
 DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
 
+@setCharacterVariant image:{BeBenator}
+
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_five_kitchen)
 
 
@@ -46,7 +48,6 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     
 = bebe_choice
     //Ingredienti suggeriti: sacrificio, Peanutbutter, giocattoloPreferito
-    @setCharacterVariant variant:{BeBenator}
     BeBe: Questa sì che è pace.
         + YOU: Che hai fatto al tuo pelo?
             BeBe: Un tributo, un grande tributo.
