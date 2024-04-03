@@ -16,8 +16,9 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private StringEvent continueEvent;
     [SerializeField] private InkAtomsStory inkAtomsStory;
-    [SerializeField] private TextAsset itInkTextAsset;
-    [SerializeField] private TextAsset enInkTextAsset;
+    //[SerializeField] private TextAsset itInkTextAsset;
+    //[SerializeField] private TextAsset enInkTextAsset;
+    [SerializeField] private MenuInkStoriesAsset inkStoriesAsset;
 
     [SerializeField] private Button startButton;
     [SerializeField] private Toggle enToggle;
@@ -33,8 +34,7 @@ public class Menu : MonoBehaviour
     private void Awake()
     {
         Assert.IsNotNull(inkAtomsStory);
-        Assert.IsNotNull(itInkTextAsset);
-        Assert.IsNotNull(enInkTextAsset);
+        Assert.IsNotNull(inkStoriesAsset);
         Assert.IsNotNull(continueEvent);
         Assert.IsNotNull(startButton);
         Assert.IsNotNull(itToggle);
@@ -96,8 +96,8 @@ public class Menu : MonoBehaviour
     {
         string localeCode = LocalizationSettings.SelectedLocale.Identifier.Code;
         inkAtomsStory.StartStory(localeCode == itLocaleCode ?
-            itInkTextAsset :
-            enInkTextAsset);
+            inkStoriesAsset.ItInkTextAsset :
+            inkStoriesAsset.EnInkTextAsset);
         inkAtomsStory["in_unity"] = true;
         continueEvent.Raise(null);
     }

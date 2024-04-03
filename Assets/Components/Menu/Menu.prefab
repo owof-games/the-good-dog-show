@@ -450,8 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   inkAtomsStory: {fileID: 11400000, guid: c6bfcfd395c994843afe25dd3c0b5e88, type: 2}
-  itInkTextAsset: {fileID: 4900000, guid: f429f5f7ce243b24b850b620c7a89f33, type: 3}
-  enInkTextAsset: {fileID: 4900000, guid: 5677dbc09eb7ea544917e7f51eac6437, type: 3}
+  inkStoriesAsset: {fileID: 11400000, guid: 3146dc0df3f756b48a298e49b3d667e6, type: 2}
   startButton: {fileID: 4909366408926330556}
   enToggle: {fileID: 2163615727125454589}
   itToggle: {fileID: 6061616771500230280}
