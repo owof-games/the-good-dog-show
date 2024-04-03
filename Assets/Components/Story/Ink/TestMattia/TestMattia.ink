@@ -29,9 +29,19 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> test_transitions
 
--> test_variants
+// -> test_variants
 
 // -> test_enter
+
+-> test_counter
+
+=== test_counter
+
+@moveToDialogue character:{DOGRON}
+
+DOGRON: Non sentite un po' la tristezza? Già {nonAliveCharacters()}, e a me non va di farvi andare via, nuuuuuuuuuuuu!
+
+-> END
 
 
 === test_enter
