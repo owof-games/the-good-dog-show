@@ -44,6 +44,8 @@ INCLUDE VariablesAndFunctions/Characters.ink
 DOGRON: E allora, si parte! La nostra missione qui è completa!
 DOGRON: Vai coi titoli di coda, Bruiser!
 
+~ playBackgroundMusic("credits")
+
 @moveToCredits
 
 _ Game Design: _ Marco Spelgatti, Mattia Belletti, Gabriele Perugini

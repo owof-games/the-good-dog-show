@@ -1338,6 +1338,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1482053614855175256, guid: 0115cdfb315853347adb73522ab85d20, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7175998456000550501, guid: 0115cdfb315853347adb73522ab85d20, type: 3}
       propertyPath: m_Name
       value: Credits
@@ -1415,6 +1419,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: fb882a452f409a14fa3f5e3a7d9429bd, type: 2}
     - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
+      propertyPath: audioEntries.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: crossFadeDuration._usage
       value: 1
       objectReference: {fileID: 0}
@@ -1431,6 +1439,10 @@ PrefabInstance:
       value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
+      propertyPath: audioEntries.Array.data[2].name
+      value: credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: backgroundMusicVolume._constant
       value: 
       objectReference: {fileID: 11400000, guid: bee45013b201b754b9da5d5e77fd1188, type: 2}
@@ -1438,6 +1450,10 @@ PrefabInstance:
       propertyPath: backgroundMusicVolume._variable
       value: 
       objectReference: {fileID: 11400000, guid: b97e22ffae069fc468aa8609143f6c29, type: 2}
+    - target: {fileID: 994385327626077872, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
+      propertyPath: audioEntries.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c8efec0cc3310c54391d44950a59cf7f, type: 3}
     - target: {fileID: 8295896391703092920, guid: 0a026849e3a317c4280a204ea8759d1e, type: 3}
       propertyPath: m_Name
       value: AudioManager
