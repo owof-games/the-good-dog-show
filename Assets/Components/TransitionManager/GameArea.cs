@@ -4,5 +4,6 @@ public enum GameArea
     Lounge,
     Dialogue,
     Kitchen,
-    DogronTalk
+    DogronTalk, // "ending"
+    Credits
 }

@@ -123,4 +123,22 @@ DOGRON: Un pianeta molto semplice. Ci sono idranti, giardini, fiumi, un sacco di
 DOGRON: E allora, si parte! La nostra missione qui è completa!
 DOGRON: Vai coi titoli di coda, Bruiser!
 
+@moveToCredits
+
+_ Game Design: _ Marco Spelgatti, Mattia Belletti, Gabriele Perugini
+
+_ Narrative Design e Scrittura: _ Marco Spelgatti
+
+_ Grafiche: _ Gabriele Perugini
+
+_ Programmazione C\#: _ Mattia Belletti
+
+_ Programmazione Ink: _ Marco Spelgatti, Mattia Belletti
+
+_ Musiche: _ Alec Shea //#url:https:\/\/slaleky.itch.io/retro-and-electronic-music-pack
+
+_ SFX: _ Chris Logdson //#url:https:\/\/chrislsound.itch.io/ambient-puzzle
+
+_ Grazie per aver giocato con noi <3
+
 -> END
