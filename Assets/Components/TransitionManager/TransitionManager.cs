@@ -172,7 +172,6 @@ public class TransitionManager : MonoBehaviour
     /// <param name="gameArea">The game area to turn on.</param>
     private void Show(GameArea gameArea)
     {
-        // turn on the new area, possibly executing its OnTurnOn
         GameObject go = GetGameAreaComponent(gameArea).gameObject;
         go.SetActive(true);
     }
@@ -197,7 +196,6 @@ public class TransitionManager : MonoBehaviour
     /// <param name="gameArea">The game area to keep on.</param>
     private void Hide(GameArea gameArea)
     {
-        // turn on the new area, possibly executing its OnTurnOn
         GameObject go = GetGameAreaComponent(gameArea).gameObject;
         go.SetActive(false);
     }
