@@ -14,30 +14,44 @@ VAR day = 0
 
 @moveToDialogue character:{DOGRON}
 
-DOGRON: {And now, a welcome to all the contestants and those following us from home!|Here wwwwe go again, contestants and spectators!|Goooood evening to all the beautiful people on this planet and beyond!|Has anyone seen my favorite collar?|Last night friends, last night together!}
-DOGRON: {Competitors, remember that every day youuuuu will lose one of your abilities. Human person here in front of me! You will lose today, drum roll...|What skill will we take away from our huuuuuman person today?!?|Fewer and fewer people, fewer and fewer active skills!|Uuuuh, my tummy hurts today.|Me doggo big, not crying, no no, wooooof!}
+DOGRON: {And nowwwwwwww, a warm welcome to all the contestants and those following us from home!|Here we go again, contestants and spectators!|Goooood evening to all the beautiful people on this planet and beyond!|Has anyone seen my favorite collar?|Last night my friends, last night together!}
+
+// skip "remove_ability" the first time and immediately go to use_ability
+{ use_ability:
+    -> remove_ability
+- else:
+    -> use_ability
+}
+
+= remove_ability
+
+DOGRON: {Contestants, remember that every day youuuuu will lose one of your abilities. Human person here in front of me! Today you wil lose... drum rolls...|What skill shall we take away from our huuuuuman person today?!?|Fewer and fewer people, fewer and fewer active skills!|Uuuuh, my tummy hurts today.|Me big doggo, me not crying, no no, wooooof!}
 
 ~ temp ability = LIST_RANDOM(abilities)
 { ability:
   - EvidenziaIngredienti: DOGRON: You will no longer be able to see the ingredients clearly.
   - ScelteLente: DOGRON: Choices will now flow faster. 
-  - SceltaIngrediente: DOGRON: You no longer have an ingredient of your choice to select at the startof the game.
-  - PNGParliExtra: DOGRON: Enough with the extra chatter!
+  - SceltaIngrediente: DOGRON: You will have no longer an ingredient of your choice to select at the start of the game.
+  - PNGParliExtra: DOGRON: Enough with the chit-chat!
   - SaltaMorte: DOGRON: If you get the recipe wrong, you won't have any rescue plans.
-  - EliminaConcorrente: DOGRON: You will no longer be able to eliminate another competitor.
-  - RichiamaConcorrente: DOGRON: No power to recall a person who has left.
+  - EliminaConcorrente: DOGRON: You will no longer be able to eliminate another contestant.
+  - RichiamaConcorrente: DOGRON: No power to recall a person who left.
 }
 ~ abilities -= ability
 
+-> use_ability
+
+= use_ability
+
 { abilities has PNGParliExtra:
-  DOGRON: I remind you dear person that you will be able to talk to one moreperson.
+  DOGRON: I remind you, my dear person, that you will be able to talk to one more person.
 }
 
-{ abilities has EliminaConcorrente and not eliminatrice:
+{ abilities has EliminaConcorrente and not eliminatrice and alive_characters:
     -> eliminatrice_choice ->
 }
 
-{ abilities has RichiamaConcorrente and not resuscitatrice:
+{ abilities has RichiamaConcorrente and not resuscitatrice and alive_characters != LIST_ALL(alive_characters):
     -> resuscitatrice_choice ->
 }
 
@@ -45,7 +59,7 @@ DOGRON: {Competitors, remember that every day youuuuu will lose one of your abil
 
 = eliminatrice_choice
     // TODO: visualizzare solo se ci sono almeno 2 persone vive
-    DOGRON: You have a chance to get rid of one of these beautiful people, who doyou want to get rid of?
+    DOGRON: You have a chance to get rid of one of these beautiful people, who do you want to get rid of?
     + {alive_characters has BeBe} YOU:BeBe.
         ~ alive_characters -= BeBe
         DOGRON: Bye Bye BeBe.
@@ -65,20 +79,20 @@ DOGRON: {Competitors, remember that every day youuuuu will lose one of your abil
         ~ alive_characters -= Quello
         ~ eliminatrice = true
         ~ abilities -= EliminaConcorrente
-        DOGRON: Oh. Oh. My friend, I hope you will forgive this competitor, but you mustleave. I will see you again in the endless meadow!
+        DOGRON: Oh. Oh. My friend, I hope you will forgive this contestant, but you must leave. I will see you again in the endless meadows!
     + {alive_characters has ilDivo} YOU: Il Divo
         ~ alive_characters -= ilDivo
         ~ eliminatrice = true 
         ~ abilities -= EliminaConcorrente
-        DOGRON: sorry, sort of. Goodbye, Divo!
+        DOGRON: Sorry, kind of. Goodbye, Divo!
     + YOU: No person!
-        DOGRON: I like this way of reasoning!
+        DOGRON: I like this way of thinking!
     -
     ->->
 
 = resuscitatrice_choice
     // TODO: visualizzare solo se c'è almeno una persona che è uscita
-    DOGRON: You want to bring a competitor back among us?
+    DOGRON: You want to bring a contestant back among us?
         + { alive_characters hasnt BeBe } YOU:BeBe!
         ~ alive_characters += BeBe
         ~ resuscitatrice = true
@@ -89,7 +103,7 @@ DOGRON: {Competitors, remember that every day youuuuu will lose one of your abil
         ~ resuscitatrice = true
         ~ abilities -= RichiamaConcorrente
         DOGRON: And here you go again: Piiiietro!
-        + { alive_characters hasnt UgoEMimi } YOU: Ugo & Mimi!
+        + { alive_characters hasnt UgoEMimi } YOU: Ugo e Mimi!
         ~ alive_characters += UgoEMimi
         ~ resuscitatrice = true
         ~ abilities -= RichiamaConcorrente
@@ -98,12 +112,12 @@ DOGRON: {Competitors, remember that every day youuuuu will lose one of your abil
         ~ alive_characters += Quello
         ~ resuscitatrice = true
         ~ abilities -= RichiamaConcorrente
-        DOGRON: Hello my friend, at last!
+        DOGRON: Hello my friend, at long last!
         + { alive_characters hasnt ilDivo } YOU: Il Divo.
         ~ alive_characters += ilDivo
         ~ resuscitatrice = true
         ~ abilities -= RichiamaConcorrente
-        DOGRON: Well, he's back!
+        DOGRON: Well... he's back.
         + YOU: MMM, I'm fine, thank you.
             DOGRON: Ah, uh, it seems cruuuuuel but that's the game, isn't it?
         -

@@ -49,49 +49,49 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - Farina:
         ~ return selectIngredientData(what, "flour", 1)
     - Saltare:
-        ~ return selectIngredientData(what, "stir-frying", 1)
+        ~ return selectIngredientData(what, "stir-fry", 1)
     - Sciogliere:
         ~ return selectIngredientData(what, "melt", 2)
     - Lievitare:
-        ~ return selectIngredientData(what, "leavening", 2)
+        ~ return selectIngredientData(what, "rise", 2)
     - Sale:
         ~ return selectIngredientData(what, "salt", 1)
     - Cipolla:
         ~ return selectIngredientData(what, "onion", 1)
     - Affettare:
-        ~ return selectIngredientData(what, "slicing", 3)
+        ~ return selectIngredientData(what, "slice", 3)
     - TonnoInScatola:
         ~ return selectIngredientData(what, "canned tuna", 1)
     - Mescolare:
-        ~ return selectIngredientData(what, "stirring", 1)
+        ~ return selectIngredientData(what, "stir", 1)
     - Burro:
         ~ return selectIngredientData(what, "butter", 1)
     - Montare:
-        ~ return selectIngredientData(what, "whipping", 3)
+        ~ return selectIngredientData(what, "whip", 3)
     - Zafferano:
         ~ return selectIngredientData(what, "saffron", 3)
     - Mantecare:
-        ~ return selectIngredientData(what, "sauteing", 3)
+        ~ return selectIngredientData(what, "saute", 3)
     - Braciola:
         ~ return selectIngredientData(what, "pork chop", 2)
     - Arrosticino:
-        ~ return selectIngredientData(what, "lamb vindaloo", 3)
+        ~ return selectIngredientData(what, "lamb skewer", 3)
     - Costina:
         ~ return selectIngredientData(what, "pork rib", 3)
     - Osso:
         ~ return selectIngredientData(what, "bone", 2)
     - Grigliare:
-        ~ return selectIngredientData(what, "grilling", 2)
+        ~ return selectIngredientData(what, "grill", 2)
     - Crocchette:
         ~ return selectIngredientData(what, "kibbles", 1)
     - Versare:
-        ~ return selectIngredientData(what, "pouring", 2)
+        ~ return selectIngredientData(what, "pour", 2)
     - Riempire:
-        ~ return selectIngredientData(what, "filling", 3)
+        ~ return selectIngredientData(what, "fill", 3)
     - Formaggio:
         ~ return selectIngredientData(what, "cheese", 2)
     - Fondere:
-        ~ return selectIngredientData(what, "melting", 2)
+        ~ return selectIngredientData(what, "melt", 2)
     - Coccole:
         ~ return selectIngredientData(what, "cuddles", 3)
     - Brandina:
@@ -99,11 +99,11 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - Cuccia:
         ~ return selectIngredientData(what, "kennel", 3)
     - Sgranocchiare:
-        ~ return selectIngredientData(what, "crunching", 2)
+        ~ return selectIngredientData(what, "crunch", 2)
     - Fidarsi:
-        ~ return selectIngredientData(what, "trusting", 3)
+        ~ return selectIngredientData(what, "trust", 3)
     - BarattoloDelloYogurt:
-        ~ return selectIngredientData(what, "the yogurt pot", 2)
+        ~ return selectIngredientData(what, "yogurt pot", 2)
     - Pettorina:
         ~ return selectIngredientData(what, "harness", 3)
     - Trasportino:
@@ -117,17 +117,17 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - Inconscio:
         ~ return selectIngredientData(what, "subconscious", 3)
     - CorrereNeiSogni:
-        ~ return selectIngredientData(what, "running in dreams", 2)
+        ~ return selectIngredientData(what, "run in dreams", 2)
     - Coccolare:
-        ~ return selectIngredientData(what, "cuddling", 3)
+        ~ return selectIngredientData(what, "cuddle", 3)
     - Carezzare:
-        ~ return selectIngredientData(what, "caressing", 2)
+        ~ return selectIngredientData(what, "pet", 2)
     - Pettare:
-        ~ return selectIngredientData(what, "fondling a dog", 3)
+        ~ return selectIngredientData(what, "fondle", 3)
     - Grattare:
-        ~ return selectIngredientData(what, "scratching", 4)
+        ~ return selectIngredientData(what, "scratch", 4)
     - DormireAssieme:
-        ~ return selectIngredientData(what, "sleeping together", 4)
+        ~ return selectIngredientData(what, "sleep together", 4)
     - Protezione:
         ~ return selectIngredientData(what, "protection", 2)
     - NoGatti:
@@ -137,53 +137,53 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - Skyrim:
         ~ return selectIngredientData(what, "Skyrim", 2)
     - BlocchiDiErba:
-        ~ return selectIngredientData(what, "blocks of grass", 2)
+        ~ return selectIngredientData(what, "grass blocks", 2)
     - UovaDiPecora:
         ~ return selectIngredientData(what, "sheep eggs", 3)
     - Scolare:
-        ~ return selectIngredientData(what, "draining", 2)
+        ~ return selectIngredientData(what, "drain", 2)
     - Lacrime:
         ~ return selectIngredientData(what, "tears", 3)
     - CacaoAmaro:
         ~ return selectIngredientData(what, "bitter cocoa", 2)
     - Specchiarsi:
-        ~ return selectIngredientData(what, "mirroring", 3)
+        ~ return selectIngredientData(what, "look in the mirror", 3)
     - Scottare:
-        ~ return selectIngredientData(what, "hot", 2)
+        ~ return selectIngredientData(what, "sear", 2)
     - IVeriVideogiochi:
         ~ return selectIngredientData(what, "the REAL video games", 3)
     - Canapé:
         ~ return selectIngredientData(what, "canapé", 2)
     - Mungere:
-        ~ return selectIngredientData(what, "milking", 2)
+        ~ return selectIngredientData(what, "milk", 2)
     - Cardare:
-        ~ return selectIngredientData(what, "carding", 3)
+        ~ return selectIngredientData(what, "card", 3)
     - ChinottoDiSavona:
         ~ return selectIngredientData(what, "Savona's Chinotto", 2)
     - Raccontare:
-        ~ return selectIngredientData(what, "telling", 3)
+        ~ return selectIngredientData(what, "tell", 3)
     - Selfie:
         ~ return selectIngredientData(what, "selfie", 3)
     - Interviste:
         ~ return selectIngredientData(what, "interviews", 3)
     - Avvelenare:
-        ~ return selectIngredientData(what, "poisoning", 3)
+        ~ return selectIngredientData(what, "poison", 3)
     - CollareConEtichetta:
         ~ return selectIngredientData(what, "necklace with a Dogron name tag", 3)
     - TonnoAlNaturale:
-        ~ return selectIngredientData(what, "canned tuna au naturel", 3)
+        ~ return selectIngredientData(what, "canned tuna in brine", 3)
     - Cantare:
-        ~ return selectIngredientData(what, "singing", 3)
+        ~ return selectIngredientData(what, "sing", 3)
     - Perdonare:
-        ~ return selectIngredientData(what, "forgiving", 3)
+        ~ return selectIngredientData(what, "forgive", 3)
     - Evolversi:
-        ~ return selectIngredientData(what, "evolving", 3)
+        ~ return selectIngredientData(what, "evolve", 3)
     - IoMeStessoMedesimo:
         ~ return selectIngredientData(what, "memyselfandI", 3)
     - SelfCare:
         ~ return selectIngredientData(what, "hashtagselfcare", 3)
     - Sventrare:
-        ~ return selectIngredientData(what, "gutting", 3)
+        ~ return selectIngredientData(what, "gut", 3)
     - Emancipazione:
         ~ return selectIngredientData(what, "empowerment", 4)
     - MichelaMurgia:
@@ -197,7 +197,7 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - KateBush:
         ~ return selectIngredientData(what, "Kate Bush", 3)
     - IdeaDiSuccesso:
-        ~ return selectIngredientData(what, "the platonic idea of success", 4)
+        ~ return selectIngredientData(what, "the idea of success", 4)
     - CassaPortatile:
         ~ return selectIngredientData(what, "a portable loudspeaker", 4)
     - Padre:
@@ -207,7 +207,7 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - Mappa:
         ~ return selectIngredientData(what, "map", 4)
     - Grande:
-        ~ return selectIngredientData(what, "I Am Big, It's the Catering That Got Small", 2)
+        ~ return selectIngredientData(what, "I am big, it's the catering industry that got small.", 2)
     - Aiuto:
         ~ return selectIngredientData(what, "help", 3)
     - Aiutoooooo:
@@ -215,7 +215,7 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - CollaDiPesce:
         ~ return selectIngredientData(what, "isinglass", 1)
     - Filtrare:
-        ~ return selectIngredientData(what, "filtering", 1)
+        ~ return selectIngredientData(what, "filter", 1)
     - Mazinga:
         ~ return selectIngredientData(what, "Great Mazinger", 2)
     - OrecchieUgo:

@@ -5,9 +5,9 @@
 @moveToDialogue character:{DOGRON}
 
 DOGRON: Good morning, everyone, and wwwwwelcome to the third episode of THE VERY VERY GOOD GOOD DOG SHOW!
-DOGRON: Don't you feel a little sadness? Already two people have left us, and I don't feel like making youuuuu leave, no!
-DOGRON: But the Supreme Chihuahua and the Grand Council of Pugs, in their wisdom they know that it is important to find the perfect mistress, no, the perfect little person for the restaurant on Satuuuuurn!
-DOGRON: And suuuuurely this magnificent person with magnificent hands that
+DOGRON: Don't you feel a little sad? {nonAliveCharacters()} already have left us, and I don't feel like making youuuuu leave too, no!
+DOGRON: But the Supreme Chihuahua and the Grand Council of Pugs, in their wisdom they knooooooooow that it is important to find the perfect owner, I mean, the perfect little person for the restaurant on Saturn!
+DOGRON: And surely this fantastic person with fantastic hands that can pat my head so gooooooood, must know how to make a recipe for…
 DOGRON: ... when you feel sad because all the huuuuuumans are gone!
 DOGRON: As always you have a few minutes for chit-chat, and then it's time to start cooooooooking!
 
@@ -19,23 +19,23 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     UgoEMimi: …
         + YOU: I know I'm going to regret saying this, but you seem very quiet today.
         -
-    UgoEMimi: Ugo spoke with one of the producers, for his video game.
-    UgoEMimi: Junk sellers, they are. But did you know that the manufacturers are pugs!!!!
-    UgoEMimi: And he was told that the project lacks a coherent narrative, and a connection between gameplay, narrative and graphical elements.
-    UgoEMimi: Mi hanno detto in sostanza che non ha senso! That it's a game where meaningless things happen! But I've been playing <b>real video games</b> forever! These are walking simulator pugs and visual novels!
+    UgoEMimi: Ugo spoke with one of the publishers, for his video game.
+    UgoEMimi: Junk sellers, they are. But did you know that the publishers are... pugs?!?
+    UgoEMimi: And he was told that the project lacks a consistent narrative, and a connection between gameplay and graphical elements.
+    UgoEMimi: They essentially told me that it makes no sense! That it's a game where meaningless things happen! But I've always been playing <b>real video games</b>! These are walking-simulator and visual-novel pugs!
         ~ dialogue_ingredients_of_the_day += IVeriVideogiochi
         + YOU: What are you going to do now?
         -
-    UgoEMimi: Oh, I will cook <b>canapés</b> while Ugo recovers from the pain.
+    UgoEMimi: Oh, I will cook <b>canapés</b> while Ugo recovers from his pain.
         ~ dialogue_ingredients_of_the_day += Canapé
     UgoEMimi: I do not suffer Mimi! Men do not suffer!
-    UgoEMimi: Then what are they, those tears, Ugo?
-        + YOU: Aren't you scared about that missing humans thing?
+    UgoEMimi: What are then those tears, Ugo?
+        + YOU: Aren't you scared about thing about missing humans?
         -
-    UgoEMimi: Uh, I feel sorry for them, but we never got along with humans. Not after the failure of the Virtual Boy.
-    UgoEMimi: Speak for yourself, Ugo. I personally have always loved humans, I used to get really good pizza when I could still cook them.
+    UgoEMimi: Uh, I feel sorry for them, but we never really got along with humans. Not after the failure of the Virtual Boy.
+    UgoEMimi: Speak for yourself, Ugo. I personally have always loved humans, I used to make a really good pizza when I could still cook them.
         + YOU: Oh, and I was afraid I was the only person who ate human flesh!
-        + YOU: I have too much junk in my body for my meat to be tasty.
+        + YOU: There’s too much junk in my body for my meat to be tasty.
         + YOU: I think it is time for me to go to Uranus.
         -
 
@@ -44,39 +44,39 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     
 = bebe_choice
     //Ingredienti suggeriti: mungere e cardare
-    BeBe: Hey, there, I was distracted and didn't notice your arrival.
+    BeBe: Hey, there, I was distracted and didn't notice you coming.
         + YOU: Everything okay?
             BeBe: Oh yes of course, I'm so happy to be here!
         + YOU: In the cult they say, "Distraction is the gift of Belial."
             BeBe: Belial? Cult?
-        + YOU: What's with the bandaged paw?
+        + YOU: What's with the bandaged hoof?
             BeBe: Uh, a mistake during the pedicure.
         -
-    BeBe: Rather: you've been here for three episodes now, and you don't tell much about yourself. Would you like to confide something to me, something that will stay between you and me?
-        + YOU: When I dream I see the coming of the Apocalypse, and all the Horsemen of the Apocalypse have the face of Joan Rivers.
+    BeBe: On a different note! You've been here for three episodes now, and you haven’t spoken much about yourself. Would you like to confide something to me, something that will stay between us?
+        + YOU: When I dream I see the coming of the Apocalypse, and all the Horsemen have the face of Joan Rivers.
             BeBe: I think it's a common thing after Iron Man 3.
         + YOU: I am the second most important person in Rebecca Glasscock's fanclub.
             BeBe: Who?
-        + YOU: I don't know why I'm here, I'm afraid it's a punishment from the cult for that mistake with Ermenegildo.
+        + YOU: I don't know why I'm here, I'm afraid it's a punishment from the Cult for that mistake with Ermenegildo.
             BeBe: You seem like a very confused person, you know?
         -
-    BeBe: But, don't you find today's theme a little strange? In what sense "humans are all gone"? And then what are humans?
-        + YOU: Um, am I a human person?
+    BeBe: But, don't you find today's theme a little strange? What did he mean with "humans are all gone"? And then again, what are humans?
+        + YOU: Um, like, I am a human person?
         -
-    BeBe: Uh, that's why that hairless face, and the fact that he doesn't rumble! That's so funny. And where you come from there are sheep too?
+    BeBe: Uh, that's why that hairless face, and the fact that you doesn't ruminate! That's so funny. And are there sheep too where you come from?
         + YOU: Many, they are among the most common animals.
         -
-    BeBe: In what sense, animals? Of course, it must be an evolved place, with so many sheep, well well well!
-        + YOU: We raise them to eat, make wool, make milk.
-            BeBe: Ah. I guess I'll go back to my stuff. Baaaaaaaaaay.
-        + YOU: Yes, that's right, very evolved, um.
-        + YOU: Well, they make good sacrificial animals for the Cult!
-            BeBe: In what sense? No, I don't want to know. I don't want to.
+    BeBe: What do you mean, animals? Of course, it must be a civilized place, with so many sheep, very good!
+        + YOU: We raise them to eat them, make wool, make milk.
+            BeBe: But… you are monsters!!!
+        + YOU: Yes, that's right, very civilized, um.
+        + YOU: Well, they make great sacrificial animals for the Cult!
+            BeBe: What do you mean? No, wait, I don't want to know. I don't want to.
         -
-    BeBe: Today I want to hit DOGRON: disappearance involves suffering, and suffering is overcome with pain. Therefore I will cook something by <b>milking</b> and then <b>carding</b> my own wool.
+    BeBe: Today I want to amaze DOGRON: disappearance involves suffering, and suffering is overcome through pain. Therefore, I will cook something by <b>milking</b> myself and then <b>carding</b> my own wool.
     ~ dialogue_ingredients_of_the_day += Mungere
     ~ dialogue_ingredients_of_the_day += Cardare
-    BeBe: That's why I greet you now, and wish you the best.
+    BeBe: That's why I say my goodbye to you now, and wish you the best.
 
     ->->
 
@@ -86,56 +86,56 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     Piiiietro: Yet I was sure it was a D minor.
         + YOU: Excuse me?
         + YOU: You were down a semitone.
-        + YOU: demeanor of whom?
+        + YOU: Demeanor of whom?
         -
-    Piiiietro: But that you always enter other people's rooms like that? What a scumbag!
-        + YOU: Actually this is the lounge, and it is common.But why? Do you have your own room?
+    Piiiietro: But do you always get in other people's rooms like that? What a scumbag!
+        + YOU: Actually this is the lounge, and it’s shared. But, do you have your own room?
         -
     Piiiietro: Sure, otherwise where would I place the UV bed and the speaker system?
         + YOU: Please please give me something that looks like sunshine for an hour!
             Piiiietro: What if I then get a sunburn infection!!!?
-        + YOU: Speaker system? So it was you who sang first?
+        + YOU: Speaker system? So it was you who was singing earlier?
             Piiiietro: NO.
-        + YOU: But I don't have a room, I sleep in the rafters above the kitchen.
-            Piiiietro: And here you can see who has an agent and who doesn't, I'm sorry!
+        + YOU: But I don't have a room, I sleep in the girders above the kitchen.
+            Piiiietro: And now we clearly see who has an agent and who does not, sorry for that!
         -
-    Piiiietro: Maybe they'll have us do karaoke anyway. Small, tonight, after the rehearsal. It seems that my pasta with <b>canned tuna</b> and even badly <b>drained</b> is a hit. I'll reintroduce it again tonight!
+    Piiiietro: Anyway: maybe they'll let us have karaoke. Short, tonight, after the rehearsal. It seems that my pasta with <b>canned tuna</b> and even badly <b>drained</b> is a hit. I'll try it again tonight!
         ~ dialogue_ingredients_of_the_day += TonnoInScatola
         ~ dialogue_ingredients_of_the_day += Scolare
-        + YOU: But the theme doesn't bother you, by any chance?
+        + YOU: But doesn’t the theme bother you, by any chance?
         -
     Piiiietro: And why should it?
         + YOU: I mean, do you see other human people?
-    Piiiietro: Hey sweetheart, speak for yourself! I am a mathematical genius, an abstract entity, the very definition of the golden section. And I wear leopard print. Like hell I'm a human!
-    Piiiietro: And now get out of my room, that I must create some drama between BeBe and Dogron.
+    Piiiietro: Hey sweetheart, speak for yourself! I am a mathematical genius, an abstract entity, the very definition of the golden section. And I wear leopard print. Like hell I'm human!
+    Piiiietro: And now get out of my room, I want to create some drama between BeBe and Dogron.
     
     ->->
 
     
 = quello_choice
     //Ingredienti: Chinotto di Savona e raccontare
-    Quello: What a fucking theme.
-        + YOU: Is everything all right?
+    Quello: What a shitty theme.
+        + YOU: Is everything alright?
             Quello: Yes, yes, I think.
         + YOU: You look angry.
-            Quello: No, what are you saying? Anger is FORBIDDEN by the labor contract.
-        + YOU: This whole "all humans are gone" thing is disturbing, isn't it?
-            Quello: You survive, you know?
+            Quello: No, what are you saying? Anger is FORBIDDEN by the contract of employment.
+        + YOU: This "all humans are gone" thing is disturbing, don’t you think?
+            Quello: You get by, you know?
         -
-    Quello: Oh, sorry to be bitter.
-    Quello: It's a little strange though to think about a theme like this, when your father did, did some horrible things.
-        + YOU: In what sense?
-        + YOU: You know, even mine, when he became one of the Old Ones…
+    Quello: Oh, sorry if I’m too bitter.
+    Quello: It's kinda weird to think about a subject like this, when my father did… did some horrible things.
+        + YOU: What do you mean?
+        + YOU: You know, mine too, when he became one of the Old Ones…
         + YOU: We all make mistakes, don't we?
         -
-    Quello: Il Divo always says that work solves every problem though, every fear. So I'm going to start cooking. I was thinking that disappearance is a bitter thing, and I might make a braid that is a <b>tell the story</b> of other vacuum cleaners like me.
+    Quello: Il Divo always says that work solves every problem and every fear, though. So I'm going to start cooking. I was thinking that disappearance is a bitter thing, so I might make a braid that is a <b>storytelling</b> of other vacuum cleaners like me.
     ~ dialogue_ingredients_of_the_day += Raccontare
     Quello: Make it sweet but fill it with chunks of <b>Savona’s Chinotto</b> to enhance the bitterness of certain experiences.
     ~ dialogue_ingredients_of_the_day += ChinottoDiSavona
-    Quello: Kind of like when your father exterminates an entire population with his invention.
-        + YOU: Or your father adds a space-time dimension to your planet because he quarreled with your other father.
+    Quello: A bit like when your father exterminates an entire population with one of his inventions.
+        + YOU: Or when your father adds a new space-time dimension to your planet because he had a fight with your other father.
         -
-    Quello: That's right. You really understand me. I'm going to clean up Il Divo ingredients and then start my recipe. Thank you for understanding!
+    Quello: That's right. You really understand me. I'm going to clean up Il Divo’s ingredients and then I will start my recipe. Thank you for the understanding!
 
     ->->
 
@@ -144,26 +144,26 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     //Ingredienti: selfie e interviste
     ilDivo: Find me That One, now!
         + YOU: That one who?
-        + YOU: Is he going to be cleaning something of yours?
-        + YOU: You understand that I don't work for you, right?
+        + YOU: Is he cleaning something of yours?
+        + YOU: You know that I don't work for you, right?
         -
-    ilDivo: Mom was always right, in the end you have to do things yourself.
-    ilDivo: What a nightmare then that this language of yours has only two genders to define.
+    ilDivo: Mom was always right, in the end you have to do everything on your own.
+    ilDivo: Moreover, what a nightmare this language of yours, that only has two genders available.
     ilDivo: I don't get paid enough for all this!
-        + YOU: What do you mean, two genders?
-        + YOU: What do you mean, alone?
-        + YOU: What do you mean, THEY PAY YOU?!?!
+        + YOU: What do you mean by “two genders”?
+        + YOU: What do you mean by “on your own”?
+        + YOU: What do you mean by… THEY PAY YOU?!?!
         -
-    ilDivo: You've been wondering this forever, and yes, being rich and famous is damn hard. Think like, how do I know if a person loves me?
+    ilDivo: I’m sure you were wondering about this the whole time and, yes, being rich and famous is damn hard. Think, like, how do I know if a person loves me?
         + YOU: But are you here for the cooking contest, or to find love?
         -
-    ilDivo: Me, a cooking contest? What do you take me for!!!
+    ilDivo: Me? A cooking contest? What do you think I am?!?
     ilDivo: Xi Jinping paid 7,759,312,650.00 Yuan for a <b>selfie</b> with me!
             ~ dialogue_ingredients_of_the_day += Selfie
     ilDivo: I learned to receive <b>interviews</b> before I even walked!
             ~ dialogue_ingredients_of_the_day += Interviste
-    ilDivo: A cooking contest, tsé. That one's cooking for both of us, what do you think?
-        + YOU: Ooooook, it's time for me to take the curtains off.
+    ilDivo: A cooking contest, tsk. That One is cooking for the both of us, what were you thinking?
+        + YOU: Ooooook, it's time for me to go away.
         -
 
     ->->

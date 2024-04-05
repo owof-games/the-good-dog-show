@@ -12,6 +12,8 @@ VAR chosen_ingredient = InvalidIngredient
 VAR ScampataLaMorte = false
 CONST normal_speed = 1.3
 CONST slow_speed = 1.0
+CONST acceleration = 7
+CONST max_rounds = 6
 CONST num_ingredients_to_get_right = 3
 
 
@@ -23,9 +25,9 @@ CONST num_ingredients_to_get_right = 3
  ----------------------------------*/
 
 
-EXTERNAL setIngredientsSpeed(speed)
-=== function setIngredientsSpeed(speed)
-[[[ set ingredients speed to {speed} ]]]
+EXTERNAL setIngredientsSpeed(speed, acceleration, maxRounds)
+=== function setIngredientsSpeed(speed, acceleration, maxRounds)
+[[[ set ingredients speed to {speed} {acceleration} {maxRounds} ]]]
 
 EXTERNAL hideKitchenText()
 === function hideKitchenText() ===
@@ -62,14 +64,17 @@ EXTERNAL hideKitchenText()
 ~ temp displayed_choose_ingredient = false
 ~ temp displayed_explanation = false
 
-// setup speed according to abilities
-{ abilities has ScelteLente:
-    ~ setIngredientsSpeed(slow_speed)
-- else:
-    ~ setIngredientsSpeed(normal_speed)
-}
-
 - (kitchen_inner_loop)
+
+// setup speed according to abilities
+{
+- not displayed_choose_ingredient and abilities has SceltaIngrediente:
+    ~ setIngredientsSpeed(slow_speed, 0, 99999)
+- abilities has ScelteLente:
+    ~ setIngredientsSpeed(slow_speed, acceleration, max_rounds)
+- else:
+    ~ setIngredientsSpeed(normal_speed, acceleration, max_rounds)
+}
 
 // check whether we should break the loop and go to the ending
 ~ num_loop += 1
@@ -104,6 +109,12 @@ EXTERNAL hideKitchenText()
 
 { not in_unity:
     -> debugChooseIngredient(all_ingredients) ->
+}
+
+// if the timer runs out, it returns invalid ingredient: just mark it wrong and move on
+{ chosen_ingredient == InvalidIngredient:
+    @ingredientFeedback success:false
+    -> kitchen_inner_loop
 }
 
 // add the strangeness of the chosen ingredient

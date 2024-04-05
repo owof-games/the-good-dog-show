@@ -4,10 +4,10 @@
 
 @moveToDialogue character:{DOGRON}
 
-DOGRON: But people friends, we are already on the second day of THE GOOD DOG (very very goooood dog!) SHOW!!! Aren't you super mega happy and wagging your tails!!!? Oh, hoooowwwww I would hate to see you all ever leave!
+DOGRON: Friendly people, we are already on the second day of THE GOOD DOG (very very goooood dog!) SHOW!!! Aren't you super mega happy and wagging your tails!!!? Oh, hoooowwwww I would hate to see you leave!
 DOGRON: But if we didn't eliminate someone, how could we find a perfect replacement for, for, for the larger kitchen of Uuuuuranus?
-DOGRON: And speaking of Uranus, today's theme is: a meal for when real friends come!
-DOGRON: I'll give you a few minutes for chit-chat and then we're off!
+DOGRON: And speaking of Uranus, today's theme is: a meal for when you meet with real friends!
+DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
     
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_two_kitchen)
 
@@ -16,17 +16,17 @@ DOGRON: I'll give you a few minutes for chit-chat and then we're off!
     UgoEMimi: Mimi, no, you're the one who doesn't understand! Kojima compared it to <b>Skyrim</b>! And Kojima is never wrong!
         ~ dialogue_ingredients_of_the_day += Skyrim
     UgoEMimi: Ugo, I don't want to contradict you, you know, but it was a dream!
-    UgoEMimi: And you tell me that dreams lie, huh! Didn't you dream of cooking forever, and now you see where we are?
+    UgoEMimi: And you tell me that dreams lie, huh! Didn't you dream of cooking forever? Now look where we are!
     UgoEMimi: My dream was to open an electrician's tool store, not to cook <b>vol-au-vents</b> every Saturday for your boorish friends!
      ~ dialogue_ingredients_of_the_day += VolAuVent
     UgoEMimi: Mimi, you're going too far now! And you know what happens when I get pissed off!
-        + YOU: Mr. Hugh, so you are creating a video game?
-            UgoEMimi: Oh, more than a video game, THE video game! It will be a stealth but not too much slasher shooter with 4X elements and a car race and resource management multiplayer mode with microtransactions, NFT and lots of DLC!
+        + YOU: Mr. Ugo, so you are creating a video game?
+            UgoEMimi: Oh, more than a video game, THE video game! It will be a stealth (but not too much) slasher shooter with 4X elements and a car race and resource management and multiplayer mode with microtransactions, NFT and lots of DLCs!
             UgoEMimi: But for now Ugo has only created the title and a cover with Paint.
-        + YOU: Mrs. Mimi, so you're into electricality, is that what they say?
+        + YOU: Mrs. Mimi, so you're into electricality, is that what it’s called?
             UgoEMimi: A woman cannot be passionate about electricity, Mimi is only good at cleaning, cooking and ironing.
-            UgoEMimi: In fact we only live in one house where I did all the grounding.
-        + YOU: I don't know what you have, but in worship if you don't mind your own business you die badly. Bye.
+            UgoEMimi: And sure enough we live in a house where I did all the groundings.
+        + YOU: I don't know what’s up with you, but in the Cult if you don't mind your own business, you die in a bad way. Bye.
         -
 
     ->->
@@ -34,33 +34,33 @@ DOGRON: I'll give you a few minutes for chit-chat and then we're off!
     
 = bebe_choice
     //Ingredienti: blocchi d'erba e uova di pecora (sacrificio)
-    BeBe: Well, hello there! Who would have thought I would survive the first day? Nella didn't make it.
+    BeBe: Well, hello there! Who would have thought I would have survived the first day? LaLa didn't make it.
     {not day_one_lounge.bebe_choice: BeBe: Anyway, I didn't get a chance to introduce myself yesterday, I'm BeBe, single mother of eight, er, seven little lambs.}
         + YOU: LaLa?
-            BeBe: A long history, a long long history.
+            BeBe: A long story, a long long story.
         + YOU: Why are you walking around with a cleaver?
             BeBe: Cleaver? What cleaver?
-        + YOU: I feel sorry for those who got out. But sorry, who got out!!!
-            BeBe: Do you think I remember the names of all of you, with my lambs at home?
+        + YOU: I feel sorry for the one who got out. But, sorry, who got out?
+            BeBe: Do you think I remember the names of all of you, when I have to think about my lambs at home?
         -
-    BeBe: But let's talk about good things, given today's theme: do you have people friends waiting for you? I only have my eight, uh, seven daughters, and I'm their best friend.
+    BeBe: But, given today's theme, let's talk about good things: do you have friends waiting for you? I only have my eight, uh, seven daughters, and I'm their best friend.
     BeBe: The best mom and friend there is. I would do anything for them!
-        + YOU: Of course, if you are convinced of it.…
+        + YOU: Of course, if you are sure about it.…
         + YOU: I have Kitty waiting for me at home, she is my life.
         + YOU: There are a few people in the cult that I get along with, you know? But not too many.
         -
-        + YOU: Do you have any secret recipes to focus on today?
+        + YOU: Do you have any secret recipe to count on today?
         -
     BeBe: If I told you, it wouldn't be secret, would it?
-    BeBe: Just kidding, if the theme is "food for friendly people," of course I agree.
-    BeBe: And you are a friend to me aren't you?
+    BeBe: Just kidding, if the theme is "food for friendly people", of course I will share.
+    BeBe: And you are a friend to me, aren't you?
         + YOU: Of course I do!
         + YOU: (lie) Of course I do!
         + YOU: (ironically) Of course I do!
         -
-    BeBe: That reassures me. I don't like people who take me by the ears.
+    BeBe: That reassures me. I don't like people who make fun of me.
     BeBe: Anyway, I was thinking, what is true friendship? And of course I thought about my eight, er, seven daughters. And what do they love to do when we're all together? Video games!
-    BeBe: It amuses me a lot when they say in an affectionate way, "No mom, don't play with us tonight, please!" They are so tender.
+    BeBe: It amuses me a lot when they say in an affectionate way, "No mom, don't play with us tonight, please!" They are so sweet.
     BeBe: And so I was thinking of making baskets with fried <b>grass blocks</b>, and <b>sheep eggs</b>.
     ~ dialogue_ingredients_of_the_day += BlocchiDiErba
     ~ dialogue_ingredients_of_the_day += UovaDiPecora
@@ -68,7 +68,7 @@ DOGRON: I'll give you a few minutes for chit-chat and then we're off!
         -
     BeBe: Sure. In friendship, sacrifice is important!!!
     BeBe: But now I have to go brood for a moment. See you later!
-        + YOU: Um, later.
+        + YOU: Um, see you later.
         -
 
     ->->
@@ -76,7 +76,7 @@ DOGRON: I'll give you a few minutes for chit-chat and then we're off!
     
 = piiiietro_choice
     //Ingredienti: tonno in scatola e scolare
-    Piiiietro: <b>Canned tuna</b>, <b>drain</b>.
+    Piiiietro: <b>Canned tuna</b>, then <b>drain</b>.
         ~ dialogue_ingredients_of_the_day += TonnoInScatola
         ~ dialogue_ingredients_of_the_day += Scolare
         + YOU: I beg your pardon?
@@ -84,21 +84,21 @@ DOGRON: I'll give you a few minutes for chit-chat and then we're off!
         ->->
         + YOU: Is that all you can cook?
         -
-    Piiiietro: That I saw yesterday that you were watching what I was cooking. They all do that, copying other people's work, and then.
+    Piiiietro: I saw that, yesterday you were watching what I was cooking. Everybody does that, copy other people's work, and then…!
         + YOU: It may surprise you, but I cook even worse than you do.
-            Piiiietro: Let's not exaggerate, I saw what you brought up yesterday!
-        + YOU: Did you then find your dog?
+            Piiiietro: Don’t overdo it, I saw what you brought up yesterday!
+        + YOU: And did you find your dog?
             Piiiietro: No, and I found his Russian sable fur coat abandoned behind an armchair.
-            Piiiietro: But he always does this when I forbid him to go on vacation somewhere.
-        + YOU: But the rosary then?
+            Piiiietro: But he always does that when I forbid him to go on vacation somewhere.
+        + YOU: And the rosary?
             Piiiietro: I think I saw it on Dogron, I'll have to investigate further.
         -
-    Piiiietro: However, yesterday the production told me that I can't leave, that I signed a contract, and that if the mistake is my agent's it doesn't change anything to them.
+    Piiiietro: However, yesterday the producers told me that I can't leave, that I signed a contract, and that if the mistake is my agent's it doesn't change anything to them.
         + YOU: Agent?
         -
     Piiiietro: Math agent. We do challenges like rap, but with equations. It doesn't look like it but it's super tiring, last year two contestants died of dehydration just to finish, oh, I don't even remember what, I always win anyway.
     Piiiietro: I'm so good at math.
-    Piiiietro: But now I say goodbye, that I have to fix the diamonds on my teeth before the episode.
+    Piiiietro: But now I’ll go: I have to fix the diamonds on my teeth before the episode.
     {not day_one_lounge.piiiietro_choice: Piiiietro: Ah, we didn't introduce ourselves yesterday: my name is Piiiietro.}
 
     ->->
@@ -106,46 +106,46 @@ DOGRON: I'll give you a few minutes for chit-chat and then we're off!
         
 = quello_choice
     //Ingredienti: lacrime e cacao amaro
-    {not day_one_lounge.quello_choice: Quello: Hello! I am That One, or It, sometimes. I was watching you cook yesterday and woah, you're doing great!}
+    {not day_one_lounge.quello_choice: Quello: Hello! I am That One There, or That One Here, sometimes. I was watching you cook yesterday and woah, you're doing great!}
     Quello: I'm kind of struggling today, you know?
     Quello: All my "real friends" are dead, you know?
-        + YOU: But like that dinosaur joke?
-        + YOU: This is the time when I have to say I'm sorry, right?
+        + YOU: You mean it like in that dinosaur joke?
+        + YOU: This is the moment when I have to say I'm sorry, right?
         + YOU: I saw a very friendly sheep earlier. If you want to talk to her…
         -
-    Quello: I won't bore you with this sad story, I promise. I can't help but think of recipes that don't have <b>tears</b> in them, though. Lots.
+    Quello: I won't bore you with my sad story, I promise. It’s just that I can't but think of recipes that have <b>tears</b> in them. Lots of them.
     ~ dialogue_ingredients_of_the_day += Lacrime
         + YOU: Don't they spoil the flavor?
         -
-    Quello: It depends. With <b>bitter cocoa</b>, the salty goes well with it. I might make a cake.
+    Quello: It depends. Salty tastes are fine with <b>bitter cocoa</b>. I might make a cake.
     ~ dialogue_ingredients_of_the_day += CacaoAmaro
-    Quello: A cake not to be shared with any person.
-    Quello: Except for Il Divo, which he would never eat, however, because it would gross him out on trust. And he's right.
-    Quello: Sorry, sadness is forbidden by the labor contract. See you later, good luck!
+    Quello: A cake that won’t be shared with anyone.
+    Quello: Except for Il Divo, who would never eat it, however, because it would gross him out on trust. And he's right.
+    Quello: Sorry, sadness is forbidden by my contract of employment. See you later, and good luck!
 
     ->->
 
     
 = il_divo_choice
     //Ingredienti: specchiarsi e scottare
-    ilDivo: I get that it's the Pope, but it can wait, that I have to open a new office in Dubai before lunch, alright!!!?
-        + YOU: But why do I persist in talking to this?
+    ilDivo: I get that, it's the Pope, but he can wait, I have to open a new office in Dubai before lunch, ok?!?
+        + YOU: Why do I ever insist on talking to this guy?
         -
-    ilDivo: Why hello gorgeous! Have we met?
-        + {day_one_lounge.il_divo_choice} YOU: We talked together yesterday, like. Oprah, the cocaine, the saffron?
-        + {not day_one_lounge.il_divo_choice} YOU: I haven't had the luck yet, no.
+    ilDivo: Why hello gorgeous! Have we ever met before?
+        + {day_one_lounge.il_divo_choice} YOU: We, like, talked yesterday. Oprah, the cocaine, the saffron?
+        + {not day_one_lounge.il_divo_choice} YOU: I haven't yet had the luck, no.
         -
-    ilDivo: They call me il Divo, but that's an understatement. He thinks the White House has a portrait of me, so to speak.
-    ilDivo: Wikipedia has my picture under the definition of "Cool," not as the obvious preposition but what am I telling you that you may not have been in middle school but I already asked you, are you single?
+    ilDivo: They call me il Divo, but that's an understatement. I mean, the White House has a portrait of me.
+    ilDivo: Wikipedia has my picture under the definition of "Cool", obviously not as in the temperature level, but why am I talking to you, you may not even have finished the high school, and, did I maybe already ask you, are you single?
         + YOU: Yes, and every time I meet a man I remember why.
         + YOU: No, I have someone waiting for me at home, but I don't know how to get back!
-        + YOU: I think I have a crush on one of the people here in the studio.
+        + YOU: I think I have a crush on someone here in the studio.
         -
-    ilDivo: Of course you then fall in love with me, of course. Bella Hadid decided not to <b>mirror</b> herself after she saw me.
+    ilDivo: Of course you will fall in love with me, of course. Bella Hadid decided not to <b>mirror</b> herself after she saw me.
         ~ dialogue_ingredients_of_the_day += Specchiarsi
-    ilDivo: But then life is difficult.
-    ilDivo: Because they tell you, "Hey, how fortunate to be a species with 23000 different sexual genders, it must be a great bazaar," but then we have binary things too, and I end up falling in love, and…
-    ilDivo: What am I telling you? I'm <b>hot</b> stuff baby, you can't just grab me like that! And now I have to work, work, produce, fill in the blank! Get out!
+    ilDivo: But then life gets difficult.
+    ilDivo: Because they tell you, "Hey, how great it must be to be part of a species with 23000 different sexual genders, it must be such a great deal," but then we have binary things too, and I end up falling in love, and…
+    ilDivo: What am I saying? I'm <b>hot</b> stuff baby, you can't just grab me like that! And now I have to work, work, produce, fill in the void! Get out!
         ~ dialogue_ingredients_of_the_day += Scottare
 
     ->->
