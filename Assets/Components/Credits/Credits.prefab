@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 306106552454843114}
-  transitionDuration: 1
+  transitionDuration: 0.72
   stayDuration: 3
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   moveToGameAreaEvent: {fileID: 11400000, guid: 1381fee5817cc7246a8aab73773c28fb, type: 2}

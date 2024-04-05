@@ -123,4 +123,26 @@ DOGRON: A very simple planet. There are fire hydrants, gardens, rivers, lots of 
 DOGRON: So, off we go! Our mission here is complete!
 DOGRON: Go with the credits, Bruiser!
 
+~ playBackgroundMusic("credits")
+
+@moveToCredits
+
+_ Game Design: _ Marco Spelgatti, Mattia Belletti, Gabriele Perugini
+
+_ Narrative Design: _ Marco Spelgatti, Gabriele Perugini
+
+_ Writing: Marco Spelgatti
+
+_ Graphics: _ Gabriele Perugini
+
+_ C\# Programming: _ Mattia Belletti
+
+_ Ink Programming: _ Marco Spelgatti, Mattia Belletti
+
+_ Music: _ Alec Shea //#url:https:\/\/slaleky.itch.io/retro-and-electronic-music-pack
+
+_ SFX: _ Chris Logdson //#url:https:\/\/chrislsound.itch.io/ambient-puzzle
+
+_ Thank you for playing with us <3 _ (and go pat your _ DOGRON on our behalf)
+
 -> END

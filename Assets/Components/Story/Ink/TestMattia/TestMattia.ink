@@ -50,7 +50,9 @@ DOGRON: Vai coi titoli di coda, Bruiser!
 
 _ Game Design: _ Marco Spelgatti, Mattia Belletti, Gabriele Perugini
 
-_ Narrative Design e Scrittura: _ Marco Spelgatti
+_ Narrative Design: _ Marco Spelgatti, Gabriele Perugini
+
+_ Testi: Marco Spelgatti
 
 _ Grafiche: _ Gabriele Perugini
 
@@ -62,7 +64,7 @@ _ Musiche: _ Alec Shea //#url:https:\/\/slaleky.itch.io/retro-and-electronic-mus
 
 _ SFX: _ Chris Logdson //#url:https:\/\/chrislsound.itch.io/ambient-puzzle
 
-_ Grazie per aver giocato con noi <3
+_ Grazie per aver giocato con noi <3 _ (e fate un grattino al vostro _ DOGRON da parte nostra)
 
 -> END
 
