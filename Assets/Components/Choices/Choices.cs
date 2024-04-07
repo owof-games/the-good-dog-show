@@ -11,9 +11,9 @@ using UnityEngine.UI;
 public class Choices : MonoBehaviour
 {
     [SerializeField] private float disableTime = 0.1f;
-    private Button[] buttons;
+    private Button[] buttons = null;
 
-    private void Start()
+    private void Awake()
     {
         buttons = GetComponentsInChildren<Button>();
         Assert.IsTrue(buttons.Length > 0);
@@ -30,8 +30,11 @@ public class Choices : MonoBehaviour
     private IEnumerator ShortDisable(Button button)
     {
         var interactable = button.interactable;
+        var enabled = button.enabled;
         button.interactable = false;
+        button.enabled = false;
         yield return new WaitForSeconds(disableTime);
         button.interactable = interactable;
+        button.enabled = enabled;
     }
 }
