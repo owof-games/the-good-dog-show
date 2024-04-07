@@ -15,6 +15,16 @@ VAR day = 0
 @moveToDialogue character:{DOGRON}
 
 DOGRON: {E ora, un benvenuuuuto a tuuuutte le persone concorrenti e a chi ci segue da casa!|Eccoci nuovamente, concorrenti e spettatrici!|Buonasera a tuuuuutte le persone belle di questo pianeta e oltre!|Qualcuuuuuna ha visto il mio collare preferito?|L'ultima sera amiche, l'uuuultima sera assieme!}
+
+// skip "remove_ability" the first time and immediately go to use_ability
+{ use_ability:
+    -> remove_ability
+- else:
+    -> use_ability
+}
+
+= remove_ability
+
 DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità.  Persona uuuuumana qui davanti a me! Tu oggi perderai, rullo di tamburi...| Quuuuale abilità toglieremo oggi alla nostra persona umana?!?|Sempre meno gente, sempre meno abilità attive!|Uuuuh, mi fa male il pancino oggi.|Me doggo grande, non piange, no no, auuuuu!}
 
 ~ temp ability = LIST_RANDOM(abilities)
@@ -29,15 +39,19 @@ DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abi
 }
 ~ abilities -= ability
 
+-> use_ability
+
+= use_ability
+
 { abilities has PNGParliExtra:
   DOGRON: Ti ricordo cara persona che potrai parlare con una persona in più.
 }
 
-{ abilities has EliminaConcorrente and not eliminatrice:
+{ abilities has EliminaConcorrente and not eliminatrice and alive_characters:
     -> eliminatrice_choice ->
 }
 
-{ abilities has RichiamaConcorrente and not resuscitatrice:
+{ abilities has RichiamaConcorrente and not resuscitatrice and alive_characters != LIST_ALL(alive_characters):
     -> resuscitatrice_choice ->
 }
 
@@ -70,7 +84,7 @@ DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abi
         ~ alive_characters -= ilDivo
         ~ eliminatrice = true 
         ~ abilities -= EliminaConcorrente
-        DOGRON: spiace, circa. Addio Divo!
+        DOGRON: Spiace, circa. Addio Divo!
     + YOU: Nessuna persona!
         DOGRON: Mi piace questo modo di ragionare!
     -

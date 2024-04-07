@@ -35,7 +35,58 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> test_counter
 
--> test_credits
+// -> test_credits
+
+-> bug_eliminazione
+
+=== bug_eliminazione
+
+@moveToEnding
+
+DOGRON: questo sarebbe il test iniziale.
+
+~ abilities = (EliminaConcorrente)
+
+-> inizio_lounge ->
+
+@moveToDialogue character:{DOGRON}
+
+DOGRON: ora c'è il dialogo di inizio giornata.
+
+-> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_test)
+
+-> END
+
+    = ugoemimi_choice
+    UgoEMimi: <b>ciao</b>, come va?
+    YOU: ciao
+    ->->
+
+    = bebe_choice
+    BeBe: ciao
+    YOU: ciao
+    ->->
+
+    = piiiietro_choice
+    Piiiietro: ciao
+    YOU: ciao
+    ->->
+
+
+    = quello_choice
+    Quello: ciao
+    YOU: ciao
+    ->->
+
+
+    = ildivo_choice
+    ilDivo: ciao
+    YOU: ciao
+    ->->
+    
+    = cucina_test
+    
+    -> END
 
 === test_credits
 

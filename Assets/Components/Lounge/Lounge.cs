@@ -17,8 +17,39 @@ public class Lounge : MonoBehaviour
     [SerializeField] private CharacterNameValueList charactersInLounge;
     [SerializeField] private BoolReference isGameMenuOpened;
 
-    private List<GameObject> characterButtons;
-    private List<LoungeCharacter> loungeCharacters;
+    private List<GameObject> _characterButtons;
+    private List<GameObject> CharacterButtons
+    {
+        get
+        {
+            _characterButtons ??= (
+                from c in charactersRoot.GetComponentsInChildren<Button>(true)
+                where c.interactable
+                select c.gameObject)
+                .ToList();
+            return _characterButtons;
+        }
+    }
+
+    private List<LoungeCharacter> _loungeCharacters;
+    private List<LoungeCharacter> LoungeCharacters
+    {
+        get
+        {
+            if (_loungeCharacters == null)
+            {
+                _loungeCharacters = new();
+                foreach (var character in CharacterButtons)
+                {
+                    if (character.TryGetComponent<LoungeCharacter>(out var loungeCharacter))
+                    {
+                        _loungeCharacters.Add(loungeCharacter);
+                    }
+                }
+            }
+            return _loungeCharacters;
+        }
+    }
 
     private void Awake()
     {
@@ -26,23 +57,6 @@ public class Lounge : MonoBehaviour
         Assert.IsNotNull(choiceEvent);
         Assert.IsNotNull(charactersInLounge);
         Assert.IsNotNull(continueEvent);
-
-        // extract all the buttons
-        characterButtons = (
-            from c in charactersRoot.GetComponentsInChildren<Button>(true)
-            where c.interactable
-            select c.gameObject)
-            .ToList();
-
-        // and get the lounge characters
-        loungeCharacters = new();
-        foreach (var character in characterButtons)
-        {
-            if (character.TryGetComponent<LoungeCharacter>(out var loungeCharacter))
-            {
-                loungeCharacters.Add(loungeCharacter);
-            }
-        }
     }
 
     private void OnEnable()
@@ -52,7 +66,7 @@ public class Lounge : MonoBehaviour
 
     public void UpdateActiveCharacters()
     {
-        foreach (var character in loungeCharacters)
+        foreach (var character in LoungeCharacters)
         {
             character.gameObject.SetActive(charactersInLounge.Contains(character.CharacterName));
         }
@@ -64,19 +78,19 @@ public class Lounge : MonoBehaviour
     /// <returns></returns>
     private IEnumerator KeepButtonsSelected()
     {
-        GameObject lastSelectedButton = characterButtons[Random.Range(0, characterButtons.Count)];
+        GameObject lastSelectedButton = CharacterButtons[Random.Range(0, CharacterButtons.Count)];
         var current = EventSystem.current;
 
         for (; ; )
         {
             // do nothing if the game menu is opened
-            if(isGameMenuOpened.Value)
+            if (isGameMenuOpened.Value)
             {
                 yield return null;
                 continue;
             }
 
-            var activeCharacterButtons = characterButtons.Where(cb => cb.activeSelf);
+            var activeCharacterButtons = CharacterButtons.Where(cb => cb.activeSelf);
 
             // update last selected character button if it's no longer active
             if (!activeCharacterButtons.Contains(lastSelectedButton))
