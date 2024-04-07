@@ -16,7 +16,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
 
 @setCharacterVariant image:{BeBenator}
 
--> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_five_kitchen)
+-> lounge_loop_with_letter(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_five_kitchen, -> day_five_letter)
 
 
 = ugo_e_mimi_choice
@@ -173,6 +173,12 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
         + YOU: Tu piaceresti un sacco a mio padre. Un sacco!
         -
     ilDivo: Voglio dirvi quanto mi siete mancati, tutti voi, ma vi prometto che non vi lascerò mai più. Vedete, questà è la mia vita, e lo sarà per sempre. Non esiste altro, solo noi.        
+    ->->
+
+
+= day_five_letter
+    @moveToEnding
+    DOGRON: qua leggo la lettera e tutto
     ->->
     
     

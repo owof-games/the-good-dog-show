@@ -19,7 +19,7 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> test_abilities
 
-// -> prima_giornata
+-> prima_giornata
 
 // ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
 // ~ chosen_ingredient = InvalidIngredient
@@ -37,7 +37,7 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> test_credits
 
--> bug_eliminazione
+// -> bug_eliminazione
 
 === bug_eliminazione
 
@@ -421,7 +421,7 @@ DOGRON: transizione, di nuovo!
 
 ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
 
--> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno)
+-> lounge_loop_with_letter(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno, -> letter)
 
 
     = ugoemimi_choice
@@ -449,6 +449,12 @@ DOGRON: transizione, di nuovo!
     = ildivo_choice
     ilDivo: ciao
     YOU: ciao
+    ->->
+    
+    
+    = letter
+    @moveToEnding
+    DOGRON: leggerò la lettera!
     ->->
 
 
