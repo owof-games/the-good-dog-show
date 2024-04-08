@@ -113,7 +113,6 @@ public class InputManager : MonoBehaviour
     {
         if (cc.phase == InputActionPhase.Performed)
         {
-            Debug.Log("toggle menu!");
             toggleMenuPerformed.Raise(@void);
         }
     }
