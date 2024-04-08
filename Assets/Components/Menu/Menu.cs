@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Linq;
 
+using DG.Tweening;
+
 using LemuRivolta.InkAtoms;
 
 using UnityAtoms.BaseAtoms;
@@ -16,8 +18,6 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private StringEvent continueEvent;
     [SerializeField] private InkAtomsStory inkAtomsStory;
-    //[SerializeField] private TextAsset itInkTextAsset;
-    //[SerializeField] private TextAsset enInkTextAsset;
     [SerializeField] private MenuInkStoriesAsset inkStoriesAsset;
 
     [SerializeField] private Button startButton;
@@ -27,6 +27,19 @@ public class Menu : MonoBehaviour
     [SerializeField] private StringEventReference playBackgroundMusicEvent;
     [SerializeField] private StringReference musicName;
     [SerializeField] private BoolReference isGameMenuOpened;
+
+    [SerializeField] private RectTransform startPlusRoot;
+    [SerializeField] private float startPlusRootAnchorPosYDestination = -103;
+    [SerializeField] private float startPlusRootBounceWaitDuration = 1f;
+    [SerializeField] private float startPlusRootBounceDuration = 1f;
+    [SerializeField] private RectTransform startPlusSymbol;
+    [SerializeField] private float startPlusSymbolAnimationWaitDuration = 0.3f;
+    [SerializeField] private float startPlusSymbolAnimationDuration = 1f;
+    [SerializeField] private float startPlusSymbolFinalRotation = 360 * 8;
+    [SerializeField] private StringReference plusModePlayerPrefsKey;
+
+    [SerializeField] private BoolReference isDebug;
+    [SerializeField] private GameObject[] debugObjects;
 
     private const string enLocaleCode = "en-US";
     private const string itLocaleCode = "it-IT";
@@ -43,6 +56,11 @@ public class Menu : MonoBehaviour
 
     private IEnumerator Start()
     {
+        foreach (var debugObject in debugObjects)
+        {
+            debugObject.SetActive(isDebug.Value);
+        }
+
         yield return LocalizationSettings.InitializationOperation;
 
         enToggle.gameObject.SetActive(true);
@@ -55,6 +73,19 @@ public class Menu : MonoBehaviour
     private void OnEnable()
     {
         playBackgroundMusicEvent.Event.Raise(musicName);
+
+        if (PlayerPrefs.GetString(plusModePlayerPrefsKey) == "true")
+        {
+            startPlusRoot.gameObject.SetActive(true);
+            DOTween.Sequence()
+                .Insert(startPlusRootBounceWaitDuration, startPlusRoot
+                    .DOAnchorPos(new Vector2(startPlusRoot.anchoredPosition.x, startPlusRootAnchorPosYDestination), startPlusRootBounceDuration)
+                    .SetEase(Ease.OutBounce))
+                .AppendInterval(startPlusSymbolAnimationWaitDuration)
+                .Append(startPlusSymbol.DOLocalRotate(new Vector3(0, 0, startPlusSymbolFinalRotation), startPlusSymbolAnimationDuration, RotateMode.FastBeyond360)
+                    .SetEase(Ease.OutQuint))
+                .Join(startPlusSymbol.DOScale(1, startPlusSymbolAnimationDuration));
+        }
     }
 
     public void SetENLocale(bool selected)
@@ -92,13 +123,19 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void OnStart()
+    public void OnStart(bool newModePlus)
     {
         string localeCode = LocalizationSettings.SelectedLocale.Identifier.Code;
         inkAtomsStory.StartStory(localeCode == itLocaleCode ?
             inkStoriesAsset.ItInkTextAsset :
             inkStoriesAsset.EnInkTextAsset);
         inkAtomsStory["in_unity"] = true;
+        inkAtomsStory["new_mode_plus"] = newModePlus ? "true" : "false";
         continueEvent.Raise(null);
+    }
+
+    public void DebugSetModePlus(string value)
+    {
+        PlayerPrefs.SetString(plusModePlayerPrefsKey, value);
     }
 }

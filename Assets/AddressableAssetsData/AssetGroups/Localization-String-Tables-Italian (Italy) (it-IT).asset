@@ -10,26 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Assets-Shared
+  m_Name: Localization-String-Tables-Italian (Italy) (it-IT)
   m_EditorClassIdentifier: 
-  m_GroupName: Localization-Assets-Shared
+  m_GroupName: Localization-String-Tables-Italian (Italy) (it-IT)
   m_Data:
     m_SerializedData: []
-  m_GUID: ddb986f461f259b4bbde19ea16a83ef2
+  m_GUID: d01b6639f708ddb48aa181c61a0f319c
   m_SerializeEntries:
-  - m_GUID: 6719b58b06903bb4babaa1dd283087c4
-    m_Address: Assets/Data/Controls/Buttons Shared Data.asset
+  - m_GUID: 4d71e26dc0694f1448ed99ad474fa1b8
+    m_Address: MainMenu_it-IT
     m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a8c3ff144d8a96248adc0f1c05163b2a
-    m_Address: Assets/Components/Menu/MainMenu Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Locale-it-IT
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: a4785390dd4afa24eb348e7efbc8799f, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 12efdba3476f63f4d99bdc76314835aa, type: 2}
-    - {fileID: 11400000, guid: cffca158293560546bbbb8a516e887da, type: 2}
+    - {fileID: 11400000, guid: 2d632ba7ebe53a44095a0a0bd5972cf6, type: 2}
+    - {fileID: 11400000, guid: 76d951b68eaebd54c80c7a41bbc21550, type: 2}

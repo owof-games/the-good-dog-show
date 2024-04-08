@@ -51,6 +51,10 @@ CONST base_dialogue_loops = 3
 
 ~ num_loop_rimanenti -= 1
 ~ temp youHaveTimeToTalk = num_loop_rimanenti >= 0
+{ is_new_mode_plus():
+    // always have time in nm+
+    ~ youHaveTimeToTalk = true
+}
 
 { alive_characters:
     @moveToLounge

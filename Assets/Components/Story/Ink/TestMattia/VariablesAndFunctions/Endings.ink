@@ -26,7 +26,10 @@ Management of day endings and game ending.
     -> non_ce_lhai_fatta
 }
 
--> eliminazione_concorrente ->
+{ not is_new_mode_plus():
+    -> eliminazione_concorrente ->
+// TODO: se vogliamo un dialogo diverso in caso di non-eliminazione, da mettere qua in un branch "- else:"
+}
 
 // select an ending according to the strangeness
 {

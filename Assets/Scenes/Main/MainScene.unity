@@ -1432,6 +1432,14 @@ PrefabInstance:
       propertyPath: itInkTextAsset
       value: 
       objectReference: {fileID: 4900000, guid: fcfc6aca5491bfe43b28dcc9566e5af0, type: 3}
+    - target: {fileID: 4905196625283791951, guid: 474cbbab14c3d6640b034fd52e5be6ea, type: 3}
+      propertyPath: plusModePlayerPrefsKey._usage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905196625283791951, guid: 474cbbab14c3d6640b034fd52e5be6ea, type: 3}
+      propertyPath: plusModePlayerPrefsKey._constant
+      value: 
+      objectReference: {fileID: 11400000, guid: f17918d2f8f675f4d93ef2d901ca22c4, type: 2}
     - target: {fileID: 7164257165897377237, guid: 474cbbab14c3d6640b034fd52e5be6ea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

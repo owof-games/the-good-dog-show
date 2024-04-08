@@ -8,6 +8,8 @@ INCLUDE VariablesAndFunctions/DayStart.ink
 INCLUDE VariablesAndFunctions/Abilities.ink
 INCLUDE VariablesAndFunctions/Audio.ink
 INCLUDE VariablesAndFunctions/Characters.ink
+INCLUDE VariablesAndFunctions/NewModePlus.ink
+
 
 
 
@@ -19,7 +21,7 @@ INCLUDE VariablesAndFunctions/Characters.ink
 
 // -> test_abilities
 
--> prima_giornata
+// -> prima_giornata
 
 // ~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
 // ~ chosen_ingredient = InvalidIngredient
@@ -38,6 +40,126 @@ INCLUDE VariablesAndFunctions/Characters.ink
 // -> test_credits
 
 // -> bug_eliminazione
+
+// -> prima_giornata_nmp
+
+-> test_set_new_mode_plus
+
+=== test_set_new_mode_plus
+
+@moveToEnding
+{ is_new_mode_plus():
+DOGRON: siamo già in new mode plus.
+- else:
+DOGRON: setto il new mode plus.
+~ setNewModePlus(true)
+}
+
+-> END
+
+
+
+=== prima_giornata_nmp
+
+-> inizio_lounge ->
+
+-> lounge_loop_with_letter(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno_nmp, -> letter)
+
+
+    = ugoemimi_choice
+    UgoEMimi: <b>ciao</b>, come va?
+    YOU: ciao
+    ->->
+
+    = bebe_choice
+    BeBe: ciao
+    YOU: ciao
+    ->->
+
+    = piiiietro_choice
+    Piiiietro: ciao
+    YOU: ciao
+    ->->
+
+
+    = quello_choice
+    Quello: ciao
+    YOU: ciao
+    ->->
+
+
+    = ildivo_choice
+    ilDivo: ciao
+    YOU: ciao
+    ->->
+    
+    
+    = letter
+    @moveToEnding
+    DOGRON: leggerò la lettera!
+    ->->
+
+
+
+=== cucina_giorno_uno_nmp
+
+~ dialogue_ingredients_of_the_day = (CollaDiPesce, Filtrare, Cipolla)
+
+-> kitchen_loop(3, (Uova, Farina, Saltare, Sciogliere, Lievitare, Sale), -> seconda_giornata_inizio_nmp, 0)
+
+
+
+=== seconda_giornata_inizio_nmp
+
+@moveToDialogue character:{DOGRON}
+
+DOGRON: Finale del giorno uno!
+YOU: Fantastico! Vero?
+DOGRON: Tu che ne dici?
++ YOU: È fantastico
++ YOU: Non male
++ YOU: Sono spacciato
+-
+DOGRON: Esatto!
+
+-> seconda_giornata_lounge_nmp
+
+
+=== seconda_giornata_lounge_nmp
+
+-> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_giorno_uno_nmp)
+
+
+    = ugoemimi_choice
+    UgoEMimi: ciao
+    YOU: ciao
+    ->->
+
+    = bebe_choice
+    BeBe: ciao
+    YOU: ciao
+    ->->
+
+    = piiiietro_choice
+    Piiiietro: ciao
+    YOU: ciao
+    ->->
+
+
+    = quello_choice
+    Quello: ciao
+    YOU: ciao
+    ->->
+
+
+    = ildivo_choice
+    ilDivo: ciao
+    YOU: ciao
+    ->->
+
+
+
+
 
 === bug_eliminazione
 
