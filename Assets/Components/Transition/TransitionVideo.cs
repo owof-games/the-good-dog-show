@@ -12,7 +12,9 @@ public class TransitionVideo : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private RectTransform targetImageTransform;
     [SerializeField] private FloatReference transitionDuration;
+#if UNITY_EDITOR
     [SerializeField] private BoolReference debugMode;
+#endif
 
     /// <summary>
     /// A coroutine that starts playing the video, and waits for the video to completely cover the
@@ -60,6 +62,8 @@ public class TransitionVideo : MonoBehaviour
     }
 
     public CustomYieldInstruction WaitForStoppedVideoPlayer() =>
+#if UNITY_EDITOR
         debugMode ? null :
+#endif
         new WaitForVideoPlayerCompleteYieldInstruction(videoPlayer);
 }

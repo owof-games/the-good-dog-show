@@ -759,6 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   inkAtomsStory: {fileID: 11400000, guid: c6bfcfd395c994843afe25dd3c0b5e88, type: 2}
+  editorInkStoriesAsset: {fileID: 0}
   inkStoriesAsset: {fileID: 11400000, guid: 3146dc0df3f756b48a298e49b3d667e6, type: 2}
   startButton: {fileID: 4909366408926330556}
   enToggle: {fileID: 2163615727125454589}
@@ -795,7 +796,8 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
-  isDebug:
+  transitioning: {fileID: 11400000, guid: 54188e15319d9f445a860627e18d1548, type: 2}
+  debugMode:
     _usage: 1
     _value: 0
     _constant: {fileID: 11400000, guid: ee4d8d6dad7fc7046aa5edbcec6eb977, type: 2}

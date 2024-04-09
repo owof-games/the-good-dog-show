@@ -1433,6 +1433,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: fcfc6aca5491bfe43b28dcc9566e5af0, type: 3}
     - target: {fileID: 4905196625283791951, guid: 474cbbab14c3d6640b034fd52e5be6ea, type: 3}
+      propertyPath: editorInkStoriesAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 444d1c89079ecc4468501b798bf559a3, type: 2}
+    - target: {fileID: 4905196625283791951, guid: 474cbbab14c3d6640b034fd52e5be6ea, type: 3}
       propertyPath: plusModePlayerPrefsKey._usage
       value: 1
       objectReference: {fileID: 0}

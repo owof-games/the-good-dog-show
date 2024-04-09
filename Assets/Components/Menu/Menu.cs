@@ -18,6 +18,9 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private StringEvent continueEvent;
     [SerializeField] private InkAtomsStory inkAtomsStory;
+#if UNITY_EDITOR
+    [SerializeField] private MenuInkStoriesAsset editorInkStoriesAsset;
+#endif
     [SerializeField] private MenuInkStoriesAsset inkStoriesAsset;
 
     [SerializeField] private Button startButton;
@@ -37,8 +40,11 @@ public class Menu : MonoBehaviour
     [SerializeField] private float startPlusSymbolAnimationDuration = 1f;
     [SerializeField] private float startPlusSymbolFinalRotation = 360 * 8;
     [SerializeField] private StringReference plusModePlayerPrefsKey;
+    [SerializeField] private BoolVariable transitioning;
 
-    [SerializeField] private BoolReference isDebug;
+#if UNITY_EDITOR
+    [SerializeField] private BoolReference debugMode;
+#endif
     [SerializeField] private GameObject[] debugObjects;
 
     private const string enLocaleCode = "en-US";
@@ -47,18 +53,28 @@ public class Menu : MonoBehaviour
     private void Awake()
     {
         Assert.IsNotNull(inkAtomsStory);
+#if UNITY_EDITOR
+        Assert.IsNotNull(editorInkStoriesAsset);
+#endif
         Assert.IsNotNull(inkStoriesAsset);
         Assert.IsNotNull(continueEvent);
         Assert.IsNotNull(startButton);
         Assert.IsNotNull(itToggle);
         Assert.IsNotNull(enToggle);
+        Assert.IsNotNull(transitioning);
     }
 
     private IEnumerator Start()
     {
         foreach (var debugObject in debugObjects)
         {
-            debugObject.SetActive(isDebug.Value);
+            debugObject.SetActive(
+#if UNITY_EDITOR
+            debugMode.Value
+#else
+            false
+#endif
+            );
         }
 
         yield return LocalizationSettings.InitializationOperation;
@@ -74,8 +90,14 @@ public class Menu : MonoBehaviour
     {
         playBackgroundMusicEvent.Event.Raise(musicName);
 
+        StartCoroutine(ModePlusAnimation());
+    }
+
+    private IEnumerator ModePlusAnimation()
+    {
         if (PlayerPrefs.GetString(plusModePlayerPrefsKey) == "true")
         {
+            yield return transitioning.Await(isTransitioning => !isTransitioning);
             startPlusRoot.gameObject.SetActive(true);
             DOTween.Sequence()
                 .Insert(startPlusRootBounceWaitDuration, startPlusRoot
@@ -126,9 +148,14 @@ public class Menu : MonoBehaviour
     public void OnStart(bool newModePlus)
     {
         string localeCode = LocalizationSettings.SelectedLocale.Identifier.Code;
+#if UNITY_EDITOR
+        var assets = editorInkStoriesAsset;
+#else
+        var assets = inkStoriesAsset;
+#endif
         inkAtomsStory.StartStory(localeCode == itLocaleCode ?
-            inkStoriesAsset.ItInkTextAsset :
-            inkStoriesAsset.EnInkTextAsset);
+            assets.ItInkTextAsset :
+            assets.EnInkTextAsset);
         inkAtomsStory["in_unity"] = true;
         inkAtomsStory["new_mode_plus"] = newModePlus ? "true" : "false";
         continueEvent.Raise(null);
