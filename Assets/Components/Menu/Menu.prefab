@@ -762,6 +762,7 @@ MonoBehaviour:
   editorInkStoriesAsset: {fileID: 0}
   inkStoriesAsset: {fileID: 11400000, guid: 3146dc0df3f756b48a298e49b3d667e6, type: 2}
   startButton: {fileID: 4909366408926330556}
+  startPlusButton: {fileID: 7271706263323719924}
   enToggle: {fileID: 2163615727125454589}
   itToggle: {fileID: 6061616771500230280}
   playBackgroundMusicEvent:
@@ -933,8 +934,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 7271706263323719924}
+    m_SelectOnDown: {fileID: 7271706263323719924}
     m_SelectOnLeft: {fileID: 6061616771500230280}
     m_SelectOnRight: {fileID: 4909366408926330556}
   m_Transition: 2
@@ -1725,8 +1726,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 2163615727125454589}
+    m_SelectOnDown: {fileID: 2163615727125454589}
     m_SelectOnLeft: {fileID: 2163615727125454589}
     m_SelectOnRight: {fileID: 6061616771500230280}
   m_Transition: 2

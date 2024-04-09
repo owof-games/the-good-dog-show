@@ -24,6 +24,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private MenuInkStoriesAsset inkStoriesAsset;
 
     [SerializeField] private Button startButton;
+    [SerializeField] private Button startPlusButton;
     [SerializeField] private Toggle enToggle;
     [SerializeField] private Toggle itToggle;
 
@@ -138,7 +139,11 @@ public class Menu : MonoBehaviour
         // force selection of a button is the game menu is not on, and none of our elements are selected
         EventSystem currentEventSystem = EventSystem.current;
         var selected = currentEventSystem.currentSelectedGameObject;
-        if (!isGameMenuOpened.Value && selected != startButton.gameObject && selected != itToggle.gameObject && selected != enToggle.gameObject)
+        if (!isGameMenuOpened.Value &&
+            selected != startButton.gameObject &&
+            selected != itToggle.gameObject &&
+            selected != enToggle.gameObject &&
+            selected != startPlusButton.gameObject)
         {
             Debug.Log($"Menu forces selected object from {selected?.name} back to {startButton.gameObject?.name}");
             currentEventSystem.SetSelectedGameObject(startButton.gameObject);
