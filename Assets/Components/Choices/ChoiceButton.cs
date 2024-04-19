@@ -103,7 +103,7 @@ public class ChoiceButton : MonoBehaviour
         {
             // actual choice
             var choice = storyStep.Value.Choices[myIndex];
-            var text = choice.Text.Split(':')[^1].Trim();
+            var text = choice.Text.Split(':', 2)[^1].Trim();
             textMeshPro.text = text;
 
             textMeshPro.enabled = true;
