@@ -7,6 +7,8 @@ INCLUDE VariablesAndFunctions/Endings.ink
 INCLUDE VariablesAndFunctions/DayStart.ink
 INCLUDE VariablesAndFunctions/Abilities.ink
 INCLUDE VariablesAndFunctions/Characters.ink
+INCLUDE VariablesAndFunctions/Audio.ink
+INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 INCLUDE 00StartingTest.ink
 INCLUDE 01DayOne.ink
@@ -14,8 +16,6 @@ INCLUDE 02DayTwo.ink
 INCLUDE 03DayThree.ink
 INCLUDE 04DayFour.ink
 INCLUDE 05DayFive.ink
-INCLUDE VariablesAndFunctions/Audio.ink
-INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 
 
