@@ -8,7 +8,7 @@ DOGRON: No no no friends, those are not tears youuuuu see, it's just allergy to 
 DOGRON: Sigh.
 DOGRON: The last episode of THE VERY GOOOOOD DOGGO GOOD DOGRON GOOD, SOMEONE TELL DOGRON THAT HE'S A GOOD DOOOG and deserves a pat!
 DOGRON: May I remind you, finalists, that at stake there’s the chance to have your own mega restaurant on Neptuuuuune.
-DOGRON: Coincidentally very close to my huuuuuman-less cottage, and to that of the Great Pug Council and the Supreme Chihuahua.
+DOGRON: Incredibly near to my little house, and to that of the Grand Council of Pugs, and to the Supreme Chihuahua. Completely by chance.
 DOGRON: We good dogs, woof woof.
 DOGRON: And that's why today's theme, the last big theme is:
 DOGRON: A dish that shooooooouts to the world that you are the best dog parent in the world!
@@ -16,7 +16,7 @@ DOGRON: Racers, start your engines, and may the best dog person win.
 
 @setCharacterVariant image:{BeBenator}
 
--> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_five_kitchen)
+-> lounge_loop_with_letter(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_five_kitchen, -> day_five_letter)
 
 
 = ugo_e_mimi_choice
@@ -174,8 +174,71 @@ DOGRON: Racers, start your engines, and may the best dog person win.
         -
     ilDivo: I want to tell you that I missed you so much, all of you, but I promise I will never leave you again. You see, this is my life, and always will be. There’s nothing else, only us.        
     ->->
+
+
+= day_five_letter
+        @moveToEnding
+    DOGRON: But, but…! We have a surprise for you! I think. A uuuuuuunique surprise, uuuuuuuuunique, just like you are!
+    DOGRON: A letter!
     
+    + YOU: Why, have you no more “U”s?
+    + YOU: Maybe it’s Adramelech, he owes me an aspic.
+    + YOU: I bet it will be from my fathers.[] Something like: “Did you bring your wool sweater?”, or “Sheep’s blood, not goat’s blood, or Caacrinolaas will start barking!”
     
+    -
+    
+    DOGRON: No, it’s from a certain Ermenegildo. I can smeel clues!
+    DOGRON: “Hey, you. Yes, you, who knocked me out on Grandpa Pig’s train. Who ate my favorite little fingers. Who buried me in a Kate Bush’ cover! I know where you are!”
+    ~ dialogue_ingredients_of_the_day += KateBush
+    DOGRON: Uuuuuh, he sounds quite angry, don’t you think?
+    
+    + YOU: Not really, he does like that every time I kill him.
+    + YOU: You should hear him when somebody insults Taylor Swift. That’s where he really gets angry.
+    + YOU: I don’t know if you talked with BeBe: that is actual rage!
+    
+    -
+    
+    DOGRON: I will go on reading, it’s getting engaging. It sounds like that episode of “Out the Corgis”! Or maybe it was “Shih Tzu and the City”?
+    DOGRON: “I know where you are: I’ll get there, and then you can also have your other two wishes. LOL, you know I’m funnier than your father. The one with the tentacles, I mean. The other one is unbeatable. Do you remember that time when he turned inside out the organs of the nazis? How fun!”
+    ~ dialogue_ingredients_of_the_day += Padre
+    
+    + YOU: Argh, that was MY idea. It’s so annoying to have such a famous father.
+    + YOU: I think it was the season finale of “This world can’t shiba me down”.
+    + YOU: Ah, yes, back then the brain à la nazi was all rage! So much fun!
+    
+    -
+    
+    DOGRON: “Or that one time when he decided to teleport all humans from the dog planet to the cat planet, just because a mutt decided to steal his favourite toy”
+    ~ dialogue_ingredients_of_the_day += GiocattoloPreferito
+    DOGRON: “And then he even forgot about that, and now the cats are official intergalactic divinities and are conquering the universe. Or, as it must be called now: “The Great Shelf.” ROFL.”
+    DOGRON: What do you mean, humans on the cat planet? Brought away from, from, from ouuuuuuuur planet?!?
+    
+    + YOU: No, no, surely not yours. The universe is full of planets governed by pugs. Full.
+    + YOU: Well, if your father’s a furry and a dog steals his favourite ball…
+    + YOU: This is just a funny misunderstanding. It’s a joke between friends, isn’t it?
+    
+    -
+    
+    DOGRON: I think it’s better I go talk with the grand council of pugs. Rather, it’s something I MUST do. Keep the letter.
+    
+    + [YOU: Read aloud.]
+    
+    -
+    
+    YOU: “And so. I came back to live, brushed my teeth, and turned around my underwear, so it counts as if I washed them. Now can I get that date from you?”
+    YOU: “It must be the sixth time I ask you, and each and every time you find some justification not to come. Just like when you said: “I don’t want to see you, Caacrinlaas damn you!”, or like last time, when you shouted: “For all the pollution of Taylor’s plane, don’t you understand you disgust me?!?”
+    YOU: “I’m not good at reading these mixed signals you’re giving me.”
+    YOU: “Because of this I will wait for you on the small planet just next to yours, with six cans of Miller, and the last game of (name hidden to avoid charges from a videogame creator who doesn’t pay his associates).”
+    YOU: “Yours truly, Ermenegildo.”
+    
+    + YOU: Send BeBe to kill Ermenegildo. Again.
+    + YOU: Ask the pugs to make the planet explode.
+    + YOU: Make (name hidden to avoid charges from a videogame creator who doesn’t pay his associates) hire Ermenegildo.
+    
+    -
+    
+    ->->
+
     
 === day_five_kitchen
 

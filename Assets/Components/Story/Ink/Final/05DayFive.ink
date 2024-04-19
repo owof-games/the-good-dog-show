@@ -8,7 +8,7 @@ DOGRON: No no no amiche, non sono lacrime quelle che vedete, è solo allergia al
 DOGRON: Sob.
 DOGRON: L'ultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGRON BUONO, QUALCUNO DICA A DOGRON CHE è BUUUUUUUUUUONO SHOWWWWW e si merita un pat-pat. U-u-u-u-uuuno!
 DOGRON: Vi ricordo, finaliste, che in palio c'è la possibilità di avere un proprio mega ristorante su Nettuuuuuuuuuuuuuuuuuuuno.
-DOGRON: casualmente vicinissimo alla mia casetta senza uuuumani, e a quella del Grande Consiglio dei Carlini e della Suprema Chihuahua.
+DOGRON: Casualmente vicinissimo alla mia casetta senza uuuumani, e a quella del Grande Consiglio dei Carlini e della Suprema Chihuahua.
 DOGRON: Noi brave dogghe, si si.
 DOGRON: E per questo il tema di oggi, l'ultimo grande tema è:
 DOGRON: Un piatto che gridi al mondo che sei la migliore genitora per dogghe al mondo!
@@ -177,11 +177,68 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
 
 
 = day_five_letter
-    @moveToEnding
-    DOGRON: qua leggo la lettera e tutto
+        @moveToEnding
+    DOGRON: Ma, ma! Abbiamo una sorpresa per te. Credo. Uuuuuuuuna sorpresa uuuuuuuunica, come te.
+    DOGRON: Uuuuuna lettera!
+    
+    + YOU: Perché hai finito le "u"?
+    + YOU: Chissà se è Adramelech, mi deve ancora un aspic.
+    + YOU: Sarà da parte dei miei padri, minimo.[] Tipo: "Te lo sei portato il maglioncino di lana?" o "Non di capra ma di pecora il sangue, che poi Caacrinolaas si mette ad abbaiare!"
+    
+    -
+    
+    DOGRON: No, dice che è Ermenegildo. E sento odore di indizi!
+    DOGRON: "Ehi tu. Sì, tu che mi hai lasciato tramortito sul Trenino di Nonno Pig. Che hai mangiato le mie ditina preferite. Che mi hai seppellito in una cover di Kate Bush! So dove sei!"
+    ~ dialogue_ingredients_of_the_day += KateBush
+    DOGRON: Uuuu, sembra arrabbiatino, non trovi?
+    
+    + YOU: Naa, fa così ogni volta che lo uccido.
+    + YOU: Devi sentirlo quando insultano Taylor Swift. Lì sì che sbrocca.
+    + YOU: Non so se hai parlato con BeBe: quella sì che è rabbia!
+    
+    -
+    
+    DOGRON: Continuo con la lettura che è avvincente, sembra quell'episodio di "Corgi Fuori"! O era "Shih Tzu and the City"?
+    DOGRON: "So dove sei, ma anche sette e otto. Lol, sai che sono più divertente di tuo padre. Di quello coi tentacoli, intendo. L'altro è imbattibile. Ti ricordi di quella volta in cui per scherzo rivoltò all'esterno gli organi di tutti i fascisti? Che ridere!"
+    ~ dialogue_ingredients_of_the_day += Padre
+    
+    + YOU: Fu una mia idea, uffi. Che balle avere un padre famoso!
+    + YOU: Mi sa che era il finale di stagione di "Questo mondo non mi renderà Shiba Inu".
+    + YOU: Tornò di moda anche l'intestino alla piazzale Loreto! Che spasso quei giorni!
+    
+    -
+    
+    DOGRON: "O quella volta in cui decise di teletrasportare tutti gli umani dal pianeta dei cani al pianeta dei gatti, solo perché un cagnaccio gli rubò il suo giocattolo preferito!"
+    ~ dialogue_ingredients_of_the_day += GiocattoloPreferito
+    DOGRON: "E poi se ne è pure dimenticato, e ora i gatti sono ufficialmente divinità intergalattiche e stanno conquistando l'universo. O, come va chiamato ora: "La grande mensola". Lollone."
+    DOGRON: In che senso, umani sul pianeta dei gatti? Portati via dal, dal, dal nooooooooooooostro pianeta?!?
+    
+    + YOU: No no sicuro non il tuo. L'universo è pieno di pianeti governati da carlini. Pieno.
+    + YOU: Diciamo che se tuo padre è furry e un cane gli ruba la palla preferita...
+    + YOU: Si tratta di un buffo equivoco, Dogron. Uno scherzo tra amici, no?
+    
+    -
+    
+    DOGRON: Credo anzi, è, è il caso che vada a parlare col gran consiglio dei caaaarlini. Tieniti la lettera.
+    
+    + [YOU: Leggi a voce alta.]
+    
+    -
+    
+    YOU: "E insomma. Sono resuscitato, mi sono lavato i denti e ho rigirato al contrario le mutande che quindi è come se le avessi lavate. Ora me lo dai quell'appuntamento?"
+    YOU: "Sarà la sesta volta che te lo chiedo, e ogni volta inventi delle scuse per non venire. Come quando mi hai detto: "Non ti voglio vedere, Caacrinolaas cane!" o l'ultima volta quando hai urlato: "Ma mannaggia l'aereo tossico di Taylor, la vuoi capire che mi fai schifo?!?"
+    YOU: "Io non li so leggere tutti questi segnali contrastanti che mi dai."
+    YOU: "Per questo ti aspetto sul pianetino qui a fianco, con una bottiglia di Tavernello e l'ultimo gioco di (nome coperto per evitare denunce da parte di un creator di videogiochi italiano che non paga chi lavora)."
+    YOU: "Tuo, Ermenegildo."
+    
+    + YOU: Spedisci BeBe a uccidere Ermenegildo, di nuovo.
+    + YOU: Chiedi ai carlini di far esplodere il pianetino.
+    + YOU: Fai assumere Ermenegildo da (nome coperto per evitare denunce da parte di un creator di videogiochi italiano che non paga chi lavora).
+    
+    -
+    
     ->->
-    
-    
+
     
 === day_five_kitchen
 

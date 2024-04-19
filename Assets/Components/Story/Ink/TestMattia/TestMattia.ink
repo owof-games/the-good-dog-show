@@ -43,7 +43,21 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 // -> prima_giornata_nmp
 
--> test_set_new_mode_plus
+-> test_choice_with_column
+
+// -> test_set_new_mode_plus
+
+=== test_choice_with_column
+
+@moveToEnding
+
+DOGRON: Eccoci
+
++ YOU: scelta 1
++ YOU: scelta 2: the true choice
+-
+
+-> END
 
 === test_set_new_mode_plus
 

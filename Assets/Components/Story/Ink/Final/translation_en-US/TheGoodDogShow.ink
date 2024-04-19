@@ -7,6 +7,8 @@ INCLUDE VariablesAndFunctions/Endings.ink
 INCLUDE VariablesAndFunctions/DayStart.ink
 INCLUDE VariablesAndFunctions/Abilities.ink
 INCLUDE VariablesAndFunctions/Characters.ink
+INCLUDE VariablesAndFunctions/Audio.ink
+INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 INCLUDE 00StartingTest.ink
 INCLUDE 01DayOne.ink
@@ -14,7 +16,7 @@ INCLUDE 02DayTwo.ink
 INCLUDE 03DayThree.ink
 INCLUDE 04DayFour.ink
 INCLUDE 05DayFive.ink
-INCLUDE VariablesAndFunctions/Audio.ink
+
 
 
 
@@ -28,4 +30,5 @@ VAR in_unity = false
     ~ SEED_RANDOM(235)
 }
 
--> starting_test
+// -> starting_test
+-> day_five_lounge

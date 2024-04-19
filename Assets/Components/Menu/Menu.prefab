@@ -792,9 +792,9 @@ MonoBehaviour:
   startPlusSymbolAnimationDuration: 1
   startPlusSymbolFinalRotation: 2880
   plusModePlayerPrefsKey:
-    _usage: 0
+    _usage: 1
     _value: 
-    _constant: {fileID: 0}
+    _constant: {fileID: 11400000, guid: f17918d2f8f675f4d93ef2d901ca22c4, type: 2}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
   transitioning: {fileID: 11400000, guid: 54188e15319d9f445a860627e18d1548, type: 2}
