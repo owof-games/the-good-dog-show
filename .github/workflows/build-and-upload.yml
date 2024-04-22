@@ -45,10 +45,8 @@ jobs:
       name: Windows 🪟
       targetPlatform: StandaloneWindows
       channel: win
-      # HALF-BROKEN IL2CPP CASE: windows self-hosted is required to have IL2CPP, but =>
-      # break forcefully after 15 minutes because of:
-      # https://github.com/game-ci/documentation/issues/430
-      # timeout: 15
+      # HALF-BROKEN IL2CPP CASE: windows builds, but standard image cannot handle video files
+      timeout: 360
       # buildContinueOnError: true
       tags: '["self-hosted", "Windows"]'
       # WORKING MONO: we can compile on linux, have a mono build,
