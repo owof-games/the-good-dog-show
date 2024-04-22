@@ -12,7 +12,7 @@
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",
     "com.yasirkula.assetusagedetector": "2.5.0",
-    "it.lemurivolta.ink-atoms": "file:C:/Users/mbelletti/PersonalRepos/InkAtomsScaffolding/Packages/it.lemurivolta.ink-atoms",
+    "it.lemurivolta.ink-atoms": "https://github.com/lemurivolta/ink-atoms.git#upm",
     "it.lemurivolta.ink-translate": "0.4.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
