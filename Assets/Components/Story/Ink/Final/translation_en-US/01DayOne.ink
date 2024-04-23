@@ -7,7 +7,7 @@
 DOGRON: But, let’s officially start!
 DOGRON: Contestants, today, in this first episode of THE GOOD DOG SHOW we will put you to the test by asking you tooooooo…
 DOGRON: Coooooking something that you would eat every day!
-DOGRON: You have a few minutes to talk to each other, before going to the kitchen. Translated into the show rules: a maximum of {abilities has PNGParliExtra: {base_dialogue_loops}|{base_dialogue_loops+1}} people!
+DOGRON: You have a few minutes to talk to each other before going to the kitchen. Translated into the show rules: you can talk with a maximum of {abilities has PNGParliExtra: {base_dialogue_loops}|{base_dialogue_loops+1}} people!
 DOGRON: It's up to you to decide whether you want to share your secrets, trick the other contestants, or get a scratch behind your ear! And be carefuuuuuuul, because in THE GOOD DOG everything changes in the blink of an eye!
 
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_one_kitchen)
@@ -27,10 +27,10 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
             UgoEMimi: My merit. I chose her hairdresser, as a good husband must!
         -
     UgoEMimi: And you, what are you doing here?
-    UgoEMimi: Ugo, don't be rude, we are all tense because of this new situation!
+    UgoEMimi: Ugo, don't be rude! We are all tense because of this new situation!
         + YOU: I wonder about that too.
         + YOU: I think it's a punishment from the Cult.
-        + YOU: I only remember my room, some chloroform…
+        + YOU: I remember only my room, the quick lights, the chloroform…
         -
     UgoEMimi: Do you need help with the cooking, darling?
     UgoEMimi: Mimi! Why are you helping the competition? I need money for the publisher!
@@ -59,11 +59,11 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
         + YOU: But there is no sun here. Maybe not even on the whole planet.
             BeBe: There is grass though, I can smell it!
         + YOU: Uhm, yes, yes of course.
-            BeBe: Are you quoting that new K-Pop group, the Blink of an eye?
+            BeBe: Are you quoting that new K-Metal band, the Blink of an eye?
         -
     BeBe: But how are you settling in, sweetheart? Do you have everything you need?
         + YOU: I don't know where I am, I just want to run away.
-            BeBe: If I win, I promise to take you with me, I still have a spare bedroom!
+            BeBe: If I win, I promise to take you with me, I have a spare bedroom!
         + YOU: Last time I cooked, my house exploded.
             BeBe: It happens to all everybody, sooner or later.
         + YOU: I'm not supposed to be here. The Cult is looking for me.
@@ -98,7 +98,7 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
         + YOU: Gucci’s rosary?
             Piiiietro: Yes, a gift from my grandmother Scianel to celebrate my 16th birthday.
         + YOU: Snookie?
-            Piiiietro: Sorry, I signed an NDA, that's all I can say.
+            Piiiietro: Sorry, I signed an non-disclosure agreement, that's all I can say.
         -
     Piiiietro: She'll be back, I hope. This planet looks tiny anyway, there won't be many other puppies.
     Piiiietro: Anyway, pleasure to meet you, I am Piiiietro, a math student. When I was fourteen years old, I solved the Collatz game.

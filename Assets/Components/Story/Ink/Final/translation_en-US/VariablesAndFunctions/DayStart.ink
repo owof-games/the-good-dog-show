@@ -25,12 +25,12 @@ DOGRON: {And nowwwwwwww, a warm welcome to all the contestants and those followi
 
 = remove_ability
 
-DOGRON: {Contestants, remember that every day youuuuu will lose one of your abilities. Human person here in front of me! Today you wil lose... drum rolls...|What skill shall we take away from our huuuuuman person today?!?|Fewer and fewer people, fewer and fewer active skills!|Uuuuh, my tummy hurts today.|Me big doggo, me not crying, no no, wooooof!}
+DOGRON: {Contestants, remember that every day youuuuu will lose one of your abilities. Human person here in front of me! Today you will lose... drum rolls...|What skill shall we take away from our huuuuuman person today?!?|Fewer and fewer people, fewer and fewer active skills!|Uuuuh, my tummy hurts today.|Me big doggo, me not crying, no no, wooooof!}
 
 ~ temp ability = LIST_RANDOM(abilities)
 { ability:
   - EvidenziaIngredienti: DOGRON: You will no longer be able to see the ingredients clearly.
-  - ScelteLente: DOGRON: Choices will now flow faster. 
+  - ScelteLente: DOGRON: Choices will now flow faster.
   - SceltaIngrediente: DOGRON: You will have no longer an ingredient of your choice to select at the start of the game.
   - PNGParliExtra: DOGRON: Enough with the chit-chat!
   - SaltaMorte: DOGRON: If you get the recipe wrong, you won't have any rescue plans.
@@ -74,7 +74,7 @@ DOGRON: {Contestants, remember that every day youuuuu will lose one of your abil
         ~ alive_characters -= UgoEMimi
         ~ eliminatrice = true
         ~ abilities -= EliminaConcorrente
-        DOGRON: Mimi, sashay away.
+        DOGRON: Mimi, we will miss you. Ugo: sashay away.
     + {alive_characters has Quello} YOU: That One
         ~ alive_characters -= Quello
         ~ eliminatrice = true
@@ -107,7 +107,7 @@ DOGRON: {Contestants, remember that every day youuuuu will lose one of your abil
         ~ alive_characters += UgoEMimi
         ~ resuscitatrice = true
         ~ abilities -= RichiamaConcorrente
-        DOGRON: Mimi! How nice to have you here with us again!
+        DOGRON: Mimi! How nice to have you here with us again! And Ugo, ah. Ugo.
         + { alive_characters hasnt Quello } YOU: That One.
         ~ alive_characters += Quello
         ~ resuscitatrice = true

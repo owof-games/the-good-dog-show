@@ -31,10 +31,10 @@ DOGRON: Come here, tail!
         + YOU: But what about Mr. Ugo?
         + YOU: No, I mean the fact that you are, like, missing a head.
         -
-    UgoEMimi: I feel so light today, you know? I haven't in the longest time. Earlier I soldered some electrical sockets, and helped the cameraman with a problem with his android circuits.
+    UgoEMimi: I feel so light today, you know? I haven't in the longest time. Earlier today, I soldered some electrical sockets, and helped the cameraman with a problem in his android circuits.
     UgoEMimi: And to celebrate the change, as requested by Dogron and his dog friends, I think I will make an Olivier salad with <b>Ugo's ears</b>.
             ~ dialogue_ingredients_of_the_day += OrecchieUgo
-            + YOU: I remember Eustacchio's ears, fucking great with mushrooms.
+            + YOU: I remember Ermenegildo's fingers, so great with mushrooms.
             + YOU: Maybe you'd better hear what the jury thinks about it first?
             + YOU: Will Mr. Ugo miss it?
             -
@@ -51,7 +51,7 @@ DOGRON: Come here, tail!
     BeBe: Yes yes yes, I'm just in a hurry. Change, it's important to embrace change. Change, for my eight, no, seven daughters. Seven.
         + YOU: How come you always quote your daughters?
         -
-    BeBe: Because every mother's duty is to protect them. And if she fails, to retaliate. Bring about change.
+    BeBe: Because every mother's duty is to protect them. And if she fails, to retaliate. Be the change you want to see in the world.
         + YOU: Should I worry?
         -
     BeBe: No, you shouldn’t. But today I will bring a very special recipe, you know? Change requires risk, and for that I'm going to use hemlock. A little bit of <b>poison</b>, betting on how fatal it can be. And the killer's <b>collar</b>.
@@ -71,7 +71,7 @@ DOGRON: Come here, tail!
     Piiiietro: In the end, he left.
         + YOU: Who?
         -
-    Piiiietro: Bruiser. He left me a letter, telling me that he found a Supreme Chihuahua, and that he will live with her. That he sent a service cat and retrieve his spotted bowls and his satin and diamond kennel, and asks not to look for him.
+    Piiiietro: Bruiser. He left me a letter, telling me that he found a Supreme Chihuahua, and that he will live with her. That he sent a service cat to retrieve his spotted bowls and his satin and diamond kennel, and asks me not to look for him.
     Piiiietro: He thanks me for these years together, but he thinks it's time for him to be with someone who doesn't hide himself from the others. Who doesn't pretend to be infinite, he says.
         + YOU: What does he mean?
         + YOU: I'm sorry… I guess?
@@ -145,9 +145,9 @@ DOGRON: Come here, tail!
             -
         ilDivo: I have found true love. Here, on this tiny planet, I understood everything. I stopped for a moment, a hit of cocaine and a moment of <b>hashtag selfcare</b>, and there he was, the true love of my life!
             ~ dialogue_ingredients_of_the_day += SelfCare
+            + YOU: That One?
             + YOU: Bruiser?
-            + YOU: Ermenegildo?
-            + YOU: The Supreme Chihuahua?
+            + YOU: the corpse of Ermenegildo?
             -
         ilDivo: <b>Me, myself and I</b>. There is only one great love in this life, and it can only be me. Just me!
             ~ dialogue_ingredients_of_the_day += IoMeStessoMedesimo

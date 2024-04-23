@@ -82,7 +82,7 @@ DOGRON: Regarding what you just cooked... {~ From the frying pan comes a smell o
 ->->
 
 == finale_uno
-DOGRON: Regarding your recipe: {~ What's in the pan doesn't scream, doesn't move, and doesn't ask existential questions|Might be acceptable. For a McDonald's|I know some students who might eat it, maybe}. Unexpectedly, you move on to the next episode!
+DOGRON: Regarding your recipe: {~ what's in the pan doesn't scream, doesn't move, and doesn't ask existential questions|might be acceptable. For a McDonald's|I know some students who might eat it, maybe}. Unexpectedly, you move on to the next episode!
 ->->
 
 

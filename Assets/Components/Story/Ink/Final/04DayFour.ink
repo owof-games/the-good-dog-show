@@ -34,7 +34,7 @@ DOGRON: Vieni qui, coda!
     UgoEMimi: Oggi mi sento così leggera, sai? Non mi capitava da tempo. Prima mi son messa a saldare un po' di prese elettriche, e ho aiutato la cameraman con un problema ai suoi circuiti androidici.
     UgoEMimi: E per celebrare il cambiamento, come richiesto da Dogron e i suoi amici cani, credo farò una pasta con le cime di rapa e le <b>orecchie di Ugo</b>.
             ~ dialogue_ingredients_of_the_day += OrecchieUgo
-            + YOU: Ricordo le dita di Eustacchio, coi funghi furono una bomba.
+            + YOU: Ricordo le dita di Ermenegildo, coi funghi furono una bomba.
             + YOU: Forse conviene sentir prima che ne pensa la giuria?
             + YOU: Il signor Ugo ne sentirà la mancanza?
             -

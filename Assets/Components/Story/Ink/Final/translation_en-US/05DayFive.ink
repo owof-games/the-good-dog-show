@@ -31,11 +31,11 @@ DOGRON: Racers, start your engines, and may the best dog person win.
     UgoEMimi: Although I didn't mind Ugo's <b>gutting</b>.
         ~ dialogue_ingredients_of_the_day += Sventrare
         + YOU: So you actually killed him?
-            UgoEMimi: When it comes to Ugo, he was at the point of brain death for decades already, sweetheart.
+            UgoEMimi: When it comes to Ugo, he was brain dead for decades already, sweetheart.
         + YOU: So we ate him yesterday?
             UgoEMimi: Just a little bit, I hope it was not indigestible to you.
         + YOU: So could you give me some tips if I had a similar problem?
-            UgoEMimi: It would never be exactly the same problem, since I don't see a second head attached to your neck, but meat is still meat, isn't it?
+            UgoEMimi: It would never be exactly the same problem, since I don't see a second head attached to your neck, but abuse is still abuse, isn't it?
         -
     UgoEMimi: It's strange that this experience is ending, you know? So many things have changed!
         + YOU: Are you going to open your electrician's store now?
@@ -68,10 +68,10 @@ DOGRON: Racers, start your engines, and may the best dog person win.
         + YOU: I will win this last challenge, for sure!
         + YOU: I hope Kitty has not summoned Pazuzo again in my absence.
         -
-    BeBe: However it goes, I am happy about this meeting, this journey with you. Today I will bring something unexpected, to DOGRON. Something that will leave him trembling, terrified.
+    BeBe: Whatever happens, I am happy about this meeting, about this journey with you. Today I will bring something unexpected to DOGRON. Something that will leave him trembling, terrified.
         + YOU: Like what?
         -
-    BeBe: Three gifts, like the Magic Kings. Like Destiny's Child. Always the same story, after all. A baked pasta, but the pasta will be <b>Peanutbutter</b>, the sauce will be Dogron's <b>favorite toy</b>, and the oven, the <b>sacrifice</b>. His sacrifice.
+    BeBe: Three gifts, like the Magic Kings. Like Destiny's Child. Like the Bee Gees. Always the same story, after all. A baked pasta, but the pasta will be <b>Peanutbutter</b>, the sauce will be Dogron's <b>favorite toy</b>, and the oven, the <b>sacrifice</b>. His sacrifice.
     ~ dialogue_ingredients_of_the_day += PeanutButter
     ~ dialogue_ingredients_of_the_day += GiocattoloPreferito
     ~ dialogue_ingredients_of_the_day += Sacrificio
@@ -198,35 +198,35 @@ DOGRON: Racers, start your engines, and may the best dog person win.
     
     -
     
-    DOGRON: I will go on reading, it’s getting engaging. It sounds like that episode of “Out the Corgis”! Or maybe it was “Shih Tzu and the City”?
+    DOGRON: I will go on reading, it’s getting engaging. It sounds like that episode of “Corgiful”! Or maybe it was “Shih Tzu and the City”?
     DOGRON: “I know where you are: I’ll get there, and then you can also have your other two wishes. LOL, you know I’m funnier than your father. The one with the tentacles, I mean. The other one is unbeatable. Do you remember that time when he turned inside out the organs of the nazis? How fun!”
     ~ dialogue_ingredients_of_the_day += Padre
     
     + YOU: Argh, that was MY idea. It’s so annoying to have such a famous father.
-    + YOU: I think it was the season finale of “This world can’t shiba me down”.
-    + YOU: Ah, yes, back then the brain à la nazi was all rage! So much fun!
+    + YOU: I think it was the season finale of “Better call Shiba Inu”.
+    + YOU: Ah, yes, back then the brain à la nazi was all the rage! So much fun!
     
     -
     
-    DOGRON: “Or that one time when he decided to teleport all humans from the dog planet to the cat planet, just because a mutt decided to steal his favourite toy”
+    DOGRON: “Or that one time when he decided to teleport all humans from the dog planet to the cat planet, just because a mutt decided to steal his favourite toy!”
     ~ dialogue_ingredients_of_the_day += GiocattoloPreferito
-    DOGRON: “And then he even forgot about that, and now the cats are official intergalactic divinities and are conquering the universe. Or, as it must be called now: “The Great Shelf.” ROFL.”
+    DOGRON: “And then he even forgot about that, and now cats are officially intergalactic divinities and are conquering the universe. Or, as it must be called now: “The Great Shelf.” ROFL.”
     DOGRON: What do you mean, humans on the cat planet? Brought away from, from, from ouuuuuuuur planet?!?
     
     + YOU: No, no, surely not yours. The universe is full of planets governed by pugs. Full.
-    + YOU: Well, if your father’s a furry and a dog steals his favourite ball…
+    + YOU: Well, if your father’s a furry and a dog steals his favorite ball…
     + YOU: This is just a funny misunderstanding. It’s a joke between friends, isn’t it?
     
     -
     
-    DOGRON: I think it’s better I go talk with the grand council of pugs. Rather, it’s something I MUST do. Keep the letter.
+    DOGRON: I think it’s better I go talk with the Great Council of Pugs. Rather, it’s something I MUST do. Keep the letter.
     
     + [YOU: Read aloud.]
     
     -
     
-    YOU: “And so. I came back to live, brushed my teeth, and turned around my underwear, so it counts as if I washed them. Now can I get that date from you?”
-    YOU: “It must be the sixth time I ask you, and each and every time you find some justification not to come. Just like when you said: “I don’t want to see you, Caacrinlaas damn you!”, or like last time, when you shouted: “For all the pollution of Taylor’s plane, don’t you understand you disgust me?!?”
+    YOU: “So. I came back to life, brushed my teeth, and turned around my underwear, so it counts as if I washed it. Now, can I get that date from you?”
+    YOU: “It must be the sixth time I ask you, and each and every time you find a reason not to come. Just like when you said: “For the love of Caacrinolaas, I don’t want to see you!”. Or like last time, when you shouted: “For all the pollution of Taylor’s plane, don’t you understand you disgust me?!?”
     YOU: “I’m not good at reading these mixed signals you’re giving me.”
     YOU: “Because of this I will wait for you on the small planet just next to yours, with six cans of Miller, and the last game of (name hidden to avoid charges from a videogame creator who doesn’t pay his associates).”
     YOU: “Yours truly, Ermenegildo.”

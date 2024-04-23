@@ -15,7 +15,7 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
     //Ingredienti suggeriti: Vol-au-vent e Skyrim
     UgoEMimi: Mimi, no, you're the one who doesn't understand! Kojima compared it to <b>Skyrim</b>! And Kojima is never wrong!
         ~ dialogue_ingredients_of_the_day += Skyrim
-    UgoEMimi: Ugo, I don't want to contradict you, you know, but it was a dream!
+    UgoEMimi: Ugo, I don't like to contradict you, you know, but it was a dream!
     UgoEMimi: And you tell me that dreams lie, huh! Didn't you dream of cooking forever? Now look where we are!
     UgoEMimi: My dream was to open an electrician's tool store, not to cook <b>vol-au-vents</b> every Saturday for your boorish friends!
      ~ dialogue_ingredients_of_the_day += VolAuVent
@@ -60,7 +60,7 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
         -
     BeBe: That reassures me. I don't like people who make fun of me.
     BeBe: Anyway, I was thinking, what is true friendship? And of course I thought about my eight, er, seven daughters. And what do they love to do when we're all together? Video games!
-    BeBe: It amuses me a lot when they say in an affectionate way, "No mom, don't play with us tonight, please!" They are so sweet.
+    BeBe: It amuses me a lot when they say in an affectionate way, "No mom, don't play with us tonight, we beg you!" They are so sweet.
     BeBe: And so I was thinking of making baskets with fried <b>grass blocks</b>, and <b>sheep eggs</b>.
     ~ dialogue_ingredients_of_the_day += BlocchiDiErba
     ~ dialogue_ingredients_of_the_day += UovaDiPecora
@@ -88,7 +88,7 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
         + YOU: It may surprise you, but I cook even worse than you do.
             Piiiietro: Don’t overdo it, I saw what you brought up yesterday!
         + YOU: And did you find your dog?
-            Piiiietro: No, and I found his Russian sable fur coat abandoned behind an armchair.
+            Piiiietro: No, and I found his Russian sable fur coat, behind an armchair, abandoned.
             Piiiietro: But he always does that when I forbid him to go on vacation somewhere.
         + YOU: And the rosary?
             Piiiietro: I think I saw it on Dogron, I'll have to investigate further.
@@ -113,14 +113,14 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
         + YOU: This is the moment when I have to say I'm sorry, right?
         + YOU: I saw a very friendly sheep earlier. If you want to talk to her…
         -
-    Quello: I won't bore you with my sad story, I promise. It’s just that I can't but think of recipes that have <b>tears</b> in them. Lots of them.
+    Quello: I won't bore you with this sad story, I swear. It’s just that I can't but think of recipes that have <b>tears</b> in them. Lots of them.
     ~ dialogue_ingredients_of_the_day += Lacrime
         + YOU: Don't they spoil the flavor?
         -
     Quello: It depends. Salty tastes are fine with <b>bitter cocoa</b>. I might make a cake.
     ~ dialogue_ingredients_of_the_day += CacaoAmaro
     Quello: A cake that won’t be shared with anyone.
-    Quello: Except for Il Divo, who would never eat it, however, because it would gross him out on trust. And he's right.
+    Quello: Except for Il Divo, who would never eat it, however, because it would gross him out, just because. And he's right, you know?
     Quello: Sorry, sadness is forbidden by my contract of employment. See you later, and good luck!
 
     ->->
@@ -133,12 +133,12 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
         -
     ilDivo: Why hello gorgeous! Have we ever met before?
         + {day_one_lounge.il_divo_choice} YOU: We, like, talked yesterday. Oprah, the cocaine, the saffron?
-        + {not day_one_lounge.il_divo_choice} YOU: I haven't yet had the luck, no.
+        + {not day_one_lounge.il_divo_choice} YOU: We didn’t have the misfortune yet, no.
         -
     ilDivo: They call me il Divo, but that's an understatement. I mean, the White House has a portrait of me.
     ilDivo: Wikipedia has my picture under the definition of "Cool", obviously not as in the temperature level, but why am I talking to you, you may not even have finished the high school, and, did I maybe already ask you, are you single?
         + YOU: Yes, and every time I meet a man I remember why.
-        + YOU: No, I have someone waiting for me at home, but I don't know how to get back!
+        + YOU: No, I have my cat waiting for me at home, but I don't know how to get back!
         + YOU: I think I have a crush on someone here in the studio.
         -
     ilDivo: Of course you will fall in love with me, of course. Bella Hadid decided not to <b>mirror</b> herself after she saw me.

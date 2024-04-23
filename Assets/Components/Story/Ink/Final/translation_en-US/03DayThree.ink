@@ -9,7 +9,7 @@ DOGRON: Don't you feel a little sad? {nonAliveCharacters()} already have left us
 DOGRON: But the Supreme Chihuahua and the Grand Council of Pugs, in their wisdom they knooooooooow that it is important to find the perfect owner, I mean, the perfect little person for the restaurant on Saturn!
 DOGRON: And surely this fantastic person with fantastic hands that can pat my head so gooooooood, must know how to make a recipe for…
 DOGRON: ... when you feel sad because all the huuuuuumans are gone!
-DOGRON: As always you have a few minutes for chit-chat, and then it's time to start cooooooooking!
+DOGRON: As usual, you have a few minutes for chit-chat, and then it's time to start cooooooooking!
 
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_three_kitchen)
 
@@ -17,7 +17,7 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
 = ugo_e_mimi_choice
     //INGREDIENTI SUGGERITI: iverivideogiochi e canapé
     UgoEMimi: …
-        + YOU: I know I'm going to regret saying this, but you seem very quiet today.
+        + YOU: I know I'm going to regret what I’m about to ask, but: how come you’re so quiet?
         -
     UgoEMimi: Ugo spoke with one of the publishers, for his video game.
     UgoEMimi: Junk sellers, they are. But did you know that the publishers are... pugs?!?
@@ -29,13 +29,13 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     UgoEMimi: Oh, I will cook <b>canapés</b> while Ugo recovers from his pain.
         ~ dialogue_ingredients_of_the_day += Canapé
     UgoEMimi: I do not suffer Mimi! Men do not suffer!
-    UgoEMimi: What are then those tears, Ugo?
+    UgoEMimi: Then what are those tears?
         + YOU: Aren't you scared about thing about missing humans?
         -
     UgoEMimi: Uh, I feel sorry for them, but we never really got along with humans. Not after the failure of the Virtual Boy.
-    UgoEMimi: Speak for yourself, Ugo. I personally have always loved humans, I used to make a really good pizza when I could still cook them.
+    UgoEMimi: Speak for yourself, Ugo. I personally have always loved humans, I used to make a really good stew when they weren’t considered persons yet.
         + YOU: Oh, and I was afraid I was the only person who ate human flesh!
-        + YOU: There’s too much junk in my body for my meat to be tasty.
+        + YOU: There is too much candy in my body for my meat to be tasty.
         + YOU: I think it is time for me to go to Uranus.
         -
 
@@ -61,9 +61,9 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
             BeBe: You seem like a very confused person, you know?
         -
     BeBe: But, don't you find today's theme a little strange? What did he mean with "humans are all gone"? And then again, what are humans?
-        + YOU: Um, like, I am a human person?
+        + YOU: Uhm, I’m a human person. I think. I didn’t even know that there are non-human persons until just a few moments ago.
         -
-    BeBe: Uh, that's why that hairless face, and the fact that you doesn't ruminate! That's so funny. And are there sheep too where you come from?
+    BeBe: Uh, that's why you have that hairless face, and you don’t ruminate! It must be so hard for you to digest. And, are there sheep too where you come from?
         + YOU: Many, they are among the most common animals.
         -
     BeBe: What do you mean, animals? Of course, it must be a civilized place, with so many sheep, very good!
@@ -91,13 +91,13 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     Piiiietro: But do you always get in other people's rooms like that? What a scumbag!
         + YOU: Actually this is the lounge, and it’s shared. But, do you have your own room?
         -
-    Piiiietro: Sure, otherwise where would I place the UV bed and the speaker system?
+    Piiiietro: Sure thing, where would I place the UV bed and the speaker system otherwise?
         + YOU: Please please give me something that looks like sunshine for an hour!
             Piiiietro: What if I then get a sunburn infection!!!?
         + YOU: Speaker system? So it was you who was singing earlier?
             Piiiietro: NO.
         + YOU: But I don't have a room, I sleep in the girders above the kitchen.
-            Piiiietro: And now we clearly see who has an agent and who does not, sorry for that!
+            Piiiietro: And now we clearly see who has an agent and who does not, I’m sorry!
         -
     Piiiietro: Anyway: maybe they'll let us have karaoke. Short, tonight, after the rehearsal. It seems that my pasta with <b>canned tuna</b> and even badly <b>drained</b> is a hit. I'll try it again tonight!
         ~ dialogue_ingredients_of_the_day += TonnoInScatola
@@ -125,15 +125,16 @@ DOGRON: As always you have a few minutes for chit-chat, and then it's time to st
     Quello: Oh, sorry if I’m too bitter.
     Quello: It's kinda weird to think about a subject like this, when my father did… did some horrible things.
         + YOU: What do you mean?
-        + YOU: You know, mine too, when he became one of the Old Ones…
+        + YOU: If it’s of any consolation, mine too, when he became one of the Old Ones…
         + YOU: We all make mistakes, don't we?
         -
-    Quello: Il Divo always says that work solves every problem and every fear, though. So I'm going to start cooking. I was thinking that disappearance is a bitter thing, so I might make a braid that is a <b>storytelling</b> of other vacuum cleaners like me.
+    Quello: Il Divo always says that work solves every problem and every fear. So I'm going to start cooking. I was thinking that the disappearance is a bitter thing, so I might make a braid that is a <b>storytelling</b> of other vacuum cleaners like me.
     ~ dialogue_ingredients_of_the_day += Raccontare
     Quello: Make it sweet but fill it with chunks of <b>Savona’s Chinotto</b> to enhance the bitterness of certain experiences.
     ~ dialogue_ingredients_of_the_day += ChinottoDiSavona
     Quello: A bit like when your father exterminates an entire population with one of his inventions.
-        + YOU: Or when your father adds a new space-time dimension to your planet because he had a fight with your other father.
+        + YOU: Or when your father adds a new space-time dimension to your planet just because he had a fight with your other father and wants to mess with him.
+            YOU: I will never forget those desperate, 5-dimensional screams.
         -
     Quello: That's right. You really understand me. I'm going to clean up Il Divo’s ingredients and then I will start my recipe. Thank you for the understanding!
 

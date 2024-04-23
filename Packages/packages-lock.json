@@ -235,14 +235,15 @@
       "url": "https://package.openupm.com"
     },
     "it.lemurivolta.ink-atoms": {
-      "version": "file:C:/Users/mbelletti/PersonalRepos/InkAtomsScaffolding/Packages/it.lemurivolta.ink-atoms",
+      "version": "https://github.com/lemurivolta/ink-atoms.git#upm",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.unity-atoms.unity-atoms-core": "4.4.8",
         "com.unity-atoms.unity-atoms-base-atoms": "4.4.8",
         "com.inkle.ink-unity-integration": "1.1.8"
-      }
+      },
+      "hash": "bd0397ad38a8bd44e67151fd40858ae6f4a73dd0"
     },
     "it.lemurivolta.ink-translate": {
       "version": "0.4.0",
