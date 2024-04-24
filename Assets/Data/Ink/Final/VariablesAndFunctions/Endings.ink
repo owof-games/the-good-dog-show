@@ -150,3 +150,63 @@ _ SFX: _ Chris Logdson //#url:https:\/\/chrislsound.itch.io/ambient-puzzle
 _ Grazie per aver giocato con noi <3 _ (e fate un grattino al vostro _ DOGRON da parte nostra)
 
 -> END
+
+TODO: Mattia, nuovo finale qui.
+
+=== finale_Segreto ===
+DOGRON: Eccoti. L'ho capito, sai?
+DOGRON: Tuuuuuuuutto questo tempo.
+DOGRON: E sei sempre stata tuuuu, vero?
+    + YOU: Non capisco cosa intendi.
+    + YOU: Fossi stata qualcun altro sarebbe stato davvero strano.
+    + YOU: Come l'hai capito?
+    -
+DOGRON: Tutte quelle vite di Ermenegildo.
+DOGRON: E poi, è da quando è iniziato lo show che mi gratta sempre il nasino, e non capivo come mai.
+DOGRON: E sono allergico solo a una cosa.
+DOGRON: Ai gatti.
+    + YOU: Miao!
+    -
+DOGRON: Non c'è alcuuuun pianeta su cui tornare, vero?
+    + YOU: Certo. Solo, senza umani.
+    + YOU: Ora hai un pianeta pieno di possibilità!
+    + YOU: Hai un universo intero, perché inseguire i bipedi senza pelo?
+    -
+DOGRON: Quindi il Gran Consiglio dei Carlini mi ha sempre mentito?
+    + YOU: Si fanno cose strane, per proteggere i più deboli.
+    -
+DOGRON: Perché l'hai fatto? E perché sei tornata? Perché sei venuuuuuta nello show?
+    + YOU: Può un semplice cane capire la mente di un gatto?
+    + YOU: Una lunga storia, iniziata col sugo-gate, la Clerici e mio padre.
+    + YOU: Beh, a volte quando subentra la noia si fanno cose strane.
+    -
+YOU: Ma non prenderla sul personale. Qui hai un sacco di amici, i carlini, Bruiser Woods.
+YOU: Hai me.
+DOGRON: Dopo quello che hai fatto?
+YOU: Dopo secoli di regno nel mondo dei gatti, voglio provare a fare una cosa nuova, per una volta.
+YOU: Essere una brava miaaaaaaorsona.
+    + YOU: Dogron: hai mai pensato di uuuuuululare fianco a fianco a un gatto?
+    -
+DOGRON: E perché non fianco a fianco a un amico?
+DOGRON: Vuoi ricominciare tutto questo con me?    
+-> END
+
+TODO: Mattia, testi newplus!
+
+=== regular_NewPlus ===
+DOGRON: Ehm, coff, coff, woof woof.
+DOGRON: Sembra che abbiamo un problema con la navicella spaziale.
+DOGRON: E in attesa della partenza tuuuuuutti si sono mostrati così gentili da far ripartire da capo lo show.
+DOGRON: E da chiacchierare sempre con te.
+DOGRON: Metti caso che hai perso quuuuuuualcosa di importante.
+DOGRON: Nel mentre mi metto a cercare quuuuella cosa lì dei carlini.
+DOGRON: La puuuuuuuuuuuuuuuuuuuuleggia.
+-> END
+
+=== true_NewPlus ===
+DOGRON: Quindi, visto che non c'è di dove andare, ma solo da dove iniziare, eccoci qui!
+DOGRON: Ricominciamo uuuun'altra volta tuuuutto da capo, tanto che c'hanno da fare quuuuueste persone?
+DOGRON: E ora hai tuuuutto il tempo per conoscerle meglio, fare loro le domande, scoprire le loro storie.
+DOGRON: Se vuuuuoi diventare uuuuuna brava dogga, ehm, gatta, capire le altre persone è uuuuun passaggio importante.
+DOGRON: Cominciamo!
+-> END
