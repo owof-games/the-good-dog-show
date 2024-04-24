@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: GameMenu Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: GameMenu
+  m_TableCollectionNameGuidString: e2e258e68212d324f93e6d6655c4863f
+  m_Entries:
+  - m_Id: 887476760576
+    m_Key: GameMenu/Prefab Mode in Context/GameMenu/Controls/BackToGameButton/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 947660828672
+    m_Key: GameMenu/Prefab Mode in Context/GameMenu/Controls/QuitToMenuButton/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 968170975232
+    m_Key: GameMenu/Prefab Mode in Context/GameMenu/Controls/QuitGameButton/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1060512772096
+    m_Key: GameMenu/Prefab Mode in Context/GameMenu/Controls/Header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1089482829824
+    m_Key: GameMenu/Prefab Mode in Context/GameMenu/Controls/Music Volume/Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1104385191936
+    m_Key: GameMenu/Prefab Mode in Context/GameMenu/Controls/SFX Volume/Label
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8689991626784768
+  references:
+    version: 2
+    RefIds:
+    - rid: 8689991626784768
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1713945985238
