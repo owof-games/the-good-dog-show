@@ -30,4 +30,15 @@ VAR in_unity = false
     ~ SEED_RANDOM(235)
 }
 
+{ is_new_mode_plus():
+    @moveToDialogue character:{DOGRON}
+    DOGRON: Ehm, coff, coff, woof woof.
+    DOGRON: Sembra che abbiamo un problema con la navicella spaziale.
+    DOGRON: E in attesa della partenza tuuuuuutti si sono mostrati così gentili da far ripartire da capo lo show.
+    DOGRON: E da chiacchierare sempre con te.
+    DOGRON: Metti caso che hai perso quuuuuuualcosa di importante.
+    DOGRON: Nel mentre mi metto a cercare quuuuella cosa lì dei carlini.
+    DOGRON: La puuuuuuuuuuuuuuuuuuuuleggia.
+}
+
 -> starting_test
