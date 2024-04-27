@@ -32,13 +32,22 @@ VAR in_unity = false
 
 { is_new_mode_plus():
     @moveToDialogue character:{DOGRON}
-    DOGRON: Ehm, coff, coff, woof woof.
-    DOGRON: Sembra che abbiamo un problema con la navicella spaziale.
-    DOGRON: E in attesa della partenza tuuuuuutti si sono mostrati così gentili da far ripartire da capo lo show.
-    DOGRON: E da chiacchierare sempre con te.
-    DOGRON: Metti caso che hai perso quuuuuuualcosa di importante.
-    DOGRON: Nel mentre mi metto a cercare quuuuella cosa lì dei carlini.
-    DOGRON: La puuuuuuuuuuuuuuuuuuuuleggia.
+    DOGRON: Prova prova. Prova prova.
+    DOGRON: È acceso questo microfono?
+    DOGRON: E dove sono i crocchini? Mi avevate promesso i crocchini se avessi fatto il bravo, uuuuuuuuuuffa!
+    DOGRON: Ah, siamo già in diretta?
+    DOGRON: Puuuuuuoi rimandere indietro il tempo?
+    DOGRON: Uh, le lontrelline sono piuuuù affidabili, sai?
+    DOGRON: Ricominciamo!
+    DOGRON: Rieccoci a THE GOOD DOG SHOW!
+    DOGRON: L'uuuuuunico reality che per la seconda stagione ti propone esattamente le stesse persone.
+    DOGRON: Gli stessi drammi.
+    DOGRON: Le stesse ricette.
+    DOGRON: Ma con uuuuuuuuna grande novità: ora potrai parlare con tuuuuutte le persone senza limiti.
+    DOGRON: Scoprire dove nascondono i loro giochi preferiti.
+    DOGRON: O come scappare dal veterinario.
+    DOGRON: E farmi ancora piuuuuuuuuuuuù grattini.
+    DOGRON: Cominciamo?
 }
 
 -> starting_test

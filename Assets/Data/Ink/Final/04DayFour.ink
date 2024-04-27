@@ -74,7 +74,7 @@ DOGRON: Vieni qui, coda!
     Piiiietro: Bruiser. Mi ha lasciato una lettera, dicendomi che ha trovato una Chihuahua Suprema, e che vivrà con lei. Che ha mandato un gatto di servizio e recuperare le sue ciotole zebrate e la cuccia di raso e diamanti, e mi invita a non cercarlo.
     Piiiietro: Mi ringrazia per questi anni passati assieme, ma crede sia arrivato per lui il momento di stare con qualcuno che non si nasconde agli altri. Che non finga di essere infinito, dice.
         + YOU: Che intende?
-        + YOU: Mi dispiace, credo?
+        + YOU: Come diceva nonna, è importante andare dove la ciotola è piena.
         + YOU: Bruiser sa scrivere?!?
         -
     Piiiietro: Ha ragione, sai? Tu, tu ti mostri per come sei, al mondo?

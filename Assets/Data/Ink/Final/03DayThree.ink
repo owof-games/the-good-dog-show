@@ -29,14 +29,14 @@ DOGRON: Come sempre avete qualche minuto per le chiacchiere e poi si inizia a cu
     UgoEMimi: Oh, io cucinerò dei <b>canapé</b> mentre Ugo si riprende dal dolore.
         ~ dialogue_ingredients_of_the_day += Canapé
     UgoEMimi: Io non soffro! Gli uomini non soffrono!
-    UgoEMimi: E allora cosa sono quelle lacrime?
+    UgoEMimi: E allora cosa sono quelle lacrime, Ugo?
         + YOU: Non siete spaventati per quella cosa degli umani scomparsi?
         -
     UgoEMimi: Uh, mi spiace per loro, ma non siamo mai andati d'accordo con gli umani. Non dopo il fallimento del Virtual Boy.
     UgoEMimi: Parla per te, Ugo. Personalmente ho sempre amato gli umani, mi veniva uno spezzatino buonissimo quando ancora non li consideravano persone.
         + YOU: Oh, e io che temevo di esser l'unica persona ad aver mangiato carne umana!
         + YOU: Vi avviso: ho troppe caramelle in corpo perché la mia carne sia gustosa.
-        + YOU: Credo sia giunto il momento per me di andare su Urano.
+        + YOU: Credo sia giunto il momento per me di nascondermi in uno scatolone.
         -
 
     ->->

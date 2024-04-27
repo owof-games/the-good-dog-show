@@ -46,7 +46,7 @@ DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
     BeBe: Ma parliamo di cose belle, visto il tema di oggi: hai persone amiche che ti aspettano? Io ho solo le mie otto, uh, sette figlie, e sono la loro migliore amica.
     BeBe: La migliore mamma e amica che ci sia. Farei di tutto per loro!
         + YOU: Certo, se ne sei convinta tu...
-        + YOU: Ho Micia che mi aspetta a casa, lei è la mia vita.
+        + YOU: Ho Micia che mi aspetta a casa, lei è la compagna della mia vita.
         + YOU: Ci sono un po' di persone nel culto con cui vado d'accordo, sai? Ma non troppe.
         -
         + YOU: Hai qualche ricetta segreta su cui puntare, oggi?

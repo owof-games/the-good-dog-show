@@ -120,7 +120,7 @@ _ Grazie per aver giocato con noi <3 _ (e fate un grattino al vostro _ DOGRON da
 -> END
 
 = secret
-    DOGRON: Eccoti. L'ho capito, sai?
+    DOGRON: L'ho capito, sai?
     DOGRON: Tuuuuuuuutto questo tempo.
     DOGRON: E sei sempre stata tuuuu, vero?
         + YOU: Non capisco cosa intendi.
@@ -130,7 +130,6 @@ _ Grazie per aver giocato con noi <3 _ (e fate un grattino al vostro _ DOGRON da
     DOGRON: Tutte quelle vite di Ermenegildo.
     DOGRON: E poi, è da quando è iniziato lo show che mi gratta sempre il nasino, e non capivo come mai.
     DOGRON: E sono allergico solo a una cosa.
-    DOGRON: Ai gatti.
         + YOU: Miao!
         -
     DOGRON: Non c'è alcuuuun pianeta su cui tornare, vero?

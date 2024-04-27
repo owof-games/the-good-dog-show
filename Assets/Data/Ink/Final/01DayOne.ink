@@ -146,7 +146,7 @@ DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altr
         -
     Quello: Comunque piacere, il mio nome è Quello. A volte Quello Lì, altre volte Quell'altro. Le persone sanno essere così creative.
     Quello: Come cercherai di stupire Dogron?
-        + YOU: Non ferendo nessuno.
+        + YOU: Lanciandogli palle di pelo.
         + YOU: Fuggendo mentre tutte voi cucinate.
         + YOU: Uova al tegamino?
         -
@@ -172,7 +172,7 @@ DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altr
         + YOU: Sento un attimo lo spaccino e ti dico.
             ilDivo: Ok, senti se ha anche della bamba allora.
         + YOU: Per questo sei tutto giallo?
-            ilDivo: Guarda che son rosso. Te li ha insegnati Dogron i colori?
+            ilDivo: Guarda che sono rosso. Te li ha insegnati Dogron i colori?
         + YOU: Tu hai idea di dove siamo, piuttosto?
             ilDivo: Stagista inutile. Sempre inutili, cristo!
         -

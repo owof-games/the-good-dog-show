@@ -83,7 +83,7 @@ DOGRON: Qualcuuuuuuno a cui vuoi molto molto bene ti ha detto che sarebbe tornat
 = domanda5
 // TEST: DOMANDA 5: abilità SceltaIngrediente
 DOGRON: Qual è la tua pappa preferita, ma tipo la cosa suuuuuper preferita del mondo per te?
-+ YOU: Gli arrosticini.
++ YOU: Pesce. Un sacco di pesce!
 + YOU: Ti prego fammi uscire da questo luogo, ti prego, cosa ti ho fatto di male?!?
 + YOU: La fine del capitalismo.
     ~ abilities += SceltaIngrediente
@@ -95,7 +95,7 @@ DOGRON: Qual è la tua pappa preferita, ma tipo la cosa suuuuuper preferita del 
 // TEST: DOMANDA 6: abilità PNGParliExtra
 DOGRON: Ti portano al parco. C'è il sole, un sacco di persone amiche, e il tuo collare preferito.
 + YOU: Ma dov'è la domanda?
-+ YOU: Questa è perfezione!
++ YOU: Non è nella mia natura farmi comandare!
     ~ abilities += PNGParliExtra
 + YOU: Uh, che tipo di collare? Anche un harness? E una gag ball?
 -

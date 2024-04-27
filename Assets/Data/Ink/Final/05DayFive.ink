@@ -155,7 +155,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     ilDivo: <b>Io sono ancora grande, è la ristorazione che è diventata piccola.</b>
     ~ dialogue_ingredients_of_the_day += Grande
         + YOU: Me la ricordavo diversa.
-        + YOU: Come, scusa?
+        + YOU: Ma stai facendo le fusa?
         + YOU: Lo dicevo, nella ristorazione c'è qualcosa che non va.
         -
     ilDivo: E Quello... Quello se ne è andato, e il mio cuore, il mio cuore che non ho nemmeno perché sono un fungo ma oh, il mio cuore, aiuto!
@@ -194,7 +194,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     
     + YOU: Naa, fa così ogni volta che lo uccido.
     + YOU: Devi sentirlo quando insultano Taylor Swift. Lì sì che sbrocca.
-    + YOU: Non so se hai parlato con BeBe: quella sì che è rabbia!
+    + YOU: Non so se hai parlato con BeBe: quella è rabbia!
     
     -
     
