@@ -44,7 +44,7 @@ jobs:
       version: ${{ inputs.version }}
       name: Windows 🪟
       targetPlatform: StandaloneWindows
-      channel: win
+      channel: win-testmattia
       # HALF-BROKEN IL2CPP CASE: windows builds, but standard image cannot handle video files
       timeout: 360
       # buildContinueOnError: true
