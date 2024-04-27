@@ -111,7 +111,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ inputs.targetPlatform }}
-          path: build
+          path: ${{ inputs.targetPlatform == 'WebGL' && 'build/WebGL/WebGL' || 'build' }}
   upload:
     runs-on: ['self-hosted', 'Linux']
     name: Upload for ${{ inputs.name }}
