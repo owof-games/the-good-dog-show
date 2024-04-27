@@ -155,7 +155,7 @@ DOGRON: Racers, start your engines, and may the best dog person win.
     ilDivo: <b>I am big, it's the catering industry that got small.</b>.
     ~ dialogue_ingredients_of_the_day += Grande
         + YOU: I remembered it differently.
-        + YOU: Excuse me?
+        + YOU: Are you… purring?
         + YOU: I said it, there is something wrong in the catering industry.
         -
     ilDivo: And That... That One's gone, and my heart, my heart I don't even have because I'm a mushroom but oh, my heart, <b>help</b>!

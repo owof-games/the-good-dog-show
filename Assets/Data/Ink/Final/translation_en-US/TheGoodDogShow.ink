@@ -30,4 +30,24 @@ VAR in_unity = false
     ~ SEED_RANDOM(235)
 }
 
+{ is_new_mode_plus():
+    @moveToDialogue character:{DOGRON}
+    DOGRON: Testing. One two three.
+    DOGRON: Is the microphone on?
+    DOGRON: Where are the kibbles? You promised me kibbles if I was a good dog, uuuuuuugh!
+    DOGRON: Ah, we are live already?
+    DOGRON: Puuuuuuoi rimandare indietro il tempo?
+    DOGRON: Uhm, otters are more reliable, youuuuuu know?
+    DOGRON: Let’s start again!
+    DOGRON: Welcome back to THE GOOD DOG SHOW!
+    DOGRON: The only reality show that brings you a second season with exactly the same people as the first one.
+    DOGRON: The very same drama.
+    DOGRON: The very same recipes.
+    DOGRON: But with one huuuuuuuge news: now you will be able to talk with all the people without limits!
+    DOGRON: Discover where they keep their favourite toys
+    DOGRON: Or how they run away from the veterinarian
+    DOGRON: Or how to give me even more ear scratches.
+    DOGRON: Do we begin?
+}
+
 -> starting_test

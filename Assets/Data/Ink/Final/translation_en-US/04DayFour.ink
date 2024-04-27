@@ -74,7 +74,7 @@ DOGRON: Come here, tail!
     Piiiietro: Bruiser. He left me a letter, telling me that he found a Supreme Chihuahua, and that he will live with her. That he sent a service cat to retrieve his spotted bowls and his satin and diamond kennel, and asks me not to look for him.
     Piiiietro: He thanks me for these years together, but he thinks it's time for him to be with someone who doesn't hide himself from the others. Who doesn't pretend to be infinite, he says.
         + YOU: What does he mean?
-        + YOU: I'm sorry… I guess?
+        + YOU: Just like granny said, it’s important to go where the bowl is full.
         + YOU: Bruiser can write?!
         -
     Piiiietro: He's right, you know? You, do you show yourself as you are to the world?

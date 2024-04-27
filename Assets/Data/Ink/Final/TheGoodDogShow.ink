@@ -36,7 +36,7 @@ VAR in_unity = false
     DOGRON: È acceso questo microfono?
     DOGRON: E dove sono i crocchini? Mi avevate promesso i crocchini se avessi fatto il bravo, uuuuuuuuuuffa!
     DOGRON: Ah, siamo già in diretta?
-    DOGRON: Puuuuuuoi rimandere indietro il tempo?
+    DOGRON: Puuuuuuoi rimandare indietro il tempo?
     DOGRON: Uh, le lontrelline sono piuuuù affidabili, sai?
     DOGRON: Ricominciamo!
     DOGRON: Rieccoci a THE GOOD DOG SHOW!

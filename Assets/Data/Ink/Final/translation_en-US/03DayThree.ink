@@ -29,14 +29,14 @@ DOGRON: As usual, you have a few minutes for chit-chat, and then it's time to st
     UgoEMimi: Oh, I will cook <b>canapés</b> while Ugo recovers from his pain.
         ~ dialogue_ingredients_of_the_day += Canapé
     UgoEMimi: I do not suffer Mimi! Men do not suffer!
-    UgoEMimi: Then what are those tears?
+    UgoEMimi: What are then those tears, Ugo?
         + YOU: Aren't you scared about thing about missing humans?
         -
     UgoEMimi: Uh, I feel sorry for them, but we never really got along with humans. Not after the failure of the Virtual Boy.
     UgoEMimi: Speak for yourself, Ugo. I personally have always loved humans, I used to make a really good stew when they weren’t considered persons yet.
         + YOU: Oh, and I was afraid I was the only person who ate human flesh!
         + YOU: There is too much candy in my body for my meat to be tasty.
-        + YOU: I think it is time for me to go to Uranus.
+        + YOU: I think it’s the right moment for me to hide in a box.
         -
 
     ->->

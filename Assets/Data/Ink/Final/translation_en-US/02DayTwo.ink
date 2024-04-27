@@ -46,7 +46,7 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
     BeBe: But, given today's theme, let's talk about good things: do you have friends waiting for you? I only have my eight, uh, seven daughters, and I'm their best friend.
     BeBe: The best mom and friend there is. I would do anything for them!
         + YOU: Of course, if you are sure about it.…
-        + YOU: I have Kitty waiting for me at home, she is my life.
+        + YOU: Kitty is waiting for me at home, she’s my soulmate.
         + YOU: There are a few people in the cult that I get along with, you know? But not too many.
         -
         + YOU: Do you have any secret recipe to count on today?

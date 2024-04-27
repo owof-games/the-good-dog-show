@@ -83,7 +83,7 @@ DOGRON: Someone you love very very much told youuuu he would be right back, but 
 = domanda5
 // TEST: DOMANDA 5: abilità SceltaIngrediente
 DOGRON: What is your favorite food, but, like, your suuuuuper favorite thing in the world?
-+ YOU: lamb skewers.
++ YOU: Fish. Lots of fish!
 + YOU: Please get me out of this place, please, what did I ever do to you?!?
 + YOU: The end of capitalism.
     ~ abilities += SceltaIngrediente
@@ -95,7 +95,7 @@ DOGRON: What is your favorite food, but, like, your suuuuuper favorite thing in 
 // TEST: DOMANDA 6: abilità PNGParliExtra
 DOGRON: They take you to the playground. There's the sunshine, lots of friendly people, and your favorite collar.
 + YOU: But where is the question?
-+ YOU: This is perfection!
++ YOU: It’s not in my nature to be ordered around.
     ~ abilities += PNGParliExtra
 + YOU: Uh, what kind of collar? Is there a harness too? And a gag ball?
 -

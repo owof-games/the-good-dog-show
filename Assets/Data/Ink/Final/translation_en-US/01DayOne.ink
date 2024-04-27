@@ -146,7 +146,7 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
         -
     Quello: Anyway pleasure, my name is That One. Sometimes it’s That One There, other times That Other One. People can be so creative.
     Quello: How will you try to impress Dogron?
-        + YOU: By not hurting anyone.
+        + YOU: Throwing him fur balls.
         + YOU: Escaping while all of you are cooking.
         + YOU: Fried eggs?
         -
@@ -172,7 +172,7 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
         + YOU: I'm going to ring my dealer in a second and tell you.
             ilDivo: Okay, check if he also has cocaine then.
         + YOU: Is that why you're all yellow?
-            ilDivo: Look, I'm red. Did Dogron teach you the colors?
+            ilDive: Hey, I’m red. Did Dogron teach you the colors?
         + YOU: But rather, do you have any idea where we are?
             ilDivo: Useless intern. Always useless, Christ!
         -
