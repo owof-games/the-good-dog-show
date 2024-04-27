@@ -50,9 +50,9 @@ VAR in_unity = false
     DOGRON: Cominciamo?
 }
 
-// -> starting_test
+-> starting_test
 
-~ dialogue_ingredients_of_the_day += Burro
-~ dialogue_ingredients_of_the_day += Montare
-~ abilities += SceltaIngrediente
--> day_one_kitchen
+// ~ dialogue_ingredients_of_the_day += Burro
+// ~ dialogue_ingredients_of_the_day += Montare
+// ~ abilities += SceltaIngrediente
+// -> day_one_kitchen
