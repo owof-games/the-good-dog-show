@@ -48,11 +48,11 @@ jobs:
       # HALF-BROKEN IL2CPP CASE: windows builds, but standard image cannot handle video files
       timeout: 360
       # buildContinueOnError: true
-      tags: '["self-hosted", "Windows"]'
+      # tags: '["self-hosted", "Windows"]'
       # WORKING MONO: we can compile on linux, have a mono build,
       # but it won't hang
       # timeout: 360
-      # tags: '["self-hosted", "Linux"]'
+      tags: '["self-hosted", "Linux"]'
       # fix_permissions: true
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}

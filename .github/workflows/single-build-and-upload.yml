@@ -104,7 +104,7 @@ jobs:
           targetPlatform: ${{ inputs.targetPlatform }}
           # use the custom win installation with vc redist included only if using windows, otherwise the default image is good
           # customImage: ${{ inputs.targetPlatform == 'StandaloneWindows' && 'redglow/editor:windows-2022.3.10f1-windows-il2cpp-3-vstoolsworkload' || '' }}
-          customImage: ${{ inputs.targetPlatform == 'StandaloneWindows' && 'unityci/editor:ubuntu-2022.3.10f1-windows-mono-3.0.1' || '' }}
+          # customImage: ${{ inputs.targetPlatform == 'StandaloneWindows' && 'unityci/editor:ubuntu-2022.3.10f1-windows-mono-3.0.1' || '' }}
       
       # Save as artifact
       - name: Upload build as artifact
