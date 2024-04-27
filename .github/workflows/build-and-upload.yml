@@ -80,9 +80,10 @@ jobs:
     if: ${{ inputs.include_webgl }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
+      # todo: self-hosted;Linux + fix_permissions is ok, but we should just have self-hosted and fix_permissions according to the platform
       project_name: ${{ inputs.project_name }}
       version: ${{ inputs.version }}
-      tags: '["self-hosted"]'
+      tags: '["self-hosted", "Linux"]'
       name: WebGL 🌐
       targetPlatform: WebGL
       timeout: 360
