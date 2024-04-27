@@ -55,7 +55,7 @@ jobs:
       - name: Fix permissions
         if: ${{ inputs.fix_permissions }}
         shell: sh
-        run: sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+        run: echo "user is $USER and workspace is $GITHUB_WORKSPACE and curr dir is $(pwd)" && sudo chown -R $USER:$USER $GITHUB_WORKSPACE
 
       # Checkout (without LFS)
       - name: Checkout repository
@@ -116,7 +116,7 @@ jobs:
       - name: Fix permissions (again)
         if: ${{ inputs.fix_permissions }}
         shell: sh
-        run: sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+        run: echo "user is $USER and workspace is $GITHUB_WORKSPACE and curr dir is $(pwd)" && sudo chown -R $USER:$USER $GITHUB_WORKSPACE
   upload:
     runs-on: ['self-hosted', 'Linux']
     name: Upload for ${{ inputs.name }}
