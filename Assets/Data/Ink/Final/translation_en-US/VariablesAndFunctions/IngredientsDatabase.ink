@@ -161,7 +161,7 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - ChinottoDiSavona:
         ~ return selectIngredientData(what, "Savona's Chinotto", 2)
     - Raccontare:
-        ~ return selectIngredientData(what, "tell", 3)
+        ~ return selectIngredientData(what, "storytelling", 3)
     - Selfie:
         ~ return selectIngredientData(what, "selfie", 3)
     - Interviste:
@@ -173,7 +173,7 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - TonnoAlNaturale:
         ~ return selectIngredientData(what, "canned tuna in brine", 3)
     - Cantare:
-        ~ return selectIngredientData(what, "sing", 3)
+        ~ return selectIngredientData(what, "singing", 3)
     - Perdonare:
         ~ return selectIngredientData(what, "forgive", 3)
     - Evolversi:
@@ -183,17 +183,17 @@ LIST Ingredients = InvalidIngredient, Uova, Pentola, NoceMoscata, Farina, Saltar
     - SelfCare:
         ~ return selectIngredientData(what, "hashtagselfcare", 3)
     - Sventrare:
-        ~ return selectIngredientData(what, "gut", 3)
+        ~ return selectIngredientData(what, "gutting", 3)
     - Emancipazione:
-        ~ return selectIngredientData(what, "empowerment", 4)
+        ~ return selectIngredientData(what, "emancipated", 4)
     - MichelaMurgia:
         ~ return selectIngredientData(what, "Virginia Woolf", 4)
     - Sacrificio:
         ~ return selectIngredientData(what, "sacrifice", 3)
     - PeanutButter:
-        ~ return selectIngredientData(what, "mr.Peanutbutter", 4)
+        ~ return selectIngredientData(what, "mr. Peanutbutter", 4)
     - GiocattoloPreferito:
-        ~ return selectIngredientData(what, "DOGRON's favourite ball", 4)
+        ~ return selectIngredientData(what, "DOGRON's favourite toy", 4)
     - KateBush:
         ~ return selectIngredientData(what, "Kate Bush", 3)
     - IdeaDiSuccesso:

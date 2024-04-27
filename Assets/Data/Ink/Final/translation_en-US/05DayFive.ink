@@ -108,7 +108,7 @@ DOGRON: Racers, start your engines, and may the best dog person win.
         -
     Piiiietro: That's also why I wanted you to be the first person to know: I leave the math studies.
     Piiiietro: And you'll say: Piiiietro, you're but a pi, what's the point, what else can you do?
-    Piiiietro: And I will answer: don't step on my dreams! Because I was born to sing, to go around with my <b>portable speakers</b>, my Eiffel 65 album and sing around the world!
+    Piiiietro: And I will answer: don't step on my dreams! Because I was born to sing, to go around with my <b>portable loudspeakers</b>, my Eiffel 65 album and sing around the world!
        ~ dialogue_ingredients_of_the_day += CassaPortatile
         + YOU: Singing? What is there to sing in Blue dabudidabuda?
         + YOU: Woah, what a brave person you are.

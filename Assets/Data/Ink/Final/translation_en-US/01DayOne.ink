@@ -72,7 +72,7 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
         + YOU: More importantly, what did you decide to cook for this first episode?
         -
     BeBe: Uh you know, even though I’m a working sheep, being a single mom of eight – darn it! – seven little lambs forces you to deal with money problems.
-    BeBe: So I think I will make some bread and <b>onion</b> soup to <b>slice</b>.
+    BeBe: So I think I will make some bread soup and <b>onion</b>s to <b>slice</b>.
     BeBe: Onion makes everything taste great, and it costs nothing.
     ~ dialogue_ingredients_of_the_day += Cipolla
     ~ dialogue_ingredients_of_the_day += Affettare
@@ -121,7 +121,7 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
         + YOU: I feel like I've been locked up tight, for a century of lonely nights, waiting for someone to release me…
         + YOU: No thanks, I'd rather have been really kidnapped.
         -
-    Piiiietro: But I can merely cook a pasta dish with <b>stirred</b> <b>canned tuna</b>, the fuck am I doing here?
+    Piiiietro: But I can merely cook a pasta dish with <b>stir</b>red <b>canned tuna</b>, the fuck am I doing here?
        ~ dialogue_ingredients_of_the_day += TonnoInScatola
         ~ dialogue_ingredients_of_the_day += Mescolare
     Piiiietro: Bruiser, Bruiser where are you? We've got to get out of here! See you later, or never!
@@ -182,7 +182,7 @@ DOGRON: It's up to you to decide whether you want to share your secrets, trick t
         + YOU: You're talking to me?
         -
     ilDivo: And who else, lazybones!!!? I guess you want an autograph, right?
-    ilDivo: Or my secret to <b>whip</b> up my risotto alla milanese?
+    ilDivo: Or my secret to <b>saute</b> my risotto alla milanese?
     ~ dialogue_ingredients_of_the_day += Mantecare
     ilDivo: Are you single?
     ilDivo: Ah, but don't waste my time. Look for That One, and bring me a couple of ounces of caviar and coke for my winning snack.

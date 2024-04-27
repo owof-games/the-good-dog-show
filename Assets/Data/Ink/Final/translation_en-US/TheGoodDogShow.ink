@@ -36,7 +36,7 @@ VAR in_unity = false
     DOGRON: Is the microphone on?
     DOGRON: Where are the kibbles? You promised me kibbles if I was a good dog, uuuuuuugh!
     DOGRON: Ah, we are live already?
-    DOGRON: Puuuuuuoi rimandare indietro il tempo?
+    DOGRON: Can youuuuuu turn back time?
     DOGRON: Uhm, otters are more reliable, youuuuuu know?
     DOGRON: Let’s start again!
     DOGRON: Welcome back to THE GOOD DOG SHOW!

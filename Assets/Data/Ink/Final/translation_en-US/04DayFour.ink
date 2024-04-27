@@ -54,7 +54,7 @@ DOGRON: Come here, tail!
     BeBe: Because every mother's duty is to protect them. And if she fails, to retaliate. Be the change you want to see in the world.
         + YOU: Should I worry?
         -
-    BeBe: No, you shouldn’t. But today I will bring a very special recipe, you know? Change requires risk, and for that I'm going to use hemlock. A little bit of <b>poison</b>, betting on how fatal it can be. And the killer's <b>collar</b>.
+    BeBe: No, you shouldn’t. But today I will bring a very special recipe, you know? Change requires risk, and for that I'm going to use hemlock. A little bit of <b>poison</b>, betting on how fatal it can be. And the <b>killer's collar</b>.
     ~ dialogue_ingredients_of_the_day += Avvelenare
     ~ dialogue_ingredients_of_the_day += CollareConEtichetta
         + YOU: Um, I think I left the cat in the oven.
@@ -91,7 +91,7 @@ DOGRON: Come here, tail!
         + YOU: BeBe sounds to me like a good listener, you know?
             Piiiietro: When she needs to say my name she gets all mixed up, though.
         -
-    Piiiietro: I too will welcome change tonight, you know? Like Bruiser. No more pasta with canned tuna. I'll make pasta with <b>natural canned tuna</b>! And I will present it by <b>singing</b>.
+    Piiiietro: I too will welcome change tonight, you know? Like Bruiser. No more pasta with canned tuna. I'll make pasta with <b>canned tuna in brine</b>! And I will present it by <b>singing</b>.
        ~ dialogue_ingredients_of_the_day += TonnoAlNaturale
         ~ dialogue_ingredients_of_the_day += Cantare
     Piiiietro: Uh, I said it. I have to run now, see you later!

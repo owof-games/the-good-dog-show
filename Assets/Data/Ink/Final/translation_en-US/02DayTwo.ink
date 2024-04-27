@@ -17,7 +17,7 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
         ~ dialogue_ingredients_of_the_day += Skyrim
     UgoEMimi: Ugo, I don't like to contradict you, you know, but it was a dream!
     UgoEMimi: And you tell me that dreams lie, huh! Didn't you dream of cooking forever? Now look where we are!
-    UgoEMimi: My dream was to open an electrician's tool store, not to cook <b>vol-au-vents</b> every Saturday for your boorish friends!
+    UgoEMimi: My dream was to open an electrician's tool store, not to cook <b>vol-au-vent</b>s every Saturday for your boorish friends!
      ~ dialogue_ingredients_of_the_day += VolAuVent
     UgoEMimi: Mimi, you're going too far now! And you know what happens when I get pissed off!
         + YOU: Mr. Ugo, so you are creating a video game?
@@ -141,11 +141,11 @@ DOGRON: I'll give you a few minutes for the chit-chat and then we're off!
         + YOU: No, I have my cat waiting for me at home, but I don't know how to get back!
         + YOU: I think I have a crush on someone here in the studio.
         -
-    ilDivo: Of course you will fall in love with me, of course. Bella Hadid decided not to <b>mirror</b> herself after she saw me.
+    ilDivo: Of course you will fall in love with me, of course. Bella Hadid decided not to <b>look</b> herself <b>in the mirror</b> after she saw me.
         ~ dialogue_ingredients_of_the_day += Specchiarsi
     ilDivo: But then life gets difficult.
     ilDivo: Because they tell you, "Hey, how great it must be to be part of a species with 23000 different sexual genders, it must be such a great deal," but then we have binary things too, and I end up falling in love, and…
-    ilDivo: What am I saying? I'm <b>hot</b> stuff baby, you can't just grab me like that! And now I have to work, work, produce, fill in the void! Get out!
+    ilDivo: What am I saying? I’m so hot I could <b>sear</b> you baby, you can't just grab me like that! And now I have to work, work, produce, fill in the void! Get out!
         ~ dialogue_ingredients_of_the_day += Scottare
 
     ->->

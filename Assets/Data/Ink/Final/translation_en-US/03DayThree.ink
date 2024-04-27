@@ -22,7 +22,7 @@ DOGRON: As usual, you have a few minutes for chit-chat, and then it's time to st
     UgoEMimi: Ugo spoke with one of the publishers, for his video game.
     UgoEMimi: Junk sellers, they are. But did you know that the publishers are... pugs?!?
     UgoEMimi: And he was told that the project lacks a consistent narrative, and a connection between gameplay and graphical elements.
-    UgoEMimi: They essentially told me that it makes no sense! That it's a game where meaningless things happen! But I've always been playing <b>real video games</b>! These are walking-simulator and visual-novel pugs!
+    UgoEMimi: They essentially told me that it makes no sense! That it's a game where meaningless things happen! But I've always been playing <b>REAL video games</b>! These are walking-simulator and visual-novel pugs!
         ~ dialogue_ingredients_of_the_day += IVeriVideogiochi
         + YOU: What are you going to do now?
         -
