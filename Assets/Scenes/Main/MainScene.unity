@@ -1855,6 +1855,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1783160035}
     m_Modifications:
+    - target: {fileID: 5799775895285041317, guid: 8687427b8d94d964fbc9241fb58ec529, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 4b238a03e2f201548b5162420b7569ff, type: 3}
     - target: {fileID: 5893414191094651577, guid: 8687427b8d94d964fbc9241fb58ec529, type: 3}
       propertyPath: m_Name
       value: TransitionVideo
