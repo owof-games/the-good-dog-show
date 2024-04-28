@@ -1,4 +1,5 @@
 using System.Collections;
+using System.ComponentModel;
 
 using DG.Tweening;
 
@@ -12,8 +13,17 @@ public class TransitionVideo : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private RectTransform targetImageTransform;
     [SerializeField] private FloatReference transitionDuration;
+    [SerializeField, InspectorName("WebGL URL")] private string webGlURL;
 #if UNITY_EDITOR
     [SerializeField] private BoolReference debugMode;
+#endif
+
+#if UNITY_WEBGL
+    private void Awake()
+    {
+        videoPlayer.url = webGlURL;
+        videoPlayer.clip = null;
+    }
 #endif
 
     /// <summary>
