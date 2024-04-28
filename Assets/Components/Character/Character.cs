@@ -1,8 +1,11 @@
 using System;
 
+using LemuRivolta.InkAtoms;
+
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
+using System.Linq;
 
 public class Character : MonoBehaviour
 {
@@ -15,7 +18,7 @@ public class Character : MonoBehaviour
 
     [SerializeField] private CharacterVariant[] variants;
     [SerializeField] private CharacterName characterName;
-    [SerializeField] private StringValueList characterVariants;
+    [SerializeField] private SerializableInkListItemValueList characterVariants;
     [SerializeField] private ShadowButtonCompanion shadowButtonCompanion;
 
     public CharacterName CharacterName => characterName;
@@ -24,7 +27,7 @@ public class Character : MonoBehaviour
     {
         characterVariants.Added.Register(CharacterVariantsChanged);
         characterVariants.Removed.Register(CharacterVariantsChanged);
-        CharacterVariantsChanged("");
+        InnerCharacterVariantsChanged();
     }
 
     private void OnDisable()
@@ -33,17 +36,19 @@ public class Character : MonoBehaviour
         characterVariants.Removed.Unregister(CharacterVariantsChanged);
     }
 
-    private void CharacterVariantsChanged(string _variant)
+    private void CharacterVariantsChanged(SerializableInkListItem _variant)
     {
-        foreach (var characterVariant in characterVariants)
+        InnerCharacterVariantsChanged();
+    }
+
+    private void InnerCharacterVariantsChanged()
+    {
+        foreach (var myVariant in from characterVariant in characterVariants
+                                  from myVariant in variants
+                                  where characterVariant.itemName == myVariant.VariantName
+                                  select myVariant)
         {
-            foreach (var myVariant in variants)
-            {
-                if (characterVariant == myVariant.VariantName)
-                {
-                    shadowButtonCompanion.SetForegroundImage(myVariant.Sprite);
-                }
-            }
+            shadowButtonCompanion.SetForegroundImage(myVariant.Sprite);
         }
     }
 }

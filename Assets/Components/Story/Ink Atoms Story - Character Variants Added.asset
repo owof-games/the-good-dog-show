@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea84ebc569f199b4e9c64e7f5ceabf74, type: 3}
-  m_Name: Set Character Variant Command
+  m_Script: {fileID: 11500000, guid: 7ccb2fe26f108034a9f98b923ae7a331, type: 3}
+  m_Name: Ink Atoms Story - Character Variants Added
   m_EditorClassIdentifier: 
-  characterVariants: {fileID: 11400000, guid: 1c2c64b8ab4f53b41a96b859a3b3c71e, type: 2}
+  _developerDescription: 
+  _replayBufferSize: 1

@@ -169,7 +169,7 @@ MonoBehaviour:
   - VariantName: BeBenator
     Sprite: {fileID: 21300000, guid: d190697200cd1444e899eb98c92f7200, type: 3}
   characterName: 3
-  characterVariants: {fileID: 11400000, guid: 1c2c64b8ab4f53b41a96b859a3b3c71e, type: 2}
+  characterVariants: {fileID: 11400000, guid: 4b3d78d70604e394fb026dd6ba02d4c6, type: 2}
   shadowButtonCompanion: {fileID: 9083502010823635746}
 --- !u!114 &9083502010823635746 stripped
 MonoBehaviour:

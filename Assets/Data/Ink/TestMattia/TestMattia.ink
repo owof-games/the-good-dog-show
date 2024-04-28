@@ -31,7 +31,7 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 // -> test_transitions
 
-// -> test_variants
+-> test_variants
 
 // -> test_enter
 
@@ -43,7 +43,7 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 // -> prima_giornata_nmp
 
--> test_choice_with_column
+// -> test_choice_with_column
 
 // -> test_set_new_mode_plus
 
@@ -355,15 +355,8 @@ YOU: Questa è una lunga frase. Questa è una lunga frase. Questa è una lunga f
 
 @moveToEnding
 
-DOGRON: dico cose
-YOU: dico cose
-
-@moveToDialogue character:{DOGRON}
-
 DOGRON: altre cose
 YOU: benissimo
-
-@setCharacterVariant image:{MIMI}
 
 -> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_test)
 
@@ -381,14 +374,16 @@ YOU: benissimo
     ->->
 
     = piiiietro_choice
-    Piiiietro: ciao
+    Piiiietro: ciao, ho aiutato mimi a far fuori ugo
     YOU: ciao
+    ~ character_variants += MIMI
     ->->
 
 
     = quello_choice
-    Quello: ciao
+    Quello: ciao, ho fatto incazzare bebe
     YOU: ciao
+    ~ character_variants += BeBenator
     ->->
 
 

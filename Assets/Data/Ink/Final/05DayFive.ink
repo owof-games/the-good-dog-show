@@ -14,7 +14,7 @@ DOGRON: E per questo il tema di oggi, l'ultimo grande tema è:
 DOGRON: Un piatto che gridi al mondo che sei la migliore genitora per dogghe al mondo!
 DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
 
-@setCharacterVariant image:{BeBenator}
+~ character_variants += BeBenator
 
 -> lounge_loop_with_letter(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_five_kitchen, -> day_five_letter)
 

@@ -42,6 +42,14 @@ MonoBehaviour:
     variableChangeEvent: {fileID: 0}
     variableValue: {fileID: 11400000, guid: e38e4596b2649dd4f9bb90dc9cb0a419, type: 2}
     variableList: {fileID: 11400000, guid: 0f2e049875860ce4eb1c0c9bac50823c, type: 2}
+  - matchKind: 3
+    name: character_variants
+    regex: 
+    list: []
+    variablePairChangeEvent: {fileID: 0}
+    variableChangeEvent: {fileID: 0}
+    variableValue: {fileID: 11400000, guid: e38e4596b2649dd4f9bb90dc9cb0a419, type: 2}
+    variableList: {fileID: 11400000, guid: 4b3d78d70604e394fb026dd6ba02d4c6, type: 2}
   externalFunctions:
   - {fileID: 11400000, guid: ed2790165974aa54790950ca0be48120, type: 2}
   - {fileID: 11400000, guid: a9b1953a1b9787546b940ce02a460b2d, type: 2}
