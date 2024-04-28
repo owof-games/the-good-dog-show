@@ -1432,10 +1432,6 @@ PrefabInstance:
       propertyPath: itInkTextAsset
       value: 
       objectReference: {fileID: 4900000, guid: fcfc6aca5491bfe43b28dcc9566e5af0, type: 3}
-    - target: {fileID: 4905196625283791951, guid: 474cbbab14c3d6640b034fd52e5be6ea, type: 3}
-      propertyPath: editorInkStoriesAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3146dc0df3f756b48a298e49b3d667e6, type: 2}
     - target: {fileID: 7164257165897377237, guid: 474cbbab14c3d6640b034fd52e5be6ea, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
