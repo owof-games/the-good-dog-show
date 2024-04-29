@@ -76,6 +76,7 @@ jobs:
       timeout: 360
       channel: linux
       fix_permissions: true
+      development: ${{ inputs.development }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -94,6 +95,7 @@ jobs:
       timeout: 360
       channel: webgl
       fix_permissions: true
+      development: ${{ inputs.development }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -112,6 +114,7 @@ jobs:
       targetPlatform: StandaloneOSX
       timeout: 360
       channel: mac
+      development: ${{ inputs.development }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
