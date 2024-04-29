@@ -8,6 +8,7 @@ on:
 
 jobs:
   get_version:
+    runs-on: ['self-hosted']
     outputs:
       version: ${{ steps.version.outputs.substring }}
     steps:
