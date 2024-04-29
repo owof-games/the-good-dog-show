@@ -1,4 +1,4 @@
-name: Automatic Release 🤖
+name: Developer Release 🏗️
 run-name: Publish version ${{ github.ref_name }}
 
 on:
