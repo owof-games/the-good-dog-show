@@ -4,7 +4,7 @@ run-name: Publish version ${{ github.ref_name }}
 on:
   push:
     tags:
-      - "dev[0-9]+.[0-9]+.[0-9]+"
+      - "dev-[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
   get_version:
@@ -15,14 +15,14 @@ jobs:
         id: version
         with:
           value: ${{ github.ref_name }}
-          index_of_str: "de"
+          index_of_str: "dev-"
   export_game_release:
     name: Publish version ${{ github.ref_name }} 🤖
     needs: [get_version]
     uses: ./.github/workflows/build-and-upload.yml
     with:
       project_name: ${{ vars.PRIVATE_PROJECT_NAME }}
-      version: ${{ needs.get_version.outputs.version }} # ${{ github.ref_name }}
+      version: v${{ needs.get_version.outputs.version }} # ${{ github.ref_name }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
