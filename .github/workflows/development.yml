@@ -24,6 +24,7 @@ jobs:
     with:
       project_name: ${{ vars.PRIVATE_PROJECT_NAME }}
       version: v${{ needs.get_version.outputs.version }} # ${{ github.ref_name }}
+      development: true
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}

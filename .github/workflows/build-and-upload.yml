@@ -25,6 +25,10 @@ on:
         required: false
         type: boolean
         default: true
+      development:
+        required: false
+        type: boolean
+        default: false
     secrets:
       BUTLER_CREDENTIALS:
         required: true
@@ -54,6 +58,7 @@ jobs:
       # timeout: 360
       tags: '["self-hosted", "Linux"]'
       fix_permissions: true
+      development: ${{ inputs.development }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
