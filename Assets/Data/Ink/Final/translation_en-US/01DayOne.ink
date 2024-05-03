@@ -7,7 +7,7 @@
 DOGRON: But, let’s officially start!
 DOGRON: Contestants, today, in this first episode of THE GOOD DOG SHOW we will put you to the test by asking you tooooooo…
 DOGRON: Coooooking something that you would eat every day!
-DOGRON: You have a few minutes to talk to each other before going to the kitchen. Translated into the show rules: you can talk with a maximum of {abilities has PNGParliExtra: {base_dialogue_loops}|{base_dialogue_loops+1}} people!
+DOGRON: You have a few minutes to talk to each other before going to the kitchen. Translated into the show rules: you can talk with a maximum of {abilities has PNGParliExtra: {base_dialogue_loops+1}|{base_dialogue_loops}} people!
 DOGRON: It's up to you to decide whether you want to share your secrets, trick the other contestants, or get a scratch behind your ear! And be carefuuuuuuul, because in THE GOOD DOG everything changes in the blink of an eye!
 
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_one_kitchen)
