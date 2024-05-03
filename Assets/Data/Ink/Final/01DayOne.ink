@@ -7,7 +7,7 @@
 DOGRON: Ma cominciamo ufficialmente!
 DOGRON: Concorrenti, con quuuuuuuuesta prima puntata di THE GOOD DOG SHOW oggi vi metteremo alla prova chiedendovi di...
 DOGRON: Cucinare qualcosa che mangereste tuuuuuuutti i giorni!
-DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: potete parlare con un massimo di {abilities has PNGParliExtra: {base_dialogue_loops}|{base_dialogue_loops+1}} persone!
+DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: potete parlare con un massimo di {abilities has PNGParliExtra: {base_dialogue_loops+1}|{base_dialogue_loops}} persone!
 DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tuuuutto cambia in un battito di ciglia!
 
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_one_kitchen)
