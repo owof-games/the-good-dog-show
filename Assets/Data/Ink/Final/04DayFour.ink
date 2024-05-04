@@ -13,7 +13,7 @@ DOGRON: O quando prendono un cuuuuuucciolo e ti dicono che tutto rimarrà come p
 DOGRON: Il tema di oggi è il cambiamento, qualcosa per accettare il cambiamento.
 DOGRON: Un'altra grande idea della Suprema Chihuahua e del Consiglio dei Carlini.
 {LIST_COUNT(alive_characters) == 1: DOGRON: E il consiglio dei Carlini ha per voi questo indovinello. DOGRON: Suprema nel cuore, Balenciaga nella mia voce, Myrtle è il mio nome. DOGRON: Uuuuh, dov'è l'indovinello? ~ dialogue_ingredients_of_the_day += Balenciaga, Myrtle}
-TODO: non son sicura funzioni
+
 DOGRON: Potete chiacchierare un attimo tra voi, e poi iniziamo a cucinare.
 DOGRON: Vieni qui, coda!
 
