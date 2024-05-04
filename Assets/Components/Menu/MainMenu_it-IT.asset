@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 516285050880
-    m_Localized: Parla con tutti i personaggi e completa le loro storie
+    m_Localized: Parla con tutti le personagge e completa le loro storie
     m_Metadata:
       m_Items: []
   references:
