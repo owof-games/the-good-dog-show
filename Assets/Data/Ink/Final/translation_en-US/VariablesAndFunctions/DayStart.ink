@@ -27,7 +27,12 @@ DOGRON: {And nowwwwwwww, a warm welcome to all the contestants and those followi
 
 DOGRON: {Contestants, remember that every day youuuuu will lose one of your abilities. Human person here in front of me! Today you will lose... drum rolls...|What skill shall we take away from our huuuuuman person today?!?|Fewer and fewer people, fewer and fewer active skills!|Uuuuh, my tummy hurts today.|Me big doggo, me not crying, no no, wooooof!}
 
+
 ~ temp ability = LIST_RANDOM(abilities)
+{ abilities has PNGParliExtra:
+~ ability = PNGParliExtra
+}
+
 { ability:
   - EvidenziaIngredienti: DOGRON: You will no longer be able to see the ingredients clearly.
   - ScelteLente: DOGRON: Choices will now flow faster.

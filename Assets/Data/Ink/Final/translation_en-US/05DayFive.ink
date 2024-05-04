@@ -14,7 +14,7 @@ DOGRON: And that's why today's theme, the last big theme is:
 DOGRON: A dish that shooooooouts to the world that you are the best dog parent in the world!
 DOGRON: Racers, start your engines, and may the best dog person win.
 
-@setCharacterVariant image:{BeBenator}
+~ character_variants += BeBenator
 
 -> lounge_loop_with_letter(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_five_kitchen, -> day_five_letter)
 

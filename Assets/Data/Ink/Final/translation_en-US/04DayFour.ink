@@ -12,10 +12,15 @@ DOGRON: Today's theme concerns us all. The theme that comes to your mind when yo
 DOGRON: Or when they get a puppy and they tell youuuu that everything will stay the same but it's not true, that puppy starts walking, goes to stuuudy and you got attached to them and they forget about you.
 DOGRON: Today's theme is change, something to accept change.
 DOGRON: Another great idea from Supreme Chihuahua and the Pug Council.
+{LIST_COUNT(alive_characters) == 1:
+DOGRON: The Great Council of Pugs has a riddle for you.
+DOGRON: The Supreme in my heart, Balenciaga in my voice, Myrtle is my name.
+DOGRON: Wait, where’s the riddle?
+}
 DOGRON: You can chat with each other for a little while, and then we start cooking.
 DOGRON: Come here, tail!
 
-@setCharacterVariant image:{MIMI}
+~ character_variants += MIMI
 
 -> lounge_loop(-> bebe_choice, -> ugo_e_mimi_choice, -> piiiietro_choice, -> quello_choice, -> il_divo_choice, -> day_four_kitchen)
 
@@ -162,5 +167,9 @@ DOGRON: Come here, tail!
         
         
 === day_four_kitchen
+{LIST_COUNT(alive_characters) == 1:
+~ dialogue_ingredients_of_the_day += Balenciaga
+~ dialogue_ingredients_of_the_day += Myrtle
+}
 
 -> kitchen_loop(4, (Pettorina, Trasportino, Veterinario, Automobile, Viaggiare, Inconscio, CorrereNeiSogni), -> day_five_lounge, 3)
