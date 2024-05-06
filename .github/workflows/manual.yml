@@ -18,6 +18,9 @@ on:
       development:
         type: boolean
         default: false
+      version:
+        type: string
+        required: false
 
 jobs:
   build-and-upload:
@@ -29,6 +32,7 @@ jobs:
       include_linux: ${{ inputs.include_linux }}
       include_webgl: ${{ inputs.include_webgl }}
       development: ${{ inputs.development }}
+      version: ${{ inputs.version }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
