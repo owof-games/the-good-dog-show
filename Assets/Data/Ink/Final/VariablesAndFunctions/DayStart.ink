@@ -27,7 +27,12 @@ DOGRON: {E ora, un benvenuuuuto a tuuuutte le persone concorrenti e a chi ci seg
 
 DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità. Persona uuuuumana qui davanti a me! Tu oggi perderai, rullo di tamburi...| Quuuuale abilità toglieremo oggi alla nostra persona umana?!?|Sempre meno gente, sempre meno abilità attive!|Uuuuh, mi fa male il pancino oggi.|Me doggo grande, non piange, no no, auuuuu!}
 
+
 ~ temp ability = LIST_RANDOM(abilities)
+{ abilities has PNGParliExtra:
+~ ability = PNGParliExtra
+}
+
 { ability:
   - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.
   - ScelteLente: DOGRON: Le scelte ora scorreranno più veloci.

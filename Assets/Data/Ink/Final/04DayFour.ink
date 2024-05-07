@@ -16,8 +16,6 @@ DOGRON: Un'altra grande idea della Suprema Chihuahua e del Consiglio dei Carlini
 DOGRON: E il consiglio dei Carlini ha per voi questo indovinello.
 DOGRON: Suprema nel cuore, Balenciaga nella mia voce, Myrtle è il mio nome.
 DOGRON: Uuuuh, dov'è l'indovinello?
-~ dialogue_ingredients_of_the_day += Balenciaga
-~ dialogue_ingredients_of_the_day += Myrtle
 }
 DOGRON: Potete chiacchierare un attimo tra voi, e poi iniziamo a cucinare.
 DOGRON: Vieni qui, coda!
@@ -169,5 +167,9 @@ DOGRON: Vieni qui, coda!
         
         
 === day_four_kitchen
+{LIST_COUNT(alive_characters) == 1:
+~ dialogue_ingredients_of_the_day += Balenciaga
+~ dialogue_ingredients_of_the_day += Myrtle
+}
 
 -> kitchen_loop(4, (Pettorina, Trasportino, Veterinario, Automobile, Viaggiare, Inconscio, CorrereNeiSogni), -> day_five_lounge, 3)
