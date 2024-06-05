@@ -24,7 +24,7 @@ public class ShadowButtonCompanion : MonoBehaviour
 
     private void Start()
     {
-        SetForegroundImage(baseImage.sprite);
+        ForegroundImage = baseImage.sprite;
         foregroundImage.enabled = true;
         baseImage.enabled = false;
     }
@@ -34,9 +34,14 @@ public class ShadowButtonCompanion : MonoBehaviour
         shadowImage.enabled = show;
     }
 
-    public void SetForegroundImage(Sprite image) {
-        baseImage.sprite = image;
-        shadowImage.sprite = baseImage.sprite;
-        foregroundImage.sprite = baseImage.sprite;
+    public Sprite ForegroundImage
+    {
+        get => baseImage.sprite;
+        set
+        {
+            baseImage.sprite = value;
+            shadowImage.sprite = baseImage.sprite;
+            foregroundImage.sprite = baseImage.sprite;
+        }
     }
 }

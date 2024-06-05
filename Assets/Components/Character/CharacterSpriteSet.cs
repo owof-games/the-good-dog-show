@@ -25,6 +25,6 @@ public class CharacterSpriteSet : MonoBehaviour
             return;
         }
         var sprite = sprites[Random.Range(0, sprites.Length)];
-        shadowButtonCompanion.SetForegroundImage(sprite);
+        shadowButtonCompanion.ForegroundImage = sprite;
     }
 }

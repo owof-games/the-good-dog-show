@@ -16,6 +16,8 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 
 
+-> test_bug_finale_speciale
+
 
 // -> too_many_choices
 
@@ -31,7 +33,7 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 // -> test_transitions
 
--> test_variants
+// -> test_variants
 
 // -> test_enter
 
@@ -46,6 +48,59 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 // -> test_choice_with_column
 
 // -> test_set_new_mode_plus
+
+
+
+
+== test_bug_finale_speciale
+
+@moveToEnding
+
+DOGRON: True ending!
+
+-> lounge_loop(-> bebe_choice, -> ugoemimi_choice, -> piiiietro_choice, -> quello_choice, -> ildivo_choice, -> cucina_test)
+
+
+-> END
+
+    = ugoemimi_choice
+    UgoEMimi: <b>ciao</b>, come va?
+    YOU: ciao
+    ->->
+
+    = bebe_choice
+    BeBe: ciao
+    YOU: ciao
+    ->->
+
+    = piiiietro_choice
+    Piiiietro: ciao, ho aiutato mimi a far fuori ugo
+    YOU: ciao
+    ~ character_variants += MIMI
+    ->->
+
+
+    = quello_choice
+    Quello: ciao, ho fatto incazzare bebe
+    YOU: ciao
+    ~ character_variants += BeBenator
+    ->->
+
+
+    = ildivo_choice
+    ilDivo: ciao
+    YOU: ciao
+    ->->
+    
+    = cucina_test
+    
+    @moveToEnding
+    
+    DOGRON: Fine!
+    
+    -> END
+
+
 
 === test_choice_with_column
 

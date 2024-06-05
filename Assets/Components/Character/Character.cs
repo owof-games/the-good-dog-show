@@ -1,16 +1,13 @@
 using System;
-
 using LemuRivolta.InkAtoms;
-
 using UnityAtoms.BaseAtoms;
-
 using UnityEngine;
 using System.Linq;
 
 public class Character : MonoBehaviour
 {
     [Serializable]
-    public struct CharacterVariant
+    public class CharacterVariant
     {
         public string VariantName;
         public Sprite Sprite;
@@ -22,6 +19,8 @@ public class Character : MonoBehaviour
     [SerializeField] private ShadowButtonCompanion shadowButtonCompanion;
 
     public CharacterName CharacterName => characterName;
+
+    private Sprite originalImage;
 
     private void OnEnable()
     {
@@ -43,12 +42,22 @@ public class Character : MonoBehaviour
 
     private void InnerCharacterVariantsChanged()
     {
-        foreach (var myVariant in from characterVariant in characterVariants
-                                  from myVariant in variants
-                                  where characterVariant.itemName == myVariant.VariantName
-                                  select myVariant)
+        var variant = (from characterVariant in characterVariants
+            from myVariant in variants
+            where characterVariant.itemName == myVariant.VariantName
+            select myVariant).FirstOrDefault();
+        if (variant != null)
         {
-            shadowButtonCompanion.SetForegroundImage(myVariant.Sprite);
+            if (originalImage == null)
+            {
+                originalImage = shadowButtonCompanion.ForegroundImage;
+            }
+
+            shadowButtonCompanion.ForegroundImage = variant.Sprite;
+        }
+        else if (originalImage != null)
+        {
+            shadowButtonCompanion.ForegroundImage = originalImage;
         }
     }
 }

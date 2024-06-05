@@ -759,6 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 11400000, guid: 9141e1c48176ef6498da7d252844c68c, type: 2}
   inkAtomsStory: {fileID: 11400000, guid: c6bfcfd395c994843afe25dd3c0b5e88, type: 2}
+  characterVariants: {fileID: 11400000, guid: 4b3d78d70604e394fb026dd6ba02d4c6, type: 2}
   editorInkStoriesAsset: {fileID: 11400000, guid: 444d1c89079ecc4468501b798bf559a3, type: 2}
   inkStoriesAsset: {fileID: 11400000, guid: 3146dc0df3f756b48a298e49b3d667e6, type: 2}
   startButton: {fileID: 4909366408926330556}

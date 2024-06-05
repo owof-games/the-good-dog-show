@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private StringEvent continueEvent;
     [SerializeField] private InkAtomsStory inkAtomsStory;
+    [SerializeField] private SerializableInkListItemValueList characterVariants;
 #if UNITY_EDITOR
     [SerializeField] private MenuInkStoriesAsset editorInkStoriesAsset;
 #endif
@@ -158,6 +159,7 @@ public class Menu : MonoBehaviour
 #else
         var assets = inkStoriesAsset;
 #endif
+        characterVariants.Clear(); // because of a bug in the ink atoms lib, this variable doesn't get reset
         inkAtomsStory.StartStory(localeCode == itLocaleCode ?
             assets.ItInkTextAsset :
             assets.EnInkTextAsset);
