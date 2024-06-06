@@ -303,6 +303,8 @@ MonoBehaviour:
   advance:
     m_PersistentCalls:
       m_Calls: []
+  missingCharactersRefractoryAmount: 5
+  advancementRefractoryTime: 0.3
   isWritingText: {fileID: 11400000, guid: 1b050b637021fef4c92729db0f05b99a, type: 2}
   storyStep: {fileID: 11400000, guid: 8363b8f137780a440b4f3bac11b53796, type: 2}
   moveToGameAreaEvent:
@@ -469,10 +471,6 @@ PrefabInstance:
       propertyPath: MouseAndKeyboardIcon
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 3443927304118950622, guid: ba2ade0e6f6cd2b4bac9ab234d3d96cd, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5ea90b7e6ce6b2d46ab5159c5b0dccfe, type: 3}
     - target: {fileID: 4033333280240646584, guid: ba2ade0e6f6cd2b4bac9ab234d3d96cd, type: 3}
       propertyPath: m_Name
       value: InputHint
