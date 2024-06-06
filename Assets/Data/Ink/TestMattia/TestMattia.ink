@@ -16,7 +16,7 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 
 
--> test_dogron_va_via
+// -> test_dogron_va_via
 
 // -> test_bug_finale_speciale
 
@@ -40,7 +40,7 @@ INCLUDE VariablesAndFunctions/NewModePlus.ink
 
 // -> test_counter
 
-// -> test_credits
+-> test_credits
 
 // -> bug_eliminazione
 
