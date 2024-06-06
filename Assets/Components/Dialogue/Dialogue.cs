@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Linq;
-
 using DG.Tweening;
-
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using LemuRivolta.InkAtoms;
-
 using UnityAtoms.BaseAtoms;
-
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
@@ -34,6 +32,9 @@ public class Dialogue : TransitionTarget
     [SerializeField] private Ease easingIn;
     [SerializeField] private Ease easingOut;
 
+    private bool otherCharacterHasLeft = true;
+    [SerializeField] private OtherCharacterLeavesCommand otherCharacterLeavesCommand;
+
     private Vector2? youInitialPosition;
     private Vector2? otherInitialPosition;
 
@@ -51,6 +52,11 @@ public class Dialogue : TransitionTarget
         Assert.IsNotNull(youStart);
         Assert.IsNotNull(otherStart);
         Assert.IsNotNull(abilities);
+
+        if (otherCharacterLeavesCommand != null)
+        {
+            otherCharacterLeavesCommand.Dialogue = this;
+        }
     }
 
     private void Start()
@@ -89,13 +95,26 @@ public class Dialogue : TransitionTarget
         var tweenOther = otherRectTransform.DOAnchorPos(otherInitialPosition.Value, animationDuration)
             .SetEase(easingIn);
 
-        while (tweenYou.active || tweenOther.active)
-        {
-            yield return null;
-        }
+        yield return tweenYou.WaitForCompletion();
+        yield return tweenOther.WaitForCompletion();
+        otherCharacterHasLeft = false;
+        // while (tweenYou.active || tweenOther.active)
+        // {
+        //     yield return null;
+        // }
 
         storyStep.Changed.Register(OnStoryStepChanged);
         isWritingText.Changed.Register(OnIsWritingTextChanged);
+    }
+
+    /// <summary>
+    /// Called by an ink event if the other character must leave earlier (see: letter)
+    /// </summary>
+    public IEnumerator OnOtherCharacterLeaves()
+    {
+        var tweenOther = ExitOther();
+        yield return tweenOther.WaitForCompletion();
+        otherCharacterHasLeft = true;
     }
 
     public override IEnumerator OnTurnOff()
@@ -113,17 +132,25 @@ public class Dialogue : TransitionTarget
         youRectTransform.anchoredPosition = youInitialPosition.Value;
         var tweenYou = youRectTransform.DOAnchorPos(youStart.anchoredPosition, animationDuration)
             .SetEase(easingOut);
-        otherRectTransform.anchoredPosition = otherInitialPosition.Value;
-        var tweenOther = otherRectTransform.DOAnchorPos(otherStart.anchoredPosition, animationDuration)
-            .SetEase(easingOut);
+        var tweenOther = otherCharacterHasLeft ? null : ExitOther();
 
-        while (tweenYou.active || tweenOther.active)
-        {
-            yield return null;
-        }
+        yield return tweenYou.WaitForCompletion();
+        yield return tweenOther?.WaitForCompletion();
+        // while (tweenYou.active || tweenOther.active)
+        // {
+        //     yield return null;
+        // }
 
         youRectTransform.gameObject.SetActive(false);
         otherRectTransform.gameObject.SetActive(false);
+    }
+
+    private TweenerCore<Vector2, Vector2, VectorOptions> ExitOther()
+    {
+        otherRectTransform.anchoredPosition = otherInitialPosition.Value;
+        var tweenOther = otherRectTransform.DOAnchorPos(otherStart.anchoredPosition, animationDuration)
+            .SetEase(easingOut);
+        return tweenOther;
     }
 
     private void OnIsWritingTextChanged(bool _)
@@ -159,7 +186,8 @@ public class Dialogue : TransitionTarget
 
         // show the choices
         MainThreadQueue.EnqueueLater(() =>
-            choicesRoot.SetActive(storyStep.Value.Choices.Length > 0 && !isWritingText.Value), "showing or hiding dialogue choices");
+                choicesRoot.SetActive(storyStep.Value.Choices.Length > 0 && !isWritingText.Value),
+            "showing or hiding dialogue choices");
 
         // try to select a relevant UI element if possible
         MainThreadQueue.EnqueueLater(() => SelectRelevantObject(true), "forcing selection of dialogue UI item");
@@ -218,6 +246,7 @@ public class Dialogue : TransitionTarget
         {
             return;
         }
+
         foreach (var character in otherRoot.GetComponentsInChildren<Character>(true))
         {
             character.gameObject.SetActive(character.CharacterName == characterName);

@@ -177,7 +177,7 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
 
 
 = day_five_letter
-        @moveToEnding
+    @moveToEnding
     DOGRON: Ma, ma! Abbiamo una sorpresa per te. Credo. Uuuuuuuuna sorpresa uuuuuuuunica, come te.
     DOGRON: Uuuuuna lettera!
     
@@ -220,7 +220,10 @@ DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
     -
     
     DOGRON: Credo anzi, è, è il caso che vada a parlare col gran consiglio dei caaaarlini. Tieniti la lettera.
+
+    @otherCharacterLeaves
     
+    YOU: Uhm...
     + [YOU: Leggi a voce alta.]
     
     -

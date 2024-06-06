@@ -196,6 +196,7 @@ MonoBehaviour:
   animationDuration: 0.8
   easingIn: 27
   easingOut: 26
+  otherCharacterLeavesCommand: {fileID: 11400000, guid: 828adac8ee240de4aa21992885d0c58e, type: 2}
 --- !u!1 &6443876183529045503
 GameObject:
   m_ObjectHideFlags: 0

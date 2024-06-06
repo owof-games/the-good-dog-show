@@ -177,7 +177,7 @@ DOGRON: Racers, start your engines, and may the best dog person win.
 
 
 = day_five_letter
-        @moveToEnding
+    @moveToEnding
     DOGRON: But, but…! We have a surprise for you! I think. A uuuuuuunique surprise, uuuuuuuuunique, just like you are!
     DOGRON: A letter!
     
@@ -220,7 +220,10 @@ DOGRON: Racers, start your engines, and may the best dog person win.
     -
     
     DOGRON: I think it’s better I go talk with the Great Council of Pugs. Rather, it’s something I MUST do. Keep the letter.
+
+    @otherCharacterLeaves
     
+    YOU: Uhm...
     + [YOU: Read aloud.]
     
     -

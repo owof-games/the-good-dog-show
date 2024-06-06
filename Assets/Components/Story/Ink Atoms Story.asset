@@ -64,6 +64,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3467d2feb921e9348bebb8b231455b6d, type: 2}
   - {fileID: 11400000, guid: 7fb9600d62fc2034d8439cbaa527faf8, type: 2}
   - {fileID: 11400000, guid: b1f8acd5e3064ce438818da1448050c3, type: 2}
+  - {fileID: 11400000, guid: 828adac8ee240de4aa21992885d0c58e, type: 2}
   tagProcessors: []
   syntaxCheckFiles:
   - {fileID: 102900000, guid: 19c6a0a7b510759468d60c952699525d, type: 3}
