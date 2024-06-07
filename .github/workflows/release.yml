@@ -12,9 +12,6 @@ jobs:
     uses: ./.github/workflows/build-and-upload.yml
     with:
       project_name: ${{ vars.PUBLIC_PROJECT_NAME }}
-      include_windows: false
-      include_macos: false
-      include_linux: false
       version: ${{ github.ref_name }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
